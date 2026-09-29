@@ -521,3 +521,13 @@ github = "fstltna/PullUpdates"
 description = "Updates a Hotline server from a master server and restarts it."
 discord_editors = []   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
+
+[[software]]
+id = "liteline"
+name = "Liteline"
+category = "Clients"
+description = "Vintage Hotline Client"
+homepage = "https://agora.vespernet.net/"
+platforms = "System 6"
+discord_editors = ["267316948277264386"]   # Discord user IDs, like ["123456789012345678"]
+github_editors = []
