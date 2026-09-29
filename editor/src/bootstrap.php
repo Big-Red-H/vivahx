@@ -193,6 +193,17 @@ function can_edit(array $user, array $project): bool
     return !empty($user['developer']) && in_array($user['id'], $project['discord_editors'], true);
 }
 
+/** Anyone signed in with GitHub, or a Discord member with one of the Dev roles. */
+function can_recommend(array $user): bool
+{
+    return $user['provider'] === 'github' || !empty($user['developer']);
+}
+
+function suggest_on_github_url(): string
+{
+    return 'https://github.com/' . config()['github']['repo'] . '/issues/new?template=software.yml';
+}
+
 function editable_projects(array $user): array
 {
     return array_filter(projects(), fn ($p) => can_edit($user, $p));

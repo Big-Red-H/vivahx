@@ -68,6 +68,11 @@ Or, if your project is on GitHub, <a href="login.php?with=github">sign in with G
 </ul>
 <?php endif ?>
 
+<?php if (can_recommend($user)): ?>
+<h2>Know a project we're missing?</h2>
+<p><a class="button secondary" href="recommend.php">Recommend a project</a></p>
+<?php endif ?>
+
 <h2>Ask to be linked to a project</h2>
 <p>Pick your project and a maintainer will link your account to it. <?php if ($user['provider'] === 'discord'): ?>Your Discord user ID is <code><?= e($user['id']) ?></code>.<?php else: ?>If you can push to the project's GitHub repo you don't need to ask: it's linked already.<?php endif ?></p>
 <form method="post" action="request.php" class="editform">

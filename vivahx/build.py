@@ -334,6 +334,7 @@ def main():
                                                            "\n".join(lines), '<a href="/">Back to the news</a>'), sidebar))
 
     # Software.
+    editor_url = config.get("editor_url", "").rstrip("/")
     sections = []
     for category in CATEGORIES:
         items = [s for s in by_recent_release(software, latest) if s["category"] == category]
@@ -349,13 +350,23 @@ def main():
         sections.append(f'<a name="{category.lower()}"></a>' + box(
             h(category), f"{len(items)} {'program' if len(items) == 1 else 'programs'}", "\n".join(rows),
             "Downloads come straight from each project's own releases"))
+    # How to add a project that's missing: the editor (signed in) or a GitHub issue (anyone).
+    suggest = f"https://github.com/{config.get('github_repo', 'Big-Red-H/vivahx')}/issues/new?template=software.yml"
+    ways = []
+    if editor_url:
+        ways.append(f'<li><a href="{h(editor_url)}/recommend.php">Recommend it</a>: sign in with GitHub, or with Discord '
+                    f'if you have a Client, Server or Tracker Dev role. <font size="1">(Needs a modern browser.)</font></li>')
+    ways.append(f'<li><a href="{h(suggest)}">Suggest it on GitHub</a>: anyone with a GitHub account.</li>')
+    sections.append(box("Know a Hotline project we're missing?", "Clients, servers, trackers, bots, tools",
+                        "<p>Tell us about it, and once a maintainer has looked it over it gets its own page here, "
+                        "with its releases followed automatically.</p><ul>" + "".join(ways) + "</ul>",
+                        '<a href="/software/">All software</a>'))
     write("software/index.html", page(config, "Software", "\n".join(sections), sidebar))
 
     posts_by_software = defaultdict(list)
     for p in posts:
         if p.get("software"):
             posts_by_software[p["software"]].append(p)
-    editor_url = config.get("editor_url", "").rstrip("/")
     for s in software:
         body = project_page(config, s, releases_by_id[s["id"]], posts_by_software[s["id"]], editor_url)
         write(f"software/{s['id']}.html", page(config, s["name"], body, sidebar))
