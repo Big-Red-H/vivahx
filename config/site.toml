@@ -10,7 +10,8 @@ files_base_url = ""
 
 posts_on_front_page = 10
 
-# The Hotline HQ Discord, linked at the top of every page and in the sidebar.
+# The Hotline HQ Discord, linked at the top of every page and in the sidebar. This is the
+# VivaHX invite: it gives the VivaHX Visitor role, so keep it rather than the general one.
 discord_invite = "https://discord.gg/rfRKHy6UR2"
 
 # The page editor for developers (needs HTTPS, since it signs in with Discord or GitHub).
