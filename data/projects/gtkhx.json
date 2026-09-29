@@ -1,7 +1,7 @@
 {
  "repo": "mishan/gtkhx",
  "url": "https://github.com/mishan/gtkhx",
- "description": "A Hotline client with a GTK+ frontend",
+ "description": "A Hotline client for GTK 4 and libadwaita, largely written in Rust. It works with Hotline 1.2, 1.5 and 1.9 servers and implements the modern protocol extensions: voice and video chat, inline media, animated icons and chat history.",
  "homepage": "https://gtkhx.org",
  "license": "GPL-2.0",
  "language": "Rust",
@@ -15,7 +15,7 @@
   "hotline",
   "hotline-client",
   "libadwaita",
-  "libpanel",
+  "rust",
   "voice-chat"
  ],
  "archived": false,

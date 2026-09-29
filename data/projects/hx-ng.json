@@ -1,7 +1,7 @@
 {
  "repo": "mishan/hx-ng",
  "url": "https://github.com/mishan/hx-ng",
- "description": "Next generation Hotline client (web based)",
+ "description": "A web client for the Hotline-ng protocol, with chat, the user list, private messages, threaded news, and voice and video. Pairs with hxd-ng",
  "homepage": "",
  "license": "",
  "language": "TypeScript",

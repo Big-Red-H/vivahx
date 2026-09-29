@@ -1,7 +1,7 @@
 {
  "repo": "mishan/hxd-ng",
  "url": "https://github.com/mishan/hxd-ng",
- "description": "Next generation Hotline server",
+ "description": "A from-scratch Hotline server in Rust. It serves classic Hotline clients on :5500 and Hotline-ng, a mobile-first JSON/WebSocket protocol with resumable sessions, portable identity, and voice/video, on :5700, all from one shared state",
  "homepage": "",
  "license": "",
  "language": "Rust",
