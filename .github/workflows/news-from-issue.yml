@@ -1,0 +1,54 @@
+name: Publish a news post from an issue
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: content
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    # Only people who can label issues (the org's maintainers) can publish.
+    if: github.event.label.name == 'publish' && contains(github.event.issue.labels.*.name, 'news')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Write the post
+        id: post
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: echo "file=$(python3 -m vivahx.issue_to_post)" >> "$GITHUB_OUTPUT"
+      - name: Save to GitHub
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: scripts/save.sh "News post from issue #$ISSUE_NUMBER" news
+      - name: Build and upload
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+        run: scripts/deploy.sh
+      - name: Close the issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          FILE: ${{ steps.post.outputs.file }}
+        run: |
+          slug=$(basename "$FILE" .md)
+          gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --comment "Published: http://vivahx.com/news/$slug.html (saved as \`$FILE\`; edit that file to change it)."

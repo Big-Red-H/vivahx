@@ -1,0 +1,23 @@
+{
+ "id": "hotline-discord-bridge",
+ "releases": [
+  {
+   "version": "1.0.0a",
+   "title": "Alpha Release!",
+   "date": "2026-04-08",
+   "url": "https://github.com/tagban/hotline_discord_bridge/releases/tag/1.0.0a",
+   "notes": "This correctly encapsulates most of what I was working towards. I removed web-chat for now as moderating it isn't great, and I am itching to work towards something better. :) Wish me luck! In the mean time this is the mostly completed version in Alpha 1.0.0a\r\n\r\n - Updated with hotfix.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Archive.zip",
+     "size": 18406,
+     "source_url": "https://github.com/tagban/hotline_discord_bridge/releases/download/1.0.0a/Archive.zip",
+     "path": "hotline-discord-bridge/1.0.0a/Archive.zip",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

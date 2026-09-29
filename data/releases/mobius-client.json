@@ -1,0 +1,309 @@
+{
+ "id": "mobius-client",
+ "releases": [
+  {
+   "version": "v0.3.1",
+   "title": "v0.3.1",
+   "date": "2026-03-12",
+   "url": "https://github.com/jhalter/mobius-hotline-client/releases/tag/v0.3.1",
+   "notes": "## Changelog\n* 3d2a7c2 Fix incorrect repo name in Homebrew release workflow sed pattern\n\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "size": 3787429,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.1/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "path": "mobius-client/v0.3.1/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "size": 4013665,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.1/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "path": "mobius-client/v0.3.1/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "size": 3494167,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.1/mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "path": "mobius-client/v0.3.1/mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "size": 3826361,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.1/mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "path": "mobius-client/v0.3.1/mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_arm64.zip",
+     "size": 3665995,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.1/mobius-hotline-client_client_Windows_arm64.zip",
+     "path": "mobius-client/v0.3.1/mobius-hotline-client_client_Windows_arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_x86_64.zip",
+     "size": 4053826,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.1/mobius-hotline-client_client_Windows_x86_64.zip",
+     "path": "mobius-client/v0.3.1/mobius-hotline-client_client_Windows_x86_64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.3.0",
+   "title": "v0.3.0",
+   "date": "2026-03-11",
+   "url": "https://github.com/jhalter/mobius-hotline-client/releases/tag/v0.3.0",
+   "notes": "## Changelog\n* ea1e0b0 Add timestamps to join/leave and re-style to match classic Hotline client\n* f8b224b Add usage to readme\n* 4cf5f45 Apply theming to huh forms\n* 9ea31dc Convert theming to use AdaptiveColor for better light/dark terminal compatibility\n* da530a5 Delete temp file\n* 5d8c331 Display usage if config is bad instead of exit 1 with no output.\n* 2491579 Drop light theme and unify on dark (for now)\n* a2be260 Fix account management issues\n* 3c94a14 Improve threaded news article UX\n* e3a7eb3 Initial multi-session support\n* e554e99 Initial theme support\n* 62a2fb2 Merge pull request #3 from erichelgeson/master\n* 5057be4 More style tweaks\n* d393274 Refactor screens to tea.View\n* 5a1eb1f Remove hardcoded stylings\n* 48d9ce0 Store config in homedir dotfile\n* 70fa8a9 Style cleanup\n* 38b6882 Style tweaks\n* 20c42e6 Update charmbracelet dependencies to latest stable releases\n* 944fc7b Update to charmbracelet v2 modules\n* a257e87 Use charmtone colors for theming\n* 9ccc630 ignore binary and move yaml to example so users dont accidentally commit passwords.\n\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "size": 3787434,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.0/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "path": "mobius-client/v0.3.0/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "size": 4013665,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.0/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "path": "mobius-client/v0.3.0/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "size": 3494182,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.0/mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "path": "mobius-client/v0.3.0/mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "size": 3826373,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.0/mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "path": "mobius-client/v0.3.0/mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_arm64.zip",
+     "size": 3666014,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.0/mobius-hotline-client_client_Windows_arm64.zip",
+     "path": "mobius-client/v0.3.0/mobius-hotline-client_client_Windows_arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_x86_64.zip",
+     "size": 4053835,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.3.0/mobius-hotline-client_client_Windows_x86_64.zip",
+     "path": "mobius-client/v0.3.0/mobius-hotline-client_client_Windows_x86_64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.5",
+   "title": "v0.2.5",
+   "date": "2025-12-06",
+   "url": "https://github.com/jhalter/mobius-hotline-client/releases/tag/v0.2.5",
+   "notes": "## Changelog\n* c229a20 Add gradient helper and remove left border on modal buttons\n* 824ecd7 Add sound notifications for server messages and news\n* c057b56 Disable sound player for linux builds\n* df7aabb Update Tracker address in mobius-client-config.yaml\n\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "size": 3423430,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.2.5/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "path": "mobius-client/v0.2.5/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "size": 3627185,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.2.5/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "path": "mobius-client/v0.2.5/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "size": 3142023,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.2.5/mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "path": "mobius-client/v0.2.5/mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "size": 3437821,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.2.5/mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "path": "mobius-client/v0.2.5/mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_arm64.zip",
+     "size": 3324409,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.2.5/mobius-hotline-client_client_Windows_arm64.zip",
+     "path": "mobius-client/v0.2.5/mobius-hotline-client_client_Windows_arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_x86_64.zip",
+     "size": 3676618,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.2.5/mobius-hotline-client_client_Windows_x86_64.zip",
+     "path": "mobius-client/v0.2.5/mobius-hotline-client_client_Windows_x86_64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.4",
+   "title": "v0.2.4",
+   "date": "2025-12-05",
+   "url": "https://github.com/jhalter/mobius-hotline-client/releases/tag/v0.2.4",
+   "notes": "## Changelog\n* e4c0e40 Change CGO_ENABLED from 0 to 1 in config\n* 9e0b61f Update build configuration in .goreleaser.yml\n* c7b3bb2 Upgrade Go setup action to version 5\n\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "size": 3362874,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.2.4/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "path": "mobius-client/v0.2.4/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "size": 3570391,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.2.4/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "path": "mobius-client/v0.2.4/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_arm64.zip",
+     "size": 3269573,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.2.4/mobius-hotline-client_client_Windows_arm64.zip",
+     "path": "mobius-client/v0.2.4/mobius-hotline-client_client_Windows_arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_x86_64.zip",
+     "size": 3619216,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.2.4/mobius-hotline-client_client_Windows_x86_64.zip",
+     "path": "mobius-client/v0.2.4/mobius-hotline-client_client_Windows_x86_64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.0",
+   "title": "v0.1.0",
+   "date": "2024-10-06",
+   "url": "https://github.com/jhalter/mobius-hotline-client/releases/tag/v0.1.0",
+   "notes": "## Changelog\r\n* b1a3f1b Bump mobius version to fix tracker listing\r\n\r\nUpstream fix:\r\nhttps://github.com/jhalter/mobius/commit/7c005672a40eb92110e32b37f41f59c027fa8598",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "size": 2111518,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.1.0/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "path": "mobius-client/v0.1.0/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "size": 2215240,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.1.0/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "path": "mobius-client/v0.1.0/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "size": 2037347,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.1.0/mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "path": "mobius-client/v0.1.0/mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "size": 2180927,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.1.0/mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "path": "mobius-client/v0.1.0/mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_arm64.zip",
+     "size": 1989119,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.1.0/mobius-hotline-client_client_Windows_arm64.zip",
+     "path": "mobius-client/v0.1.0/mobius-hotline-client_client_Windows_arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_x86_64.zip",
+     "size": 2151011,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.1.0/mobius-hotline-client_client_Windows_x86_64.zip",
+     "path": "mobius-client/v0.1.0/mobius-hotline-client_client_Windows_x86_64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.0.2",
+   "title": "v0.0.2",
+   "date": "2024-07-22",
+   "url": "https://github.com/jhalter/mobius-hotline-client/releases/tag/v0.0.2",
+   "notes": "## Changelog\n* a72829d Fix go.mod\n\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "size": 2111332,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.0.2/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "path": "mobius-client/v0.0.2/mobius-hotline-client_client_Darwin_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "size": 2215651,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.0.2/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "path": "mobius-client/v0.0.2/mobius-hotline-client_client_Darwin_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "size": 2037756,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.0.2/mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "path": "mobius-client/v0.0.2/mobius-hotline-client_client_Linux_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "size": 2181310,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.0.2/mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "path": "mobius-client/v0.0.2/mobius-hotline-client_client_Linux_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_arm64.zip",
+     "size": 1989865,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.0.2/mobius-hotline-client_client_Windows_arm64.zip",
+     "path": "mobius-client/v0.0.2/mobius-hotline-client_client_Windows_arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "mobius-hotline-client_client_Windows_x86_64.zip",
+     "size": 2151143,
+     "source_url": "https://github.com/jhalter/mobius-hotline-client/releases/download/v0.0.2/mobius-hotline-client_client_Windows_x86_64.zip",
+     "path": "mobius-client/v0.0.2/mobius-hotline-client_client_Windows_x86_64.zip",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

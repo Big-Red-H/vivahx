@@ -1,0 +1,46 @@
+name: Check for releases
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: content
+  cancel-in-progress: false
+
+jobs:
+  releases:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Look for new releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 -m vivahx.sync_releases
+      - name: Copy new files to DreamObjects
+        env:
+          DREAMOBJECTS_ACCESS_KEY: ${{ secrets.DREAMOBJECTS_ACCESS_KEY }}
+          DREAMOBJECTS_SECRET_KEY: ${{ secrets.DREAMOBJECTS_SECRET_KEY }}
+          DREAMOBJECTS_BUCKET: ${{ vars.DREAMOBJECTS_BUCKET }}
+          DREAMOBJECTS_ENDPOINT: ${{ vars.DREAMOBJECTS_ENDPOINT }}
+        run: python3 -m vivahx.mirror --minutes 60
+      - name: Save to GitHub
+        run: scripts/save.sh "Releases $(date -u +%Y-%m-%d)" data news
+      # A push made by this workflow doesn't start the build workflow, so it uploads here.
+      - name: Build and upload
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+        run: scripts/deploy.sh

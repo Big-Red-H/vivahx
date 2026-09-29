@@ -1,0 +1,8 @@
+version = "1.9.1"
+title = "Hotline Server 1.9.1"
+date = 2003-01-01
+notes = "Hotline Server for Mac OS X."
+
+[[files]]
+name = "Hotline-Server-1.9.1-OSX.zip"
+url = "http://hlwiki.com/HotlineFiles/Servers/Hotline-Server-1.9.1-OSX.zip"

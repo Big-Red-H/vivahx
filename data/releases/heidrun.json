@@ -1,0 +1,275 @@
+{
+ "id": "heidrun",
+ "releases": [
+  {
+   "version": "1.5.1",
+   "title": "Heidrun 1.5.1",
+   "date": "2026-09-27",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.5.1",
+   "notes": "\n### Added\n- **Protocol Console:** Export… saves the shown transcript as a log file.\n\n### Fixed\n- **Uploads to classic Hotline servers stalled at 0 bytes.** The client sent the transfer handshake twice; it now sends it once, as the original Heidrun did.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.5.1-168.dmg",
+     "size": 8316919,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.5.1/Heidrun-1.5.1-168.dmg",
+     "path": "heidrun/1.5.1/Heidrun-1.5.1-168.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.5.0",
+   "title": "Heidrun 1.5.0",
+   "date": "2026-09-24",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.5.0",
+   "notes": "\n### Added\n- **Connection uptime in the Task Manager.** Each server shows when it connected and for how long; the time stops at an unexpected disconnect.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.5.0-161.dmg",
+     "size": 8306359,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.5.0/Heidrun-1.5.0-161.dmg",
+     "path": "heidrun/1.5.0/Heidrun-1.5.0-161.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.4.1",
+   "title": "Heidrun 1.4.1",
+   "date": "2026-09-16",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.4.1",
+   "notes": "\n### Fixed\n- **Downloads from classic Hotline servers were corrupt.** The client treated the transfer stream as a bare data fork, so the Hotline file envelope landed on disk and the last bytes of the file were cut off. Downloads, resumes and Quick Look previews now decode the envelope, sized from its own headers.\n- Connecting from the tracker window now adds the server to Recent Servers, like the connect form does.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.4.1-152.dmg",
+     "size": 8289513,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.4.1/Heidrun-1.4.1-152.dmg",
+     "path": "heidrun/1.4.1/Heidrun-1.4.1-152.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.4.0",
+   "title": "Heidrun 1.4.0",
+   "date": "2026-09-09",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.4.0",
+   "notes": "\n### Added\n- **Drop boxes and upload folders.** Classic icons for folders named `…upload…` / `…drop box…`; a refused drop box is explained; Finder drops onto a folder row upload into that folder.\n- **Protocol Console:** server popup and text field filter the transcript.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.4.0-148.dmg",
+     "size": 8328420,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.4.0/Heidrun-1.4.0-148.dmg",
+     "path": "heidrun/1.4.0/Heidrun-1.4.0-148.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.3.0",
+   "title": "Heidrun 1.3.0",
+   "date": "2026-08-28",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.3.0",
+   "notes": "\n### Added\n- **Per-server attention.** Each server window now shows unread badges on its\n  sidebar items — private messages (counted per message), public-chat mentions\n  of your nickname, private-chat invitations, server broadcasts, and new news\n  posts. The window title carries a `(N)` marker (visible in the Window menu)\n  and flashes briefly on new activity, and the Dock badge totals unread items\n  across all connected servers. New toggles under Settings → Notifications →\n  Attention.\n\n### Changed\n- A private message arriving in a background window no longer opens the\n  thread automatically; it stays unread until you view it.\n\n### Fixed\n- The Dock badge no longer flip-flops between servers when connected to more\n  than one.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.3.0-134.dmg",
+     "size": 8296756,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.3.0/Heidrun-1.3.0-134.dmg",
+     "path": "heidrun/1.3.0/Heidrun-1.3.0-134.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.2.0",
+   "title": "Heidrun 1.2.0",
+   "date": "2026-06-21",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.2.0",
+   "notes": "\n### Added\n- **Large files — over 4 GiB.** Download and upload individual files, and whole\n  folders, larger than 4 GiB when the server supports it. Transfers were\n  previously capped at 4 GiB.\n- **Unicode text (UTF-8).** Chat, nicknames, file and folder names, news, and the\n  chat topic now handle emoji and non-Latin scripts when the server supports it.\n  Connections to older servers keep using the classic Mac encoding.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.2.0-117.dmg",
+     "size": 8221633,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.2.0/Heidrun-1.2.0-117.dmg",
+     "path": "heidrun/1.2.0/Heidrun-1.2.0-117.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.1.0",
+   "title": "Heidrun 1.1.0",
+   "date": "2026-06-19",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.1.0",
+   "notes": "\n### Added\n- **Folder downloads.** Download an entire folder in one go — the whole\n  subtree is recreated locally with a live progress bar, and partially\n  downloaded files resume where they left off. If the target folder already\n  exists you're asked whether to **Replace**, **Merge**, or **Cancel**.\n- **Drag and drop to move.** Drag files or folders onto a folder row to move\n  them on the server. Every subfolder now shows a **`..`** row at the top:\n  double-click it to go up a level, drop items on it to move them to the\n  enclosing folder, or hover a drag over it to spring the view up while you\n  keep dragging.\n\n### Fixed\n- The post count next to a news category now updates immediately after you\n  post, delete, or edit a thread (it could previously stay stale — for\n  example, showing one post over an empty category).\n- Merging a downloaded folder into an existing local folder no longer\n  duplicates or corrupts files that were already there.\n- A folder download's progress tile no longer sticks at \"Zero KB\".\n- The News view animates correctly when switched from the sidebar, the\n  transcript keeps its scroll position, and a one-click sidebar selection\n  glitch is fixed.\n\n### Changed\n- The folder-conflict and download/upload conflict prompts are now fully\n  localized in German and Japanese.\n\n### Developer\n- Updated to heidrun-protocol 1.0.0-rc26 (folder download + live progress).\n- Split `ThreadBodyPane` out of `NewsView` to keep files within the length\n  limit.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.1.0-107.dmg",
+     "size": 8171201,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.1.0/Heidrun-1.1.0-107.dmg",
+     "path": "heidrun/1.1.0/Heidrun-1.1.0-107.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0.7",
+   "title": "Heidrun 1.0.7",
+   "date": "2026-06-16",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.0.7",
+   "notes": "\n### Added\n- **Content size.** A new density control in Settings with four choices —\n  Compact, Standard, Comfortable, and **System Setting**, which follows the\n  macOS \"Sidebar icon size\" preference. Lists and message text scale to match.\n- **Complete German & Japanese localization.** The whole interface is now\n  fully localized in both languages — including the feature sidebar, error and\n  confirmation dialogs, the file and bookmark panels, and the Touch ID prompt\n  shown when unlocking a saved password.\n\n### Changed\n- Refreshed sidebar styling and feature icons, plus assorted UI polish across\n  Settings, the file list, and the task manager.\n\n### Fixed\n- Text in the Files, News, Chat, and Messages tabs that was already translated\n  could still appear in English; it now renders in German and Japanese as\n  intended.\n- A \"New…\" menu item could reappear after being dismissed.\n\n### Developer\n- Transcript styling tests track the resolved content-size body/caption sizes\n  rather than hardcoded system font sizes.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.0.7-86.dmg",
+     "size": 8096253,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.0.7/Heidrun-1.0.7-86.dmg",
+     "path": "heidrun/1.0.7/Heidrun-1.0.7-86.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0.6",
+   "title": "Heidrun 1.0.6",
+   "date": "2026-06-07",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.0.6",
+   "notes": "\n### Fixed\n- Fixed slow displaying of selected threads in threaded news.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.0.6-65.dmg",
+     "size": 8056170,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.0.6/Heidrun-1.0.6-65.dmg",
+     "path": "heidrun/1.0.6/Heidrun-1.0.6-65.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0.5",
+   "title": "Heidrun 1.0.5",
+   "date": "2026-06-07",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.0.5",
+   "notes": "### Added\n- Privilege-aware controls now cover **file** and **news** operations too (1.0.4 brought them to the admin controls). When a server reports your account's privileges, Download / Upload / New Folder / Rename / Delete and the news Post / Reply / Edit / Delete / bundle actions disable for accounts that aren't allowed to use them. A convenience only — the server still enforces every action — and fail-open on servers that don't report them.\n\n### Fixed\n- News actions the server denied (e.g. deleting a post without permission) used to fail silently; they now surface the server's error.\n\n### Developer\n- Protocol console: replies are correlated per connection, so two connections to the same server no longer mislabel each other's replies. The User Access push (TX 354) is labelled `userAccess`.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.0.5-57.dmg",
+     "size": 8059093,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.0.5/Heidrun-1.0.5-57.dmg",
+     "path": "heidrun/1.0.5/Heidrun-1.0.5-57.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0.4",
+   "title": "Heidrun 1.0.4",
+   "date": "2026-06-07",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.0.4",
+   "notes": "### Added\n- Privilege-aware admin controls. When a server reports your account's access privileges, the Admin tab, **Edit Account**, and **Disconnect User** disable for accounts that aren't allowed to use them — instead of letting you try and hit a permission error. A convenience only; the server still enforces every privilege.\n\n### Fixed\n- Access privileges are now read in the canonical Hotline bit order, so the privilege-aware controls work correctly against classic Hotline servers, not just Heidrun's own server.\n\n### Developer\n- The protocol console labels the User Access push (TX 354) as `userAccess` rather than the misleading `userList`.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.0.4-51.dmg",
+     "size": 8044862,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.0.4/Heidrun-1.0.4-51.dmg",
+     "path": "heidrun/1.0.4/Heidrun-1.0.4-51.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0.3",
+   "title": "Heidrun 1.0.3",
+   "date": "2026-06-07",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.0.3",
+   "notes": "### Fixed\n- The user list could appear empty when connecting to some servers — classic Hotline/HXD servers that send a \"user access\" privileges message right after login. The roster now stays populated.\n- Developer protocol console: a reply on a second simultaneous connection no longer shows as unknown (`???`) when both connections reuse the same task number.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.0.3-44.dmg",
+     "size": 8047211,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.0.3/Heidrun-1.0.3-44.dmg",
+     "path": "heidrun/1.0.3/Heidrun-1.0.3-44.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0.2",
+   "title": "Heidrun 1.0.2",
+   "date": "2026-06-06",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.0.2",
+   "notes": "### Changed\n- Errors now surface through one consistent alert. Failures that used to pass silently now tell you what happened — most visibly a chat or private message the server rejects (e.g. when your account isn't allowed to send), plus failed file, news, and account-admin actions and bookmark import/export.\n\n### Fixed\n- Roster desync after an automatic reconnect (e.g. when the server restarts): a user who joined during the reconnect could be missing from the user list even though chat showed them entering. The roster stays in sync now.\n\n---\nRequires macOS 15 (Sequoia) or later. Notarized for Apple Silicon and Intel.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.0.2-39.dmg",
+     "size": 8019592,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.0.2/Heidrun-1.0.2-39.dmg",
+     "path": "heidrun/1.0.2/Heidrun-1.0.2-39.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0.1",
+   "title": "1.0.1",
+   "date": "2026-06-05",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.0.1",
+   "notes": "### Added\n- Undo / redo (⌘Z, ⇧⌘Z) in the chat, messages, and news composers.\n- Drag to reorder bookmarks in the library.\n- Copy support for the chat subject, status bar, and file-info fields.\n- Keyboard shortcuts: ⌘I (user info), Spacebar (Quick Look), ⌘W.\n\n### Changed\n- Messages rebuilt on an AppKit conversation list, with Dock attention on incoming private messages.\n- Threaded news rebuilt on AppKit panes with a persistent body divider.\n- Account admin and the user editor reworked into a single unified view.\n- Connection form no longer flashes on open; ⌘. cancels an in-progress connect. General animation and status-bar / banner layout polish.\n\n### Fixed\n- Window memory leaks: the per-window undo manager and the whole document scene (document, host state, table rows/cells, composers) are now released on window close instead of accumulating.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.0.1-17.dmg",
+     "size": 7995697,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.0.1/Heidrun-1.0.1-17.dmg",
+     "path": "heidrun/1.0.1/Heidrun-1.0.1-17.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0.0",
+   "title": "Heidrun 1.0.0",
+   "date": "2026-06-03",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.0.0",
+   "notes": "Initial release. A complete Swift 6 port of the original 2002 Hotline\nclient, modernised for macOS 15+ while keeping wire compatibility with\nclassic Hotline 1.5 servers and Heidrun-server's extensions.\n\n### Connection\n- TLS connections with trust-on-first-use SHA-256 certificate pinning.\n- Per-server identity (nickname, numeric icon, emoji avatar — single\n  per-bookmark setting; default identity lives in Settings → Identity).\n- Bookmarks live as `.heidrunbookmark` document files you can open\n  from Finder, the Dock recents menu, the File → Open dialog, or by\n  double-clicking in the bookmark library. Opening a file auto-\n  connects to the server it describes; ⌘S saves edits with proper\n  document-edited indication. Multi-bookmark connect — select\n  several in the library and open them all at once, each in its own\n  window. Connection → Bookmark (⌘D) toggles the focused window\n  into / out of the bookmark library.\n- Recent-servers list + tracker browser (UDP registration on 5499 plus\n  TCP listing on 5498).\n- Auto-reconnect with configurable retry count + delay.\n- Session restoration on launch — re-opens the servers that were\n  connected at quit (toggle in Settings).\n- Confirm-before-disconnect prompt on Cmd+W / Cmd+Q while connected.\n  Return confirms; Escape cancels. Closing the last window\n  disconnects the session and keeps Heidrun running (Cmd+Q to quit).\n- Touch ID password storage (opt-in) for saved server credentials.\n\n### Chat & messaging\n- Public chat with a selectable transcript (drag any selection out\n  to Finder as a plain-text file). `hotline://`, `heidrun://`, and\n  `http(s)://` URLs are clickable in chat, private messages, and\n  news bodies — `hotline://` / `heidrun://` open a new connection\n  in-app, http(s) hands off to the default browser.\n- `/clear` slash command — wipes the local transcript without\n  disconnecting or affecting other clients (replaced with a single\n  system-trace line so the panel doesn't read as empty).\n- Private chats — create, invite, accept, leave, change subject.\n- Private messages with per-correspondent conversation threading.\n- Broadcast banner (server-wide messages).\n- Sound effects + system notifications for every event class, with\n  per-cue Settings toggles.\n\n### Files\n- Browse + sort with per-row Finder icons derived from each file's\n  HFS type / creator (installed-app associations honoured —\n  `.sit` shows the StuffIt icon if installed, `.psd` shows the\n  Photoshop icon, and so on).\n- Drag-from / drag-to Finder for single-file transfers.\n- Folder bulk transfers — download or upload an entire subtree\n  in one operation, with HFS type / creator preserved.\n- Mac resource forks round-trip end-to-end against Heidrun servers.\n  Downloads write the rsrc to the file's native macOS resource\n  fork (`..namedfork/rsrc`) so Finder, Get Info, and classic Mac\n  apps see the file correctly; uploads read it back the same way.\n  Negotiated via the `0xE002` Heidrun protocol extension and\n  degrades gracefully (data-fork-only) against non-Heidrun servers.\n- HFS type / creator codes stamped on uploads now come from each\n  file's `com.apple.FinderInfo` xattr — classic Mac files (the kind\n  that carry a real resource fork) keep their authentic codes\n  (`APPL` / `DTSL`, `TEXT` / `ttxt`, etc.) instead of falling back\n  to a generic `BINA` / `????` extension guess. The extension table\n  still resolves modern files whose FinderInfo is absent or empty.\n- Get Info on a remote file shows the resource-fork size alongside\n  the data-fork size whenever the server reports one — a quick way\n  to spot which files on a Heidrun server still carry a real rsrc\n  without round-tripping them first.\n- Replace / Resume / Cancel prompt when an upload collides with an\n  existing server file.\n- Partial-download resume via the project's own `.heidrunpart`\n  sidecar files (re-opens, asks before continuing).\n- Quick Look previews for selected files without downloading.\n\n### News\n- Plain bulletin-board news (read + post).\n- Threaded news (browse bundles + categories, read posts, post\n  top-level threads, reply with auto-derived \"Re: <parent title>\"\n  one level deep).\n- Per-post / per-thread / per-folder copy + export.\n\n### Appearance & accessibility\n- Three-step content density preset\n  (**Compact** · **Standard** · **Comfortable**) with a per-preset\n  body-size override (9–20pt fine-tuning) in\n  Settings → Appearance.\n- Light + Dark mode throughout (semantic system colours; no\n  hard-coded palette).\n- German + Japanese localizations alongside English.\n\n### Window chrome\n- Unified compact toolbar (icon-only) on host windows.\n- Toolbar auto-hides on hover in full-screen mode.\n- Sidebar wrapped in a GroupBox with a slightly wider default\n  column for a cleaner read. The host sidebar's feature picker is\n  an NSTableView for native row-height consistency with the\n  Appearance density preset.\n- Status bar shows the active login.\n- Connect-form titlebar matches the host window chrome; the\n  Heidrun glyph is rendered crisply at toolbar size.\n\n### Developer\n- Protocol Console window — wire-level transaction inspector\n  showing every TX in + out, with class-ID-aware reply correlation.\n  Off by default; enable in Settings → Developer.\n\n### Documentation\n- DMG ships with a `Documentation/` folder containing the README,\n  this changelog, `LICENSE` (GPL-2.0), `NOTICE`, and\n  `THIRD_PARTY_LICENSES`.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.0.0-664.dmg",
+     "size": 7873788,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.0.0/Heidrun-1.0.0-664.dmg",
+     "path": "heidrun/1.0.0/Heidrun-1.0.0-664.dmg",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

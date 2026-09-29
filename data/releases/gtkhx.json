@@ -1,0 +1,251 @@
+{
+ "id": "gtkhx",
+ "releases": [
+  {
+   "version": "v1.4.0",
+   "title": "1.4.0",
+   "date": "2026-09-26",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.4.0",
+   "notes": "- Video\r\n  - Video chat and screen sharing, on servers that support it\r\n  - A dockable Video panel shows everyone's camera and screen, plus your own preview\r\n  - Choose a camera in Settings → Voice\r\n  - Camera tiles keep the same order, by user, instead of shuffling between calls\r\n- Voice\r\n  - Fixed occasional audio problems after joining or rejoining voice\r\n- Themes and Icons\r\n  - Themes now color the whole window, not just the chat\r\n  - Richer chat colors, and each nickname keeps its own color\r\n  - New icons that match the desktop and follow the theme's colors\r\n  - The original pixel-art icons live on in the new Classic theme\r\n  - New Neon Doll theme\r\n  - Settings → General can keep the system's window colors around a themed chat\r\n- Files\r\n  - The file browser is now its own window, one per connection\r\n  - Clearer layout, with labeled Download and Upload buttons\r\n  - Right-click a file for Open, Preview, Get Info, Rename, Delete and more\r\n- User Interface\r\n  - Slimmer window chrome, so chat gets much more of the window\r\n  - The server banner and connection status now sit in the header bar\r\n  - The status bar is gone, and the toolbar is optional (off by default)\r\n  - Pane titles and action bars can be hidden\r\n  - Chat tabs stay hidden until there is a second conversation\r\n  - Settings opens with Ctrl+,\r\n- Hotline Protocol\r\n  - Fixed file transfers with Windows clients and servers\r\n- macOS\r\n  - GtkHx now asks for camera and microphone access\r\n  - Fixed a crash on macOS versions too old to run GtkHx\r\n- Code Modernization\r\n  - GtkHx now shares its Hotline protocol code with the hxd-ng server\r\n- Translations\r\n  - Translated the new strings\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "GtkHx-v1.4.0-macos-arm64.zip",
+     "size": 34536569,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.4.0/GtkHx-v1.4.0-macos-arm64.zip",
+     "path": "gtkhx/v1.4.0/GtkHx-v1.4.0-macos-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.4.0-macos-x86_64.zip",
+     "size": 36665364,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.4.0/GtkHx-v1.4.0-macos-x86_64.zip",
+     "path": "gtkhx/v1.4.0/GtkHx-v1.4.0-macos-x86_64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.4.0-win64.zip",
+     "size": 73810888,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.4.0/GtkHx-v1.4.0-win64.zip",
+     "path": "gtkhx/v1.4.0/GtkHx-v1.4.0-win64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.4.0.flatpak",
+     "size": 11497544,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.4.0/GtkHx-v1.4.0.flatpak",
+     "path": "gtkhx/v1.4.0/GtkHx-v1.4.0.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v1.3.2",
+   "title": "1.3.2",
+   "date": "2026-09-05",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.3.2",
+   "notes": "- Fixed issue with Linux Flatpak and bundled library paths\r\n- News Browser\r\n  - Fixed double load issue\r\n  - Fixed a bug that prevented users from creating a new folder\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "GtkHx-v1.3.2-macos-arm64.zip",
+     "size": 33482165,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.2/GtkHx-v1.3.2-macos-arm64.zip",
+     "path": "gtkhx/v1.3.2/GtkHx-v1.3.2-macos-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.3.2-macos-x86_64.zip",
+     "size": 35533961,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.2/GtkHx-v1.3.2-macos-x86_64.zip",
+     "path": "gtkhx/v1.3.2/GtkHx-v1.3.2-macos-x86_64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.3.2-win64.zip",
+     "size": 72737202,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.2/GtkHx-v1.3.2-win64.zip",
+     "path": "gtkhx/v1.3.2/GtkHx-v1.3.2-win64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.3.2.flatpak",
+     "size": 11420224,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.2/GtkHx-v1.3.2.flatpak",
+     "path": "gtkhx/v1.3.2/GtkHx-v1.3.2.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v1.3.1",
+   "title": "1.3.1",
+   "date": "2026-08-06",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.3.1",
+   "notes": "- Build\r\n  - Bundle fonts and translations for macOS and Windows packages\r\n- Connections\r\n  - Include some more servers for new users\r\n- User Interface\r\n  - Fix chat scroll bug\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "gtkhx-flatpak.zip",
+     "size": 11387840,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.1/gtkhx-flatpak.zip",
+     "path": "gtkhx/v1.3.1/gtkhx-flatpak.zip",
+     "mirrored": false
+    },
+    {
+     "name": "gtkhx-macos-macos-14.zip",
+     "size": 32889967,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.1/gtkhx-macos-macos-14.zip",
+     "path": "gtkhx/v1.3.1/gtkhx-macos-macos-14.zip",
+     "mirrored": false
+    },
+    {
+     "name": "gtkhx-macos-macos-15-intel.zip",
+     "size": 35215994,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.1/gtkhx-macos-macos-15-intel.zip",
+     "path": "gtkhx/v1.3.1/gtkhx-macos-macos-15-intel.zip",
+     "mirrored": false
+    },
+    {
+     "name": "gtkhx-windows.zip",
+     "size": 72114600,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.1/gtkhx-windows.zip",
+     "path": "gtkhx/v1.3.1/gtkhx-windows.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v1.3.0",
+   "title": "1.3.0",
+   "date": "2026-08-04",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.3.0",
+   "notes": "- Connections (formerly Bookmarks)\r\n  - Bookmarks are now Settings → Connections; the separate Bookmarks window is gone\r\n  - Each connection can override your nickname and icon for that server, or\r\n    inherit the defaults from Settings → Identity\r\n  - Bookmarks are now kept in a single TOML file\r\n  - Legacy bookmark files are imported if the TOML file does not exist\r\n  - Connections can be exported to legacy Hotline bookmark files\r\n  - Built-in bookmarks can now be deleted\r\n- Build\r\n  - GtkHx is now available for macOS and Windows\r\n- Code Modernization\r\n  - GtkHx is now mostly Rust code\r\n- Config\r\n  - The settings file (gtkhxrc) is now gtkhx.toml\r\n  - GtkHx will migrate the old gtkhxrc if one is present and no gtkhx.toml exists\r\n  - Fixed bugs in preferences along the way\r\n- Hotline Protocol\r\n  - Fixed old bug with resumable file transfers\r\n  - Ensure that multi-byte names > 32 bytes get truncated at a character boundary\r\n- Multiple Connections\r\n  - Users may now be connected to more than one server at a time, and switch between connections with tabs\r\n- Sound\r\n  - Replaced libcanberra with rodio for notification sound playback\r\n- Translations\r\n  - Updated existing translations\r\n  - Added Japanese translations\r\n- User Interface\r\n  - Button icons now default to their original size, rather than upscaled\r\n  - Brand new hxchat widget for Chat (replaces forked version of HexChat's xtext)\r\n    - Significantly better performance\r\n    - Markdown support (toggleable)\r\n    - Icon display next to speaker (toggleable)\r\n    - Speaker grouping, so <Nick> doesn't have to keep appearing on every consecutive line\r\n    - Right clicking on a speaker's name or icon will now pop up a \"user\" popup menu\r\n    - Chat history can be searched via Ctrl-F\r\n  - Ctrl-U now works to clear any input in the app\r\n  - [Enter] in the Connect dialog now connects\r\n  - Handle character conversion on user list and user info\r\n  - Closed panels/windows will not reopen on startup\r\n  - Docking a window will now highlight the pane that is being targeted\r\n  - Panel foreground state is now persisted",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "GtkHx-v1.3.0-macos-arm64.zip",
+     "size": 33045549,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.0/GtkHx-v1.3.0-macos-arm64.zip",
+     "path": "gtkhx/v1.3.0/GtkHx-v1.3.0-macos-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.3.0-macos-x86_64.zip",
+     "size": 35335112,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.0/GtkHx-v1.3.0-macos-x86_64.zip",
+     "path": "gtkhx/v1.3.0/GtkHx-v1.3.0-macos-x86_64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.3.0-win64.zip",
+     "size": 72673195,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.0/GtkHx-v1.3.0-win64.zip",
+     "path": "gtkhx/v1.3.0/GtkHx-v1.3.0-win64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.3.0.flatpak",
+     "size": 11381536,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.3.0/GtkHx-v1.3.0.flatpak",
+     "path": "gtkhx/v1.3.0/GtkHx-v1.3.0.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v1.2.2",
+   "title": "1.2.2",
+   "date": "2026-07-07",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.2.2",
+   "notes": "- Voice\r\n  - Voice activity detection for self\r\n  - Volume control slider for each individual\r\n  - Sounds for join / leave events\r\n  - Update to follow latest version of the voice chat spec\r\n- Code Modernization\r\n  - Parts of GtkHx's UI are now written in Rust\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "gtkhx.flatpak",
+     "size": 10733912,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.2.2/gtkhx.flatpak",
+     "path": "gtkhx/v1.2.2/gtkhx.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v1.2.1",
+   "title": "1.2.1",
+   "date": "2026-07-01",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.2.1",
+   "notes": "Small follow-up release following the big 1.2.0 release to address some bugs\r\n\r\n- User Interface\r\n  - Move Join Voice/Mute buttons to the User list\r\n- Bug Fixes\r\n  - Make sure Files browser resets to root directory between sessions\r\n  - Fix emoji picker related crash when closing private chat/message tabs\r\n  - Fix issue with GtkHx reporting task errors for ICON_GETLIST when unavailable\r\n  - Don't auto fetch 1.5+ News if server version is <150\r\n  - Fix Hotline protocol regression with large frames introduced in Rust hxnet migration\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "gtkhx.flatpak",
+     "size": 10251640,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.2.1/gtkhx.flatpak",
+     "path": "gtkhx/v1.2.1/gtkhx.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v1.2.0",
+   "title": "1.2.0",
+   "date": "2026-07-01",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.2.0",
+   "notes": "- User Interface\r\n  - GtkHx theme support\r\n  - Emoji shortcode support with typeahead completion\r\n  - Agreement text is now rendered in a monospace font\r\n  - Cleaner Settings dialog\r\n- Code Modernization\r\n  - GtkHx's networking code is now in Rust\r\n  - Address GTK+ 4 deprecations\r\n- Hotline Protocol\r\n  - GIF icon support\r\n- Bug Fixes\r\n  - Various voice chat fixes\r\n- Compatibility Fixes\r\n  - Support for glycin 1+ and 2+ loaders\r\n  - rustc dependency dropped to 1.8.5\r\n  - Voice chat and its dependencies are now optional\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "gtkhx.flatpak",
+     "size": 10247792,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.2.0/gtkhx.flatpak",
+     "path": "gtkhx/v1.2.0/gtkhx.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v1.1.0",
+   "title": "1.1.0",
+   "date": "2026-06-19",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.1.0",
+   "notes": "- Voice chat\r\n- Inline media\r\n- User Interface\r\n  - New multi-panel interface with support for custom layouts and undocking panels into their own windows so that users can still have the nostalgic multi-window experience if they prefer\r\n  - Dropped custom GtkHList in favor of GtkColumnView\r\n  - Results from different trackers are nested in their own result sets\r\n  - Added support for hotline:// links\r\n  - Made the News 1.5 browser handle links in the posts\r\n- Code Modernization\r\n  - Parts of GtkHx are being rewritten in Rust\r\n- Bug Fixes\r\n  - Handle Chat subjects with Mac Roman characters\r\n  - Fixed icons in Private Chat user list\r\n  - Fixed an issue where creating new user accounts was not working\r\n- Hotline Protocol\r\n  - Tracker v3 support\r\n  - Support for fetching tracker listings via TLS\r\n  - Dropped RC4 cipher support. RC4 is weak/insecure and should not be used.\r\n  - Handle servers that echo request opcode in TASK replies\r\n- Settings\r\n  - Dropped *(X|Y)POS config keys as GTK+ 4 does not support getting the window position\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "gtkhx.flatpak",
+     "size": 8649728,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.1.0/gtkhx.flatpak",
+     "path": "gtkhx/v1.1.0/gtkhx.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v1.0.0",
+   "title": "1.0.0",
+   "date": "2026-05-29",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.0.0",
+   "notes": "- General\r\n  - Tons of fixes, especially for modern systems / 64-bit architectures\r\n  - XDG-compliant config (~/.hx/ -> ~/.config/gtkhx/ and ~/.gtkhxrc -> ~/.config/gtkhx/gtkhxrc)\r\n  - Created GtkHx icon and .desktop file\r\n  - Admins can now send server broadcasts\r\n  - Updated icons.rsrc to include icons from HLC 1.9\r\n  - New machine-generated translations for French, German, Spanish, and Portuguese\r\n  - Debug logging support with HL protocol tracing\r\n  - SOCKS support is now available via the system's NetworkManager\r\n  - Flatpak package support\r\n  - Scrapped Plugin support for now\r\n  - Better file preview support (support common image types, PDF, source code, markdown)\r\n    - Optional libpoppler dep for PDF file previews\r\n    - Optional libgtksourceview dep for markdown / source code file previews\r\n    - Optional ImageMagick dep for QuickDraw PICT previews\r\n- Code Quality\r\n  - Unit tests\r\n  - Integration tests that run against mhxd and Janus instances\r\n  - Fixed all compilation warnings\r\n- Code Modernization\r\n  - GTK+ 1.2 -> GTK+ 4.x + libadwaita\r\n  - Rewrote threading/event model\r\n  - Use libgsound / libcanberra instead of executing binary to play sounds\r\n  - Networking code rewritten to use GSocketClient/GIOStream\r\n  - GtkHx now uses an event driven architecture\r\n  - Leveraged GLib data types\r\n  - Switch to meson for build system\r\n- User Interface\r\n  - Totally revamped Settings window\r\n  - Brand new News browser\r\n  - Brand new orthogonal file manager type Files browser\r\n  - Wide format icon support\r\n  - Pre-1.5 News now has a text search feature\r\n  - Tracker search case sensitivity can now be toggled in the Tracker window\r\n  - New Bookmark manager dialog allows for in-app management of Hotline bookmarks\r\n  - URLs in Chat / Message / Private Chat / News can now be right clicked\r\n  - Emoji picker next to Chat and Message input fields\r\n  - System notification support\r\n  - Systray support via libayatana-appindicator\r\n  - Prevent/block user actions that the server does not allow\r\n  - Server banner support (both URL, which pulls in libsoup, and native HTXF)\r\n  - Cleaner Task row design\r\n  - Light/Dark theme support\r\n- Hotline Protocol\r\n  - Better protocol support for all protocol versions\r\n  - Do not attempt to fetch News/Agreement if the user does not have permission\r\n  - PING support\r\n  - Fixed issue with file protocol list handling that prevented showing all contents of a directory\r\n  - Addressed issue with GtkHx not identifying client type with HOPE negotiation\r\n  - Support for ZSTD and LZ4 HOPE compression algorithms\r\n  - Support for CHACHA20-POLY1305 HOPE stream cipher\r\n  - Support for native UTF-8 extension\r\n  - Support for large file transfers (>4GB) extension\r\n  - Support for chat history extension\r\n  - Support for colored names extension\r\n  - Support for TLS encrypted connections",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "gtkhx.flatpak.gz",
+     "size": 7046649,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.0.0/gtkhx.flatpak.gz",
+     "path": "gtkhx/v1.0.0/gtkhx.flatpak.gz",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "id": "decline",
+ "releases": [
+  {
+   "version": "1.0-build-11",
+   "title": "decline 1.0 build 11",
+   "date": "2025-09-06",
+   "url": "https://github.com/dubsdotla/decline/releases/tag/1.0-build-11",
+   "notes": "- Added Notification preferences pane.\r\n- Added a command called \"/notify\" that allows you to trigger notifications with \"/notify text\".\r\n- Added chat input history which can be cycled through with the up and down arrow keys.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "declinebuild11.zip",
+     "size": 2793301,
+     "source_url": "https://github.com/dubsdotla/decline/releases/download/1.0-build-11/declinebuild11.zip",
+     "path": "decline/1.0-build-11/declinebuild11.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0-build-10",
+   "title": "decline 1.0 build 10",
+   "date": "2025-08-13",
+   "url": "https://github.com/dubsdotla/decline/releases/tag/1.0-build-10",
+   "notes": "- Fixed an issue where the server name could be appended to the window title multiple times when reconnecting to a server.\r\n- Added a new a custom notification system, that draws inspiration from Growl and Toast notifications and the like, that for now is limited to be using for broadcast messages, private messages and incremental news post updates.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "declinebuild10.zip",
+     "size": 2778860,
+     "source_url": "https://github.com/dubsdotla/decline/releases/download/1.0-build-10/declinebuild10.zip",
+     "path": "decline/1.0-build-10/declinebuild10.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0-build-9",
+   "title": "decline 1.0 build 9",
+   "date": "2025-07-30",
+   "url": "https://github.com/dubsdotla/decline/releases/tag/1.0-build-9",
+   "notes": "- Fixed issue where you couldn't Read News, Post News and Download FIles on some servers because not all servers send Transaction 354 which sends the user's available privileges, so now the user is given those three privileges by default.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "declinebuild9.zip",
+     "size": 2770265,
+     "source_url": "https://github.com/dubsdotla/decline/releases/download/1.0-build-9/declinebuild9.zip",
+     "path": "decline/1.0-build-9/declinebuild9.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0-build-8",
+   "title": "decline 1.0 build 8",
+   "date": "2025-07-24",
+   "url": "https://github.com/dubsdotla/decline/releases/tag/1.0-build-8",
+   "notes": "- Fixed an issue, inadvertently caused by one of the changes in the last build, which made all file and folder names in Files to appear \"blank\" 😅",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "declinebuild8.zip",
+     "size": 2770242,
+     "source_url": "https://github.com/dubsdotla/decline/releases/download/1.0-build-8/declinebuild8.zip",
+     "path": "decline/1.0-build-8/declinebuild8.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0-build-7",
+   "title": "decline 1.0 build 7",
+   "date": "2025-07-24",
+   "url": "https://github.com/dubsdotla/decline/releases/tag/1.0-build-7",
+   "notes": "- Fixed issue where assuming an agreement string was a UTF8 string could sometimes lead to a nil value and a crash.\r\n\r\n-  Fixed issue where NSShiftJISStringEncoding was not being detected which lead to the wrong characters being displayed in the agreement, filenames, etc.\r\n\r\n- Fixed issue where a timeout connecting to a server could lead to a crash.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "declinebuild7.zip",
+     "size": 2770251,
+     "source_url": "https://github.com/dubsdotla/decline/releases/download/1.0-build-7/declinebuild7.zip",
+     "path": "decline/1.0-build-7/declinebuild7.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0-build-6",
+   "title": "decline 1.0 build 6",
+   "date": "2025-07-23",
+   "url": "https://github.com/dubsdotla/decline/releases/tag/1.0-build-6",
+   "notes": "- Added a bit more formal bookmark support, your login and password information for a server can now be saved/loaded using the keychain. \r\n\r\n- Added support for the \"hotline://\" URL protocol which allows you to automatically connect to a server, as a bonus this will also work in combination with your bookmarks so can automatically connect with a saved login/password.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "declinebuild6.zip",
+     "size": 2769451,
+     "source_url": "https://github.com/dubsdotla/decline/releases/download/1.0-build-6/declinebuild6.zip",
+     "path": "decline/1.0-build-6/declinebuild6.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0-build-5",
+   "title": "decline 1.0 build 5",
+   "date": "2025-07-19",
+   "url": "https://github.com/dubsdotla/decline/releases/tag/1.0-build-5",
+   "notes": "- Fixed issue where the client instance wasn't getting properly removed when clicking the close button of the New Connection window\r\n\r\n- Fixed issue with new news posts with urls where the urls weren't being displayed with the correct formatting and weren't clickable",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "declinebuild5.zip",
+     "size": 2762377,
+     "source_url": "https://github.com/dubsdotla/decline/releases/download/1.0-build-5/declinebuild5.zip",
+     "path": "decline/1.0-build-5/declinebuild5.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0-build-4",
+   "title": "decline 1.0 build 4",
+   "date": "2025-07-19",
+   "url": "https://github.com/dubsdotla/decline/releases/tag/1.0-build-4",
+   "notes": "- Further refinement of functionality for reconnecting when the connection has been dropped. There are now 5 initial reconnection attempts and if unsuccessful you will be be prompted with a failure message and asked if you want to try again.\r\n\r\n- Fixed issue where clicking the chat textview would incorrectly cause the chat input to be sent. Chat is now correctly sent in two cases, when clicking Send and when hitting the return key.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "declinebuild4.zip",
+     "size": 2759756,
+     "source_url": "https://github.com/dubsdotla/decline/releases/download/1.0-build-4/declinebuild4.zip",
+     "path": "decline/1.0-build-4/declinebuild4.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0-build-3",
+   "title": "decline 1.0 build 3",
+   "date": "2025-07-18",
+   "url": "https://github.com/dubsdotla/decline/releases/tag/1.0-build-3",
+   "notes": "- Slightly better handling of connection failure and reconnection when connection drops. \r\n- Currently only tries to reconnect once.\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "declinebuild3.zip",
+     "size": 2759163,
+     "source_url": "https://github.com/dubsdotla/decline/releases/download/1.0-build-3/declinebuild3.zip",
+     "path": "decline/1.0-build-3/declinebuild3.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0-build-2",
+   "title": "decline 1.0 build 2",
+   "date": "2025-07-15",
+   "url": "https://github.com/dubsdotla/decline/releases/tag/1.0-build-2",
+   "notes": "This is the first official public release build of decline on GitHub!",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "declinebuild2.zip",
+     "size": 2758037,
+     "source_url": "https://github.com/dubsdotla/decline/releases/download/1.0-build-2/declinebuild2.zip",
+     "path": "decline/1.0-build-2/declinebuild2.zip",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

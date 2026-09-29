@@ -1,0 +1,11 @@
+# Site settings.
+
+title = "VivaHX! - Hotline HQ"
+url = "http://vivahx.com"
+
+# Where mirrored release files are served from, over plain HTTP so old Macs can download them.
+# Leave empty until the DreamObjects bucket is set up; until then downloads link to where each
+# file came from.
+files_base_url = ""
+
+posts_on_front_page = 10

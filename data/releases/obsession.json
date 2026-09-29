@@ -1,0 +1,127 @@
+{
+ "id": "obsession",
+ "releases": [
+  {
+   "version": "v109.05-alpha",
+   "title": "Obsession 109.05 Alpha",
+   "date": "2024-10-09",
+   "url": "https://github.com/tjohnman/Obsession/releases/tag/v109.05-alpha",
+   "notes": "## What's Changed\r\n* Increase Label Width for Request Account Dialog by @zquestz in https://github.com/tjohnman/Obsession/pull/49\r\n* Add Arch Linux install to README.md by @zquestz in https://github.com/tjohnman/Obsession/pull/48\r\n* Some small bug fixes by @tjohnman in https://github.com/tjohnman/Obsession/pull/51\r\n\r\n## New Contributors\r\n* @zquestz made their first contribution in https://github.com/tjohnman/Obsession/pull/49\r\n\r\n**Full Changelog**: https://github.com/tjohnman/Obsession/compare/v109.04-alpha...v109.05-alpha",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "obsession-109.05-alpha-qt4-windows.zip",
+     "size": 28195714,
+     "source_url": "https://github.com/tjohnman/Obsession/releases/download/v109.05-alpha/obsession-109.05-alpha-qt4-windows.zip",
+     "path": "obsession/v109.05-alpha/obsession-109.05-alpha-qt4-windows.zip",
+     "mirrored": false
+    },
+    {
+     "name": "obsession-109.05-alpha-qt6-windows.zip",
+     "size": 69724131,
+     "source_url": "https://github.com/tjohnman/Obsession/releases/download/v109.05-alpha/obsession-109.05-alpha-qt6-windows.zip",
+     "path": "obsession/v109.05-alpha/obsession-109.05-alpha-qt6-windows.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v109.04-alpha",
+   "title": "Obsession 109.04 Alpha",
+   "date": "2024-07-23",
+   "url": "https://github.com/tjohnman/Obsession/releases/tag/v109.04-alpha",
+   "notes": "**Full Changelog**: https://github.com/tjohnman/Obsession/compare/v109.03-apha...v109.04-alpha",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "obsession-109.04-alpha-qt4-windows.zip",
+     "size": 28087776,
+     "source_url": "https://github.com/tjohnman/Obsession/releases/download/v109.04-alpha/obsession-109.04-alpha-qt4-windows.zip",
+     "path": "obsession/v109.04-alpha/obsession-109.04-alpha-qt4-windows.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v109.03-apha",
+   "title": "Obsession 109.03 Alpha",
+   "date": "2024-07-19",
+   "url": "https://github.com/tjohnman/Obsession/releases/tag/v109.03-apha",
+   "notes": "Some UX improvements and text encoding bug fixes.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "obsession-109.03-alpha-qt4-windows.zip",
+     "size": 27051835,
+     "source_url": "https://github.com/tjohnman/Obsession/releases/download/v109.03-apha/obsession-109.03-alpha-qt4-windows.zip",
+     "path": "obsession/v109.03-apha/obsession-109.03-alpha-qt4-windows.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v109.02-alpha",
+   "title": "Obsession 109.02-alpha",
+   "date": "2022-11-20",
+   "url": "https://github.com/tjohnman/Obsession/releases/tag/v109.02-alpha",
+   "notes": "",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Obsession.macOS.109.02-alpha.dmg",
+     "size": 29928472,
+     "source_url": "https://github.com/tjohnman/Obsession/releases/download/v109.02-alpha/Obsession.macOS.109.02-alpha.dmg",
+     "path": "obsession/v109.02-alpha/Obsession.macOS.109.02-alpha.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Obsession.Windows.109.02-alpha.MSVC2015.x64.zip",
+     "size": 25701636,
+     "source_url": "https://github.com/tjohnman/Obsession/releases/download/v109.02-alpha/Obsession.Windows.109.02-alpha.MSVC2015.x64.zip",
+     "path": "obsession/v109.02-alpha/Obsession.Windows.109.02-alpha.MSVC2015.x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v109.01-alpha",
+   "title": "Obsession 109.01-alpha for macOS",
+   "date": "2020-08-08",
+   "url": "https://github.com/tjohnman/Obsession/releases/tag/v109.01-alpha",
+   "notes": "",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Obsession.109.01.alpha.zip",
+     "size": 41585508,
+     "source_url": "https://github.com/tjohnman/Obsession/releases/download/v109.01-alpha/Obsession.109.01.alpha.zip",
+     "path": "obsession/v109.01-alpha/Obsession.109.01.alpha.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v107.00-alpha",
+   "title": "Obsession 107.00-alpha for Windows",
+   "date": "2020-08-08",
+   "url": "https://github.com/tjohnman/Obsession/releases/tag/v107.00-alpha",
+   "notes": "",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Obsession.107.alpha.Windows.zip",
+     "size": 14124424,
+     "source_url": "https://github.com/tjohnman/Obsession/releases/download/v107.00-alpha/Obsession.107.alpha.Windows.zip",
+     "path": "obsession/v107.00-alpha/Obsession.107.alpha.Windows.zip",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "id": "lemoniscate",
+ "releases": [
+  {
+   "version": "v0.1.7",
+   "title": "v0.1.7 - Chat history",
+   "date": "2026-04-17",
+   "url": "https://github.com/bourbonicfisky/lemoniscate/releases/tag/v0.1.7",
+   "notes": "# Lemoniscate v0.1.7 Release Notes\r\n\r\nPersistent chat history. Your server now remembers what was said while clients were offline, and modern clients can page back through it. Storage is JSONL-based with no database dependency -- it works on Tiger PPC the same as modern macOS and Linux.\r\n\r\nAs writing this the only server that has chat history is Apple Media Archive as it's the only hotline server I run but hopefully you'll be the next!\r\n\r\nThis pairs well with the HOPE AEAD encryption from 0.1.6: if you have an encryption key configured, message bodies are encrypted at rest using ChaCha20-Poly1305 while metadata stays plaintext so the index and startup scan still work.\r\n\r\n---\r\n\r\n## Chat History\r\n\r\n- **Server-side chat persistence** using append-only JSONL files under `<FileRoot>/ChatHistory/`. One file per channel (`channel-0.jsonl` for public chat, `channel-N.jsonl` for private chat rooms). No database, no external dependencies.\r\n- **Cursor-based pagination** via `TranGetChatHistory` (transaction 700). Clients query with `before`/`after` cursors and a `limit` parameter. The server returns matching entries plus a `has_more` flag for paging. Queries are O(log n) via an in-memory binary-search index built at startup.\r\n- **Capability negotiation** at login. The server advertises `HL_CAPABILITY_CHAT_HISTORY` (bit 4) so clients know history is available. Navigator v0.2.5+ renders the backlog automatically.\r\n- **Legacy client replay.** When `ChatHistoryLegacyBroadcast` is enabled, the server replays the last N messages (default 30) as regular chat broadcasts on login. Clients without history support still see what they missed -- it just shows up as normal chat lines when they connect.\r\n- **Optional at-rest encryption.** Point `ChatHistory.EncryptionKey` at a 32-byte key file and message bodies are sealed with ChaCha20-Poly1305 before being written to disk. The nonce, ciphertext, and tag are base64-encoded inline. Metadata (timestamp, nick, flags, icon) stays plaintext so startup scanning, pruning, and grep still work.\r\n- **Crash-safe storage.** On startup, each channel file is scanned line-by-line. If the last line is truncated (power loss, SIGKILL mid-write), the trailing garbage is removed with `ftruncate()` and the index is rebuilt cleanly.\r\n- **Configurable retention.** Set `ChatHistoryMaxMessages` (default 10,000) and/or `ChatHistoryMaxDays` (0 = unlimited) to control how much history is kept. Pruning runs at startup and periodically.\r\n- **Per-connection rate limiting** on history queries using a token-bucket algorithm. Default: 20-token capacity refilling at 10/sec. Prevents a client from hammering the history endpoint.\r\n- **Sign-on / sign-off logging.** When `ChatHistoryLogJoins` is enabled (default off), user connections and disconnections are recorded as system messages in the history stream. Renderers display these as system events, not chat lines.\r\n- **Per-channel support.** Public chat and private chat rooms each get their own history file and index. Private chats (those with a `FieldChatID`) are persisted separately.\r\n- **Permission gating.** `ACCESS_READ_CHAT_HISTORY` (bit 56) controls who can query history, falling back to `ACCESS_READ_CHAT` (bit 9) when unset.\r\n- **Periodic fsync.** The server flushes chat history to disk every 60 seconds via the existing idle-check timer, balancing durability against write overhead.\r\n\r\n## GUI\r\n\r\n- New **Chat History** disclosure section in Settings with controls for:\r\n  - Enable/disable\r\n  - Max messages and max days retention\r\n  - Legacy broadcast replay (on/off + message count)\r\n  - Log joins/parts\r\n- All settings persist to both plist (GUI) and YAML (CLI) config formats.\r\n\r\n## Config\r\n\r\nNew YAML keys under the `ChatHistory` mapping:\r\n\r\n```yaml\r\nChatHistory:\r\n  Enabled: true\r\n  MaxMessages: 10000\r\n  MaxDays: 0\r\n  LegacyBroadcast: false\r\n  LegacyCount: 30\r\n  EncryptionKey: \"\"\r\n  RateCapacity: 20\r\n  RateRefillPerSec: 10\r\n  LogJoins: false\r\n```\r\n\r\nEquivalent plist keys: `ChatHistoryEnabled`, `ChatHistoryMaxMessages`, `ChatHistoryMaxDays`, `ChatHistoryLegacyBroadcast`, `ChatHistoryLegacyCount`, `ChatHistoryRateCapacity`, `ChatHistoryRateRefillPerSec`, `ChatHistoryLogJoins`.\r\n\r\n## Build\r\n\r\n- `chat_history.c` and `chat_history.h` added to the source tree.\r\n- `test/test_chat_history.c` with 11 tests covering pagination, crash recovery, tombstone semantics, pruning, encryption round-trip, and rate-limiter math.\r\n- Handler table size bumped to 1024 to accommodate transaction code 700.\r\n- Makefile dependency tracking improved with `-MMD -MP` on the modern branch (PPC branch uses manual rebuilds).\r\n\r\n## Known Issues\r\n\r\n- Chat history is not replicated or synced between servers. It's local to the machine running Lemoniscate.\r\n- The at-rest encryption key must be managed manually (generated, backed up, and referenced in config). There is no key rotation mechanism.\r\n- Legacy broadcast replay sends messages as regular chat, so there's no visual distinction between replayed history and live chat on older clients.\r\n- \r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Lemoniscate-0.1.7-macOS-UB.dmg",
+     "size": 3742979,
+     "source_url": "https://github.com/bourbonicfisky/lemoniscate/releases/download/v0.1.7/Lemoniscate-0.1.7-macOS-UB.dmg",
+     "path": "lemoniscate/v0.1.7/Lemoniscate-0.1.7-macOS-UB.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "lemoniscate-linux-x86_64-0.1.7.zip",
+     "size": 118618,
+     "source_url": "https://github.com/bourbonicfisky/lemoniscate/releases/download/v0.1.7/lemoniscate-linux-x86_64-0.1.7.zip",
+     "path": "lemoniscate/v0.1.7/lemoniscate-linux-x86_64-0.1.7.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Lemoniscate-OSX-Intel-v0.1.7-hotfix.zip",
+     "size": 355032,
+     "source_url": "https://github.com/bourbonicfisky/lemoniscate/releases/download/v0.1.7/Lemoniscate-OSX-Intel-v0.1.7-hotfix.zip",
+     "path": "lemoniscate/v0.1.7/Lemoniscate-OSX-Intel-v0.1.7-hotfix.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Lemoniscate-OSX-PPC-v0.1.7-hotfix.zip",
+     "size": 339202,
+     "source_url": "https://github.com/bourbonicfisky/lemoniscate/releases/download/v0.1.7/Lemoniscate-OSX-PPC-v0.1.7-hotfix.zip",
+     "path": "lemoniscate/v0.1.7/Lemoniscate-OSX-PPC-v0.1.7-hotfix.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.3",
+   "title": "v0.1.3 - Bugfixes",
+   "date": "2026-03-22",
+   "url": "https://github.com/bourbonicfisky/lemoniscate/releases/tag/v0.1.3",
+   "notes": "# A new PowerPC app arrives!\r\n\r\nLemoniscate is based off of MorbiusAdmin (A GUI wrapper for Morbius) but isn't a port or fork as it's entirely a rewrite top-to-bottom in C and Obj-C for the GUI. This means it's tiny, right now only about 560 kB decompressed. It uses generally under 25 MB of ram in limited testing. Roughly 100k is the icon.\r\n\r\nIt's a (almost) fully functioning Hotline Server for OS X 10.4 and OS X 10.5 and I'm sure the C source code will be useful for anyone looking for C ports of Hotline.  \r\n\r\nSans TLS, this has full 1.9 protocol coverage!\r\n\r\n# A New x86 app arrives!\r\n\r\nAlso I'm now including an experimental 10.11-Current macOS build.... Ironically the icon file is about 5x larger than the app itself. \r\n\r\n## v0.1.3 changes\r\n\r\n- Fix path traversal in folder uploads, register missing handlers\r\n\r\n# Current features \r\n\r\n## Chat & Messaging\r\n\r\n- Public chat room with all connected users\r\n- Private chat rooms — create, invite users, set topics\r\n- Instant messages (private messages between users)\r\n- Auto-reply when a user is away or idle\r\n- /me action messages\r\n- Admin broadcast messages to all users\r\n\r\n## User Management\r\n\r\n- User accounts with login and password (salted SHA-1 hashed)\r\n- Guest access (no login required)\r\n- 41 individual permission bits per account\r\n- Admin account editor — create, modify, rename, and delete accounts\r\n- Batch account editing (v1.5+ multi-user editor)\r\n- Kick/disconnect users (with optional message)\r\n- Protected accounts that can't be disconnected\r\n\r\n## File Sharing\r\n\r\n- Browse server files and folders\r\n- Download files with progress tracking\r\n- Upload files to the server\r\n- Download entire folders (recursive)\r\n- Upload entire folders (recursive)\r\n- Resume interrupted downloads\r\n- File info — type, creator, size, dates, comments\r\n- Rename, move, and delete files and folders\r\n- Create new folders\r\n- Create file aliases (symlinks)\r\n- 70+ file type mappings for correct Mac type/creator codes\r\n\r\n## News & Message Board\r\n\r\n- Flat message board (classic Hotline \"News\")\r\n- Threaded news with categories and articles\r\n- Create and delete news categories\r\n- Post, read, and delete articles with threading\r\n- News data persists across server restarts\r\n\r\n## Server Administration\r\n\r\n- GUI admin application (Cocoa, native Tiger look)\r\n- Setup wizard for first-time configuration\r\n- macOS plist configuration (native format)\r\n- YAML fallback for compatibility\r\n- Server agreement displayed on login\r\n- Server banner image\r\n- Default banner bundled with the app\r\n- Start, stop, and restart from the GUI\r\n- Live server logs in the admin interface\r\n- Log file saved to Application Support\r\n\r\n## Networking\r\n\r\n- Hotline protocol on port 5500 (configurable)\r\n- File transfers on port 5501\r\n- Bonjour/mDNS for local network discovery\r\n- Tracker registration (UDP, periodic with live user count)\r\n- Idle/away detection (5 minutes, auto-broadcasts status)\r\n- Per-IP rate limiting\r\n- Ban list (IP addresses and usernames)\r\n\r\n## Access Control\r\n\r\nGranular per-account permissions including:\r\n\r\n- Download, upload, delete, rename, and move files\r\n- Create folders and file aliases\r\n- Read and send chat\r\n- Create and manage private chat rooms\r\n- Read, post, and delete news articles\r\n- Create and delete news categories\r\n- View and modify user accounts\r\n- Disconnect other users\r\n- Send broadcast messages\r\n- Upload location restrictions (Uploads/Drop Box only)\r\n- Drop box folder visibility control\r\n\r\n## Compatibility\r\n\r\n- Runs on Mac OS X 10.4 Tiger (PowerPC)\r\n- Works with Hotline Navigator, the mierau Swift client, and classic Hotline clients\r\n- FILP file transfer format with INFO and DATA forks\r\n- Hotline 1.8+ protocol (version 190)\r\n- CLI server binary for headless operation\r\n- Mobius-compatible account and news file formats\r\n\r\n# The more interesting stuff\r\n\r\n## Planned features\r\n- Right clicking of connected users to ban/kick\r\n- Live reloading of Board / Threaded News on post\r\n\r\n## Possible Features \r\n- End-to-end encryption\r\n- TLS?\r\n\r\n## Known Bugs\r\n- Status of downloads doesn't show live updates\r\n\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Lemoniscate.0.1.3-PPC-OSX.zip",
+     "size": 300019,
+     "source_url": "https://github.com/bourbonicfisky/lemoniscate/releases/download/v0.1.3/Lemoniscate.0.1.3-PPC-OSX.zip",
+     "path": "lemoniscate/v0.1.3/Lemoniscate.0.1.3-PPC-OSX.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Lemoniscate.0.1.3-x86-macOS.dmg",
+     "size": 3173383,
+     "source_url": "https://github.com/bourbonicfisky/lemoniscate/releases/download/v0.1.3/Lemoniscate.0.1.3-x86-macOS.dmg",
+     "path": "lemoniscate/v0.1.3/Lemoniscate.0.1.3-x86-macOS.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.2",
+   "title": "v0.1.2 - Actually getting good",
+   "date": "2026-03-21",
+   "url": "https://github.com/bourbonicfisky/lemoniscate/releases/tag/v0.1.2",
+   "notes": "# A new PowerPC app arrives!\r\n\r\nLemoniscate is based off of MorbiusAdmin (A GUI wrapper for Morbius) but isn't a port or fork as it's entirely a rewrite top-to-bottom in C and Obj-C for the GUI. This means it's tiny, right now only about 560 kB decompressed. It uses generally under 25 MB of ram in limited testing. Roughly 100k is the icon.\r\n\r\nIt's a (almost) fully functioning Hotline Server for OS X 10.4 and OS X 10.5 and I'm sure the C source code will be useful for anyone looking for C ports of Hotline.  \r\n\r\n# A New x86 app arrives!\r\n\r\nAlso I'm now including an experimental 10.11-Current macOS build.... Ironically the icon file is larger than the app itself. See v0.1.1 for the that\r\n\r\n## v0.1.2 changes\r\n\r\n- Fixed Double menus in drop for Lemoniscate\r\n- Fixed Scroll bars appear even when one item or zero items on several panes\r\n- Fixed Icon is blank when tabbing\r\n- Made the about much less horrible\r\n- old.hotlinenavigator.com now is the homepage as it is compatible \r\n\r\n# Current features \r\n\r\n## Chat & Messaging\r\n\r\n- Public chat room with all connected users\r\n- Private chat rooms — create, invite users, set topics\r\n- Instant messages (private messages between users)\r\n- Auto-reply when a user is away or idle\r\n- /me action messages\r\n- Admin broadcast messages to all users\r\n\r\n## User Management\r\n\r\n- User accounts with login and password (salted SHA-1 hashed)\r\n- Guest access (no login required)\r\n- 41 individual permission bits per account\r\n- Admin account editor — create, modify, rename, and delete accounts\r\n- Batch account editing (v1.5+ multi-user editor)\r\n- Kick/disconnect users (with optional message)\r\n- Protected accounts that can't be disconnected\r\n\r\n## File Sharing\r\n\r\n- Browse server files and folders\r\n- Download files with progress tracking\r\n- Upload files to the server\r\n- Download entire folders (recursive)\r\n- Upload entire folders (recursive)\r\n- Resume interrupted downloads\r\n- File info — type, creator, size, dates, comments\r\n- Rename, move, and delete files and folders\r\n- Create new folders\r\n- Create file aliases (symlinks)\r\n- 70+ file type mappings for correct Mac type/creator codes\r\n\r\n## News & Message Board\r\n\r\n- Flat message board (classic Hotline \"News\")\r\n- Threaded news with categories and articles\r\n- Create and delete news categories\r\n- Post, read, and delete articles with threading\r\n- News data persists across server restarts\r\n\r\n## Server Administration\r\n\r\n- GUI admin application (Cocoa, native Tiger look)\r\n- Setup wizard for first-time configuration\r\n- macOS plist configuration (native format)\r\n- YAML fallback for compatibility\r\n- Server agreement displayed on login\r\n- Server banner image\r\n- Default banner bundled with the app\r\n- Start, stop, and restart from the GUI\r\n- Live server logs in the admin interface\r\n- Log file saved to Application Support\r\n\r\n## Networking\r\n\r\n- Hotline protocol on port 5500 (configurable)\r\n- File transfers on port 5501\r\n- Bonjour/mDNS for local network discovery\r\n- Tracker registration (UDP, periodic with live user count)\r\n- Idle/away detection (5 minutes, auto-broadcasts status)\r\n- Per-IP rate limiting\r\n- Ban list (IP addresses and usernames)\r\n\r\n## Access Control\r\n\r\nGranular per-account permissions including:\r\n\r\n- Download, upload, delete, rename, and move files\r\n- Create folders and file aliases\r\n- Read and send chat\r\n- Create and manage private chat rooms\r\n- Read, post, and delete news articles\r\n- Create and delete news categories\r\n- View and modify user accounts\r\n- Disconnect other users\r\n- Send broadcast messages\r\n- Upload location restrictions (Uploads/Drop Box only)\r\n- Drop box folder visibility control\r\n\r\n## Compatibility\r\n\r\n- Runs on Mac OS X 10.4 Tiger (PowerPC)\r\n- Works with Hotline Navigator, the mierau Swift client, and classic Hotline clients\r\n- FILP file transfer format with INFO and DATA forks\r\n- Hotline 1.8+ protocol (version 190)\r\n- CLI server binary for headless operation\r\n- Mobius-compatible account and news file formats\r\n\r\n# The more interesting stuff\r\n\r\n## Planned features\r\n- Right clicking of connected users to ban/kick\r\n- Live reloading of Board / Threaded News on post\r\n- Checking the size of banners to make sure they are compatible\r\n\r\n## Possible Features \r\n- End-to-end encryption\r\n- TLS?\r\n\r\n## Known Bugs\r\n- Status of downloads doesn't show live updates\r\n\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Lemoniscate.0.1.2.zip",
+     "size": 298257,
+     "source_url": "https://github.com/bourbonicfisky/lemoniscate/releases/download/v0.1.2/Lemoniscate.0.1.2.zip",
+     "path": "lemoniscate/v0.1.2/Lemoniscate.0.1.2.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.1",
+   "title": "v0.1.1 - Minor improvements",
+   "date": "2026-03-20",
+   "url": "https://github.com/bourbonicfisky/lemoniscate/releases/tag/v0.1.1",
+   "notes": "# A new PowerPC app arrives!\r\n\r\nLemoniscate is based off of MorbiusAdmin (A GUI wrapper for Morbius) but isn't a port or fork as it's entirely a rewrite top-to-bottom in C and Obj-C for the GUI. This means it's tiny, right now only about 440k decompressed. It uses generally under 25 MB of ram in limited testing.\r\n\r\nIt's a (almost) fully functioning Hotline Server for OS X 10.4 and OS X 10.5 and I'm sure the C source code will be useful for anyone looking for C ports of Hotline.  \r\n\r\n# A New x86 app arrives!\r\n\r\nAlso I'm now including an experimental 10.11-Current macOS build.... Ironically the icon file is larger than the app itself.\r\n\r\n## v0.1.1 changes\r\n\r\nTiger compatibility may have not worked since I was building on 10.5. This version has fallbacks for Tiger. Trackers now register and should work!\r\n\r\n# Current features \r\n\r\n## Chat & Messaging\r\n\r\n- Public chat room with all connected users\r\n- Private chat rooms — create, invite users, set topics\r\n- Instant messages (private messages between users)\r\n- Auto-reply when a user is away or idle\r\n- /me action messages\r\n- Admin broadcast messages to all users\r\n\r\n## User Management\r\n\r\n- User accounts with login and password (salted SHA-1 hashed)\r\n- Guest access (no login required)\r\n- 41 individual permission bits per account\r\n- Admin account editor — create, modify, rename, and delete accounts\r\n- Batch account editing (v1.5+ multi-user editor)\r\n- Kick/disconnect users (with optional message)\r\n- Protected accounts that can't be disconnected\r\n\r\n## File Sharing\r\n\r\n- Browse server files and folders\r\n- Download files with progress tracking\r\n- Upload files to the server\r\n- Download entire folders (recursive)\r\n- Upload entire folders (recursive)\r\n- Resume interrupted downloads\r\n- File info — type, creator, size, dates, comments\r\n- Rename, move, and delete files and folders\r\n- Create new folders\r\n- Create file aliases (symlinks)\r\n- 70+ file type mappings for correct Mac type/creator codes\r\n\r\n## News & Message Board\r\n\r\n- Flat message board (classic Hotline \"News\")\r\n- Threaded news with categories and articles\r\n- Create and delete news categories\r\n- Post, read, and delete articles with threading\r\n- News data persists across server restarts\r\n\r\n## Server Administration\r\n\r\n- GUI admin application (Cocoa, native Tiger look)\r\n- Setup wizard for first-time configuration\r\n- macOS plist configuration (native format)\r\n- YAML fallback for compatibility\r\n- Server agreement displayed on login\r\n- Server banner image\r\n- Default banner bundled with the app\r\n- Start, stop, and restart from the GUI\r\n- Live server logs in the admin interface\r\n- Log file saved to Application Support\r\n\r\n## Networking\r\n\r\n- Hotline protocol on port 5500 (configurable)\r\n- File transfers on port 5501\r\n- Bonjour/mDNS for local network discovery\r\n- Tracker registration (UDP, periodic with live user count)\r\n- Idle/away detection (5 minutes, auto-broadcasts status)\r\n- Per-IP rate limiting\r\n- Ban list (IP addresses and usernames)\r\n\r\n## Access Control\r\n\r\nGranular per-account permissions including:\r\n\r\n- Download, upload, delete, rename, and move files\r\n- Create folders and file aliases\r\n- Read and send chat\r\n- Create and manage private chat rooms\r\n- Read, post, and delete news articles\r\n- Create and delete news categories\r\n- View and modify user accounts\r\n- Disconnect other users\r\n- Send broadcast messages\r\n- Upload location restrictions (Uploads/Drop Box only)\r\n- Drop box folder visibility control\r\n\r\n## Compatibility\r\n\r\n- Runs on Mac OS X 10.4 Tiger (PowerPC)\r\n- Works with Hotline Navigator, the mierau Swift client, and classic Hotline clients\r\n- FILP file transfer format with INFO and DATA forks\r\n- Hotline 1.8+ protocol (version 190)\r\n- CLI server binary for headless operation\r\n- Mobius-compatible account and news file formats\r\n\r\n# The more interesting stuff\r\n\r\n## Planned features\r\n- Right clicking of connected users to ban/kick\r\n- Live reloading of Board / Threaded News on post\r\n- Checking the size of banners to make sure they are compatible\r\n\r\n## Possible Features \r\n- End-to-end encryption\r\n- TLS?\r\n\r\n## Known Bugs\r\n- Double menus in drop for Lemoniscate\r\n- Scroll bars appear even when one item or zero items on several panes\r\n- Icon is blank when tabbing\r\n- About dialog is pretty bad\r\n- Status of downloads doesn't show live updates\r\n\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Lemoniscate-0.1.1.zip",
+     "size": 203430,
+     "source_url": "https://github.com/bourbonicfisky/lemoniscate/releases/download/v0.1.1/Lemoniscate-0.1.1.zip",
+     "path": "lemoniscate/v0.1.1/Lemoniscate-0.1.1.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Lemoniscate.dmg",
+     "size": 3171412,
+     "source_url": "https://github.com/bourbonicfisky/lemoniscate/releases/download/v0.1.1/Lemoniscate.dmg",
+     "path": "lemoniscate/v0.1.1/Lemoniscate.dmg",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

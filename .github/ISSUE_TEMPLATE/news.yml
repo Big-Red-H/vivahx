@@ -1,0 +1,30 @@
+name: News post
+description: Write a news post for VivaHX. It goes up when a maintainer adds the "publish" label.
+title: "News: "
+labels: ["news"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The issue's title becomes the post's title (without the "News:" in front).
+        A maintainer reads it over, then adds the **publish** label, and it's on the site a minute later.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - General News
+        - Clients
+        - Servers
+        - Trackers
+        - Bots
+        - Misc
+    validations:
+      required: true
+  - type: textarea
+    id: post
+    attributes:
+      label: Post
+      description: "Markdown works: **bold**, *italic*, [a link](http://example.com), lists. Images aren't shown."
+    validations:
+      required: true

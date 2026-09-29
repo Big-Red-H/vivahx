@@ -1,0 +1,1279 @@
+{
+ "id": "hotline-navigator",
+ "releases": [
+  {
+   "version": "v0.3.0",
+   "title": "v0.3.0 - Resumable Transfers, Modern Trackers, and Custom Avatars",
+   "date": "2026-09-05",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.3.0",
+   "notes": "# v0.3.0\n\nThis release fills in a substantial part of Navigator’s Hotline protocol support: interrupted transfers can resume, entire folders can be transferred, modern trackers are supported, and compatible servers can display custom GIF avatars.\n\nText handling also gets a deeper cleanup. Navigator now negotiates UTF-8 consistently across live chat, history, news, and file names, while keeping MacRoman compatibility with classic servers. Private conversations gain media attachments, file sizes and dates are handled more accurately, and saved passwords move into encrypted storage.\n\n## New Features\n\n- **Resumable file transfers** — Interrupted downloads retain partial data and can resume when the remote file still matches. Uploads support classic resume offsets and modern partial-file verification, restarting when a safe resume is unavailable.\n- **Folder transfers** — Download folders from the file browser or use **Upload Folder** on desktop. Nested and empty folders are supported, with checks that keep received paths inside the destination folder.\n- **Modern trackers and server discovery** — Trackers support v1, v2, and v3, including authenticated listings and optional certificate-validated TLS. Server bookmark information can display advertised ports, transports, and features.\n- **Custom GIF avatars** — Set or clear an avatar on compatible servers. Avatars appear in user lists, user details, and grouped chat, with classic icons as a fallback.\n- **Private media attachments** — Inline media support now extends to private messages and private rooms, respecting the server’s advertised media limits.\n\n## Bugfixes and Improvements\n\n- **Consistent text and history** — UTF-8 is used when negotiated with the server; classic sessions use MacRoman. Live messages, history, news, and file names follow the same encoding, and line endings no longer produce duplicate newlines.\n- **More accurate file metadata** — Extended file and folder sizes and both protocol date formats are supported. Large-file upload framing now matches the negotiated transfer format.\n- **Safer saved passwords** — Bookmark passwords are protected in encrypted storage.\n- **Hardened external previews** — External image fetching received additional validation and privacy protections.\n- **Bounded transfer memory use** — Downloads stream to disk instead of buffering the entire file, and completed downloads avoid overwriting existing local files.\n- **Correct version from the first frame** — About and Update screens use the packaged version immediately, fixing the brief flash of version 0.2.3.\n\n## Technical\n\n- Session-wide UTF-8 negotiation covers protocol text fields, embedded names, file paths, and history; decoding no longer guesses the encoding.\n- Classic upload resumes honor RFLT fork offsets. Modern upload resumes verify a partial-file SHA-256 digest before appending.\n- Folder streams support nested paths and AEAD wrapping, with destination confinement and rejection of local links and special files.\n- Tracker v3 handles UTF-8, IPv4, IPv6, and hostname records. Authentication denial does not silently downgrade to an older protocol.\n- GIF avatar caches are bounded and scoped to the connection. Disconnects and user departures clear the relevant entries.\n- Validation includes 148 Rust tests, 87 frontend tests, and a production build. The macOS installer is signed and notarized.\n\n## Current Limitations\n\n- Retrying a failed folder download creates a new destination folder; completed files from the previous attempt remain available. Mobile folder upload is not yet supported.\n- Folder streams have a 32-bit per-file length limit; larger files must be uploaded individually.\n- Custom avatars are session-specific and must be set again after reconnecting. Local limits are 32 KiB, 256 × 256 pixels, 60 frames, and 15 seconds.\n- Tracker v3 currently requests complete listings; server-side search and pagination are not exposed.\n- Live-server interoperability testing remains ongoing, including encrypted folder transfers.\n\n## Installation\n\nDownload the universal `.dmg` below for macOS, open it, and drag Hotline Navigator into Applications. It supports Intel and Apple Silicon Macs running macOS Big Sur or later.\n\nThis release includes the macOS installer. Windows, Android, iOS / iPadOS, and Linux installers are not included in this release.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator-0.3.0-universal.dmg",
+     "size": 26689923,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.3.0/Hotline.Navigator-0.3.0-universal.dmg",
+     "path": "hotline-navigator/v0.3.0/Hotline.Navigator-0.3.0-universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline-Navigator-0.3.0-ios-unsigned.ipa.zip",
+     "size": 10240067,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.3.0/Hotline-Navigator-0.3.0-ios-unsigned.ipa.zip",
+     "path": "hotline-navigator/v0.3.0/Hotline-Navigator-0.3.0-ios-unsigned.ipa.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.3.0_x64-setup.exe",
+     "size": 8167336,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.3.0/Hotline.Navigator_0.3.0_x64-setup.exe",
+     "path": "hotline-navigator/v0.3.0/Hotline.Navigator_0.3.0_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.3.0_aarch64.AppImage",
+     "size": 89192968,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.3.0/Hotline.Navigator_0.3.0_aarch64.AppImage",
+     "path": "hotline-navigator/v0.3.0/Hotline.Navigator_0.3.0_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.3.0_arm64.deb",
+     "size": 14447702,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.3.0/Hotline.Navigator_0.3.0_arm64.deb",
+     "path": "hotline-navigator/v0.3.0/Hotline.Navigator_0.3.0_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.3.0_amd64.deb",
+     "size": 13775716,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.3.0/Hotline.Navigator_0.3.0_amd64.deb",
+     "path": "hotline-navigator/v0.3.0/Hotline.Navigator_0.3.0_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.3.0_amd64.AppImage",
+     "size": 90372600,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.3.0/Hotline.Navigator_0.3.0_amd64.AppImage",
+     "path": "hotline-navigator/v0.3.0/Hotline.Navigator_0.3.0_amd64.AppImage",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.9",
+   "title": "v0.2.9 - Colorful Names, Chat Image Uploads, More hardening against goobers",
+   "date": "2026-07-04",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.2.9",
+   "notes": "# v0.2.9\r\n\r\nThis release is a bigger step forward than the last one: Navigator can now participate in Hotline inline media instead of just text, and the surrounding UX has been tightened up so it feels integrated instead of bolted on.\r\n\r\nYou can now attach and view inline images in chat on servers that support the feature, usernames can render with server-defined colors without becoming unreadable, and access changes update live instead of requiring reconnects to take effect. News and board handling also got another round of fixes, and external image rendering is now routed through a safer privacy-preserving flow instead of letting arbitrary chat content beacon your IP through the WebView.\r\n\r\nUnder the hood, this release also adds end-to-end TLS/handshake/transaction coverage and hardens media caching so malformed or tiny spam entries cannot silently turn into a memory or CPU sink.\r\n\r\n## New Features\r\n- **Inline media support** — Expanding on rich chat, like before Navigator now supports Hotline inline media attachments and rendering. The new feature is On compatible servers, images can be attached directly in chat and appear inline with loading, success, and failure states instead of as invisible or ambiguous payloads.\r\n- **Colored nicknames** — Usernames can now render with server/user-defined colors in chat and related UI, with legibility enforcement so colors remain readable against the current theme.\r\n- **Live access updates** — Permission changes from the server now apply without needing a reconnect, so capabilities like posting inline media update in-session as access changes arrive.\r\n\r\n## Bugfixes and Improvements\r\n- **Safer external image loading** — External chat images no longer rely on direct WebView fetches. They now go through an app-managed fetch path that prevents untrusted chat content from becoming an IP-disclosure / tracking-beacon channel.\r\n- **Better image preview UX** — Inline external image previews can be enabled globally, but individual images can also be loaded on demand. Failed loads now fail visibly instead of silently disappearing, and 404s no longer cause jittery retry loops.\r\n- **Board and news navigation fixes** — News/category handling on more complex servers is more reliable, including multi-level structures that previously misrouted or stalled when traversing nested content.\r\n- **Correct access-bit handling** — Access permissions are now decoded with the correct Hotline bit ordering, fixing cases where capability checks could be interpreted incorrectly.\r\n- **Media cache hardening** — The inline-media cache is now bounded by both byte size and entry count, and implausibly tiny image payloads are rejected up front. This is transparent in normal use but closes off an easy client-side memory/CPU DoS path.\r\n- **General polish around media attachments** — Attachment chips, metadata display, and inline render states were refined so chat media is easier to understand at a glance.\r\n\r\n## Technical\r\n- Hotline inline media capability bit 3 is now wired end-to-end through protocol, backend, and UI.\r\n- External image fetching is handled in Tauri with URL validation, safer redirect handling, content-type checks, and payload size limits rather than raw WebView loads.\r\n- End-to-end TLS, handshake, and transaction tests were added to catch protocol regressions earlier.\r\n- Access-bit parsing now uses 64-bit-safe handling with correct MSB-first semantics per protocol expectations.\r\n- Media cache eviction now enforces both a byte cap and an entry cap rather than scanning only against total payload size.\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\n`.dmg` = macOS, `.msi` / `.exe` = Windows, `.apk` = Android, `.ipa` = iOS / iPadOS, Linux hippies can figure it out...\r\n\r\n/edit: Linux releases will arrive soon",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.2.9_x64-setup.exe",
+     "size": 7790637,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.9/Hotline.Navigator_0.2.9_x64-setup.exe",
+     "path": "hotline-navigator/v0.2.9/Hotline.Navigator_0.2.9_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.9.apk",
+     "size": 93251332,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.9/Hotline.Navigator_0.2.9.apk",
+     "path": "hotline-navigator/v0.2.9/Hotline.Navigator_0.2.9.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator-0.2.9-universal.dmg",
+     "size": 22338083,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.9/Hotline.Navigator-0.2.9-universal.dmg",
+     "path": "hotline-navigator/v0.2.9/Hotline.Navigator-0.2.9-universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-navigator-Windows-x64.zip",
+     "size": 7773875,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.9/hotline-navigator-Windows-x64.zip",
+     "path": "hotline-navigator/v0.2.9/hotline-navigator-Windows-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.9_amd64.AppImage",
+     "size": 89860600,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.9/Hotline.Navigator_0.2.9_amd64.AppImage",
+     "path": "hotline-navigator/v0.2.9/Hotline.Navigator_0.2.9_amd64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.9_amd64.deb",
+     "size": 13285656,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.9/Hotline.Navigator_0.2.9_amd64.deb",
+     "path": "hotline-navigator/v0.2.9/Hotline.Navigator_0.2.9_amd64.deb",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.8",
+   "title": "v0.2.8 - Quality of Life",
+   "date": "2026-04-21",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.2.8",
+   "notes": "# v0.2.8\r\n\r\nThere's been a lot of rapid changes in Navigator's capabilities so this release UX quality-of-life series of fixes since the Discord style chat introduced a new UX paradigm which inevitable had some loose ends.\r\n\r\nDisconnects are detected in seconds instead of minutes, chat icons no longer fall back to gray letter placeholders for emotes or for users who chatted before their info loaded, and `!` / `/` commands now appear above the bot's response instead of below it. News browsing also works on multi-tier servers like VesperNet, where top-level entries are folders of folders.\r\n\r\nNext release will be new feature bound.\r\n\r\n## Bugfixes and Improvements\r\n- **Optimistic Command Echo** — Chat commands prefixed with `!` (server bots) or `/` (e.g. `/me`, `/em`) now render locally the moment you hit send, so they reliably appear *above* the bot's broadcast response instead of below it. Pending messages display at 60% opacity until the server confirms; regular chat keeps its original wait-for-echo behavior.\r\n- **Faster disconnect detection** — When a server vanishes silently (peer crash, network drop, NAT timeout), the client now notices in ~60s on macOS/Linux and ~130s on Windows, down from the OS TCP retransmit default of 15+ minutes. Auto-reconnect kicks in correspondingly faster.\r\n- **Chat icons for emote messages** — `*** name action` (from `/me`) now shows the sender's icon and username header instead of a gray letter placeholder. Multi-word usernames like `dmg - dev` resolve correctly via a longest-prefix match against the live user list.\r\n- **Chat icons no longer get stuck** — Messages that arrived before the user list populated previously kept the gray letter placeholder forever. Icons (and admin badges) are now resolved from the live user list at render time, with the receipt-time value as a fallback for users who have since left.\r\n- **News browsing on nested servers** — On servers like VesperNet where the top-level news entries are folders containing more folders, navigation no longer dead-ends with an empty article pane. The client now dispatches based on the clicked item's actual type (bundle vs. category) rather than assuming any non-root path holds articles.\r\n\r\n## Technical\r\n- TCP `SO_KEEPALIVE` configured on the control channel via `socket2`: idle=30s, interval=10s, retries=3 on macOS/Linux. Windows uses the OS default retry count.\r\n- App-level keepalive failure now emits `StatusChanged(Disconnected)` and clears the transport, instead of silently breaking.\r\n- Rust chat handler extracts the sender from the `*** ` emote prefix when no `UserName` field is present.\r\n- `DiscordChatRenderer` accepts a live `users` prop and resolves `iconId`/`isAdmin` per-render via a `resolveLive(msg)` helper.\r\n- Optimistic insert tagged with `pending: true` and `optimisticKey`; echo dedup matches by `userName + message text` within a 10s window. `/me` and `/em` are preformatted as `*** name action` to match the server echo. 30s safety timeout clears the pending flag if no echo arrives.\r\n- News load effect dispatches on a tracked `newsLeafType` (2 = bundle → `get_news_categories`; 3 = category → `get_news_articles`). Going back always sets leaf type to bundle, since non-leaf path segments are bundles by invariant.\r\n- Protocol version field corrected to `u16` per Hotline spec.\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\n.dmg = macOS, .msi/.exe = Windows, .apk = Android, .ipa = iOS/iPadOS, Linux hippies can figure it out...\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.2.8.apk",
+     "size": 91392628,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.8/Hotline.Navigator_0.2.8.apk",
+     "path": "hotline-navigator/v0.2.8/Hotline.Navigator_0.2.8.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.8_x64-setup.exe",
+     "size": 7692450,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.8/Hotline.Navigator_0.2.8_x64-setup.exe",
+     "path": "hotline-navigator/v0.2.8/Hotline.Navigator_0.2.8_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.8_universal.dmg",
+     "size": 22997138,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.8/Hotline.Navigator_0.2.8_universal.dmg",
+     "path": "hotline-navigator/v0.2.8/Hotline.Navigator_0.2.8_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-navigator-unsigned.ipa",
+     "size": 9625078,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.8/hotline-navigator-unsigned.ipa",
+     "path": "hotline-navigator/v0.2.8/hotline-navigator-unsigned.ipa",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.8_amd64.deb",
+     "size": 13280112,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.8/Hotline.Navigator_0.2.8_amd64.deb",
+     "path": "hotline-navigator/v0.2.8/Hotline.Navigator_0.2.8_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.8_aarch64.AppImage",
+     "size": 88431112,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.8/Hotline.Navigator_0.2.8_aarch64.AppImage",
+     "path": "hotline-navigator/v0.2.8/Hotline.Navigator_0.2.8_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.8_arm64.deb",
+     "size": 13642676,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.8/Hotline.Navigator_0.2.8_arm64.deb",
+     "path": "hotline-navigator/v0.2.8/Hotline.Navigator_0.2.8_arm64.deb",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.7",
+   "title": "v0.2.7 - Chat history!",
+   "date": "2026-04-17",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.2.7",
+   "notes": "# v0.2.7\r\n\r\nServer-side chat history is here! Connect to a server running the [Chat History Extension](https://github.com/fogWraith/Hotline/blob/main/Docs/Protocol/Capabilities-Chat-History.md) and you'll see the conversation that happened before you arrived. Scroll back through it, pull to load more, just like Discord. Servers without history support are completely unaffected. \r\n\r\nThis is a pretty big upgrade and allows servers to add chat history. Anyone writing their own server can always yank Navigator and run the tauri in dev mode as there's a ton of debugging that is exposed.\r\n\r\nAlso hardened link preview fetching against SSRF, added a link preview toggle, and fixed download filename collisions. \r\n\r\nAs writing this the only server that has chat history is Apple Media Archive as it's the only hotline server I run.\r\n\r\n## New Features\r\n- **Server-Side Chat History** - Servers that support the Chat History Extension (capability bit 4) now serve historical messages to Navigator. The latest 50 messages load on connect, and you can scroll back through the full archive with a pull-to-load-more gesture. Retention policy is displayed above the history (e.g., \"This server keeps 30 days / 10,000 messages of chat history\").\r\n- **Separate History Preferences** - \"Server Chat History\" (on by default) and \"Local Chat History\" (off by default) are now independent toggles in Settings. Local recording is automatically suppressed on servers that provide server-side history.\r\n- **Link Previews Toggle** - Rich link previews (title, description, image) in Discord chat mode can now be toggled independently from Discord mode.\r\n- **Apple Media Archive uses HOPE** --The default bookmark for Apple Media Archive now has HOPE enabled, with automatic migration for existing users.\r\n\r\n## Improvements\r\n- Sign-on/off messages from server history render as centered italic system text, matching live join/leave notifications in Discord mode for history.\r\n- Sending a message while scrolled up through history snaps back to the bottom\r\n- Elastic pull-to-load-more when scrolling to the top of chat history, with a progress indicator and spinner\r\n- \"Beginning of chat history\" marker shown when the full archive has been loaded\r\n- Download filename collisions now append numbered suffixes (`file (1).txt`, `file (2).txt`) instead of overwriting\r\n- Startup chat history passphrase prompt removed - local vault uses a default passphrase\r\n\r\n## Security\r\n- **SSRF Protection for Link Previews** — Link preview fetches now validate target URLs before connecting. Private/internal IP ranges are blocked (RFC 1918, loopback, link-local, CGNAT, ULA IPv6). Only http/https schemes allowed. Redirects are followed manually with per-hop validation, preventing redirect-based SSRF attacks.\r\n\r\n## Technical\r\n- New `protocol/history.rs` module with packed binary entry parser, mini-TLV sub-field skipping, and 6 unit tests\r\n- `CAPABILITY_CHAT_HISTORY` (bit 4), `TransactionType::GetChatHistory` (700), and 8 new `FieldType` variants (`0x0F01`–`0x0F08`) added to protocol constants\r\n- `get_chat_history` method on `HotlineClient` with cursor-based pagination via pending-transaction pattern\r\n- `ChatHistoryResponse` / `ChatHistoryEntry` Tauri command with message IDs serialized as strings to avoid JS `Number` precision loss on u64\r\n- `ServerInfo` extended with `chatHistorySupported`, `historyMaxMsgs`, `historyMaxDays`\r\n- `is_private_ip()` and `validate_url_target()` for SSRF-safe link preview fetching with manual redirect following\r\n- Reconnect catch-up via `AFTER` cursor when the tab stays alive across disconnect/reconnect cycles\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\n.dmg = macOS, .msi/.exe = Windows, .apk = Android, .ipa = iOS/iPadOS, Linux hippies can figure it out...\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.2.7_universal.dmg",
+     "size": 23006995,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.7/Hotline.Navigator_0.2.7_universal.dmg",
+     "path": "hotline-navigator/v0.2.7/Hotline.Navigator_0.2.7_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-navigator-unsigned.ipa",
+     "size": 9624307,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.7/hotline-navigator-unsigned.ipa",
+     "path": "hotline-navigator/v0.2.7/hotline-navigator-unsigned.ipa",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.7_x64-setup.exe",
+     "size": 7684286,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.7/Hotline.Navigator_0.2.7_x64-setup.exe",
+     "path": "hotline-navigator/v0.2.7/Hotline.Navigator_0.2.7_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.7_amd64.deb",
+     "size": 13272524,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.7/Hotline.Navigator_0.2.7_amd64.deb",
+     "path": "hotline-navigator/v0.2.7/Hotline.Navigator_0.2.7_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.7_aarch64.AppImage",
+     "size": 88447496,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.7/Hotline.Navigator_0.2.7_aarch64.AppImage",
+     "path": "hotline-navigator/v0.2.7/Hotline.Navigator_0.2.7_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.7_arm64.deb",
+     "size": 13646324,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.7/Hotline.Navigator_0.2.7_arm64.deb",
+     "path": "hotline-navigator/v0.2.7/Hotline.Navigator_0.2.7_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.7.apk",
+     "size": 91385196,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.7/Hotline.Navigator_0.2.7.apk",
+     "path": "hotline-navigator/v0.2.7/Hotline.Navigator_0.2.7.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.7_Linux-arm64.zip",
+     "size": 101407225,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.7/Hotline.Navigator_0.2.7_Linux-arm64.zip",
+     "path": "hotline-navigator/v0.2.7/Hotline.Navigator_0.2.7_Linux-arm64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.6",
+   "title": "v0.2.6 - Hotfix release",
+   "date": "2026-04-15",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.2.6",
+   "notes": "## v0.2.6 Mini Release\r\n\r\nSometimes you don't adequately test. Inline images weren't rendering. OpenGraph previews for links in Discord mode.\r\n\r\n- Fix CSP img-src to allow http:/https: URLs (images were blocked in compiled builds)\r\n- Add OpenGraph link preview cards for non-image URLs in Discord chat mode\r\n- Inline images now display by default in Discord mode\r\n- Add fetch_link_preview Rust command for server-side OG metadata extraction\r\n\r\n\r\n\r\n## v0.2.5\r\n\r\nMajor chat UX overhaul with a new Discord-style display mode, makes things look a lot cleaner. It's the default chat mode but also allows for retro mode as well\r\n\r\n\r\n![Hotline Navigator Screenshot](https://images-ext-1.discordapp.net/external/Q47ramYP1GhZuOJpXHS_fWqdPh3mdsG0HMIU0Z_WmTw/https/raw.githubusercontent.com/fuzzywalrus/Hotline-Navigator/main/doc-media/v0.2.5-dark-mode-discord.png?format=webp&quality=lossless&width=2668&height=1854)\r\n\r\n\r\nWindows builds are now available via GitHub-hosted runners.\r\n\r\n## New Features\r\n- **Discord Chat Mode** - New chat display option that groups consecutive messages by user with Hotline icons, timestamps, and batched message groups. Image URLs render as inline previews without showing the URL. Set as the default for new users, switchable to Retro (IRC-style) in Settings.\r\n- **Reconnect Button** -  Disconnected server tabs now show a ↺ button next to the close button for quick one-click reconnection without opening a new tab.\r\n- **Server Chat History Deduplication** - Servers that replay chat history on connect (like Janus) no longer cause duplicate messages. Replayed messages are labeled \"Server History\" to distinguish them from live chat.\r\n\r\n## Improvements\r\n- Chat timestamps suppressed for server history messages since the original time is unknown\r\n- Server history messages don't play notification sounds or get re-persisted to local storage\r\n- Chat display preferences are mode-aware,  retro-specific toggles are greyed out in Discord mode\r\n- User icons are now captured and stored with chat messages for Discord mode rendering\r\n\r\n## Technical\r\n- New `DiscordChatRenderer` component with message batching logic (breaks on sender change, system messages, or 5-minute gap)\r\n- Windows build workflow added using GitHub-hosted `windows-latest` runners\r\n- Duplicate join/leave system messages deduplicated\r\n- Removed 32 bit support for Android. It makes the binary bigger. It causes build issues. Android 14 was the last to support 32-bit apps and google play around 2019 started mandating 64-bit support. No one was going to make use of this binary. Even if this project's goal is to support as many OSes and wide of range of devices as possible, this can be effectively removed and absolutely 0 people on planet will notice. \r\n\r\n## Bugfixes\r\n- Server chat replay no longer duplicates messages when reconnecting with chat history enabled\r\n- Username prefix no longer doubled in Discord mode when server embeds sender name in message data\r\n- User icon resolution falls back to username lookup when server sends userId 0\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\n.dmg = macOS, .msi/.exe = Windows, .apk = Android, .ipa = iOS/iPadOS, Linux hippies can figure it out...",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.2.6_x64-setup.exe",
+     "size": 7678037,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.6/Hotline.Navigator_0.2.6_x64-setup.exe",
+     "path": "hotline-navigator/v0.2.6/Hotline.Navigator_0.2.6_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.6_aarch64.AppImage",
+     "size": 88422920,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.6/Hotline.Navigator_0.2.6_aarch64.AppImage",
+     "path": "hotline-navigator/v0.2.6/Hotline.Navigator_0.2.6_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.6_arm64.deb",
+     "size": 13588376,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.6/Hotline.Navigator_0.2.6_arm64.deb",
+     "path": "hotline-navigator/v0.2.6/Hotline.Navigator_0.2.6_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.6.apk",
+     "size": 91116556,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.6/Hotline.Navigator_0.2.6.apk",
+     "path": "hotline-navigator/v0.2.6/Hotline.Navigator_0.2.6.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.6_universal.dmg",
+     "size": 22877642,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.6/Hotline.Navigator_0.2.6_universal.dmg",
+     "path": "hotline-navigator/v0.2.6/Hotline.Navigator_0.2.6_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.6_amd64.deb",
+     "size": 13230764,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.6/Hotline.Navigator_0.2.6_amd64.deb",
+     "path": "hotline-navigator/v0.2.6/Hotline.Navigator_0.2.6_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-navigator-unsigned.ipa",
+     "size": 9590969,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.6/hotline-navigator-unsigned.ipa",
+     "path": "hotline-navigator/v0.2.6/hotline-navigator-unsigned.ipa",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.5",
+   "title": "v0.2.5 - Discord style conversations",
+   "date": "2026-04-14",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.2.5",
+   "notes": "## v0.2.5\r\n\r\nMajor chat UX overhaul with a new Discord-style display mode, makes things look a lot cleaner. It's the default chat mode but also allows for retro mode as well\r\n\r\n\r\n![Hotline Navigator Screenshot](https://images-ext-1.discordapp.net/external/Q47ramYP1GhZuOJpXHS_fWqdPh3mdsG0HMIU0Z_WmTw/https/raw.githubusercontent.com/fuzzywalrus/Hotline-Navigator/main/doc-media/v0.2.5-dark-mode-discord.png?format=webp&quality=lossless&width=2668&height=1854)\r\n\r\n\r\nWindows builds are now available via GitHub-hosted runners.\r\n\r\n## New Features\r\n- **Discord Chat Mode** - New chat display option that groups consecutive messages by user with Hotline icons, timestamps, and batched message groups. Image URLs render as inline previews without showing the URL. Set as the default for new users, switchable to Retro (IRC-style) in Settings.\r\n- **Reconnect Button** -  Disconnected server tabs now show a ↺ button next to the close button for quick one-click reconnection without opening a new tab.\r\n- **Server Chat History Deduplication** - Servers that replay chat history on connect (like Janus) no longer cause duplicate messages. Replayed messages are labeled \"Server History\" to distinguish them from live chat.\r\n\r\n## Improvements\r\n- Chat timestamps suppressed for server history messages since the original time is unknown\r\n- Server history messages don't play notification sounds or get re-persisted to local storage\r\n- Chat display preferences are mode-aware,  retro-specific toggles are greyed out in Discord mode\r\n- User icons are now captured and stored with chat messages for Discord mode rendering\r\n\r\n## Technical\r\n- New `DiscordChatRenderer` component with message batching logic (breaks on sender change, system messages, or 5-minute gap)\r\n- Windows build workflow added using GitHub-hosted `windows-latest` runners\r\n- Duplicate join/leave system messages deduplicated\r\n- Removed 32 bit support for Android. It makes the binary bigger. It causes build issues. Android 14 was the last to support 32-bit apps and google play around 2019 started mandating 64-bit support. No one was going to make use of this binary. Even if this project's goal is to support as many OSes and wide of range of devices as possible, this can be effectively removed and absolutely 0 people on planet will notice. \r\n\r\n## Bugfixes\r\n- Server chat replay no longer duplicates messages when reconnecting with chat history enabled\r\n- Username prefix no longer doubled in Discord mode when server embeds sender name in message data\r\n- User icon resolution falls back to username lookup when server sends userId 0\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\n.dmg = macOS, .msi/.exe = Windows, .apk = Android, .ipa = iOS/iPadOS, Linux hippies can figure it out...\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.2.5_amd64.deb",
+     "size": 13219256,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.5/Hotline.Navigator_0.2.5_amd64.deb",
+     "path": "hotline-navigator/v0.2.5/Hotline.Navigator_0.2.5_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.5_x64-setup.exe.zip",
+     "size": 7640828,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.5/Hotline.Navigator_0.2.5_x64-setup.exe.zip",
+     "path": "hotline-navigator/v0.2.5/Hotline.Navigator_0.2.5_x64-setup.exe.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.5_x64_en-US.msi.zip",
+     "size": 10345963,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.5/Hotline.Navigator_0.2.5_x64_en-US.msi.zip",
+     "path": "hotline-navigator/v0.2.5/Hotline.Navigator_0.2.5_x64_en-US.msi.zip",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-navigator-unsigned.ipa",
+     "size": 9581258,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.5/hotline-navigator-unsigned.ipa",
+     "path": "hotline-navigator/v0.2.5/hotline-navigator-unsigned.ipa",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.5_universal.dmg",
+     "size": 22910859,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.5/Hotline.Navigator_0.2.5_universal.dmg",
+     "path": "hotline-navigator/v0.2.5/Hotline.Navigator_0.2.5_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.5_arm64.deb",
+     "size": 13597682,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.5/Hotline.Navigator_0.2.5_arm64.deb",
+     "path": "hotline-navigator/v0.2.5/Hotline.Navigator_0.2.5_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.5_aarch64.AppImage",
+     "size": 88418824,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.5/Hotline.Navigator_0.2.5_aarch64.AppImage",
+     "path": "hotline-navigator/v0.2.5/Hotline.Navigator_0.2.5_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.5.apk",
+     "size": 90996176,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.5/Hotline.Navigator_0.2.5.apk",
+     "path": "hotline-navigator/v0.2.5/Hotline.Navigator_0.2.5.apk",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.4",
+   "title": "v0.2.4",
+   "date": "2026-04-14",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.2.4",
+   "notes": "## v0.2.4\r\n\r\nMassive change in the development stack that users really won't experience. I now have working GitHub actions to manage builds for macOS, iOS/iPadOS, Linux (ARM64/AMD64) and Android. Windows will require another machine. \r\n\r\nAdded HOPE encryption for file transfers with HOPE/ChaCha20-Poly1305 \r\n\r\n## New Features\r\n- HOPE end-to-end encryption schemas do not require TLS. TLS will work, but you're just running it over the top of HOPE. \r\n\r\n## Improvements\r\n- User Color change rendering for supported servers \r\n- Usernames appear bold in chat, color delineation for Discord bot relays\r\n- Check version renders the release notes with markdown formatting\r\n\r\n## Technical\r\n- Moved to OpenSpec for development changes \r\n-  HOPE ChaCha20-Poly1305: file transfers (HTXF) are now encrypted with per-transfer AEAD keys derived via HKDF-SHA256 when the control connection uses AEAD mode.\r\n\r\n## Bugfixes\r\n- Custom Icons show now be loading\r\n- Opening URLs should not have any issues \r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\n.dmg = macOS, .msi/.exe = Windows, .apk = Android, .ipa = iOS/iPadOS, Linux hippies can figure it out...\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "hotline-navigator-unsigned.ipa",
+     "size": 9586387,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.4/hotline-navigator-unsigned.ipa",
+     "path": "hotline-navigator/v0.2.4/hotline-navigator-unsigned.ipa",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.4_universal.dmg",
+     "size": 22919789,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.4/Hotline.Navigator_0.2.4_universal.dmg",
+     "path": "hotline-navigator/v0.2.4/Hotline.Navigator_0.2.4_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.4.apk",
+     "size": 90907024,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.4/Hotline.Navigator_0.2.4.apk",
+     "path": "hotline-navigator/v0.2.4/Hotline.Navigator_0.2.4.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.4_aarch64.AppImage",
+     "size": 88410632,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.4/Hotline.Navigator_0.2.4_aarch64.AppImage",
+     "path": "hotline-navigator/v0.2.4/Hotline.Navigator_0.2.4_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.4_arm64.deb",
+     "size": 13607926,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.4/Hotline.Navigator_0.2.4_arm64.deb",
+     "path": "hotline-navigator/v0.2.4/Hotline.Navigator_0.2.4_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.4_x64-setup.exe",
+     "size": 7620136,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.4/Hotline.Navigator_0.2.4_x64-setup.exe",
+     "path": "hotline-navigator/v0.2.4/Hotline.Navigator_0.2.4_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.4_x64_en-US.msi",
+     "size": 10555392,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.4/Hotline.Navigator_0.2.4_x64_en-US.msi",
+     "path": "hotline-navigator/v0.2.4/Hotline.Navigator_0.2.4_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.4_amd64.deb",
+     "size": 13225028,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.4/Hotline.Navigator_0.2.4_amd64.deb",
+     "path": "hotline-navigator/v0.2.4/Hotline.Navigator_0.2.4_amd64.deb",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.3",
+   "title": "v0.2.3",
+   "date": "2026-04-02",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.2.3",
+   "notes": "## v0.2.3\r\n\r\nThe Hotline community now has its own search engine. [Mnemosyne](https://github.com/benabernathy/mnemosyne) is an indexing service that participating Hotline servers sync their content to message board posts, news articles, and file listings. Navigator can now search across all of them before you even connect.\r\n\r\nThe app ships with [vespernet.net](http://tracker.vespernet.net:8980) pre-configured as the default search instance. Existing users get a one-time prompt to opt in.\r\n\r\n## New Features\r\n\r\n### Mnemosyne Search\r\n- Search across files, news articles, and message board posts from multiple Hotline servers all without connecting first\r\n- Ships with vespernet.net as the default search instance\r\n- Filter results by content type with All/Board/News/Files toggles\r\n- Index stats shown on the search screen (servers indexed, total files, posts, articles)\r\n- Add custom Mnemosyne instances via the Connect dialog (⌘K → \"Mnemosyne (Search)\" type) with a connection test button\r\n\r\n### New Default Server\r\n- Added **Hotline Central Hub** (server.bigredh.com) as the first default server bookmark\r\n\r\n## Improvements\r\n- Remote user icons from hlwiki.com now load correctly (CSP fix for `img-src`). This was a goof by me adding more security.\r\n- Search button in the Tracker header opens the search tab directly, hidden when no search engines are configured\r\n- Mnemosyne instances appear in the bookmark list with a purple search icon and right-click context menu\r\n\r\n## Technical\r\n- All Mnemosyne API requests are proxied through a Rust-side `mnemosyne_fetch` Tauri command using `reqwest`, bypassing browser CORS restrictions\r\n- Mnemosyne bookmarks persisted in localStorage, independent of server bookmarks\r\n- Tab system extended with `mnemosyne` type — deduplication, close button, magnifying glass icon\r\n- URLs without a protocol prefix are auto-normalized to `http://`\r\n- 21 Vitest tests covering search, filters, stats, errors, and URL normalization\r\n- README updated with full Mnemosyne documentation section\r\n\r\n## Bugfixes\r\n- Fixed Content Security Policy blocking remote user icons from hlwiki.com, custom icons now render instead of falling back to numeric IDs\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\n.dmg = macOS, .msi/.exe = Windows, .apk = Android, .ipa = iOS/iPadOS, Linux hippies can figure it out...\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.2.3_x64_en-US.msi",
+     "size": 10518528,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.3/Hotline.Navigator_0.2.3_x64_en-US.msi",
+     "path": "hotline-navigator/v0.2.3/Hotline.Navigator_0.2.3_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.3_x64-setup.exe",
+     "size": 7581151,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.3/Hotline.Navigator_0.2.3_x64-setup.exe",
+     "path": "hotline-navigator/v0.2.3/Hotline.Navigator_0.2.3_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.3_amd64.AppImage",
+     "size": 107235832,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.3/Hotline.Navigator_0.2.3_amd64.AppImage",
+     "path": "hotline-navigator/v0.2.3/Hotline.Navigator_0.2.3_amd64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.3_amd64.deb",
+     "size": 13112564,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.3/Hotline.Navigator_0.2.3_amd64.deb",
+     "path": "hotline-navigator/v0.2.3/Hotline.Navigator_0.2.3_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator-0.2.3-universal.dmg",
+     "size": 21827623,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.3/Hotline.Navigator-0.2.3-universal.dmg",
+     "path": "hotline-navigator/v0.2.3/Hotline.Navigator-0.2.3-universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.3.apk",
+     "size": 91010736,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.3/Hotline.Navigator_0.2.3.apk",
+     "path": "hotline-navigator/v0.2.3/Hotline.Navigator_0.2.3.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.3_aarch64.AppImage",
+     "size": 105581064,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.3/Hotline.Navigator_0.2.3_aarch64.AppImage",
+     "path": "hotline-navigator/v0.2.3/Hotline.Navigator_0.2.3_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.3_arm64.deb",
+     "size": 13457984,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.3/Hotline.Navigator_0.2.3_arm64.deb",
+     "path": "hotline-navigator/v0.2.3/Hotline.Navigator_0.2.3_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator-0.2.3.ipa",
+     "size": 10187791,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.3/Hotline.Navigator-0.2.3.ipa",
+     "path": "hotline-navigator/v0.2.3/Hotline.Navigator-0.2.3.ipa",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.2",
+   "title": "v0.2.2 - Vintage TLS + Auto Connect/Reconnect + better disconnect feedback",
+   "date": "2026-04-01",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.2.2",
+   "notes": "## v0.2.2\r\nSo (Lemoniscate)[https://github.com/fuzzywalrus/lemoniscate/], my C re-write of Mobius (Hotline Server) for both PowerPC OS X and x86 macOS 10.11 and above now supports full end-to-end encryption. Unfortunately though, OS X 10.4/10.5 only supports TLS 1.0 which created a massive undertaking for both the client and server to support both.\r\n\r\nSo Navigator now supports TLS 1.0 (opt in). The rest of this is largely around connectivity. Previously, Navigator didn't display disconnected servers clearly. Now there's re-connect features in the prefs and the ability to create servers to auto connect to on lunahc\r\n\r\n## New Features\r\n\r\n### Legacy TLS Support (TLS 1.0/1.1)\r\n- New \"Allow Legacy TLS\" toggle in Settings for connecting to servers that only support TLS 1.0 with older cipher suites (e.g. DHE-RSA-AES256-SHA)\r\n- Uses vendored OpenSSL for full control over protocol versions and ciphers — macOS SecureTransport has removed these legacy cipher suites\r\n- Modern TLS (1.2+) is always attempted first; legacy is only used as a fallback when enabled\r\n- Covers both the main connection and file transfers\r\n- Helpful error message when TLS fails suggesting the legacy TLS setting\r\n\r\n### Auto-Reconnect\r\n- New \"Auto-Reconnect\" toggle in Settings with configurable options:\r\n  - Retry interval (1–999 minutes)\r\n  - Max retries (1–99)\r\n  - Sliding interval option that doubles the wait after each attempt (e.g. 3m → 6m → 12m, capped at 12 hours)\r\n- Countdown timer shown in the disconnect modal with attempt counter\r\n- \"Retry Now\" and \"Cancel\" buttons during reconnect\r\n- Only triggers on unexpected server disconnects — manual disconnect (clicking Disconnect) does not auto-reconnect\r\n\r\n### Tracker Server Search (Experimental)\r\n- After reconnect retries are exhausted, a \"Search Trackers\" button queries all configured trackers for the server name\r\n- If the server is found at a different IP, shows results with an \"Update & Connect\" button to update the bookmark and reconnect\r\n- Helps recover when a server changes its IP address\r\n\r\n### Connect on Launch\r\n- New \"Connect on launch\" checkbox in the Edit Bookmark dialog\r\n- Bookmarks with this enabled automatically connect when the app starts\r\n- Multiple bookmarks connect in parallel without blocking each other\r\n\r\n### Native Menu Bar (macOS/Windows/Linux)\r\n- Full native menu bar with Hotline Navigator, Edit, Window, and Help menus\r\n- **Hotline Navigator** menu: About, Settings (⌘,), Hide/Show, Quit\r\n- **Edit** menu: Undo, Redo, Cut, Copy, Paste, Select All\r\n- **Help** menu: Hotline Navigator Wiki, GitHub, Report an Issue, README\r\n- Settings menu item switches to the Tracker tab and opens Settings\r\n\r\n## Improvements\r\n- Disconnected server tabs now show a red dot and greyed-out icon in the tab bar\r\n- Connection status synced from ServerWindow to the tab store for real-time tab styling\r\n- Protocol debug logging now emits to the frontend for TLS handshake, connection, HOPE probe, login, and version negotiation events\r\n- All TLS paths (modern and legacy) now have 10-second timeouts to prevent hanging on unresponsive servers\r\n- MacRoman encoding verified with new Rust unit tests (café → 0x8E, CJK → UTF-8 fallback)\r\n\r\n## Bugfixes\r\n- TLS handshakes no longer hang indefinitely against servers that don't respond\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\n.dmg = macOS, .msi/.exe = Windows, .apk = Android, .ipa = iOS/iPadOS, Linux hippies can figure it out...\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.2.2_arm64.deb",
+     "size": 13437168,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.2/Hotline.Navigator_0.2.2_arm64.deb",
+     "path": "hotline-navigator/v0.2.2/Hotline.Navigator_0.2.2_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.2_aarch64.AppImage",
+     "size": 105560584,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.2/Hotline.Navigator_0.2.2_aarch64.AppImage",
+     "path": "hotline-navigator/v0.2.2/Hotline.Navigator_0.2.2_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline-Navigator-0.2.2.ipa",
+     "size": 10168212,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.2/Hotline-Navigator-0.2.2.ipa",
+     "path": "hotline-navigator/v0.2.2/Hotline-Navigator-0.2.2.ipa",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator-0.2.2-universal.dmg",
+     "size": 23598027,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.2/Hotline.Navigator-0.2.2-universal.dmg",
+     "path": "hotline-navigator/v0.2.2/Hotline.Navigator-0.2.2-universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.2_amd64.deb",
+     "size": 13081592,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.2/Hotline.Navigator_0.2.2_amd64.deb",
+     "path": "hotline-navigator/v0.2.2/Hotline.Navigator_0.2.2_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.2_amd64.AppImage",
+     "size": 107219448,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.2/Hotline.Navigator_0.2.2_amd64.AppImage",
+     "path": "hotline-navigator/v0.2.2/Hotline.Navigator_0.2.2_amd64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.2_x64-setup.exe",
+     "size": 7582168,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.2/Hotline.Navigator_0.2.2_x64-setup.exe",
+     "path": "hotline-navigator/v0.2.2/Hotline.Navigator_0.2.2_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.2_x64_en-US.msi",
+     "size": 10506240,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.2/Hotline.Navigator_0.2.2_x64_en-US.msi",
+     "path": "hotline-navigator/v0.2.2/Hotline.Navigator_0.2.2_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline-Navigator-0.2.2-universal.apk",
+     "size": 90749276,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.2/Hotline-Navigator-0.2.2-universal.apk",
+     "path": "hotline-navigator/v0.2.2/Hotline-Navigator-0.2.2-universal.apk",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.1",
+   "title": "v0.2.1 - Hope Support",
+   "date": "2026-03-28",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.2.1",
+   "notes": "## v0.2.1\r\n\r\nThis release adds HOPE (Hotline One-time Password Extension) secure login support and maintains compatibility with original. This is more future tensed as more servers pop up that support HOPE.\r\n\r\n## New Features\r\n\r\n### HOPE Secure Login (Beta)\r\n- Implements the Hotline One-time Password Extension for secure authentication\r\n- MAC algorithm negotiation supporting HMAC-SHA1, SHA1, HMAC-MD5, MD5, and INVERSE (original obfuscation)\r\n- Optional RC4 transport encryption on the main control connection after login\r\n- Per-bookmark HOPE toggle — enable it in the Connect or Edit Bookmark dialogs\r\n- Automatic fallback to legacy XOR login if the server doesn't support HOPE\r\n- Encryption status indicator in the server header when HOPE transport is active\r\n- Tested against Janus-family servers (see HOPE_JANUS_INTEROP.md for details)\r\n\r\n### Retro Server Compatibility\r\n- Protocol version downgrade: handshake now tries subversion 2, then automatically reconnects and retries with subversion 1 for 1990s-era servers\r\n- String encoding fix: outgoing text (chat, usernames, paths) is now encoded as MacRoman first, only falling back to UTF-8 for characters with no MacRoman equivalent (e.g. CJK)\r\n- News categories now parse both `NewsCategoryListData15` (field 323, v1.5+) and the older `NewsCategoryListData` (field 320) format from pre-v1.5 servers\r\n- File transfers gracefully handle servers that don't send the FILP header — falls back to reading fork data directly or raw file bytes\r\n- HOPE probe reconnect delay: 2-second pause before reconnecting after a failed HOPE probe to avoid triggering rate limits or IP bans on classic servers\r\n\r\n## Improvements\r\n- New `hope.rs` and `hope_stream.rs` modules with clean separation: crypto helpers, encrypted transport wrappers, and login orchestration\r\n- Bookmark model extended with `hope: bool` field (defaults to `false` for backward compatibility)\r\n- Build script improvements for macOS release packaging\r\n\r\n## Future\r\n- HOPE is opt-in while we validate interop with more server implementations\r\n- Store passwords encrypted at rest\r\n- Custom icons from wiki\r\n- Settings entry in the drop down menu\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\n`.dmg` = macOS, `.apk` = Android, `.ipa` = iOS/iPadOS (sideload via AltStore, Sideloadly, etc.)\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.2.1_aarch64.AppImage",
+     "size": 103082504,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.1/Hotline.Navigator_0.2.1_aarch64.AppImage",
+     "path": "hotline-navigator/v0.2.1/Hotline.Navigator_0.2.1_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.1_arm64.deb",
+     "size": 10690846,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.1/Hotline.Navigator_0.2.1_arm64.deb",
+     "path": "hotline-navigator/v0.2.1/Hotline.Navigator_0.2.1_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.1_x64_en-US.msi",
+     "size": 8536064,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.1/Hotline.Navigator_0.2.1_x64_en-US.msi",
+     "path": "hotline-navigator/v0.2.1/Hotline.Navigator_0.2.1_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.1_x64-setup.exe",
+     "size": 6245204,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.1/Hotline.Navigator_0.2.1_x64-setup.exe",
+     "path": "hotline-navigator/v0.2.1/Hotline.Navigator_0.2.1_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator-0.2.1-universal.dmg",
+     "size": 19010520,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.1/Hotline.Navigator-0.2.1-universal.dmg",
+     "path": "hotline-navigator/v0.2.1/Hotline.Navigator-0.2.1-universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline-Navigator-0.2.1.ipa",
+     "size": 7960598,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.1/Hotline-Navigator-0.2.1.ipa",
+     "path": "hotline-navigator/v0.2.1/Hotline-Navigator-0.2.1.ipa",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline-Navigator-0.2.1-universal.apk",
+     "size": 69293420,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.1/Hotline-Navigator-0.2.1-universal.apk",
+     "path": "hotline-navigator/v0.2.1/Hotline-Navigator-0.2.1-universal.apk",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.0",
+   "title": "v0.2.0 - Chat History, Chat Time Stamps and Hotline 1.9 Full coverage",
+   "date": "2026-03-24",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.2.0",
+   "notes": "## v0.2.0\r\n\r\nThis release brings the big quality of life improvement, chat history and full Hotline protocol coverage and a new structured debug logging system for developers. Every transaction type in the Hotline spec now has a corresponding client-side handler. \r\n\r\nNote the that the chat history only exists while connected to a server. If you log off it will not \"see\" messages, only the last messages. Hotline Navigator is officially a \"mature' client as future releases will be extended feature support / bug fixes / UX improvements.\r\n\r\n## New Features\r\n\r\n### Chat History (Encrypted at Rest)\r\n- Chat messages are now persisted per-server using Tauri Stronghold, encrypted on your device\r\n- Max 1000 messages per server, auto-trimmed\r\n- Timestamps can be enabled independently of chat history in Settings\r\n- Manage and clear history per-server or all at once from Settings\r\n- Chat history is enabled by default but can be toggled off\r\n\r\n### Full Hotline Protocol Coverage\r\n- Went through the complete Hotline protocol spec (hlwiki.com) and filled in every missing transaction type\r\n- Added client support for: MakeFileAlias, DownloadFolder, UploadFolder, DownloadInfo, ServerBanner event, ListUsers, UpdateUser, UserAccess request, KeepAlive, and full account management (create/delete/get/set user)\r\n- Switched keepalive from piggy-backing on GetUserNameList to the proper KeepAlive (500) transaction\r\n- Private chats should work, but I haven't found a server with them\r\n\r\n### Developer Debug Mode!\r\n- New structured logging system replaces scattered console.logs\r\n- Categorized by: Chat, Users, Files, Transfer, News, Board, Connection, Banner, Agreement, Permissions\r\n- Only outputs in dev mode (`import.meta.env.DEV`), zero overhead in production\r\n- Every Tauri event listener now has corresponding debug output\r\n\r\n## Improvements\r\n- Tracker connect/refresh buttons collapse below 440px for better small-screen support (targeting 320px usable)\r\n- Added `stronghold:default` and `core:path:default` to Tauri capabilities for encrypted storage\r\n- Broadcasts are now persisted to chat history alongside regular messages\r\n\r\n## Bugfixes\r\n- Download banner now shows again when the server agreement is displayed\r\n\r\n## Future\r\n- HOPE secure login: re-enable the probe with a reconnect delay once the approach is validated with server authors\r\n- Store passwords encrypted at rest (bcrypt) and eventually an optional password vault requiring a user-defined password at startup\r\n- Bugfix: Help does nothing in the drop down menu\r\n- Need to add a settings entry to the drop down menu\r\n- Custom icons from wiki\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\n`.dmg` = macOS, `.msi`/`.exe` = Windows, `.apk` = Android, `.ipa` = iOS/iPadOS, Linux hippies can figure it out...\r\n\r\nInstall and launch Hotline Navigator.\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator-0.2.0-universal.dmg",
+     "size": 18927782,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.0/Hotline.Navigator-0.2.0-universal.dmg",
+     "path": "hotline-navigator/v0.2.0/Hotline.Navigator-0.2.0-universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.0.ipa",
+     "size": 7929763,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.0/Hotline.Navigator_0.2.0.ipa",
+     "path": "hotline-navigator/v0.2.0/Hotline.Navigator_0.2.0.ipa",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.0.apk",
+     "size": 69077284,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.0/Hotline.Navigator_0.2.0.apk",
+     "path": "hotline-navigator/v0.2.0/Hotline.Navigator_0.2.0.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.0_amd64.deb",
+     "size": 10776134,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.0/Hotline.Navigator_0.2.0_amd64.deb",
+     "path": "hotline-navigator/v0.2.0/Hotline.Navigator_0.2.0_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.0_amd64.AppImage",
+     "size": 83921400,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.0/Hotline.Navigator_0.2.0_amd64.AppImage",
+     "path": "hotline-navigator/v0.2.0/Hotline.Navigator_0.2.0_amd64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.0_x64-setup.exe",
+     "size": 6225574,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.0/Hotline.Navigator_0.2.0_x64-setup.exe",
+     "path": "hotline-navigator/v0.2.0/Hotline.Navigator_0.2.0_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.0_x64_en-US.msi",
+     "size": 8495104,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.0/Hotline.Navigator_0.2.0_x64_en-US.msi",
+     "path": "hotline-navigator/v0.2.0/Hotline.Navigator_0.2.0_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.0_aarch64.AppImage",
+     "size": 103070216,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.0/Hotline.Navigator_0.2.0_aarch64.AppImage",
+     "path": "hotline-navigator/v0.2.0/Hotline.Navigator_0.2.0_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.2.0_arm64.deb",
+     "size": 10679494,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.2.0/Hotline.Navigator_0.2.0_arm64.deb",
+     "path": "hotline-navigator/v0.2.0/Hotline.Navigator_0.2.0_arm64.deb",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.9",
+   "title": "v0.1.9 - Markdown + Future specs",
+   "date": "2026-03-18",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.1.9",
+   "notes": "## v0.1.9\r\n\r\nThis is now getting into future mindset as I spent a lot of going through https://github.com/fogWraith/HLServer/tree/main to add the new feature sets. This is a smaller release one one large feature for markdown, and brings Hotline Navigator to feature parity with 1.9 with the Hotline Spec. Some minor serendipity that 0.1.9 brought 1.9 features.\r\n\r\n## New Features\r\n- Markdown is optionally support in chat/new/board and with a separate setting for Greeting as ASCII art is still used in these\r\n- Add Hotline protocol error codes from hlwiki spec to make sure all the extended protocol is supported and consumed\r\n- add PrivateChatTab for future prviate chat\r\n- Frontend renders user names with server-provided color; no default red for admins unless DATA_COLOR is present\r\n\r\n\r\n## Improvements\r\n\r\n### Versions are per platform\r\n- Now latest version isn't tied to macOS\r\n\r\n### Various\r\n- commands/mod.rs: read_preview_file now validates paths are within allowed directories (downloads, app data, documents). \r\n- Update checker now finds platform-specific assets (Windows .msi/.exe, Linux .deb/.appimage) instead of only macOS .dmg\r\n- expand protocol/client/state/command updates across chat, files, users, and constants\r\n- improve About credits layout at >=700px and clip settings modal content to rounded corners\r\n- remove outdated planning/release markdown docs\r\n- Disconnect Messages should be now displayed\r\n- Get Client info now exists\r\n- Delete File / Set File Info / Move File / Download File support from 1.9.x\r\n\r\n\r\n## Bugfixes \r\n- Two pre-existing build errors: added missing rust-argon2 dependency to Cargo.toml for the Stronghold plugin, and added the missing tauri::Manager import in commands for app.path() calls.\r\n\r\n## Future\r\n- HOPE secure logi:  re-enable the probe with a reconnect delay once the approach is validated with server authors\r\n- Chat persistence remains the big unsolved problem\r\n- Need to test the 1.9.x features work: Private chats work, User Name Data color, Disconnect Messages, Get Client Info, Delete File, Get File Info, Move File, Downlaod file\r\n- Store passwords encrypted at rest (bcrypt) and eventually an optional password vault that requires at startup a user defined password\r\n- Bugfix: Help does nothing in the drop down menu\r\n- Need to add a settings to drop down\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\nBuilds for other OSes coming in a few hours.\r\n\r\n`.dmg` = macOS, `.msi`/`.exe` = Windows, `.apk` = Android, `.ipa` = iOS/iPadOS, Linux hippies can figure it out...\r\n\r\nInstall and launch Hotline Navigator.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.1.9_x64_en-US.msi",
+     "size": 8499200,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.9/Hotline.Navigator_0.1.9_x64_en-US.msi",
+     "path": "hotline-navigator/v0.1.9/Hotline.Navigator_0.1.9_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.9_x64-setup.exe",
+     "size": 6237129,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.9/Hotline.Navigator_0.1.9_x64-setup.exe",
+     "path": "hotline-navigator/v0.1.9/Hotline.Navigator_0.1.9_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.9_amd64.AppImage",
+     "size": 83905016,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.9/Hotline.Navigator_0.1.9_amd64.AppImage",
+     "path": "hotline-navigator/v0.1.9/Hotline.Navigator_0.1.9_amd64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.9_amd64.deb",
+     "size": 10765024,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.9/Hotline.Navigator_0.1.9_amd64.deb",
+     "path": "hotline-navigator/v0.1.9/Hotline.Navigator_0.1.9_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator-0.1.9-universal.dmg",
+     "size": 18911918,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.9/Hotline.Navigator-0.1.9-universal.dmg",
+     "path": "hotline-navigator/v0.1.9/Hotline.Navigator-0.1.9-universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.9.apk",
+     "size": 69044104,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.9/Hotline.Navigator_0.1.9.apk",
+     "path": "hotline-navigator/v0.1.9/Hotline.Navigator_0.1.9.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.9_aarch64.AppImage",
+     "size": 103053832,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.9/Hotline.Navigator_0.1.9_aarch64.AppImage",
+     "path": "hotline-navigator/v0.1.9/Hotline.Navigator_0.1.9_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.9_arm64.deb",
+     "size": 10681320,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.9/Hotline.Navigator_0.1.9_arm64.deb",
+     "path": "hotline-navigator/v0.1.9/Hotline.Navigator_0.1.9_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.9.ipa",
+     "size": 7920554,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.9/Hotline.Navigator_0.1.9.ipa",
+     "path": "hotline-navigator/v0.1.9/Hotline.Navigator_0.1.9.ipa",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.8",
+   "title": "v0.1.8 - Large file support",
+   "date": "2026-03-17",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.1.8",
+   "notes": "## v0.1.8\r\n\r\nA lot of polishing again for visual consistency. Trying to make it feel less jank, and more like a polished app ready for people to use. I did a lot of the E2E ground work, and hey, LARGE FILE SUPPORT for like the one server that supports it. Had to renew my Apple Developer license and.... holy hell.... It wouldn't let me use my Apple Pay Credit Card and Safari crashed during the process, it failed to process with my bank. Thankfully privacy.com came to the rescue...\r\n\r\n## New Features\r\n\r\n### Inline Image Previews\r\n- Image URLs shared in chat, board posts, and news articles can now render as inline previews\r\n- Previews are capped at 300×300px and clicking them opens the image in your default browser\r\n- Off by default — enable under Settings → General → Clickable Links → Inline Image Previews\r\n\r\n### Error Modal System\r\n- Connection errors now display in a proper modal with clear, user-friendly descriptions and actionable suggestions\r\n- Categorized errors: DNS resolution, timeouts, connection refused, TLS issues, protocol mismatches, auth failures, and more\r\n- Expandable \"Technical details\" section shows the raw error for debugging\r\n- \"Try Again\" button to retry the connection directly from the modal\r\n\r\n### Connection Cancellation & Shorter Timeout\r\n- Clicking a different server while one is still connecting now cancels the previous attempt automatically\r\n- Connection timeout reduced from the OS default (60–75s) to 10 seconds\r\n\r\n### Extended Remote Icons from hlwiki.com\r\n- Banner icons (wide images like 232×18, 267×18, and other sizes up to 486×18) display behind usernames in the user list\r\n\r\n### Icon Blocklist\r\n- Icons containing hate symbols are automatically replaced with a clown emoji and a \"(blocked icon)\" warning next to the username\r\n\r\n### Large File Support\r\n- Files larger than 4 GB are now supported for transfers\r\n\r\n### Get Info Dialogs\r\n- Right-click any bookmark → Get Info shows name, address, port, TLS status, type, and a copyable `hotline://` or `hotlinetracker://` URL\r\n- Right-click any file in the Files tab → Get Info shows file name, size, type, creator, path, and a copyable `hotline://` file URL\r\n- Both dialogs have Copy URL buttons\r\n\r\n## Improvements\r\n\r\n### Connect Dialog\r\n- Shows \"Connecting...\" state with inline error messages\r\n- Smooth height animation when switching between Server/Tracker/URL types\r\n- Scrolls if the form is too tall for the window\r\n- Pasting a `hotline://` URL into the address field auto-switches to URL mode\r\n\r\n### News Tab\r\n- Reply indentation for threaded news articles\r\n- \"Reply to Article\" render fix that'd allow it to become cut off easily when window was too short\r\n\r\n### UI Polish\r\n- Modals scale with viewport height (`min-h-[400px] h-[70vh] max-h-[90vh]`) instead of fixed 600px\r\n- Better Tracker Refresh behavior (communicates to be peopl)\r\n- Red cancel button styling\r\n- Custom icon debug info in user right-click menu (shows \"Custom icon: #ID\")\r\n- About screen with version and branding\r\n- News articles now display their posted date alongside the author name\r\n- News articles now have indentations for replies\r\n\r\n## Bug Fixes\r\n- Fixed file Get Info — was showing an `alert()` placeholder instead of a proper dialog\r\n- Fixed agreement modal flash after clicking Accept\r\n- Fixed banner icon #25096 (267×18) and other non-standard banner sizes not displaying\r\n\r\n## Misc\r\n- README updates with screenshot, official website links, Hotline history, and platform support, HOPE encryption documented in README and developer reference (implemented but disabled pending reconnect strategy) \r\n\r\n## Future\r\n- HOPE secure logi:  re-enable the probe with a reconnect delay once the approach is validated with server authors\r\n- Chat persistence remains the big unsolved problem\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets.\r\n\r\nBuilds for other OSes coming in a few hours.\r\n\r\n`.dmg` = macOS, `.msi`/`.exe` = Windows, `.apk` = Android, `.ipa` = iOS/iPadOS, Linux hippies can figure it out...\r\n\r\nInstall and launch Hotline Navigator.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator-0.1.8-universal.dmg",
+     "size": 17107133,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.8/Hotline.Navigator-0.1.8-universal.dmg",
+     "path": "hotline-navigator/v0.1.8/Hotline.Navigator-0.1.8-universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.8_amd64.AppImage",
+     "size": 83061240,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.8/Hotline.Navigator_0.1.8_amd64.AppImage",
+     "path": "hotline-navigator/v0.1.8/Hotline.Navigator_0.1.8_amd64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.8_amd64.deb",
+     "size": 9789710,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.8/Hotline.Navigator_0.1.8_amd64.deb",
+     "path": "hotline-navigator/v0.1.8/Hotline.Navigator_0.1.8_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.8_aarch64.AppImage",
+     "size": 102238728,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.8/Hotline.Navigator_0.1.8_aarch64.AppImage",
+     "path": "hotline-navigator/v0.1.8/Hotline.Navigator_0.1.8_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.8_x64-setup.exe",
+     "size": 5586177,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.8/Hotline.Navigator_0.1.8_x64-setup.exe",
+     "path": "hotline-navigator/v0.1.8/Hotline.Navigator_0.1.8_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.8_x64_en-US.msi",
+     "size": 7565312,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.8/Hotline.Navigator_0.1.8_x64_en-US.msi",
+     "path": "hotline-navigator/v0.1.8/Hotline.Navigator_0.1.8_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-navigator-0.1.8-android.apk",
+     "size": 59006720,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.8/hotline-navigator-0.1.8-android.apk",
+     "path": "hotline-navigator/v0.1.8/hotline-navigator-0.1.8-android.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.8_arm64.deb",
+     "size": 9710106,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.8/Hotline.Navigator_0.1.8_arm64.deb",
+     "path": "hotline-navigator/v0.1.8/Hotline.Navigator_0.1.8_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-navigator-0.1.8-ios-unsigned.ipa",
+     "size": 7153435,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.8/hotline-navigator-0.1.8-ios-unsigned.ipa",
+     "path": "hotline-navigator/v0.1.8/hotline-navigator-0.1.8-ios-unsigned.ipa",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.7",
+   "title": "v0.1.7 - Get Info, Custom Icon Support, better responsive behavior",
+   "date": "2026-03-14",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.1.7",
+   "notes": "## New Features\r\n\r\nx64 Linux builds are still an issue, last release was borked. I ordered a N100 (16 GB of RAM soldered and 512 GB of storage)  mini pc for $110 for Linux builds. \r\n\r\n### Remote Icons from hlwiki.com\r\n- When a user has an icon that isn't in the bundled set, the client now loads it from hlwiki.com automatically\r\n- Banner icons (the wide 232x18 ones) display behind usernames in the user list at their native size\r\n- \"Show Banners\" sub-option lets you toggle banner display — when off, remote icons are clipped to normal icon size instead of stretching\r\n- All of this is controlled under Settings → General → Remote Icons (on by default)\r\n\r\n### Hotline URL Support\r\n- New \"Hotline URL\" option in the Connect dialog type dropdown — paste a `hotline://` URL and hit Connect\r\n- URLs with file paths (e.g. `hotline://server.com/files/my%20folder`) automatically open the Files tab and navigate to that folder after you accept the server agreement\r\n\r\n### Get Info Dialogs\r\n- Right-click any bookmark (server or tracker) → Get Info shows name, address, port, TLS status, type, and a copyable `hotline://` or `hotlinetracker://` URL\r\n- Right-click any file in the Files tab → Get Info shows file name, size, type, creator, path, and a copyable `hotline://` file URL\r\n- Both dialogs have Copy URL buttons\r\n\r\n### Live Username Updates\r\n- Changing your name in Settings now updates on all connected servers immediately — no more disconnect/reconnect needed\r\n\r\n## Improvements\r\n\r\n### Connect Dialog\r\n- Shows \"Connecting...\" state with inline error messages if something goes wrong\r\n- Smooth height animation when switching between Server/Tracker/URL types\r\n- Scrolls if the form is too tall for the window\r\n- Modals (Settings, Notification Log, Transfer List, Message Dialog) now scale with viewport height instead of being fixed at 600px — uses `min-h-[400px] h-[70vh] max-h-[90vh]`\r\n- Mobile tab bar updates\r\n\r\n## Bug Fixes\r\n-IPv6 address formatting in the Rust backend,  IPv6 is now support in connections (addresses get wrapped in brackets for socket APIs, trackers support for IPV6 requires a tracker)\r\n- Fixed file Get Info — was previously showing an `alert()` placeholder instead of a proper dialog\r\n\r\n## Misc\r\n- Android builds are now a thing — signed release APKs included in the release assets\r\n- iOS unsigned `.ipa` included for sideloading\r\n- Added testing documentation to the README\r\n- README updates with official website links, Hotline history resources, and platform support details\r\n- Version bumped to 0.1.7 across all platforms (macOS, iOS, Android)\r\n\r\n## Future?\r\n- fogWraith's protocol extensions are still on the radar — E2E encryption for modern Hotline while keeping legacy server compatibility\r\n- Chat persistence remains the big unsolved problem\r\n\r\n## Installation\r\nDownload the installer for your platform from the release assets\r\n\r\n`.dmg` = macOS, `.msi`/`.exe` = Windows, `.apk` = Android, `.ipa` = iOS/iPadOS, Linux hippies can figure it out...\r\n\r\nInstall and launch Hotline Navigator\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.1.7_arm64.deb",
+     "size": 9632026,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.7/Hotline.Navigator_0.1.7_arm64.deb",
+     "path": "hotline-navigator/v0.1.7/Hotline.Navigator_0.1.7_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.7_aarch64.AppImage",
+     "size": 102140424,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.7/Hotline.Navigator_0.1.7_aarch64.AppImage",
+     "path": "hotline-navigator/v0.1.7/Hotline.Navigator_0.1.7_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.7_x64_en-US.msi",
+     "size": 7499776,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.7/Hotline.Navigator_0.1.7_x64_en-US.msi",
+     "path": "hotline-navigator/v0.1.7/Hotline.Navigator_0.1.7_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.7_x64-setup.exe",
+     "size": 5502431,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.7/Hotline.Navigator_0.1.7_x64-setup.exe",
+     "path": "hotline-navigator/v0.1.7/Hotline.Navigator_0.1.7_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-navigator-0.1.7-android.apk",
+     "size": 58890896,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.7/hotline-navigator-0.1.7-android.apk",
+     "path": "hotline-navigator/v0.1.7/hotline-navigator-0.1.7-android.apk",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-navigator-0.1.7-ios.ipa",
+     "size": 7072862,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.7/hotline-navigator-0.1.7-ios.ipa",
+     "path": "hotline-navigator/v0.1.7/hotline-navigator-0.1.7-ios.ipa",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.7_universal.dmg",
+     "size": 16565877,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.7/Hotline.Navigator_0.1.7_universal.dmg",
+     "path": "hotline-navigator/v0.1.7/Hotline.Navigator_0.1.7_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.7_amd64.deb",
+     "size": 9716846,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.7/Hotline.Navigator_0.1.7_amd64.deb",
+     "path": "hotline-navigator/v0.1.7/Hotline.Navigator_0.1.7_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.7_amd64.AppImage",
+     "size": 82991608,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.7/Hotline.Navigator_0.1.7_amd64.AppImage",
+     "path": "hotline-navigator/v0.1.7/Hotline.Navigator_0.1.7_amd64.AppImage",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.6",
+   "title": "v0.1.6 - The return of Linux x64 builds + Android + iOS/iPadOS!",
+   "date": "2026-03-10",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.1.6",
+   "notes": "# Hotline Navigator v0.1.6\r\n\r\n## Release Highlights\r\n\r\nSo I stopped using Ubuntu for my VMs and am now using Mint. It must be mind boggling that I'm able to reliably release builds for ARM64 Linux but I have a Pi and it's bullet proof. Let's see if Mint doesn't crap itself. TLS encryption support for secure connections to Hotline servers.\r\n\r\nNo clue if the Linux builds work but they are here. Also, hey, it's android! No clue how well it works. File bug reports.\r\n\r\n## New Features\r\n\r\n### TLS (Encrypted Connections)\r\n- Per-bookmark TLS toggle — connect securely to servers that support it (e.g. Mobius on port 5600)\r\n- Auto-detect TLS setting (Settings → General) — automatically tries TLS when connecting from tracker listings, falls back to plain if unavailable\r\n- TLS file transfers supported (port+1, e.g. 5601)\r\n- Toggling TLS on/off auto-switches between port 5500 and 5600\r\n\r\n### Add Bookmark dialog\r\n- Bookmarking a server from tracker listings now opens an editable dialog (name, address, login, TLS, etc.) before saving\r\n- Connect dialog now includes an \"Add to Bookmarks\" checkbox\r\n\r\n## Improvements\r\n\r\n### News posting\r\n- Fixed news posting — posts and replies now work correctly\r\n\r\n### UI polish\r\n- Edit/Add Bookmark dialogs now have smooth animated open/close transitions (matching the Connect dialog)\r\n\r\n## Bug Fixes\r\n\r\n- Fixed news posting error (\"missing required key text\") - frontend parameter name mismatch with Rust backend\r\n- Fixed news reply support - parent article ID now passed correctly\r\n- Documented how I was able to fix TLS auto-detect failing when connecting via IP address (Go TLS SNI incompatibility workaround)\r\n\r\n## Misc\r\n\r\n- Version bumped to 0.1.6\r\n- TLS implementation documented in README for other client authors\r\n- Build script now supports alternate `.env` variable naming\r\n- Linux build documentation update\r\n\r\n## Future?\r\n\r\n- John pointed out the client doesn't update user names without disconnect and reconnect\r\n- Hotline links should be supported with hotline:// prefixes, will have to investigate\r\n- I still haven't figured out what to do about chat histories, chat persistence is the big weak point of hotline\r\n- Talked with Halcyon (author of Mobius) and later  fogWraith about extending the hotline protocol. I like fogWraith's cypherpunk outlet on the [protocol](https://github.com/fogWraith/HLServer/blob/main/Docs/Protocol-Ext.md) and plan to implement whatever features they plan on. I'd love to offer a E2E version of Hotline for modern users and maintain compatibility with legacy servers.\r\n\r\n## Installation\r\n\r\n- Download the installer for your platform from the release assets\r\n- `.dmg` = macOS, `.msi`/`.exe` = Windows, `.apk` = Android, `.ipa` = iOS/iPadOS, Linux hippies can figure it out...\r\n- Install and launch Hotline Navigator\r\n\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.1.6_aarch64.AppImage",
+     "size": 105167368,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.6/Hotline.Navigator_0.1.6_aarch64.AppImage",
+     "path": "hotline-navigator/v0.1.6/Hotline.Navigator_0.1.6_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.6_x64-setup.exe",
+     "size": 5569416,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.6/Hotline.Navigator_0.1.6_x64-setup.exe",
+     "path": "hotline-navigator/v0.1.6/Hotline.Navigator_0.1.6_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.6_x64_en-US.msi",
+     "size": 7585792,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.6/Hotline.Navigator_0.1.6_x64_en-US.msi",
+     "path": "hotline-navigator/v0.1.6/Hotline.Navigator_0.1.6_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator-0.1.6-universal.dmg",
+     "size": 17286066,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.6/Hotline.Navigator-0.1.6-universal.dmg",
+     "path": "hotline-navigator/v0.1.6/Hotline.Navigator-0.1.6-universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator.AppDir.tar.gz",
+     "size": 112853695,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.6/Hotline.Navigator.AppDir.tar.gz",
+     "path": "hotline-navigator/v0.1.6/Hotline.Navigator.AppDir.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline-Navigator-0.1.6-android.apk",
+     "size": 58737185,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.6/Hotline-Navigator-0.1.6-android.apk",
+     "path": "hotline-navigator/v0.1.6/Hotline-Navigator-0.1.6-android.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline-Navigator-0.1.6-ios-ipados-unsigned.ipa",
+     "size": 8999338,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.6/Hotline-Navigator-0.1.6-ios-ipados-unsigned.ipa",
+     "path": "hotline-navigator/v0.1.6/Hotline-Navigator-0.1.6-ios-ipados-unsigned.ipa",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.5",
+   "title": "v0.1.5 - Quick fixes!",
+   "date": "2026-03-04",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.1.5",
+   "notes": " Hotline Navigator v0.1.5\r\n\r\n## Release Highlights\r\n\r\nThis is a smaller quality-of-life release focused on messaging, scrolling behavior, and a few reliability fixes. I was able to give it a spin and noticed these issues when using it. My Ubuntu VM seems to have died. It's release will come later.\r\n\r\n## Improvements\r\n\r\n### Better private messaging input\r\n- Private message input now wraps long text\r\n- Input grows up to 3 lines, then scrolls internally\r\n- `Enter` sends, `Shift+Enter` adds a new line\r\n- Private message modal open/close behavior is smoother\r\n\r\n### Chat and board usability\r\n- Chat input now auto-resizes as you type\r\n- Chat view now only auto-scrolls when you’re already at the bottom \r\n- Responsive behavior fixes for chat window, (it was possible to _lose_ chat input)\r\n- Fixed board tab scrolling/layout issue \r\n\r\n### Settings and UI polish\r\n- Added a **Server Banner** toggle in Settings → General\r\n- Server banner now fades in after loading\r\n- Expanded and cleaned up available icon choices\r\n- Full Icon list support thanks to John @ HL wiki!\r\n\r\n## Bug Fixes\r\n\r\n- Fixed user flag mapping (admin/idle indicators)\r\n- Improved backend board parsing for mixed UTF-8/Mac Roman content and divider-based post splitting (helps prevent garbled board posts on older servers)\r\n\r\n## Misc\r\n\r\n- Version metadata updated to `0.1.5`\r\n- Small README/docs cleanup\r\n\r\n## Future?\r\n\r\n- John pointed out the client doesn't update user names without disconnect and reconnect. \r\n- Hotline links should be supported with hotline:// prefixes, will have to investigate\r\n- I still haven't figured out what to do about chat histories, chat persistence is the big weak point of hotline.\r\n\r\n## Installation\r\n\r\n- Download the installer for your platform from the release assets\r\n- Install and launch Hotline Navigator",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.1.5_arm64.deb",
+     "size": 8986466,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.5/Hotline.Navigator_0.1.5_arm64.deb",
+     "path": "hotline-navigator/v0.1.5/Hotline.Navigator_0.1.5_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.5_aarch64.AppImage",
+     "size": 104397320,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.5/Hotline.Navigator_0.1.5_aarch64.AppImage",
+     "path": "hotline-navigator/v0.1.5/Hotline.Navigator_0.1.5_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.5_universal.dmg",
+     "size": 14595327,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.5/Hotline.Navigator_0.1.5_universal.dmg",
+     "path": "hotline-navigator/v0.1.5/Hotline.Navigator_0.1.5_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.5_x64_en-US.msi",
+     "size": 6250496,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.5/Hotline.Navigator_0.1.5_x64_en-US.msi",
+     "path": "hotline-navigator/v0.1.5/Hotline.Navigator_0.1.5_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.5_x64-setup.exe",
+     "size": 4622859,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.5/Hotline.Navigator_0.1.5_x64-setup.exe",
+     "path": "hotline-navigator/v0.1.5/Hotline.Navigator_0.1.5_x64-setup.exe",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.4",
+   "title": "V0.1.4 - Polishing up",
+   "date": "2026-03-04",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.1.4",
+   "notes": "# Hotline Navigator v0.1.4\r\n\r\n## Release Highlights\r\n\r\nThis release focuses on chat notifications, user experience improvements, and bug fixes. You can now get notified when someone mentions you, mute noisy users, and watch for specific keyword, all configurable from Settings.\r\n\r\n## New Features\r\n\r\n### @Mention Notifications Modals and More\r\n\r\n- **Always logged:** When someone @mentions you in chat, it's always added to the notification history, even if you're actively in that chat window\r\n- **Pop-up control:** A pop-up toast only appears when you're away from the tab. You can disable pop-ups entirely in Settings while keeping the history log\r\n- **Watch Words:** Add custom keywords in Settings → General that trigger the same highlight and notification as a direct @mention (case-insensitive, whole-word matching)\r\n- **Muted Users:** Add usernames to a mute list in Settings → General to suppress all notifications and sounds from specific users entirely\r\n- **Server Agreement is now a proper Modal**  - previously you could click around on a server without \"Agreeing\". \r\n- **Smart Links** - Links in News, Boards, Chat are now clickable and can be disabled\r\n\r\n## Bug Fixes\r\n\r\n- Fixed the \"Check for Updates\" screen incorrectly showing a new version available when you're already on the latest version,caused by a race condition where the version comparison ran before the app version had finished loading\r\n- Fixed links in the About settings tab not opening the browser\r\n- Fix the glitch when clicking a bookmark to an open server that caused \"ghost users\".\r\n- Improved Linux Icon Support\r\n\r\n## Polish\r\n\r\n- Updated copyright year to 2026\r\n- TypeScript build error cleanup for cross-platform compatibility\r\n- Modal animations! Nice blur in and out\r\n- Readme.mds updated, with a new graphic\r\n\r\n## Installation\r\n\r\n- Download the installer for your platform from the release assets\r\n- Install and launch Hotline Navigator\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.1.4_arm64.deb",
+     "size": 8964216,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.4/Hotline.Navigator_0.1.4_arm64.deb",
+     "path": "hotline-navigator/v0.1.4/Hotline.Navigator_0.1.4_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.4_aarch64.AppImage",
+     "size": 104385032,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.4/Hotline.Navigator_0.1.4_aarch64.AppImage",
+     "path": "hotline-navigator/v0.1.4/Hotline.Navigator_0.1.4_aarch64.AppImage",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.4_universal.dmg",
+     "size": 14575159,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.4/Hotline.Navigator_0.1.4_universal.dmg",
+     "path": "hotline-navigator/v0.1.4/Hotline.Navigator_0.1.4_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.4_x64_en-US.msi",
+     "size": 6246400,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.4/Hotline.Navigator_0.1.4_x64_en-US.msi",
+     "path": "hotline-navigator/v0.1.4/Hotline.Navigator_0.1.4_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.4_x64-setup.exe",
+     "size": 4625141,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.4/Hotline.Navigator_0.1.4_x64-setup.exe",
+     "path": "hotline-navigator/v0.1.4/Hotline.Navigator_0.1.4_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.4_amd64.deb",
+     "size": 9028024,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.4/Hotline.Navigator_0.1.4_amd64.deb",
+     "path": "hotline-navigator/v0.1.4/Hotline.Navigator_0.1.4_amd64.deb",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.3",
+   "title": "v0.1.3",
+   "date": "2026-03-04",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.1.3",
+   "notes": "# Hotline Navigator v0.1.3\r\n\r\n## Release Highlights\r\n\r\nLast version was kinda goofed still, especially around Linux and file browsing. \r\n\r\nThis release adds admin user highlighting in chat, server broadcast support, news management tools, folder creation, scoped file search, and a configurable download folder. It also improves Linux/Debian compatibility.\r\n\r\n## New Features\r\n\r\n### Admin Highlighting in Chat\r\n- **Admin Names in Red**: Admin users' names appear in red in the chat window, making them easy to identify at a glance\r\n- **Consistent with User List**: Matches the existing \"A\" badge already shown next to admin names in the user list\r\n\r\n### Broadcast Messages\r\n- **Broadcast Button**: Users with broadcast permission see a megaphone button in the chat toolbar\r\n- **Broadcast Mode**: Clicking the button opens a dedicated broadcast input — messages are sent as server-wide broadcasts visible to all connected users, distinct from regular chat\r\n\r\n### News Management\r\n- **Create Categories**: Users with permission can add new news categories directly in the news view\r\n- **Create Folders**: Users with permission can add news folders inside categories\r\n- **Delete Items**: Categories, folders, and articles can be deleted from the news view when the user has the appropriate permissions\r\n- **Permission-Gated**: All create/delete controls are hidden unless the server grants the relevant permission\r\n\r\n### Folder Creation in Files\r\n- **New Folder Button**: Users with create-folder permission see a \"+ New Folder\" button in the file browser toolbar\r\n- **Inline Input**: Clicking the button reveals a name input inline — no modal required\r\n- **Auto-Refresh**: The file list refreshes automatically after the folder is created\r\n\r\n### Scoped File Search\r\n- **Context-Aware Search**: Global search was a bust, so I've simplified it. When browsed into a subfolder, search results are scoped to files within that folder rather than the entire server\r\n- **Dynamic Placeholder**: The search input shows the current folder name to make the scope clear (e.g. \"Search in 'Music'...\")\r\n- **Root Behavior Unchanged**: Searching from the root still searches all cached files globally\r\n\r\n### Configurable Download Folder\r\n- **Folder Picker in Settings**: A new \"Download Folder\" section in General Settings lets you choose where downloaded files are saved\r\n- **Native Dialog**: Uses a native OS folder picker — no type-in path required\r\n- **Reset to Default**: A reset button restores the system Downloads folder\r\n- **Persistent**: The chosen folder is saved across sessions\r\n\r\n## Bug Fixes\r\n\r\n- Fixed download directory fallback on Linux/Debian: if the system Downloads directory is unavailable, falls back to `~/Downloads` then the app data directory\r\n\r\n## Installation\r\n\r\n1. Download the installer for your platform from the release assets\r\n2. Install and launch `Hotline Navigator`",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_1.3.0_universal.dmg",
+     "size": 13908376,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.3/Hotline.Navigator_1.3.0_universal.dmg",
+     "path": "hotline-navigator/v0.1.3/Hotline.Navigator_1.3.0_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_1.3.0_x64-setup.exe",
+     "size": 4284263,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.3/Hotline.Navigator_1.3.0_x64-setup.exe",
+     "path": "hotline-navigator/v0.1.3/Hotline.Navigator_1.3.0_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_1.3.0_x64_en-US.msi",
+     "size": 5914624,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.3/Hotline.Navigator_1.3.0_x64_en-US.msi",
+     "path": "hotline-navigator/v0.1.3/Hotline.Navigator_1.3.0_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.3_arm64.deb",
+     "size": 8637840,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.3/Hotline.Navigator_0.1.3_arm64.deb",
+     "path": "hotline-navigator/v0.1.3/Hotline.Navigator_0.1.3_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.3_aarch64.AppImage.zip",
+     "size": 103313188,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.3/Hotline.Navigator_0.1.3_aarch64.AppImage.zip",
+     "path": "hotline-navigator/v0.1.3/Hotline.Navigator_0.1.3_aarch64.AppImage.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_1.3.0_amd64.AppImage.zip",
+     "size": 83400213,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.3/Hotline.Navigator_1.3.0_amd64.AppImage.zip",
+     "path": "hotline-navigator/v0.1.3/Hotline.Navigator_1.3.0_amd64.AppImage.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_1.3.0_amd64.deb",
+     "size": 8694654,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.3/Hotline.Navigator_1.3.0_amd64.deb",
+     "path": "hotline-navigator/v0.1.3/Hotline.Navigator_1.3.0_amd64.deb",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.2",
+   "title": "v0.1.2",
+   "date": "2026-03-03",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.1.2",
+   "notes": "# Hotline Navigator v0.1.2\r\n\r\nFinally have Ubuntu on my NAS configured in a VM for builds!\r\n\r\n## Release Highlights\r\n\r\n### Mobile Responsive Server UI\r\n- **Mobile Section Tabs**: Added a horizontal tab bar for Chat, Board, News, and Files on small screens\r\n- **User List Toggle**: Mobile tab bar now includes a user list toggle with live user count badge\r\n- **Compact Header**: Server header is optimized for smaller screens with tighter controls and truncated title behavior\r\n- **Sidebar Behavior**: Desktop sidebar is hidden on mobile, keeping the content area focused and easier to use\r\n\r\n### iOS / iPadOS Build and Packaging\r\n- **iOS Build Scripts**: Added npm scripts for iOS init/dev/build/simulator workflows\r\n- **iOS CI Job**: GitHub Actions now includes an iOS build pipeline (signed for release tags, simulator for PRs)\r\n- **Tauri iOS Config**: Added iOS bundle configuration in Tauri settings (minimum iOS version + team ID)\r\n- **Apple Project Artifacts**: Added generated Apple project files and app icon assets for iOS packaging\r\n\r\n### File Download Experience on iOS\r\n- **Documents Directory Saving**: Downloads on iOS are saved to app-accessible storage for Files app visibility\r\n- **Open File Action**: iOS download notifications include a \"View File\" action to open the downloaded item\r\n- **Directory Creation Safety**: Download directories are created automatically when needed\r\n\r\n## UI Improvements\r\n\r\n### News on Mobile\r\n- **Stacked News Layout**: News list/article layout now adapts to mobile screens\r\n- **Mobile Back Navigation**: Added back controls for returning from article/composer views on mobile\r\n\r\n### Tab Bar and Safe Areas\r\n- **iOS Safe Area Support**: Tab bar now respects iOS safe area insets\r\n- **Viewport Fit**: Added `viewport-fit=cover` for better full-screen behavior on iOS devices\r\n\r\n### Visual Refresh\r\n- **Updated App Icons**: Refreshed app icons across platform targets\r\n- **Updated Section Icons**: New icons for tracker/server/chat/board/news/files navigation areas\r\n\r\n## Bug Fixes\r\n\r\n- Fixed file browser hangs when opening empty folders by treating empty file-list replies as valid responses\r\n- Fixed file prefetch race conditions by registering one-shot listeners before issuing file list requests\r\n- Fixed potential infinite recursion during folder prefetch with visited-path cycle protection\r\n- Added loading safety timeout for Files tab requests so UI can recover when a server does not respond\r\n- Improved Hotline file path encoding for compatibility:\r\n  - Uses MacRoman encoding where possible\r\n  - Falls back to UTF-8 for unsupported characters\r\n  - Enforces 255-byte component limits for protocol compliance\r\n- Cleared pending file-list and transaction state on disconnect to reduce stale state issues\r\n\r\n## Quality and Tooling\r\n\r\n- Added ESLint flat config and lint scripts\r\n- Added Vitest + Testing Library test setup for frontend unit tests\r\n- Added TypeScript typecheck script\r\n- Added protocol transaction unit tests in Rust\r\n- Added CI gating checks before builds:\r\n  - TypeScript typecheck\r\n  - ESLint\r\n  - Vitest\r\n  - `cargo clippy -- -D warnings`\r\n  - `cargo test`\r\n- Expanded GitHub Actions release builds for macOS, Windows, Linux, and iOS artifacts\r\n\r\n## Installation\r\n\r\n1. Open the `v0.1.2` release on GitHub\r\n2. Download the installer/binary for your platform from release assets\r\n3. Install and launch `Hotline Navigator`\r\n4. For iOS/iPadOS, use the iOS build workflow from source if a signed artifact is not provided in release assets",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.1.2_universal.dmg",
+     "size": 13834405,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.2/Hotline.Navigator_0.1.2_universal.dmg",
+     "path": "hotline-navigator/v0.1.2/Hotline.Navigator_0.1.2_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.2_amd64.AppImage.linux.zip",
+     "size": 81861175,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.2/Hotline.Navigator_0.1.2_amd64.AppImage.linux.zip",
+     "path": "hotline-navigator/v0.1.2/Hotline.Navigator_0.1.2_amd64.AppImage.linux.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.2_amd64.deb",
+     "size": 7015766,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.2/Hotline.Navigator_0.1.2_amd64.deb",
+     "path": "hotline-navigator/v0.1.2/Hotline.Navigator_0.1.2_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.2_aarch64.AppImage.linux.zip",
+     "size": 101819294,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.2/Hotline.Navigator_0.1.2_aarch64.AppImage.linux.zip",
+     "path": "hotline-navigator/v0.1.2/Hotline.Navigator_0.1.2_aarch64.AppImage.linux.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.2_arm64.deb",
+     "size": 6956088,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.2/Hotline.Navigator_0.1.2_arm64.deb",
+     "path": "hotline-navigator/v0.1.2/Hotline.Navigator_0.1.2_arm64.deb",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.1",
+   "title": "v0.1.1",
+   "date": "2025-12-15",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.1.1",
+   "notes": "# Hotline Navigator v0.1.1\r\n\r\n## Release Highlights\r\n\r\nThis release adds several important features and improvements, including @username mentions, join/leave messages, a tabbed interface for multiple servers, and various UI enhancements.\r\n\r\n## New Features\r\n\r\n### @Username Mentions\r\n- **Mention Detection**: Case-insensitive @username detection in chat messages\r\n- **Visual Highlighting**: Messages containing mentions are highlighted with yellow background and left border\r\n- **Notifications**: Mentions trigger tab unread count increments and toast notifications\r\n- **Smart Matching**: Uses word boundaries to prevent partial matches (e.g., `@greg` doesn't match `@gregory`)\r\n\r\n### Join/Leave Messages\r\n- **Join Messages**: Chat messages displayed when users join the server (`\"{username} joined\"`)\r\n- **Leave Messages**: Chat messages displayed when users leave the server (`\"{username} left\"`)\r\n- **Styling**: Join/leave messages styled as centered, italic, gray text for subtle appearance\r\n- **User List Updates**: User list now correctly updates when users join or leave\r\n\r\n### Tabbed Interface\r\n- **Multi-Server Support**: Browser-like tabbed interface for managing multiple server connections\r\n- **Tab Management**: Add, remove, and switch between server tabs with keyboard shortcuts\r\n- **Unread Indicators**: Tab badges show unread message counts for background tabs\r\n- **Tracker Tab**: Always-visible tracker/bookmark tab that acts as \"home\" for opening new servers\r\n- **Keyboard Shortcuts**: \r\n  - `⌘W` - Close active server tab\r\n  - `⌘Tab` - Switch to next tab\r\n  - `⌘1-9` - Switch to tab by number\r\n\r\n## UI Improvements\r\n\r\n### Dark Mode Enhancements\r\n- **Tab Styling**: Active tab uses lighter dark background (`gray-700`) with white text and purple underline\r\n- **Overscroll Fix**: Fixed white background showing on overscroll in dark mode\r\n- **Inactive Tabs**: Darker background (`gray-800`) with gray text for better contrast\r\n\r\n### User Experience\r\n- **Close Tab Disconnect**: Closing a server tab automatically disconnects from the backend\r\n- **Tab Persistence**: Tabs persist across server connections and disconnections\r\n- **Dynamic Tab Titles**: Tab titles update automatically from server name\r\n\r\n## Bug Fixes\r\n\r\n- Fixed user list not updating when new users join (now uses `NotifyUserChange` correctly)\r\n- Fixed duplicate join messages (removed from initial load handler)\r\n- Fixed leave messages not appearing (properly get username before removal)\r\n- Fixed white background on overscroll in dark mode\r\n- Linux / Windows Custom icons\r\n\r\n##Installation\r\n\r\n1. Download `Hotline Navigator_0.1.1_universal.dmg`\r\n2. Open the DMG file\r\n3. Drag `Hotline Navigator` to your Applications folder\r\n4. Launch from Applications",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Windows.Hotline.Navigator_0.1.1_x64-setup.exe",
+     "size": 4222683,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.1/Windows.Hotline.Navigator_0.1.1_x64-setup.exe",
+     "path": "hotline-navigator/v0.1.1/Windows.Hotline.Navigator_0.1.1_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Linux.Hotline.Navigator_0.1.1_arm64.deb.zip",
+     "size": 6962798,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.1/Linux.Hotline.Navigator_0.1.1_arm64.deb.zip",
+     "path": "hotline-navigator/v0.1.1/Linux.Hotline.Navigator_0.1.1_arm64.deb.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator-0.1.1-universal.dmg",
+     "size": 13827405,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.1/Hotline.Navigator-0.1.1-universal.dmg",
+     "path": "hotline-navigator/v0.1.1/Hotline.Navigator-0.1.1-universal.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.0",
+   "title": "Release 0.1.0",
+   "date": "2025-12-13",
+   "url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/tag/v0.1.0",
+   "notes": "Exciting times! New hotline client. Below is the summary.\r\n\r\niOS and iPadOS are maybes as I probably can port to them as well but distro is via app store. Android is probably not unless someone wants to give a modernish Android device.\r\n\r\n\r\n# Hotline Navigator v0.1.0\r\n\r\n## Initial Release\r\n\r\nHotline Navigator is a modern, cross-platform client for the Hotline protocol - bringing the classic 1990s community platform experience to modern systems. This initial release provides a fully functional Hotline client with all core features.\r\n\r\n## Features\r\n\r\n### Core Functionality\r\n- **Server Browser**: Browse tracker servers and manage bookmarks with drag-and-drop reordering\r\n- **Server Connection**: Connect to Hotline servers with login credentials and custom user icons\r\n- **Connection Management**: Visual status indicators (connecting, connected, logged-in) with automatic reconnection handling\r\n\r\n### Communication\r\n- **Public Chat**: Real-time public chat rooms with message history\r\n- **Private Messaging**: Direct messages with persistent conversation history and unread message indicators\r\n- **Server Broadcasts**: Receive and display server-wide announcements\r\n- **User List**: View connected users with admin/idle status indicators and user information\r\n\r\n### Content & Files\r\n- **Message Board**: Read and post messages to server message boards\r\n- **News System**: Browse news categories, read articles, and post news/replies with threaded discussions\r\n- **File Browser**: Navigate server file systems with folder support\r\n- **File Downloads**: Download files with real-time progress tracking\r\n- **File Uploads**: Upload files to servers with progress indicators\r\n- **File Preview**: Preview images, audio files, and text files before downloading\r\n- **Transfer Manager**: Track active and completed file transfers in a dedicated window\r\n\r\n### Server Features\r\n- **Server Banners**: Automatic download and display of server banner images\r\n- **Server Agreements**: Accept server terms of service with persistent storage\r\n- **Server Information**: Display server name, version, description, and user count\r\n\r\n### User Experience\r\n- **Dark Mode**: Full dark mode support with system preference detection\r\n- **Keyboard Shortcuts**: macOS-style shortcuts (⌘K to connect, ⌘1-4 for tabs, etc.)\r\n- **Context Menus**: Right-click actions throughout the application\r\n- **Notifications**: Toast notifications with history log\r\n- **Sound Effects**: Classic Hotline sound effects (login, message, etc.) with volume control\r\n- **Settings**: Customize username, user icon (629 classic icons available), and preferences\r\n\r\n### Admin Features\r\n- **User Management**: Disconnect users from servers (requires admin permissions)\r\n- **Permission System**: Access control based on server permissions\r\n\r\n### Bookmarks\r\n- **Bookmark Management**: Create, edit, delete, and reorder server bookmarks\r\n- **Default Servers**: Pre-loaded default Hotline servers and trackers\r\n- **Bookmark Persistence**: Automatic save/load of bookmarks across sessions\r\n- **Drag & Drop**: Reorder bookmarks with visual feedback\r\n\r\n##  Installation\r\n\r\n1. Download `Hotline Navigator_0.1.0_universal.dmg`\r\n2. Open the DMG file\r\n3. Drag `Hotline Navigator` to your Applications folder\r\n4. Launch from Applications (you may need to allow it in System Settings > Privacy & Security on first launch)\r\n\r\n## System Requirements\r\n\r\n- **macOS Big Sur (11.0)** or later\r\n- **Universal Binary** - Works on both Intel (x86_64) and Apple Silicon (aarch64) Macs\r\n- Internet connection for connecting to Hotline servers\r\n- Windows ??? - Not a Windows guy but it works on Windows 11\r\n- Linux/Debian - Amd64/ARM64\r\n\r\n##  What's Working\r\n\r\nThis release includes all core Hotline protocol features:\r\n-  Complete protocol implementation (TRTP/HOTL handshake, login, transactions)\r\n-  Real-time event handling (chat, user joins/leaves, file updates)\r\n- File transfer protocol (downloads and uploads)\r\n- Message board and news protocols\r\n- User management and permissions\r\n- Persistent storage for bookmarks and preferences\r\n\r\n## Known Limitations\r\n\r\n- **Bonjour/mDNS**: Server discovery via Bonjour not yet implemented\r\n- **Account Management**: Server account creation/editing UI not yet implemented\r\n- **Bookmark Import/Export**: Manual bookmark sharing not yet available\r\n- **Auto-reconnect**: Manual reconnection required after network interruptions\r\n\r\n##  Bug Reports\r\n\r\nFound a bug? Please report\r\n\r\n## Credits\r\n\r\n**Hotline Navigator** is built with:\r\n- [Tauri](https://tauri.app/) - Cross-platform desktop framework\r\n- [React](https://react.dev/) - UI framework\r\n- [Rust](https://www.rust-lang.org/) - Systems programming\r\n- [Tailwind CSS](https://tailwindcss.com/) - Styling\r\n\r\n**Special Thanks:**\r\n- [Mierau](https://github.com/mierau) - Original [Hotline client for macOS](https://github.com/mierau/hotline) which served as the reference implementation\r\n- The Hotline community - For keeping the protocol alive\r\n\r\n**Protocol:**\r\n- Hotline protocol created by Hotline Communications in the 1990s\r\n\r\n## License\r\n\r\nMIT License - See LICENSE file for details\r\n\r\n---\r\n\r\n*Bringing the classic Hotline experience to modern platforms* \r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.Navigator_0.1.0_universal.dmg",
+     "size": 13523840,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.0/Hotline.Navigator_0.1.0_universal.dmg",
+     "path": "hotline-navigator/v0.1.0/Hotline.Navigator_0.1.0_universal.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.0_x64-setup.exe",
+     "size": 4142997,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.0/Hotline.Navigator_0.1.0_x64-setup.exe",
+     "path": "hotline-navigator/v0.1.0/Hotline.Navigator_0.1.0_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.0_amd64.deb",
+     "size": 6939080,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.0/Hotline.Navigator_0.1.0_amd64.deb",
+     "path": "hotline-navigator/v0.1.0/Hotline.Navigator_0.1.0_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline.Navigator_0.1.0_arm64.deb",
+     "size": 6875216,
+     "source_url": "https://github.com/bourbonicfisky/Hotline-Navigator/releases/download/v0.1.0/Hotline.Navigator_0.1.0_arm64.deb",
+     "path": "hotline-navigator/v0.1.0/Hotline.Navigator_0.1.0_arm64.deb",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

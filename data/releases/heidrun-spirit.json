@@ -1,0 +1,15 @@
+{
+ "id": "heidrun-spirit",
+ "releases": [
+  {
+   "version": "1.0.0",
+   "title": "heidrun-spirit 1.0.0",
+   "date": "2026-06-03",
+   "url": "https://github.com/franckjej/heidrun-spirit/releases/tag/1.0.0",
+   "notes": "Initial public release.\n\nA standalone Hotline chatterbot built on the 1998 [MegaHAL](https://megahal.alioth.debian.org/) Markov engine (© Jason Hutchens, GPL-2.0). Swift revival of the 2002 *Heidrun's Spirit* plug-in — connects to any Hotline server, replies to chat, learns as it reads, persists its brain across restarts.\n\nCross-platform via [heidrun-protocol](https://github.com/franckjej/heidrun-protocol)'s `HeidrunNIOClient`: runs on **macOS** (launchd) and **Linux** (Docker).\n\nSee [`README.md`](https://github.com/franckjej/heidrun-spirit#readme) for configuration. `deploy/` ships a LaunchDaemon plist; `Dockerfile` + `docker-compose.yml` cover the Linux path.",
+   "prerelease": false,
+   "source": "github",
+   "files": []
+  }
+ ]
+}

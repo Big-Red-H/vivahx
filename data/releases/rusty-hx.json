@@ -1,0 +1,25 @@
+{
+ "id": "rusty-hx",
+ "releases": [
+  {
+   "version": "1.0.1",
+   "title": "v1.0.1",
+   "date": "2025-12-06",
+   "url": "https://github.com/kangsterizer/rusty-hx/releases/tag/1.0.1",
+   "notes": "Fixes!",
+   "prerelease": false,
+   "source": "github",
+   "files": []
+  },
+  {
+   "version": "1.0.0",
+   "title": "v1.0",
+   "date": "2025-12-05",
+   "url": "https://github.com/kangsterizer/rusty-hx/releases/tag/1.0.0",
+   "notes": "I know there's a bug with /connect with a login and no password. IM RELEASING IT ANYWAY!",
+   "prerelease": false,
+   "source": "github",
+   "files": []
+  }
+ ]
+}

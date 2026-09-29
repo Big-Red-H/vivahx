@@ -1,0 +1,35 @@
+name: Suggest software
+description: A Hotline client, server, tracker, bot or tool VivaHX should follow.
+title: "Software: "
+labels: ["software"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Clients
+        - Servers
+        - Trackers
+        - Bots
+        - Misc
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: GitHub repo or website
+      description: "owner/repo for GitHub (its releases are followed automatically), or a web address."
+    validations:
+      required: true
+  - type: textarea
+    id: about
+    attributes:
+      label: What it is
+      description: One or two lines. What does it run on?

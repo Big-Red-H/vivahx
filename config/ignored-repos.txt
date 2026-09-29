@@ -1,0 +1,29 @@
+# GitHub repos the weekly search should stop suggesting, one owner/repo per line.
+jhalter/homebrew-mobius-hotline-client   # a Homebrew tap for Mobius Client
+amoeba/hltracker                         # replaced by amoeba/hotline
+Big-Red-H/bigredh                        # the BigRedH tracker itself
+jhalter/homebrew-mobius-hotline-server   # a Homebrew tap for Mobius
+pld-linux/gtkhx                          # Linux packaging for GtkHx
+gitpan/Hotline-Client                    # a mirror of a CPAN module
+Doughnut8/Hotline                        # a Discord log relay for game servers
+Llamenos-Hotline/llamenos-platform
+MureedQasimShah/mcp-server
+richardvanthof/Richard-Hotline-Printer
+richardvanthof/Richard-hotline-server
+BCFSCT2026/Hotline-Volunteer-Protocol
+product-briohr/hotline-tracker
+sp1le/hotline-price-bot
+Banana-Hotline/WeAreOnTheTagServer
+LeslieLeung/hotline
+jaywha/InvasionHotline
+jdan/magic-hotline
+sev-ofc/Buddhism-Hotline-Discord-Server-API
+ashu98s/COVID-19-App
+precision-sustainable-ag/Hotline-Issues
+cloudvpsssdnhanhoa/Cloud-Vps-SSD-Nh-n-H-a
+J4ckBl4ck/hotline-messenger
+labeldock/hotline
+Takora/GameServers
+mariogrieco/TachiraStream
+andimal/pigeon-creek-ski-report
+RiflerRick/AnonymousChatServer

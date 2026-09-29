@@ -1,0 +1,38 @@
+name: Look for new Hotline projects
+
+on:
+  schedule:
+    - cron: "0 15 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Search GitHub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 -m vivahx.discover > candidates.md
+      # One open issue holds this week's list; it's updated rather than a new one each week.
+      - name: Update the issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create discovery --color 5fba22 --description "Hotline projects the weekly search found" --force
+          number=$(gh issue list --label discovery --state open --json number --jq '.[0].number')
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file candidates.md
+          elif ! grep -q "Nothing new this week" candidates.md; then
+            gh issue create --title "New Hotline projects to look at" --label discovery --body-file candidates.md
+          fi

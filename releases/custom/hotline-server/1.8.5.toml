@@ -1,0 +1,12 @@
+version = "1.8.5"
+title = "Hotline Server 1.8.5"
+date = 2002-01-01
+notes = "The last Hotline Server for Mac OS 9 and Windows."
+
+[[files]]
+name = "hlserver_ppc_185.sit"
+url = "http://hlwiki.com/HotlineFiles/Servers/hlserver_ppc_185.sit"
+
+[[files]]
+name = "hlserver_pc_185.exe"
+url = "http://hlwiki.com/HotlineFiles/Servers/hlserver_pc_185.exe"

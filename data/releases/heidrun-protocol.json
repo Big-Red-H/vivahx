@@ -1,0 +1,25 @@
+{
+ "id": "heidrun-protocol",
+ "releases": [
+  {
+   "version": "1.0.0",
+   "title": "1.0.0",
+   "date": "2026-06-21",
+   "url": "https://github.com/franckjej/heidrun-protocol/releases/tag/1.0.0",
+   "notes": "First stable release of the Heidrun Hotline protocol package.\n\nShips `HeidrunCore` (wire types + Network.framework client), `HeidrunNIOClient` (cross-platform SwiftNIO client), and the `heidrun` CLI.\n\nCapabilities negotiated via `DATA_CAPABILITIES` (0x01F0):\n- **Large-file transfers (>4 GiB)** — 64-bit sizes, 24-byte HTXF handshake, 64-bit FFO fork headers; single-file and folder.\n- **UTF-8 text encoding** — opt-in UTF-8 for all strings (chat, names, news, …); macOS Roman otherwise.\n\nPlus Heidrun extensions (0xE000 band): emoji avatars, resource-fork framed downloads. Self-signed TLS, tracker registration/listing, news, file transfers.\n\nThe wire format is additive and backward-compatible: every extension degrades gracefully against peers that don't negotiate it. See docs/PROTOCOL-EXTENSIONS.md.",
+   "prerelease": false,
+   "source": "github",
+   "files": []
+  },
+  {
+   "version": "1.0.0-rc24",
+   "title": "heidrun-protocol 1.0.0-rc24",
+   "date": "2026-06-18",
+   "url": "https://github.com/franckjej/heidrun-protocol/releases/tag/1.0.0-rc24",
+   "notes": "First tagged GitHub release for **heidrun-protocol**. Notes span the recent admin line (rc22 → rc24); the headline is **over-the-wire administration** — the cross-platform NIO client and the `heidrun` CLI both gained full admin powers.\n\nThe package ships three products, pure Swift 6, macOS + Linux:\n\n- **`HeidrunCore`** — Hotline wire format, value types, codecs, the Network.framework `HotlineNetworkClient`, and the tracker client.\n- **`HeidrunNIOClient`** — cross-platform Hotline transport on SwiftNIO.\n- **`heidrun`** — text-only Hotline CLI (\"modern HX\") built on `HeidrunNIOClient`.\n\n---\n\n## 🔑 Over-the-wire admin on `HeidrunNIOClient`  (rc22)\n\nThe SwiftNIO client gained the six account-admin transactions, byte-for-byte mirroring the Network.framework client: `createLogin`, `deleteLogin`, `openLogin`, `modifyLogin`, `kick` (with optional ban), and `broadcast`. This is what unblocks cross-platform (Linux) administration. Wire quirks honoured: `openLogin` (TX 352) sends the login **plain** while every other auth/admin transaction XOR-obfuscates it; `modifyLogin` password is tri-state (`nil` omits, `\"\"` sends a single `0x00`, non-empty obfuscates); privilege bytes match the classic bitfield.\n\n---\n\n## 🖥 `heidrun` CLI admin surface  (rc23)\n\nThe CLI exposes those operations two ways, sharing one set of tested argument parsers:\n\n**REPL slash commands** (need the matching server privileges):\n\n```\n/newuser <login> <pass> <nick> [priv,…]\n/getuser <login>\n/moduser <login> <nick> [priv,…] [pass]\n/deluser <login>\n/kick <socket> [ban]\n/broadcast <message>\n```\n\n**One-shot scripting flags** — connect, do one operation, exit with a status code (non-zero on a usage or server error), no REPL:\n\n```bash\nheidrun <host> -l admin -p <pw> --create-user bob secret Bob readChat,sendChat\nheidrun <host> -l admin -p <pw> --modify-user bob Bobby readChat --user-password newpass\nheidrun <host> -l admin -p <pw> --kick 5 --ban\nheidrun <host> -l admin -p <pw> --broadcast \"back in 5\"\nheidrun <host> -l admin -p <pw> --delete-user bob\n```\n\nPrivileges are comma-separated **names** (e.g. `readChat,sendChat,postNews`), backed by a new public `PrivilegeNames` name↔bit helper in `HeidrunCore` (40 named bits).\n\n---\n\n## 🆕 Discoverability + versioning  (rc24)\n\n- **`/version`** (`/ver`) — prints the CLI version **and** the negotiated protocol versions (client advertises vN, server reports vN). `//version` still asks the server for its own version string, so nothing is lost.\n- **`/privs`** (`/privileges`) — lists the valid privilege names in the REPL, so you don't have to read source or crib off `/getuser`.\n- **`heidrun --version`** and **`heidrun --list-privileges`** — both work **offline** (no `<server>` argument needed).\n- Version source of truth: `HeidrunProtocolInfo.version` in `HeidrunCore`.\n\n---\n\n## Pinning\n\nPre-release tags compare lexically, so pin with `exact:`, never `from:`:\n\n```swift\n.package(url: \"https://github.com/franckjej/heidrun-protocol.git\", exact: \"1.0.0-rc24\")\n```\n\nGPL-2.0. No breaking API changes — additive throughout.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": []
+  }
+ ]
+}

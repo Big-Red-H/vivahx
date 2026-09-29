@@ -1,0 +1,473 @@
+{
+ "id": "invigoration",
+ "releases": [
+  {
+   "version": "v2.3.2",
+   "title": "Invigoration 2.3.2",
+   "date": "2026-09-25",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.3.2",
+   "notes": "## StarCraft II clans and groups\n\n- **Clans & Groups**, next to **+**: every clan and group your character is in, with your rank, the member count and its description. Press **+** on one to list its members by name and rank; members who come online, join a game or change rank update as it happens.\n- **Clan chat** opens as a channel tab, as it does in the game; **Open Chat** does the same for a group.\n- Names show as StarCraft II shows them: `<TAG> Name`, with the clan tag a little smaller and no `#123` code. In the Full user list, each person's BattleTag sits underneath.\n\n## StarCraft: Remastered\n\n- **Stats**: `/stats Name`, or right-click someone and choose **Stats**. You get wins and losses (overall, ranked and classic), games played, play time, APM and when the character was made.\n- **Check if Online** (right-click): someone listed in the channel who isn't really logged on (a login stuck by a server reset) is hidden from the user list. Typing `/whois` does the same.\n- The user list's right-click menu works again: right-clicking a person selects them first.\n\n## Chat\n\n- **Message length limits**, with a counter in the send box: 255 characters for StarCraft II, 223 for classic Battle.net and StarCraft: Remastered. Longer text is cut at the limit.\n- StarCraft II doesn't send unknown `/commands` as chat any more. Start a line with `//` to send one that begins with `/`.\n- A new channel tab starts with \"Entered *channel*.\", instead of a blank log.\n\n## Proxies\n\n- **SOCKS4** (and SOCKS4a) alongside SOCKS5 and HTTP.\n- **Paste a whole proxy address**: `socks5://user:pass@host:port`, `http://...`, `user:pass@host:port`, `user:pass:host:port` or `host:port:user:pass`. It fills in the fields and says what it read.\n\n## Fixes\n\n- A StarCraft II message longer than the game allows no longer closes Invigoration.\n- **Icon Set** on the user list's right-click menu opens its list again (classic bots and SC:R).\n- If Invigoration ever does crash, it writes a crash log to the `Logs` folder in its settings, naming the cause.\n- The new-version notice has a **Don't check for updates** button.\n\n## Downloads\n\nmacOS builds are signed and notarized. `osx-arm64` is for Apple Silicon, `osx-x64` for Intel.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.3.2-linux-x64.tar.gz",
+     "size": 55458075,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.2/Invigoration-v2.3.2-linux-x64.tar.gz",
+     "path": "invigoration/v2.3.2/Invigoration-v2.3.2-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.2-osx-arm64.zip",
+     "size": 53289624,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.2/Invigoration-v2.3.2-osx-arm64.zip",
+     "path": "invigoration/v2.3.2/Invigoration-v2.3.2-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.2-osx-x64.zip",
+     "size": 56294297,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.2/Invigoration-v2.3.2-osx-x64.zip",
+     "path": "invigoration/v2.3.2/Invigoration-v2.3.2-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.2-win-x64.zip",
+     "size": 84059319,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.2/Invigoration-v2.3.2-win-x64.zip",
+     "path": "invigoration/v2.3.2/Invigoration-v2.3.2-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.3.1",
+   "title": "Invigoration 2.3.1",
+   "date": "2026-09-24",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.3.1",
+   "notes": "## Battle.net friends, from StarCraft: Remastered\n\n- **Whisper a friend by their BattleTag** and it goes through Battle.net, reaching them in any game, the Battle.net app or on mobile. Use the Friends tab, `/w Name#1234`, or reply in the Whispers tab. Their replies land in the Whispers tab under their BattleTag.\n- **Add friends**: type a BattleTag into the box at the top of the Friends tab, or right-click someone in the SC:R user list and choose **Add Friend**. The list updates as soon as they accept.\n- **Friend requests you receive** show at the top of the Friends tab with **Accept** and **Decline**, and a line in chat tells you one arrived.\n- **Remove a friend**: right-click them on the Friends tab, then **Remove Friend...** and confirm.\n- **Right-click someone in the SC:R user list** for **Whisper**, **Add Friend** and **Copy BattleTag**.\n- The Friends tab's right-click popup has **Open in Whispers**, and hides the classic-only Clan Rank, Squelch and Profile Info for Battle.net friends.\n\n## StarCraft II\n\n- Whispering a friend by the name the Friends tab shows now addresses them directly, without needing their StarCraft II character's name.\n\n## Fixes\n\n- **StarCraft: Remastered reconnects much faster.** When Battle.net holds on to the last session, Invigoration now tries again every 10 seconds instead of waiting up to a minute, and it signs out properly when it disconnects.\n- Whisper threads no longer split by capitalization (`someone` and `Someone` are one thread).\n- The \"no character on this gateway\" message now points to **New character** in the bot's settings.\n\n## Downloads\n\nmacOS builds are signed and notarized. `osx-arm64` is for Apple Silicon, `osx-x64` for Intel.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.3.1-linux-x64.tar.gz",
+     "size": 55382420,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.1/Invigoration-v2.3.1-linux-x64.tar.gz",
+     "path": "invigoration/v2.3.1/Invigoration-v2.3.1-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.1-osx-arm64.zip",
+     "size": 53216755,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.1/Invigoration-v2.3.1-osx-arm64.zip",
+     "path": "invigoration/v2.3.1/Invigoration-v2.3.1-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.1-osx-x64.zip",
+     "size": 56221387,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.1/Invigoration-v2.3.1-osx-x64.zip",
+     "path": "invigoration/v2.3.1/Invigoration-v2.3.1-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.1-win-x64.zip",
+     "size": 83983735,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.1/Invigoration-v2.3.1-win-x64.zip",
+     "path": "invigoration/v2.3.1/Invigoration-v2.3.1-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.3.0",
+   "title": "Invigoration 2.3.0",
+   "date": "2026-09-24",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.3.0",
+   "notes": "## StarCraft: Remastered, for real\n\nUntil now a StarCraft: Remastered bot quietly signed in to StarCraft II chat, because the library underneath had no real SC:R support. Invigoration now connects to SC:R itself.\n\n- **Pick your character and gateway** in the bot's settings: **Sign In & Load Characters** lists every character on the account with its gateway (U.S. West, U.S. East, Europe, Korea, Asia). Characters belong to a gateway, so to play on a new one, create a character there once in StarCraft: Remastered.\n- **One channel at a time**, like classic Battle.net: no channel tabs, and `/join` (or `/channel`) moves you. The bot rejoins the channel you were last in.\n- **Everyone's game icon**: StarCraft: Brood War, Warcraft II, Diablo and Diablo II players each show their own game.\n- **Chat commands** like `/whois`, `/kick`, `/ban` and `/designate` go to the server as commands.\n- **Your Battle.net friends list**, with the game each friend is in.\n\n## StarCraft II, rebuilt\n\nStarCraft II now runs on Invigoration's own connection instead of the Stimpak library.\n\n- **Profile portraits** in the user list. The first time a StarCraft II bot connects, Invigoration offers to download them (about 21 MB, once). They're Blizzard's art, so they don't ship with Invigoration: they come from the open-source Superiority project on GitHub and are kept in your settings folder. Portraits you've seen are remembered, so they show straight away next time.\n- **Presence dots** for away, busy and in a game, on the corner of each portrait.\n- **Right-click the user list** for **Compact** (small portraits) or **Full** (larger portraits, with each person's BattleTag and status underneath).\n- **Right-click the chat** for **Pictures in Chat**: Off, Compact, or Full (the speaker's portrait beside their name, with the message wrapping next to it).\n- **Friends list** with BattleTags and the game each friend is in (StarCraft II, SC:R, Diablo IV, the Battle.net mobile app...).\n\n## Both games\n\n- **StarCraft II and StarCraft: Remastered can be connected at the same time** on one Battle.net profile.\n- **Signing in works on macOS**: the Battle.net sign-in window finishes properly, and paste works in it.\n- **Friends tab** for these games looks like the Battle.net app: the game's icon, the name, and what they're doing underneath. **Offline** shows friends who are offline (hidden by default), and **Real names** shows friends who share their real name by it instead of their BattleTag.\n- A name's `#1234` code is shown in dark gray, so it's there without shouting.\n\nAfter updating, you'll be asked to sign in to Battle.net once more: the new connection keeps its own saved sign-in.\n\n## Classic Battle.net\n\n- **Right-click the user list → Ladder Icons** turns ladder badges (StarCraft stars, Warcraft II axes, Warcraft III tiers, Diablo dots) off, so everyone shows their plain game logo. Saved per bot.\n- **Offline** on the Friends tab works here too.\n\n## Thanks\n\nTo ncarrillo, whose [Superiority](https://github.com/ncarrillo/superiority) and [sc1-research](https://github.com/ncarrillo/sc1-research) projects (MIT) mapped much of this, including StarCraft II presence and the portrait catalog; and to novares.\n\nIf the new connection gives you trouble, starting Invigoration with the environment variable `INVIGORATION_STIMPAK=1` goes back to the previous one.\n\n## Downloads\n\nmacOS builds are signed and notarized, so Gatekeeper shows no warning. `osx-arm64` is for Apple Silicon, `osx-x64` for Intel.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.3.0-linux-x64.tar.gz",
+     "size": 55366520,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.0/Invigoration-v2.3.0-linux-x64.tar.gz",
+     "path": "invigoration/v2.3.0/Invigoration-v2.3.0-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.0-osx-arm64.zip",
+     "size": 53196930,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.0/Invigoration-v2.3.0-osx-arm64.zip",
+     "path": "invigoration/v2.3.0/Invigoration-v2.3.0-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.0-osx-x64.zip",
+     "size": 56201400,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.0/Invigoration-v2.3.0-osx-x64.zip",
+     "path": "invigoration/v2.3.0/Invigoration-v2.3.0-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.0-win-x64.zip",
+     "size": 83964249,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.0/Invigoration-v2.3.0-win-x64.zip",
+     "path": "invigoration/v2.3.0/Invigoration-v2.3.0-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.2.2",
+   "title": "Invigoration 2.2.2",
+   "date": "2026-09-23",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.2.2",
+   "notes": "## Hotline: pick your name and icon without leaving the server\n\nAlong the top of every Hotline server tab there's now a strip for changing who you are there.\n\n- **Name and icon, then Apply.** Type a new name, pick an icon number or click **Choose...**, and **Apply** sends it to the server straight away. A session opened from a saved server saves them to that server's profile too, so you come back as the same person.\n- **A live preview** shows your name over your icon exactly as the user list will.\n- **Spaces at the start of a name are kept.** That's how people line a name up with the art on their icon.\n- **Choose...** opens every icon in the [hlwiki.com archive](https://hlwiki.com/ik0ns/) (about 6,500). Search by number, or by what's on an icon: the words on it, what it shows, or its colors (\"flag\", \"red eye\", \"starcraft\", \"dragon\"). Hover an icon to see its tags. Icons tagged NSFW stay hidden unless you tick **Show NSFW**. **Download All** saves the whole archive in one go, so scrolling is instant afterwards.\n\n## Hotline user lists that are easier to read\n\n- **Names change color to suit their icon:** white over dark icons, black over light ones, for everyone in the list. Admins still show in your admin color.\n- Names are **bold**, and they start just past the emblem most icons carry at the left edge.\n- The server-name bar above Chat/Files/News is gone (the tab already says it), and **Disconnect** now sits under the user list.\n\n## Right-click a tab\n\n- **A bot tab:** Connect or Disconnect.\n- **A Hotline server tab:** Connect, Disconnect, Reconnect, or Close. Disconnect here keeps the tab and its chat, so you can connect again later.\n- **A group of bots, or the Hotline tab:** Connect All, Disconnect All, or Reconnect All. Bots in a group connect two seconds apart, so the server doesn't see a burst of logins.\n- **Music:** Start or Stop.\n\nThe menu names the tab it belongs to at the top, and a group says so (\"Group: ...\").\n\n## Downloads\n\nmacOS builds are signed and notarized, so Gatekeeper shows no warning. `osx-arm64` is for Apple Silicon, `osx-x64` for Intel.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.2.2-linux-x64.tar.gz",
+     "size": 55135259,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.2/Invigoration-v2.2.2-linux-x64.tar.gz",
+     "path": "invigoration/v2.2.2/Invigoration-v2.2.2-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.2.2-osx-arm64.zip",
+     "size": 52931995,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.2/Invigoration-v2.2.2-osx-arm64.zip",
+     "path": "invigoration/v2.2.2/Invigoration-v2.2.2-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.2.2-osx-x64.zip",
+     "size": 55935396,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.2/Invigoration-v2.2.2-osx-x64.zip",
+     "path": "invigoration/v2.2.2/Invigoration-v2.2.2-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.2.2-win-x64.zip",
+     "size": 83751417,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.2/Invigoration-v2.2.2-win-x64.zip",
+     "path": "invigoration/v2.2.2/Invigoration-v2.2.2-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.2.1",
+   "title": "Invigoration 2.2.1",
+   "date": "2026-09-19",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.2.1",
+   "notes": "## Icon sets, back where you can find them\n\nThe three built-in icon sets could only be picked inside Customize → Manage Icons. The Icon Set dropdown in Bot → Appearance listed only sets you'd saved yourself, which for most people meant nothing at all.\n\n- **Bot → Icon Set** lists Battle.net 1.0 Classic, Warcraft III Classic, Battle.net 2.0 and any sets you've saved, with the selected bot's set ticked. Manage Icons is at the bottom of the list.\n- **Right-click anyone in the user list** for the same Icon Set list.\n- **Each bot keeps its own set.** Picking one saves it for that bot and shows it right away, and switching tabs switches the icons. A bot you haven't given a set keeps whichever is showing. An icon you've changed by hand in Manage Icons stays changed until you switch to a bot with a different set.\n- **Bot → Show Icons in Chat** turns the game icons beside names in chat on or off. It applies to new lines.\n- The Appearance dropdown lists the built-in sets too.\n\n## Downloads\n\nmacOS builds are signed and notarized, so Gatekeeper shows no warning. `osx-arm64` is for Apple Silicon, `osx-x64` for Intel.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.2.1-linux-x64.tar.gz",
+     "size": 55109936,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.1/Invigoration-v2.2.1-linux-x64.tar.gz",
+     "path": "invigoration/v2.2.1/Invigoration-v2.2.1-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.2.1-osx-arm64.zip",
+     "size": 52907986,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.1/Invigoration-v2.2.1-osx-arm64.zip",
+     "path": "invigoration/v2.2.1/Invigoration-v2.2.1-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.2.1-osx-x64.zip",
+     "size": 55911593,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.1/Invigoration-v2.2.1-osx-x64.zip",
+     "path": "invigoration/v2.2.1/Invigoration-v2.2.1-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.2.1-win-x64.zip",
+     "size": 83719926,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.1/Invigoration-v2.2.1-win-x64.zip",
+     "path": "invigoration/v2.2.1/Invigoration-v2.2.1-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.2.0",
+   "title": "Invigoration 2.2.0",
+   "date": "2026-09-18",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.2.0",
+   "notes": "## StarCraft II: stays signed in\n\nStarCraft II bots losing their Battle.net login is fixed at the root. After any drop, the reconnect never noticed it had worked, so it signed in to Battle.net again every 20 seconds, forever, even once the bot was back in chat. Every sign-in replaces the saved one, and the overlapping attempts deleted each other's. That is why the sign-in never stuck.\n\n- **Reconnecting ends when the bot is back in chat.** A lost session closes its channel tabs, says so, and reconnects once, reusing the same connection.\n- **One bot per Battle.net login at a time.** This covers every bot in the app and every other copy of Invigoration running. A second bot on the same login is refused with a message saying who has it, instead of the two quietly deleting each other's saved sign-in. Give each bot its own Battle.net profile to run them side by side.\n- **No endless tug-of-war.** If something else keeps taking the account's chat session (another bot, another copy of the app, or the game itself), auto-reconnect stops after three quick takeovers.\n- **The sign-in window** names the bot it's for and closes when that bot disconnects. It also remembers Battle.net's web session between sign-ins.\n- **The log says how old the saved sign-in is** at each connect, and when Battle.net stops accepting it.\n\n## Bot menu\n\nEverything for the selected bot now lives in one place: Connect, Disconnect, Edit Settings, Appearance, Normalize Password, Remove (which now asks first), Add Bot, Debug Logging, and a three-way choice for joins and leaves (show all, hide spam, hide all), saved per bot.\n\nThe status bar across the top of every bot tab is gone. Under the user list there's a Connect button while the bot is disconnected (\"Reconnect Now\" while it's waiting to retry). Otherwise it shows a dot and a word: green for Connected, amber for Connecting or Reconnecting. Disconnect also stops a connect still under way and a reconnect countdown.\n\n## Hotline\n\n- **Manage files on the server:** rename, delete (it asks first and names what will go), and create folders.\n- **Folder uploads**, the mirror of folder downloads.\n- **Server banners**, shown as the first line of chat.\n- **Profile icons** can be set per server, with a live preview. Before, saved servers were stuck on the generic icon.\n- File actions are always offered, and the server decides. Drop boxes accept uploads from accounts without general upload rights, which the old gating hid.\n\n## Looks\n\n- **A new app icon:** the flag on wood planks, so macOS 26 no longer shrinks it onto a white square.\n- **Warcraft III theme:** real oak grain on the frame, darker plates for the name sign and Send button, and a new optional **Lettering** color in Manage Themes for that text.\n- On macOS, the Music Player, Music Bar and update-notice toggles under Customize were greyed out. They work now.\n\n## Downloads\n\nmacOS builds are signed and notarized, so Gatekeeper shows no warning. `osx-arm64` is for Apple Silicon, `osx-x64` for Intel.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.2.0-linux-x64.tar.gz",
+     "size": 55105729,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.0/Invigoration-v2.2.0-linux-x64.tar.gz",
+     "path": "invigoration/v2.2.0/Invigoration-v2.2.0-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.2.0-osx-arm64.zip",
+     "size": 52904438,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.0/Invigoration-v2.2.0-osx-arm64.zip",
+     "path": "invigoration/v2.2.0/Invigoration-v2.2.0-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.2.0-osx-x64.zip",
+     "size": 55907607,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.0/Invigoration-v2.2.0-osx-x64.zip",
+     "path": "invigoration/v2.2.0/Invigoration-v2.2.0-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.2.0-win-x64.zip",
+     "size": 83717828,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.2.0/Invigoration-v2.2.0-win-x64.zip",
+     "path": "invigoration/v2.2.0/Invigoration-v2.2.0-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.1.0",
+   "title": "Invigoration 2.1.0",
+   "date": "2026-09-16",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.1.0",
+   "notes": "**Out of beta.** The bunny that opens every chat window has been saying \"Beta\" since the VB6 days — he now says STABLE.\n\n## Hotline\n\nMost of this release is Hotline, which went from chat-only to a real client.\n\n**Files.** Browse the server's folders, download files and whole folders, and upload. Double-click a row to open a folder or download a file; right-click for the same actions. A download writes to a temporary name and renames on success, so a failed transfer can't leave a half-file that looks complete.\n\n**News.** Both kinds. The threaded category tree, and — more importantly for the classic servers still running — the original flat news document, which is where their real news actually lives. Read it, post to it, and see other people's posts arrive live. Post articles and replies in threaded categories too.\n\n**Private messages.** Right-click anyone in the users list to start one. Threads land in the Whispers tab alongside Battle.net whispers, and replies go back out as Hotline private messages. Incoming ones previously arrived as anonymous lines in the chat log with no sender and no way to answer.\n\n**Secure login (HOPE).** Optional, per server: the password is sent as a MAC over a server-issued challenge instead of the classic bitwise-inverted form that anyone watching the connection can read. Falls back automatically on a server that doesn't support it.\n\n**Reconnecting.** A dropped session comes back on its own — every 30 seconds by default, configurable, with a give-up limit. Never after you disconnect yourself, and never after the server refuses the login.\n\n**Modern tracker protocol.** Version 3 is offered and falls back cleanly, so trackers that support it can list IPv6 and hostname servers and do the searching server-side.\n\n**Starts with two servers** — MacDomain and HL Central — so a new Hotline tab isn't an empty box. Neither auto-connects, neither carries credentials, and the nickname is \"Guest\".\n\nSeveral protocol layouts were wrong and are now fixed against what real servers actually send: file listings came back empty, account privileges were misread (a guest was told they couldn't browse files), and news categories and articles were misparsed. Each is now pinned by tests built from bytes captured off a live server.\n\n## Elsewhere\n\n- **Chat / Telnet** is back in the game list, with the handshake bug that made it \"unreliable\" actually fixed.\n- **CD keys** can be pasted with the dashes people actually type.\n- **A quiet update notice** — one dismissible line when a newer version exists, linking to this page. Never a dialog, never an installer, and it can be turned off entirely under Customize.\n- **Tab grouping** moved back into the bot's own settings, where people look for it.\n- Fixed a race that could corrupt the clan roster, and duplicate Discord bridges on reconnect.\n\n## Downloads\n\nmacOS builds are signed and notarized — no Gatekeeper warning. `osx-arm64` for Apple Silicon, `osx-x64` for Intel.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.1.0-linux-x64.tar.gz",
+     "size": 54965671,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.1.0/Invigoration-v2.1.0-linux-x64.tar.gz",
+     "path": "invigoration/v2.1.0/Invigoration-v2.1.0-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.1.0-osx-arm64.zip",
+     "size": 51908690,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.1.0/Invigoration-v2.1.0-osx-arm64.zip",
+     "path": "invigoration/v2.1.0/Invigoration-v2.1.0-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.1.0-osx-x64.zip",
+     "size": 54912163,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.1.0/Invigoration-v2.1.0-osx-x64.zip",
+     "path": "invigoration/v2.1.0/Invigoration-v2.1.0-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.1.0-win-x64.zip",
+     "size": 83577984,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.1.0/Invigoration-v2.1.0-win-x64.zip",
+     "path": "invigoration/v2.1.0/Invigoration-v2.1.0-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.0.8b",
+   "title": "Invigoration 2.0.8b",
+   "date": "2026-09-16",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.0.8b",
+   "notes": "Music, a connection type that came back, and faster reconnects.\n\n## Music player (Spotify)\n\nA Music tab that controls Spotify through its official Web API — search, play, queue, skip, and an optional playback bar along the bottom of the window so you can skip a track without leaving the chat tab. The point: whisper your bot from inside a game to skip a song.\n\nInvigoration asks once whether you use Spotify Premium, and hides the tab entirely if you don't. Playback happens in the Spotify app or a signed-in browser — Invigoration drives it rather than playing audio itself. The old YouTube Music view is gone; it never worked well.\n\n## Chat / Telnet is back\n\nAvailable again in the game list as \"Chat / Telnet (no game)\" — the plain-text connection some private servers run alongside the binary protocol. No CD key, no BNLS, no version check: just a username and password.\n\nIt was removed in August as unreliable. Probing a live server found the real reasons, and neither was the protocol: the two handshake bytes were being sent as two separate writes (which the server resets on, every time), and a server that sends no login prompt at all left the bot waiting forever. Both fixed.\n\nIt's also the fastest way back onto a private server after a drop — a socket and two lines, with no handshake to repeat.\n\n## Reconnecting\n\n- **Rapid reconnect** for private servers: the first attempt goes out the instant the connection drops, and each attempt skips BNLS by reusing this session's login answers — back on in about half the time. Made for holding a name or channel ops. Never used on official Battle.net.\n- **Configurable attempts**: set the seconds between tries and how many to make before giving up (0 keeps trying). Every 45 seconds up to 10 attempts for a server that takes a while; every 1 second up to 45 for a race back on.\n\n## Logging in\n\nPasswords are now hashed locally instead of being sent to BNLS in plain text. A password is tried as typed, then in the casing the original game client used, so older accounts still work. After Battle.net refuses a login — wrong password, closed account, bad CD key — auto-reconnect stands down instead of retrying its way into a lockout.\n\n## Settings\n\nBot settings now read top to bottom: Game, then Login, then Server, with everything else folded away below. Theme, chat colors and icons moved to Customize → Bot Appearance.\n\n## Fixes\n\n- Fixed a race that could corrupt the clan roster when it was read while changing.\n- Fixed duplicate Discord bridges being started on every reconnect.\n\n## Downloads\n\nmacOS builds are signed and notarized — no Gatekeeper warning. Pick `osx-arm64` for Apple Silicon, `osx-x64` for Intel.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.0.8b-linux-x64.tar.gz",
+     "size": 54888290,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.8b/Invigoration-v2.0.8b-linux-x64.tar.gz",
+     "path": "invigoration/v2.0.8b/Invigoration-v2.0.8b-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.8b-osx-arm64.zip",
+     "size": 51831569,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.8b/Invigoration-v2.0.8b-osx-arm64.zip",
+     "path": "invigoration/v2.0.8b/Invigoration-v2.0.8b-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.8b-osx-x64.zip",
+     "size": 54834807,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.8b/Invigoration-v2.0.8b-osx-x64.zip",
+     "path": "invigoration/v2.0.8b/Invigoration-v2.0.8b-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.8b-win-x64.zip",
+     "size": 83499925,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.8b/Invigoration-v2.0.8b-win-x64.zip",
+     "path": "invigoration/v2.0.8b/Invigoration-v2.0.8b-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.0.7b",
+   "title": "Invigoration v2.0.7b",
+   "date": "2026-09-14",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.0.7b",
+   "notes": "## Invigoration v2.0.7b — Themes, the Diablo II lobby, and a proper Discord relay\n\nA big one: every bot can now wear its own theme, and the Diablo II theme brings back D2's lobby — everyone in the channel standing along the bottom of the chat, with real D2 characters drawn in the gear they're actually wearing. This is the first step toward a proper avatar system for every game.\n\n### Themes\n- Per-bot themes, picked in each bot's settings: **Default**, **Diablo II**, **StarCraft**, **Warcraft II** (gritty) and **Warcraft III** (dark wood with dark metal accents)\n- New **Manage Themes** window (Customize menu): duplicate a built-in theme and adjust its colours and design\n- Diablo II theme: ornate frame that wraps the send bar (never over chat text), with the chat gem beside it\n\n### Diablo II lobby\n- The user list becomes D2's lobby strip: animated Battle.net chat avatars (the Moderator with his hammer, Blizzard Rep, StarCraft marine, the hooded Unknown...) standing on grass\n- **Diablo II realm characters drawn as themselves** — in their own armour, weapons and colours, idling like the character-select screen\n- Hover a D2 character to see what they're wearing (\"Shako, Dusk Shroud, Crystal Blue\")\n- The gear data and character art come from **us.bnet.cc** (offered when you pick the Diablo II theme, or Customize → Download Diablo II Gear Data): opt-in, downloaded once over BNFTP, kept for every server, and quietly updated when us.bnet.cc has something newer. Nothing is ever requested from any other server\n- Writing a bot? [How to use the D2 character files](https://github.com/tagban/invigoration/blob/main/docs/D2-CHARACTER-DATA-FOR-BOTS.md), with a [Python example](https://github.com/tagban/invigoration/blob/main/docs/examples/d2_characters.py)\n\n### Icons\n- Real ladder badges: StarCraft / Brood War / Warcraft II wins, Warcraft III tiers (including level 6 and Tournament), and Diablo progress\n- Special Guest (sunglasses) status icon\n- Channel-list name colours follow classic Battle.net's rules\n- Hovering a game icon shows readable stats instead of raw data\n- Fixed Diablo stats showing class and progress swapped, and dark boxes behind guest and Warcraft III icons\n\n### Discord relay\n- Discord users show on Battle.net as **[Discord] name** — with a Discord logo in other Invigoration bots\n- Battle.net chat posts to Discord **as the speaker, with their game's classic logo** as the avatar\n- Fixed messages echoing back, relaying twice, and Discord names being able to pass for Battle.net accounts\n\n### Connection & login\n- **Your password no longer leaves your computer** on the classic login (StarCraft, Diablo, Diablo II, Warcraft II): it's hashed locally instead of being sent to the BNLS server. (Warcraft III's login still uses BNLS.)\n- Passwords are tried in Battle.net's casing first (lowercase; Warcraft III uppercase). If that's refused, one fresh connection tries it exactly as typed, for accounts older bots made, and whichever works is remembered, so it logs in on the first try next time\n- Auto-reconnect no longer keeps retrying after Battle.net refuses the login (wrong password, closed account, bad CD key), since repeated failed logins can lock an account out\n- New **Normalize Password** (File menu) changes a mixed-case password to Battle.net's casing on the server\n- Fixed Atlas dropping the connection: stopped a cross-bot trivia relay loop, and long chat is split to fit\n- Fixed an auto-reconnect loop that disconnected a bot every reconnect-delay seconds\n\nmacOS, Linux, Windows :)\n\n_Downloads updated 2026-09-14 with the login changes above._\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.0.7b-linux-x64.tar.gz",
+     "size": 54837997,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.7b/Invigoration-v2.0.7b-linux-x64.tar.gz",
+     "path": "invigoration/v2.0.7b/Invigoration-v2.0.7b-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.7b-osx-arm64.zip",
+     "size": 51776291,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.7b/Invigoration-v2.0.7b-osx-arm64.zip",
+     "path": "invigoration/v2.0.7b/Invigoration-v2.0.7b-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.7b-osx-x64.zip",
+     "size": 54779805,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.7b/Invigoration-v2.0.7b-osx-x64.zip",
+     "path": "invigoration/v2.0.7b/Invigoration-v2.0.7b-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.7b-win-x64.zip",
+     "size": 52979163,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.7b/Invigoration-v2.0.7b-win-x64.zip",
+     "path": "invigoration/v2.0.7b/Invigoration-v2.0.7b-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.0.6b",
+   "title": "Invigoration v2.0.6b",
+   "date": "2026-09-10",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.0.6b",
+   "notes": "## Invigoration v2.0.6b — Mass-join load hardening\r\n\r\nDriven entirely by the user's own load-testing bot uncovering real UI hangs at scale, and now verified fixed at **12,000 users in a single chat** with no lag (up from a hang at ~2,500 previously).\r\n\r\n### Fixes\r\n- Fixed O(n) roster scans and O(n²) receive-buffer shifting under a join burst\r\n- Fixed mass-join hang caused by full-roster disk saves on every tracked user's presence\r\n- Detected join bursts and skipped rank behaviors until they subside\r\n- Skipped rank behaviors while a send is already queued (closed the remaining mass-join lock)\r\n- Indexed ClanRosterStore lookups instead of a linear scan\r\n- Capped chat log at 500 lines to fix UI lag from unbounded join/leave spam\r\n- Made the keep-alive ping immune to load: serialized socket writes, moved to a dedicated thread\r\n- Batched and chunked chat-event UI dispatch to eliminate per-event overhead under a flood\r\n- Fixed missing icon for Chat-bot product users\r\n- Removed Spotify and Pandora from the embedded music player (was dragging the UI)\r\n\r\n### Other\r\n- Added channel name and user count to the Users tab header\r\n\r\nmacOS, Linux, Windows :)",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.0.6b-linux-x64.tar.gz",
+     "size": 52671499,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.6b/Invigoration-v2.0.6b-linux-x64.tar.gz",
+     "path": "invigoration/v2.0.6b/Invigoration-v2.0.6b-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.6b-osx-arm64.zip",
+     "size": 49514168,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.6b/Invigoration-v2.0.6b-osx-arm64.zip",
+     "path": "invigoration/v2.0.6b/Invigoration-v2.0.6b-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.6b-osx-x64.zip",
+     "size": 52517475,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.6b/Invigoration-v2.0.6b-osx-x64.zip",
+     "path": "invigoration/v2.0.6b/Invigoration-v2.0.6b-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.6b-win-x64.zip",
+     "size": 50656417,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.6b/Invigoration-v2.0.6b-win-x64.zip",
+     "path": "invigoration/v2.0.6b/Invigoration-v2.0.6b-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.0.5b",
+   "title": "Invigoration v2.0.5b",
+   "date": "2026-08-28",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.0.5b",
+   "notes": "## Highlights\n\n- **Hotline protocol support** — a full Hotline client alongside the existing Battle.net/SC2\n  bots: \"Add Bot\"-style trackers, live chat sessions, user lists, and chat history, built on a\n  real transaction-protocol implementation and live-verified against multiple real servers.\n- **Pandora rewritten on its real API** — replaced WebView scraping with Pandora's actual\n  JSON-RPC API (the same one its own apps use) plus native audio playback, so Pandora now gets\n  its own station picker and full playback control on the bottom music bar, not just page\n  automation. `skip`/`thumbsup`/`thumbsdown`/`nowplaying` all work the same as YouTube Music and\n  Spotify.\n- **Play/Pause added** to the bottom music bar for all three services (YouTube Music, Spotify,\n  Pandora) — previously only Skip/Like/Dislike were available there.\n- **Shared trivia and user-tracking infrastructure** — the trivia game and last-seen/score\n  tracking are now built on a protocol-agnostic core shared between Battle.net bots and Hotline,\n  instead of being duplicated per protocol.\n\nSee the [wiki](https://github.com/tagban/invigoration/wiki) for a full Setup Guide and Commands\nreference.\n\n## Platform status\n\n- **Windows**: unsigned — Windows SmartScreen will show an \"Unknown Publisher\" warning\n  (\"More info\" → \"Run anyway\" to proceed). Code-signing infrastructure is in\n  `build-windows.ps1` for whenever a certificate is available.\n- **macOS**: arm64 (Apple Silicon) and Intel builds, both signed with a Developer ID\n  certificate and notarized — opens with no Gatekeeper warning.\n- **Linux**: x64 build available (self-contained, no separate .NET install needed). No\n  linux-arm64 build — the Stimpak native package (SC2/SC:R/WC3:R connectivity) doesn't\n  currently ship an arm64 Linux binary.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.0.5b-linux-x64.tar.gz",
+     "size": 53800035,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.5b/Invigoration-v2.0.5b-linux-x64.tar.gz",
+     "path": "invigoration/v2.0.5b/Invigoration-v2.0.5b-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.5b-osx-arm64.zip",
+     "size": 50089129,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.5b/Invigoration-v2.0.5b-osx-arm64.zip",
+     "path": "invigoration/v2.0.5b/Invigoration-v2.0.5b-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.5b-osx-x64.zip",
+     "size": 53140309,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.5b/Invigoration-v2.0.5b-osx-x64.zip",
+     "path": "invigoration/v2.0.5b/Invigoration-v2.0.5b-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.5b-win-x64.zip",
+     "size": 51878264,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.5b/Invigoration-v2.0.5b-win-x64.zip",
+     "path": "invigoration/v2.0.5b/Invigoration-v2.0.5b-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v2.0.4b",
+   "title": "Invigoration v2.0.4b",
+   "date": "2026-08-25",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.0.4b",
+   "notes": "## Highlights\n\n- **Embedded music player** — YouTube Music, Spotify, and Pandora inside the app, with chat\n  commands (`skip`/`thumbsup`/`thumbsdown`/`nowplaying`) and an optional always-visible bottom\n  playback bar.\n- **Real Battle.net profile editing** — view/edit your own Sex/Age/Location/Description via a\n  new Profile window, plus right-click Whisper/Squelch/Add Friend/Clan Rank on the Users and\n  Friends lists.\n- **Icon system overhaul** — three switchable bundled icon sets (Battle.net 1.0 Classic,\n  Warcraft III Classic, Battle.net 2.0), real background transparency throughout, a fixed\n  StarCraft/Brood War icon bug, and a moderator-sorted user list. **Battle.net 2.0 is now the\n  default look.**\n- Discord bridge presence updates, SC2/SC:R/WC3:R connectivity fixes, and the classic Chat/Telnet\n  connection type removed (unreliable on private servers).\n- SC2/SC:R/WC3:R connectivity now ships as a prebuilt native NuGet package (Stimpak) instead of\n  a git submodule + local Rust build — no Rust toolchain needed to build this project anymore.\n\nSee the [wiki](https://github.com/tagban/invigoration/wiki) for a full Setup Guide and Commands\nreference.\n\n## Platform status\n\n- **Windows**: unsigned — Windows SmartScreen will show an \"Unknown Publisher\" warning\n  (\"More info\" → \"Run anyway\" to proceed). Code-signing infrastructure is in\n  `build-windows.ps1` for whenever a certificate is available.\n- **macOS**: arm64 (Apple Silicon) and Intel builds, both signed with a Developer ID\n  certificate and notarized — opens with no Gatekeeper warning.\n- **Linux**: x64 build available (self-contained, no separate .NET install needed). No\n  **linux-arm64** build this release — the Stimpak native package doesn't currently ship an\n  arm64 Linux binary, so SC2/SC:R/WC3:R connectivity would be broken on that platform; holding\n  it back rather than shipping something unverified.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.0.4b-linux-x64.tar.gz",
+     "size": 49988747,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.4b/Invigoration-v2.0.4b-linux-x64.tar.gz",
+     "path": "invigoration/v2.0.4b/Invigoration-v2.0.4b-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.4b-osx-arm64.zip",
+     "size": 46921285,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.4b/Invigoration-v2.0.4b-osx-arm64.zip",
+     "path": "invigoration/v2.0.4b/Invigoration-v2.0.4b-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.4b-osx-x64.zip",
+     "size": 49924706,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.4b/Invigoration-v2.0.4b-osx-x64.zip",
+     "path": "invigoration/v2.0.4b/Invigoration-v2.0.4b-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.0.4b-win-x64.zip",
+     "size": 48108323,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.0.4b/Invigoration-v2.0.4b-win-x64.zip",
+     "path": "invigoration/v2.0.4b/Invigoration-v2.0.4b-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

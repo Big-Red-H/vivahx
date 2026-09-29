@@ -1,0 +1,189 @@
+{
+ "id": "magnetron",
+ "releases": [
+  {
+   "version": "v0.4.0",
+   "title": "v0.4.0",
+   "date": "2026-01-03",
+   "url": "https://github.com/benabernathy/magnetron/releases/tag/v0.4.0",
+   "notes": "The major feature in this release is the addition of a REST API for getting registered server information. The REST API supports TLS and authentication through a bearer token. As the same with the rest of the application, it is controlled through a set of configuration files. The REST API is disabled by default. \r\n\r\nAdditional changes include library upgrades to address security issues as well as bump up to Go 1.25.5. \r\n\r\nThank you for your support of this project. ",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "magnetron-darwin-amd64.tar.gz",
+     "size": 8745251,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.4.0/magnetron-darwin-amd64.tar.gz",
+     "path": "magnetron/v0.4.0/magnetron-darwin-amd64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-darwin-arm64.tar.gz",
+     "size": 10928355,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.4.0/magnetron-darwin-arm64.tar.gz",
+     "path": "magnetron/v0.4.0/magnetron-darwin-arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-linux-amd64.tar.gz",
+     "size": 8512670,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.4.0/magnetron-linux-amd64.tar.gz",
+     "path": "magnetron/v0.4.0/magnetron-linux-amd64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-linux-arm64.tar.gz",
+     "size": 7767811,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.4.0/magnetron-linux-arm64.tar.gz",
+     "path": "magnetron/v0.4.0/magnetron-linux-arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-windows-amd64.tar.gz",
+     "size": 8664930,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.4.0/magnetron-windows-amd64.tar.gz",
+     "path": "magnetron/v0.4.0/magnetron-windows-amd64.tar.gz",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.3.0",
+   "title": "v0.3.0",
+   "date": "2024-08-03",
+   "url": "https://github.com/benabernathy/magnetron/releases/tag/v0.3.0",
+   "notes": "This feature release of magnetron includes the following new features:\r\n\r\nTracker federation: Tracker can now federate servers from other trackers. Tracker can be configured to pull from multiple other trackers and list servers. This is done via the configuration file.\r\n\r\nMagnetron has been tested with the following server implementations:\r\n\r\nMobius\r\nHotline Server 1.2.3\r\n\r\n... And it has been tested with the following clients:\r\n\r\nHotline Client 1.2.3, 1.8.4, 1.8.5\r\n\r\n**Quick Start:**\r\n\r\n1. First generate a default configuration: ./magnetron config init ./config.yml This will create a default config file in your current directory.\r\n2. Update the config, you might need to set the interface/host you're serving on.\r\n3. Start the server: ./magnetron serve ./config.yml\r\n\r\n**Password Configuration:**\r\n\r\n1. Generate a default password configuration: ./magnetron password init ./passwords.yml This will create a default password config file in your current directory.\r\n2. Update your existing config and add the following options: EnablePasswords: true and PasswordFile: \"./passwords.yml\"\r\n3. Edit the password config entries. The Name and Description fields can be whatever you like, they're there for convenience. The Password field must contain the hashed password you wish to use.\r\n4. Hash a given password by running ./magnetron password encrypt then follow the on-screen prompts.\r\n5. Set the resulting value in the Password field\r\n6. Multiple entries are allowed\r\n7. You can test the password by running ./magnetron password check then follow the on-screen commands",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "magnetron-darwin-amd64.tar.gz",
+     "size": 5020080,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.3.0/magnetron-darwin-amd64.tar.gz",
+     "path": "magnetron/v0.3.0/magnetron-darwin-amd64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-darwin-arm64.tar.gz",
+     "size": 7240900,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.3.0/magnetron-darwin-arm64.tar.gz",
+     "path": "magnetron/v0.3.0/magnetron-darwin-arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-linux-amd64.tar.gz",
+     "size": 5080856,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.3.0/magnetron-linux-amd64.tar.gz",
+     "path": "magnetron/v0.3.0/magnetron-linux-amd64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-linux-arm64.tar.gz",
+     "size": 4723715,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.3.0/magnetron-linux-arm64.tar.gz",
+     "path": "magnetron/v0.3.0/magnetron-linux-arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-windows-amd64.tar.gz",
+     "size": 5230650,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.3.0/magnetron-windows-amd64.tar.gz",
+     "path": "magnetron/v0.3.0/magnetron-windows-amd64.tar.gz",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.0",
+   "title": "v0.2.0",
+   "date": "2023-09-07",
+   "url": "https://github.com/benabernathy/magnetron/releases/tag/v0.2.0",
+   "notes": "This feature release of magnetron includes the following new features:\r\n\r\n- Server password checking: Tracker can now optionally require servers to supply a matching password, servers are stored encrypted in a separate config file\r\n\r\nMagnetron has been tested with the following server implementations:\r\n\r\n- Mobius\r\n- Hotline Server 1.2.3\r\n\r\n... And it has been tested with the following clients:\r\n\r\n- Hotline Client 1.2.3, 1.8.4, 1.8.5\r\n\r\nQuick Start:\r\n\r\n1. First generate a default configuration: `./magnetron config init ./config.yml` This will create a default config file in your current directory.\r\n2. Update the config, you might need to set the interface/host you're serving on.\r\n3. Start the server: `./magnetron serve ./config.yml`\r\n\r\nPassword Configuration:\r\n\r\n1. Generate a default password configuration: `./magnetron password init ./passwords.yml` This will create a default password config file in yoru current directory.\r\n2. Update your existing config and add the following options: `EnablePasswords: true` and `PasswordFile: \"./passwords.yml\"`\r\n3. Edit the password config entries. The `Name` and `Description` fields can be whatever you like, they're there for convenience. The `Password` field must contain the hashed password you wish to use.\r\n4. Hash a given password by running `./magnetron password encrypt` then follow the on-screen prompts.\r\n5. Set the resulting value in the `Password` field\r\n6. Multiple entries are allowed\r\n7. You can test the password by running `./magnetron password check` then follow the on-screen commands",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "magnetron-darwin-amd64.tar.gz",
+     "size": 4746625,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.2.0/magnetron-darwin-amd64.tar.gz",
+     "path": "magnetron/v0.2.0/magnetron-darwin-amd64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-darwin-arm64.tar.gz",
+     "size": 6996453,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.2.0/magnetron-darwin-arm64.tar.gz",
+     "path": "magnetron/v0.2.0/magnetron-darwin-arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-linux-amd64.tar.gz",
+     "size": 4853829,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.2.0/magnetron-linux-amd64.tar.gz",
+     "path": "magnetron/v0.2.0/magnetron-linux-amd64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-linux-arm64.tar.gz",
+     "size": 4487818,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.2.0/magnetron-linux-arm64.tar.gz",
+     "path": "magnetron/v0.2.0/magnetron-linux-arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-windows-amd64.tar.gz",
+     "size": 5028224,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.2.0/magnetron-windows-amd64.tar.gz",
+     "path": "magnetron/v0.2.0/magnetron-windows-amd64.tar.gz",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.1.0",
+   "title": "v0.1.0",
+   "date": "2023-07-06",
+   "url": "https://github.com/benabernathy/magnetron/releases/tag/v0.1.0",
+   "notes": "This initial release of magnetron includes the following features:\r\n\r\n- Server registration: Servers can register by adding the tracker IP in their tracker list\r\n- Expiring inactive servers: If a server has not submitted an update in a period of time, it will be removed\r\n- Static servers: Static servers can be set by the tracker owner and are always displayed first, they cannot be expired\r\n- Hotline client support: Hotline clients can connect and get tracker results\r\n\r\nMagnetron has been tested with the following server implementations:\r\n- [Mobius](https://github.com/jhalter/mobius)\r\n- Hotline Server 1.2.3\r\n\r\n... And it has been tested with the following clients:\r\n- Hotline Client 1.2.3, 1.8.4, 1.8.5\r\n\r\nQuick Start:\r\n\r\n1. First generate a default configuration: ./magnetron config init ./config.yml This will create a default config file in your current directory.\r\n2. Update the config, you might need to set the interface/host you're serving on.\r\n3. Start the server: ./magnetron serve ./config.yml\r\n4. Profit, more likely not.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "magnetron-darwin-amd64.tar.gz",
+     "size": 4667260,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.1.0/magnetron-darwin-amd64.tar.gz",
+     "path": "magnetron/v0.1.0/magnetron-darwin-amd64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-darwin-arm64.tar.gz",
+     "size": 7388707,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.1.0/magnetron-darwin-arm64.tar.gz",
+     "path": "magnetron/v0.1.0/magnetron-darwin-arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-linux-amd64.tar.gz",
+     "size": 4708533,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.1.0/magnetron-linux-amd64.tar.gz",
+     "path": "magnetron/v0.1.0/magnetron-linux-amd64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-linux-arm64.tar.gz",
+     "size": 4345647,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.1.0/magnetron-linux-arm64.tar.gz",
+     "path": "magnetron/v0.1.0/magnetron-linux-arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-windows-amd64.tar.gz",
+     "size": 4765503,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.1.0/magnetron-windows-amd64.tar.gz",
+     "path": "magnetron/v0.1.0/magnetron-windows-amd64.tar.gz",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

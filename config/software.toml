@@ -1,0 +1,410 @@
+# Software VivaHX follows. Each entry:
+#
+#   id          short name for URLs and file paths (lowercase letters, digits, dashes)
+#   name        how it's shown
+#   category    one of: Clients, Servers, Trackers, Bots, Misc
+#   github      "owner/repo" to follow its GitHub releases (leave out for custom-only software)
+#   description one line
+#   homepage    optional link
+#   platforms   optional, shown next to the name
+#   skip_files  optional, file name patterns not to keep, e.g. ["*.txt"]
+#   prereleases optional, true to include prereleases
+#   no_posts    optional, true to not write news posts for new releases
+#
+# Releases not on GitHub go in releases/custom/<id>/<version>.toml (see releases/README.md).
+
+[[software]]
+id = "hotline-navigator"
+name = "Hotline Navigator"
+category = "Clients"
+github = "fuzzywalrus/Hotline-Navigator"
+description = "A modern Hotline client."
+platforms = "Mac, Windows, Linux, Android, iOS"
+
+[[software]]
+id = "hotline-swiftui"
+name = "Hotline (SwiftUI)"
+category = "Clients"
+github = "mierau/hotline"
+description = "A modern remake of Hotline for macOS, iOS and iPadOS."
+platforms = "Mac OS 14.1 and later"
+
+[[software]]
+id = "obsession"
+name = "Obsession"
+category = "Clients"
+github = "tjohnman/Obsession"
+description = "A Hotline client written in Qt, with Shift-JIS support."
+platforms = "Windows, Mac, Linux"
+
+[[software]]
+id = "mobius"
+name = "Mobius"
+category = "Servers"
+github = "jhalter/mobius"
+description = "A Hotline server written in Go."
+platforms = "Mac, Windows, Linux"
+skip_files = ["*_checksums.txt"]
+
+[[software]]
+id = "hotline-server"
+name = "Hotline Server"
+category = "Servers"
+description = "The original Hotline Server from Hotline Communications."
+platforms = "Mac OS 9, Mac OS X, Windows"
+homepage = "http://hlwiki.com/servers/"
+
+[[software]]
+id = "invigoration"
+name = "Invigoration"
+category = "Clients"
+github = "tagban/invigoration"
+description = "A chat client for Hotline and Battle.net, ported from VB6 to C#."
+platforms = "Windows, Mac, Linux"
+
+[[software]]
+id = "mobius-client"
+name = "Mobius Client"
+category = "Clients"
+github = "jhalter/mobius-hotline-client"
+description = "A command line Hotline client."
+platforms = "Mac, Windows, Linux"
+skip_files = ["*checksums.txt"]
+
+[[software]]
+id = "decline"
+name = "Decline"
+category = "Clients"
+github = "dubsdotla/decline"
+description = "A reimagined version of a third-party Hotline client from 2012."
+platforms = "Mac"
+
+[[software]]
+id = "gtkhx"
+name = "GtkHx"
+category = "Clients"
+github = "mishan/gtkhx"
+description = "A Hotline client with a GTK+ interface."
+platforms = "Linux"
+
+[[software]]
+id = "heidrun"
+name = "Heidrun"
+category = "Clients"
+github = "franckjej/heidrun"
+description = "A Hotline client based on the original Heidrun.app."
+platforms = "Mac"
+
+[[software]]
+id = "heidrun-protocol"
+name = "Heidrun protocol and CLI"
+category = "Misc"
+github = "franckjej/heidrun-protocol"
+description = "Shared Hotline protocol code and the Heidrun command line client."
+
+[[software]]
+id = "hotstuff"
+name = "HotStuff!"
+category = "Clients"
+description = "A classic Hotline client for the Mac."
+platforms = "Mac OS 7.1 to 10.5"
+homepage = "http://macintoshgarden.org/apps/hotstuff"
+
+[[software]]
+id = "silverwing"
+name = "SilverWing"
+category = "Clients"
+github = "HaikuArchives/SilverWing"
+description = "A Hotline client for BeOS."
+platforms = "BeOS, Haiku"
+
+[[software]]
+id = "hotline-web"
+name = "Hotline for the browser"
+category = "Clients"
+github = "jwheare/hotline"
+description = "A browser-based Hotline client written in Erlang."
+
+[[software]]
+id = "pennig-hotline"
+name = "Hotline (pennig)"
+category = "Clients"
+github = "pennig/hotline"
+description = "A Hotline client for Apple platforms."
+
+[[software]]
+id = "heidrun-server"
+name = "Heidrun Server"
+category = "Servers"
+github = "franckjej/heidrun-server"
+description = "A Hotline server written in Swift."
+
+[[software]]
+id = "lemoniscate"
+name = "Lemoniscate"
+category = "Servers"
+github = "bourbonicfisky/lemoniscate"
+description = "A Hotline server for PowerPC Macs, in the spirit of Mobius."
+platforms = "Mac OS X on PowerPC"
+
+[[software]]
+id = "phxd"
+name = "phxd"
+category = "Servers"
+github = "dcwatson/phxd"
+description = "A Hotline server written in Python using Twisted."
+
+[[software]]
+id = "nebu-hotline"
+name = "Hotline Server (NebuHiiEjamu)"
+category = "Servers"
+github = "NebuHiiEjamu/Hotline"
+description = "A Hotline server that adds third-party protocol extensions."
+
+[[software]]
+id = "pitbull"
+name = "Pitbull Pro"
+category = "Servers"
+description = "A Hotline server, client and tracker for Windows."
+platforms = "Windows"
+homepage = "http://ubersoft.org/pitbullserver/"
+
+[[software]]
+id = "mhxd"
+name = "mhxd"
+category = "Servers"
+description = "A Hotline server for Unix."
+platforms = "Unix"
+homepage = "http://hlwiki.com/servers/"
+
+[[software]]
+id = "hotline-docker"
+name = "Hotline Docker images"
+category = "Servers"
+github = "mishan/hotline-docker"
+description = "Container images for running Hotline servers and trackers."
+
+[[software]]
+id = "magnetron"
+name = "Magnetron"
+category = "Trackers"
+github = "benabernathy/magnetron"
+description = "A modern, multi-platform Hotline tracker."
+
+[[software]]
+id = "hltracker-vb"
+name = "hltracker (Visual Basic)"
+category = "Trackers"
+github = "codebox/hltracker"
+description = "A Hotline tracker written in Visual Basic."
+
+[[software]]
+id = "heidrun-spirit"
+name = "Heidrun Spirit"
+category = "Bots"
+github = "franckjej/heidrun-spirit"
+description = "A MegaHAL chatbot for Hotline."
+
+[[software]]
+id = "hotline-discord-bridge"
+name = "Hotline Discord Bridge"
+category = "Bots"
+github = "tagban/hotline_discord_bridge"
+description = "Connects Hotline servers and Discord channels."
+
+[[software]]
+id = "hotline2irc"
+name = "Hotline2IRCRouter"
+category = "Bots"
+github = "JustinTArthur/Hotline2IRCRouter"
+description = "An mIRC script that relays a Hotline server's chat to an IRC channel."
+platforms = "Windows (mIRC)"
+
+[[software]]
+id = "caps"
+name = "Caps"
+category = "Misc"
+github = "hansipie/Caps"
+description = "A Hotline client and server written in C++."
+
+[[software]]
+id = "neolith"
+name = "Neolith"
+category = "Misc"
+github = "jyelloz/neolith"
+description = "An easy-to-understand Hotline protocol implementation, with a reference client and server."
+
+[[software]]
+id = "hotline-ruby"
+name = "hotline (Ruby gem)"
+category = "Misc"
+github = "amoeba/hotline"
+description = "A Ruby gem for the Hotline protocol."
+
+[[software]]
+id = "fogwraith-hotline"
+name = "Hotline protocol notes (fogWraith)"
+category = "Misc"
+github = "fogWraith/Hotline"
+description = "Documentation of the Hotline protocol."
+
+[[software]]
+id = "hx-ng"
+name = "hx-ng"
+category = "Clients"
+github = "mishan/hx-ng"
+description = "A web-based Hotline client."
+
+[[software]]
+id = "rusty-hx"
+name = "rusty-hx"
+category = "Clients"
+github = "kangsterizer/rusty-hx"
+description = "A Hotline 1.2.3-style client written in Rust."
+
+[[software]]
+id = "hotline-client-lisp"
+name = "Hotline client (Common Lisp)"
+category = "Clients"
+github = "floren/hotline-client"
+description = "A Hotline client library and GUI in Common Lisp."
+
+[[software]]
+id = "hot-lime"
+name = "Hot Lime"
+category = "Clients"
+github = "hjcoda/hot-lime-client"
+description = "A Hotline client built with Electron."
+
+[[software]]
+id = "senesco"
+name = "Senesco"
+category = "Clients"
+github = "Rampant-ai/Senesco"
+description = "A reverse-engineered Hotline client."
+
+[[software]]
+id = "shx-i2p"
+name = "shx (I2P)"
+category = "Clients"
+github = "orignal/shx-i2p"
+description = "The SynHX client, patched for I2P."
+
+[[software]]
+id = "hxd-ng"
+name = "hxd-ng"
+category = "Servers"
+github = "mishan/hxd-ng"
+description = "A next-generation Hotline server."
+
+[[software]]
+id = "phxd-irc"
+name = "phxd (with IRC)"
+category = "Servers"
+github = "kangsterizer/phxd"
+description = "phxd, a Python Hotline server, with IRC support added."
+
+[[software]]
+id = "rhxd"
+name = "rhxd"
+category = "Servers"
+github = "DaCodeChick/rhxd"
+description = "A Hotline server written in Rust."
+
+[[software]]
+id = "zhxd"
+name = "zhxd"
+category = "Servers"
+github = "Schala/zhxd"
+description = "A Hotline server written in Zig."
+
+[[software]]
+id = "jshxd"
+name = "jshxd"
+category = "Servers"
+github = "Schala/jshxd"
+description = "A Hotline server written in JavaScript."
+
+[[software]]
+id = "shxd-i2p"
+name = "shxd (I2P)"
+category = "Servers"
+github = "orignal/shxd-i2p"
+description = "The SynHXD server, patched for I2P."
+
+[[software]]
+id = "hotline-modern"
+name = "Hotline Modern"
+category = "Misc"
+github = "Oli97430/hotline-modern"
+description = "A modern reinvention of Hotline: chat and file sharing on self-hosted servers."
+
+[[software]]
+id = "hotline-ws-bridge"
+name = "Hotline WebSocket bridge"
+category = "Misc"
+github = "jhalter/hotline-ws-bridge"
+description = "Connects WebSocket clients to Hotline servers."
+
+[[software]]
+id = "hotline-wireshark"
+name = "Hotline Wireshark dissector"
+category = "Misc"
+github = "jhalter/hotline-wireshark-dissector"
+description = "Decodes the Hotline protocol in Wireshark."
+
+[[software]]
+id = "hotline-192-banner-patch"
+name = "Hotline 1.9.2 banner patch"
+category = "Misc"
+github = "jhalter/hotline-client-1.9.2-banner-patch"
+description = "Fixes the broken banner ad in the Hotline 1.9.2 client."
+
+[[software]]
+id = "hx-libs"
+name = "hx-libs"
+category = "Misc"
+github = "mishan/hx-libs"
+description = "Rust crates for the Hotline protocol, shared by GtkHx and hxd-ng."
+
+[[software]]
+id = "hotline-icons"
+name = "Hotline icons"
+category = "Misc"
+github = "tagban/hotline_icons"
+description = "The Ultimate Icons Pack, for any Hotline client or server to use."
+
+[[software]]
+id = "net-hotline"
+name = "Net::Hotline"
+category = "Misc"
+github = "pld-linux/perl-Net-Hotline"
+description = "Perl libraries for the Hotline protocol."
+
+[[software]]
+id = "hotline-management"
+name = "HotlineManagement"
+category = "Misc"
+github = "fstltna/HotlineManagement"
+description = "Manage a Hotline server from a text interface."
+
+[[software]]
+id = "createlist"
+name = "CreateList"
+category = "Misc"
+github = "fstltna/CreateList"
+description = "Makes an HTML list of Hotline servers from a list of websites."
+
+[[software]]
+id = "pushguest"
+name = "pushguest"
+category = "Misc"
+github = "fstltna/pushguest"
+description = "Pushes an updated guest account to several Hotline servers on Linux."
+
+[[software]]
+id = "pullupdates"
+name = "PullUpdates"
+category = "Misc"
+github = "fstltna/PullUpdates"
+description = "Updates a Hotline server from a master server and restarts it."

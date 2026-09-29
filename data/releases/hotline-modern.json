@@ -1,0 +1,150 @@
+{
+ "id": "hotline-modern",
+ "releases": [
+  {
+   "version": "v0.9.1",
+   "title": "v0.9.1 — Hotfix tracker connectivity",
+   "date": "2026-06-04",
+   "url": "https://github.com/Oli97430/hotline-modern/releases/tag/v0.9.1",
+   "notes": "## Hotline Modern v0.9.1 — Hotfix\n\n### Corrections critiques\n- **Tracker connectivity** : remplace `localhost` par `127.0.0.1` pour éviter les problèmes de résolution DNS IPv6\n- **Bootstrap config** : valide la joignabilité d'un tunnel avant de le mettre en cache (timeout 3s)\n- **URLs périmées** : nettoyage automatique des tunnels trycloudflare morts au démarrage\n- **Tracker local préservé** : ne supprime jamais `localhost:9998` quand on ajoute un tunnel\n- **public-config.json** : vidé pour ne plus pointer vers un tunnel mort\n\n### APK Android\n`hotline-modern.apk` — 4.0 MB, debug build",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "hotline-modern.apk",
+     "size": 4170593,
+     "source_url": "https://github.com/Oli97430/hotline-modern/releases/download/v0.9.1/hotline-modern.apk",
+     "path": "hotline-modern/v0.9.1/hotline-modern.apk",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.9.0",
+   "title": "v0.9.0 — Phase 9: DM history, search pagination, a11y, refactor",
+   "date": "2026-05-24",
+   "url": "https://github.com/Oli97430/hotline-modern/releases/tag/v0.9.0",
+   "notes": "## Hotline Modern v0.9.0\n\n### Nouvelles fonctionnalités\n- **Historique DM** : pagination par timestamp, chargement à la demande\n- **Pagination de recherche** : offset/limit avec bouton \"Load More\"\n- **Non-lu persistant** : survit aux rechargements de page (localStorage)\n- **Message status** : type sending/sent/failed/read (infrastructure)\n\n### Qualité & Accessibilité\n- **ChatPanel refactorisé** : splitté en ChatHeader, ChatInput, MessageList\n- **40+ corrections a11y** : button type, keyboard handlers, ARIA roles\n- **Biome lint** : 0 erreurs restantes\n\n### APK Android\n`hotline-modern.apk` — 4.0 MB, debug build",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "hotline-modern.apk",
+     "size": 4170408,
+     "source_url": "https://github.com/Oli97430/hotline-modern/releases/download/v0.9.0/hotline-modern.apk",
+     "path": "hotline-modern/v0.9.0/hotline-modern.apk",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.8.0",
+   "title": "v0.8.0 — Phase 8: 15 nouvelles features",
+   "date": "2026-05-24",
+   "url": "https://github.com/Oli97430/hotline-modern/releases/tag/v0.8.0",
+   "notes": "## Hotline Modern v0.8.0\n\n### Nouvelles fonctionnalités\n- **Markdown complet** : code blocks, titres, listes, gras, italique, barré\n- **@mentions** avec highlight personnel + notifications navigateur\n- **Brouillons par canal** persistés en localStorage\n- **Catégories de canaux** : groupes repliables, renommer, supprimer, réordonner\n- **Marqueurs de non-lu** : ligne de séparation dans le chat + pastilles sidebar\n- **Blocage d'utilisateurs** côté client\n- **Messages programmés** avec processeur backend (tick 30s)\n- **PWA** : manifest + service worker (network-first API, cache-first static)\n- **Chunks Vite optimisés** : react, crypto, icons, i18n\n- **Hub splitté** en 11 fichiers Go pour la maintenabilité\n- **Indicateurs de frappe** améliorés (1/2/3/4+ utilisateurs)\n- **Protection XSS** via escapeHtml avant transforms markdown\n- **i18n** catégories, frappe, blocage (en + fr)\n\n### APK Android\n`hotline-modern.apk` — 3.9 MB, debug build",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "hotline-modern.apk",
+     "size": 4051552,
+     "source_url": "https://github.com/Oli97430/hotline-modern/releases/download/v0.8.0/hotline-modern.apk",
+     "path": "hotline-modern/v0.8.0/hotline-modern.apk",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v0.2.0",
+   "title": "v0.2.0 — Mobile & LAN connectivity",
+   "date": "2026-05-18",
+   "url": "https://github.com/Oli97430/hotline-modern/releases/tag/v0.2.0",
+   "notes": "## What's New\n\n### Mobile / LAN Support\n- Auto-detect server host from connection context (browser or native app)\n- Android cleartext HTTP enabled for local network trackers\n- Tracker URL auto-configured based on server IP\n\n### Code Polish\n- 52 message type constants (Go server)\n- `wsSend` helper eliminates WebSocket boilerplate (React client)\n- SQL subquery optimization for message history\n- Biome formatter/linter integration\n- 55-test integration suite + 137 unit tests — all passing\n\n## Download\n- **Android APK**: download `Hotline-Modern-v0.2.0.apk` below and install on your phone\n- Requires Android 7.0+\n\n## Test Results\n- ✅ Integration: 55/55\n- ✅ Unit tests: 137/137\n- ✅ Go vet: clean",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "app-debug.apk",
+     "size": 4205174,
+     "source_url": "https://github.com/Oli97430/hotline-modern/releases/download/v0.2.0/app-debug.apk",
+     "path": "hotline-modern/v0.2.0/app-debug.apk",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v1.2.0",
+   "title": "v1.2.0 — E2E Encryption, Server Discovery, Read Receipts",
+   "date": "2026-05-17",
+   "url": "https://github.com/Oli97430/hotline-modern/releases/tag/v1.2.0",
+   "notes": "## What's New\n\n### Server Discovery (Tracker)\n- **Standalone tracker binary** — decentralized server directory with heartbeat/TTL\n- **Server browser** in the connect dialog — browse, search, and quick-connect to servers\n- **Multi-tracker support** — fetch from multiple trackers with deduplication\n\n### End-to-End Encryption (DMs)\n- **Real NaCl box encryption** (Curve25519 / XSalsa20-Poly1305) for direct messages\n- Server never sees plaintext — stores `[encrypted]` in database\n- Green shield indicator shows encryption status in DM header\n- Backward compatible with older clients\n\n### Read Receipts\n- See who has read your messages (up to 5 names displayed)\n- Automatic read receipt sending when at bottom of chat\n\n### Voice Messages\n- Dedicated audio player rendering for voice recordings\n- `msgType` field distinguishes voice from text messages\n- Works in threads too\n\n### Desktop Notifications\n- Web Notification API with 500ms throttle and mute support\n\n### Server Agreement\n- Configurable agreement text shown on connect (accept/decline)\n\n### Other Improvements\n- Join/leave system messages (centered, italic)\n- Full French + English i18n coverage\n- Security hardening (CORS fixes, body size limits, input validation)\n- 137 tests passing\n\n## Downloads\n- **Hotline-Modern-Setup.exe** — Windows installer (NSIS)\n- **Hotline-Modern.msi** — Windows installer (MSI)\n- **Hotline-Modern-Portable.exe** — Windows portable (no install)\n- **Hotline-Modern.apk** — Android app\n- **hotline-server.exe** — Chat server\n- **hotline-tracker.exe** — Server discovery tracker",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline-Modern-Portable.exe",
+     "size": 8456192,
+     "source_url": "https://github.com/Oli97430/hotline-modern/releases/download/v1.2.0/Hotline-Modern-Portable.exe",
+     "path": "hotline-modern/v1.2.0/Hotline-Modern-Portable.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline-Modern-Setup.exe",
+     "size": 2406413,
+     "source_url": "https://github.com/Oli97430/hotline-modern/releases/download/v1.2.0/Hotline-Modern-Setup.exe",
+     "path": "hotline-modern/v1.2.0/Hotline-Modern-Setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline-Modern.apk",
+     "size": 4075708,
+     "source_url": "https://github.com/Oli97430/hotline-modern/releases/download/v1.2.0/Hotline-Modern.apk",
+     "path": "hotline-modern/v1.2.0/Hotline-Modern.apk",
+     "mirrored": false
+    },
+    {
+     "name": "Hotline-Modern.msi",
+     "size": 3514368,
+     "source_url": "https://github.com/Oli97430/hotline-modern/releases/download/v1.2.0/Hotline-Modern.msi",
+     "path": "hotline-modern/v1.2.0/Hotline-Modern.msi",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-server.exe",
+     "size": 16712704,
+     "source_url": "https://github.com/Oli97430/hotline-modern/releases/download/v1.2.0/hotline-server.exe",
+     "path": "hotline-modern/v1.2.0/hotline-server.exe",
+     "mirrored": false
+    },
+    {
+     "name": "hotline-tracker.exe",
+     "size": 8893952,
+     "source_url": "https://github.com/Oli97430/hotline-modern/releases/download/v1.2.0/hotline-tracker.exe",
+     "path": "hotline-modern/v1.2.0/hotline-tracker.exe",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "v1.1",
+   "title": "Hotline Modern v1.1",
+   "date": "2026-05-17",
+   "url": "https://github.com/Oli97430/hotline-modern/releases/tag/v1.1",
+   "notes": "## What's New in v1.1\n\n### Rich Content & Media\n- **Code blocks** with syntax highlighting (JS, TS, Rust, Go, Python), line numbers, and copy button\n- **Link previews** with favicon, domain, and URL path display\n- **Rich embeds** for YouTube (thumbnails) and Twitter/X\n- **Voice messages** with waveform recorder, animated indicators, and inline audio playback\n- **Deterministic avatars** generated from user identity hash\n\n### Customization\n- **Theme editor** with live preview, color pickers for 8 CSS variables, save/load named palettes\n- **Custom emoji upload** (PNG, GIF, WebP up to 256KB) with management panel\n\n### Organization & Productivity\n- **Thread panel** with reply chain navigation (slide-in side panel)\n- **Message forwarding** to other channels with optional comment\n- **Message scheduler** with datetime picker and auto-send\n- **Channel drag-reorder** with persistent order saved to localStorage\n- **Server favorites** for quick reconnection\n\n### Server Intelligence\n- **Server statistics dashboard**: 24h activity chart, top contributors, top channels, live user count\n\n### Notifications\n- **Advanced notification filters**: mentions-only mode, quiet hours, keyword alerts, per-user/channel mute\n\n### Security\n- **E2E encryption indicator** for DMs with fingerprint display\n\n### Mobile & Responsiveness\n- **Full responsive layout** with slide-out sidebar, adaptive panels, mobile header navigation\n- Touch-friendly controls, iOS zoom prevention\n\n### Internationalization\n- Complete EN/FR coverage for all new features\n\n---\n**Build**: 1574 modules, 520KB gzipped to 131KB\n**Stack**: React 18 + TypeScript + Vite | Go WebSocket server",
+   "prerelease": false,
+   "source": "github",
+   "files": []
+  },
+  {
+   "version": "v1.0.0",
+   "title": "Hotline Modern v1.0.0",
+   "date": "2026-05-17",
+   "url": "https://github.com/Oli97430/hotline-modern/releases/tag/v1.0.0",
+   "notes": "# 🚀 Hotline Modern v1.0.0\n\nModern reinvention of [Hotline](https://en.wikipedia.org/wiki/Hotline_Communications) (1997) — decentralized chat and file sharing with self-hosted servers.\n\n## Highlights\n\n- **Go server** with embedded SQLite — zero external dependencies\n- **React/Tauri client** — lightweight, native, modern\n- **Ed25519 identity** — portable across servers, no central accounts\n- **Real-time chat** — channels, DMs, typing indicators, reactions, threads\n- **File sharing** — drag & drop upload, file browser, inline previews\n- **Moderation** — 4-tier roles, kick/ban, admin panel\n- **Rich UX** — dark/light themes, compact mode, keyboard shortcuts, i18n (EN/FR)\n- **Image lightbox** — zoom, rotate, download\n- **Message search** — full-text across channels with highlights\n- **Desktop notifications** — sound, tab badges, toast alerts\n\n## Quick Start\n\n```bash\n# Server\ncd server && go build -o hotline-server ./cmd/hotline-server/ && ./hotline-server\n\n# Client\ncd client && npm install && npm run dev\n```\n\n## Full Feature List\n\nSee [README.md](https://github.com/Oli97430/hotline-modern#features) for the complete feature breakdown.",
+   "prerelease": false,
+   "source": "github",
+   "files": []
+  }
+ ]
+}

@@ -1,0 +1,473 @@
+{
+ "id": "hotline-swiftui",
+ "releases": [
+  {
+   "version": "1.0beta28",
+   "title": "Hotline for Mac b28",
+   "date": "2026-03-03",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta28",
+   "notes": "New in b28:\r\n\r\n- Highlighted words in chat (manage in Settings).\r\n- Experimental Hotline file URLs (i.e. hotline://<address>/files/path/to/file.zip) should work across servers.\r\n- System notifications for transfers, highlighted words, mentions, and private messages.\r\n- Redesigned Settings.\r\n- An onboarding experience for new Hotline users.\r\n- New experimental take on private messages.\r\n- Admin names appear red in chat.\r\n- Little update to the about box.\r\n- Some Japanese IME input bug fixes.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b28.zip",
+     "size": 7420266,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta28/Hotline.b28.zip",
+     "path": "hotline-swiftui/1.0beta28/Hotline.b28.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta27",
+   "title": "Hotline for Mac b27",
+   "date": "2026-02-21",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta27",
+   "notes": "- Quick fix for chat input on Sequoia.\r\n- Also fixed a bug that caused the app not to launch if you had iCloud disabled.\r\n- Plus an input bug for those using IME input in chat.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b27.zip",
+     "size": 6894104,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta27/Hotline.b27.zip",
+     "path": "hotline-swiftui/1.0beta27/Hotline.b27.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta26",
+   "title": "Hotline for Mac b26",
+   "date": "2026-02-20",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta26",
+   "notes": "New in Beta 26:\r\n\r\n- **Newsgroup Management** Create and delete newsgroup topics and categories.\r\n- **Updated Message Board** An attempt to improve display of message board posts to feel less like a text file.\r\n- **New File Grid View** Switch between list or icon view in Files. Grid view is now default, but your selection will be remembered.\r\n- **File Browsing** Like the Finder, now double-clicking folders browses into that folder.\r\n- **Scoped File Search** When browsed into a folder, search will search within that folder.\r\n- **Chat Improvements** Chat is now a single stylized text view so you can select multiple messages, date dividers, etc.\r\n- **Chat Search** Chat search now highlights the terms in the chat messages found.\r\n- **Chat Log Management** You can now select individual chat logs to clear in Settings.\r\n- **Chat Log Storage** Chat logs have been moved to a SQL database.\r\n- **Download Folder Preference** You can now change where files and folders download to from Settings.\r\n- **Broadcast from Chat** A new conditional toolbar item will appear in chat if you can broadcast.\r\n- **Idle All-Night-Long** When connected to a server, you will now stay connected (which means your computer won't fully go to sleep as it did before).\r\n- **Plenty of Bug Fixes** Though I'm sure there are plenty still. ;)\r\n- **Now Built for Apple Silicon and Intel** This was just me forgetting to flip on x86 support. Sorry!\r\n\r\nEnjoy! :)",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b26.zip",
+     "size": 6883584,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta26/Hotline.b26.zip",
+     "path": "hotline-swiftui/1.0beta26/Hotline.b26.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta25",
+   "title": "Hotline for Mac b25",
+   "date": "2025-11-15",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta25",
+   "notes": "New in Beta 25:\r\n\r\n- **Transfers Window** View your transfers happening across Hotline servers: ⌘⇧T\r\n- **Folder Uploading** You can now drag folders into the files view to upload.\r\n- **Redesigned Accounts** Account management is now accessible from the Server menu or the Hotline toolbar. I removed it from the sidebar because most of the time it is unnecessary and thus shouldn't take up that much space.\r\n- **Disconnect Users** Admins can now kick users from the server (no banning yet)\r\n- **View Client Info** Admins can now view user client info (nickname, IP address, active transfers, etc).\r\n- **Better File Preview** Now using QuickLook for file previews so we support previewing more document types (videos, music, GIFs, etc.)\r\n- **Bonjour Servers** Find Hotline servers running on your local network with Bonjour. So far I believe **mobius** Hotline servers is the only server that can optionally broadcast itself via Bonjour.\r\n- **Better Error Handling** You should now see more errors (when appropriate) from the server.\r\n- **Colorful Toolbar** The Hotline toolbar now takes on the colors of the server banner.\r\n- **Animated Banners** Hotline will now display animated GIF banners.\r\n- **Create Folders** Admins can now create folders in the files view.\r\n- **Broadcast Message** Admins can now broadcast messages to users on the server from the Server menu: ⌘B.\r\n\r\nEnjoy! :)",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b25.zip",
+     "size": 6027549,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta25/Hotline.b25.zip",
+     "path": "hotline-swiftui/1.0beta25/Hotline.b25.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta24",
+   "title": "Hotline for Mac b24",
+   "date": "2025-10-27",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta24",
+   "notes": "New in Beta 24:\r\n\r\n- **Chat Persistence** Public Chat is now persisted to disk encrypted between sign ins. Old chats are loaded above the agreement/banner in Public Chat with each session separated by a gray divider.\r\n- **Chat Search** Search and filter current and old Public Chat using the new search field in chat. New messages are filtered live.\r\n- **Update Notification** It's not quite an auto-update mechanism, but it's close. You should be notified now when there is a new build with what's new and a Download button to download the latest build to your Downloads folder. Updates are checked for automatically on launch. The Not Now button will wait a week to let you know again.\r\n- **Basic Markdown in Chat** Support for simple Markdown styling syntax in Public Chat.\r\n- **Chat Server Banner** For those who run Hotline without the toolbar window, the server banner is now displayed in Public Chat just above the agreement.\r\n- **Join/Leave Redesign** Join and leave messages have a simpler design that read better with the rest of the chat.\r\n- **New Networking Backend** I'm building a new async networking library to make our Hotline protocol implementation far nicer to work with. The new networking code is now in use with Trackers and file previews. Please file a bug if you see any issues with these two as I plan to move more of the client over to this new backend.\r\n\r\nAlright, that's it. There's quite a bit here, so hopefully no serious bugs, but if there are please file bugs or feature requests through the Help menu to GitHub. Thanks! :D",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b24.zip",
+     "size": 4509470,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta24/Hotline.b24.zip",
+     "path": "hotline-swiftui/1.0beta24/Hotline.b24.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta23",
+   "title": "Hotline for Mac b23",
+   "date": "2025-10-23",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta23",
+   "notes": "New in Build 23:\r\n\r\n- **File Search** A new search field has appeared in the Files view for every server. This feature is highly beta so let me know what issues you encounter. Please note that I've tried to build this to be empathetic of a server's load. So while search does slow down over time and there is a cache that is searched first. That being said, please note that you may be disconnected or banned from the odd server that has some sort of request/sec limit in place. A few other things: upload/dropbox folders are never cached as their contents may change more frequently, you can force a fresh search (uncached) by holding the shift key while pressing enter to start your search, and the search doesn't scan from top to bottom because there is some intelligence to burst into folders when we find matches and to scan the tree one level at a time at random to help with large trees.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b23.zip",
+     "size": 4088906,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta23/Hotline.b23.zip",
+     "path": "hotline-swiftui/1.0beta23/Hotline.b23.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta22",
+   "title": "Hotline for Mac b22",
+   "date": "2025-10-22",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta22",
+   "notes": "New in build 22:\r\n\r\n- **Folder Downloading** Select a folder on a server (that supports this feature) and click the download button. Please test and report any bugs thanks. 😬\r\n- **Tracker Filtering** Type in the new Tracker window search field to filter bookmarks and servers.\r\n- **Bookmark Syncing** iCloud syncing for bookmarks is improved.\r\n- **Edit Bookmarks** Right click on a bookmark to edit it, including name, address, login, and password.\r\n- **Server Status** We now show user count on servers that report it in the Tracker view.\r\n- **Fixed Annoying Tracker Refresh** Tracker lists should not refresh weirdly when the Tracker window is put in the background.\r\n\r\nApologies for the release hiatus. Genuine thanks for all the bug reports and support! ❤️",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b22.zip",
+     "size": 4016302,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta22/Hotline.b22.zip",
+     "path": "hotline-swiftui/1.0beta22/Hotline.b22.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta21",
+   "title": "Hotline for Mac b21",
+   "date": "2024-07-30",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta21",
+   "notes": "New in build 21:\r\n\r\n- Support for file uploads (including preservation of resource forks from old files as well as common file extension -> HFS type/creator conversions and Finder file comments).\r\n- Drag and drop from Finder to upload.\r\n- Updated app icon!\r\n- Hold shift while sending a public chat message to announce message to chat.\r\n- Display of server error messages.\r\n- Some minor style changes throughout.\r\n\r\nEnjoy! :)",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b21.zip",
+     "size": 3974557,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta21/Hotline.b21.zip",
+     "path": "hotline-swiftui/1.0beta21/Hotline.b21.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta20",
+   "title": "Hotline for Mac b20",
+   "date": "2024-07-03",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta20",
+   "notes": "New in build 20:\r\n- Account management has been added and shows up for those who can manage accounts on a server.\r\n- Upload and Admin Drop Box folders now have yellow and red folder icons.\r\n- New colorful icons.\r\n- Refined toolbar window.\r\n- Option-double clicking a server in the Servers window now opens the connect window with the IP address filled.\r\n- Removed headers on users and transfers and replaced with dividers.\r\n\r\n![CleanShot 2024-07-02 at 17 21 47@2x](https://github.com/mierau/hotline/assets/55453/9b24eba4-af7b-4fe3-b5df-2c9a8144ed0b)\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b20.zip",
+     "size": 3211841,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta20/Hotline.b20.zip",
+     "path": "hotline-swiftui/1.0beta20/Hotline.b20.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta19",
+   "title": "Hotline for Mac b19",
+   "date": "2024-05-23",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta19",
+   "notes": "Changes in Build 19:\r\n- Bookmarks have been rewritten to be CloudKit backed so they sync between computers (though should still work if you don't have iCloud enabled). This also removes the annoying ask to enter your password to unlock Keychain.\r\n- The Servers window now accepts dropping Hotline bookmark files on it (classic Hotline bookmark files from classic Hotline clients) so you should be able to just drag in your old Hotline bookmarks in.\r\n- Added Export Bookmark option to server bookmarks. Exported file is backwards compatible with classic Hotline clients.\r\n- Fixed issue where wrong line endings were sent to classic Hotline servers.\r\n- New setting to hide/show user join/leave messages in chat.\r\n- Hide News section for older servers.\r\n- Redesigned Message Board post editor sheet.\r\n- Revert back to not showing message viewer when no message is selected in News.\r\n- Fix chat view not scrolling to the bottom when new messages arrive sometimes.\r\n- You can now option-click the Servers button in the banner toolbar window to bring up Connect to Server.\r\n- Added some helpful context menus to files and newsgroups.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b19.zip",
+     "size": 3036490,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta19/Hotline.b19.zip",
+     "path": "hotline-swiftui/1.0beta19/Hotline.b19.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta18",
+   "title": "Hotline for Mac b18",
+   "date": "2024-05-14",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta18",
+   "notes": "Changes in build 18:\r\n\r\n- You can now post to newsgroups.\r\n- Markdown formatting, links, lists, headers, dividers, tables, and images are supports in news posts.\r\n- Added a reload button to newsgroup so you can manually refresh a portion of the news tree.\r\n- Further color icon work for servers, trackers, and users.\r\n- Folders in Files now display using the macOS folder icon.\r\n- Fallback to generic user icon when the icon ID set can not be found.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b18.zip",
+     "size": 2933774,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta18/Hotline.b18.zip",
+     "path": "hotline-swiftui/1.0beta18/Hotline.b18.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta17",
+   "title": "Hotline for Mac b17",
+   "date": "2024-05-11",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta17",
+   "notes": "Changes in build 17:\r\n- More work on threaded news.\r\n- Some more high res user icons.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b17.zip",
+     "size": 2851980,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta17/Hotline.b17.zip",
+     "path": "hotline-swiftui/1.0beta17/Hotline.b17.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta16",
+   "title": "Hotline for Mac b16",
+   "date": "2024-05-09",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta16",
+   "notes": "Changes in b16:\r\n\r\n- Experimenting with some (some!) high res user icons.\r\n- Play different sound on first private message from a user.\r\n- Admin private message unread badges are now red.\r\n- Server agreements are now expandable.\r\n- Add support for email address highlighting.\r\n- Few small fixes.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b16.zip",
+     "size": 2816615,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta16/Hotline.b16.zip",
+     "path": "hotline-swiftui/1.0beta16/Hotline.b16.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta15",
+   "title": "Hotline for Mac b15",
+   "date": "2024-05-07",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta15",
+   "notes": "Changes in 1.0b15:\r\n\r\n- Fix for downloading files from Hotline Server 1.2.3. (thanks AnteL0pe for the bug report!)\r\n- Fix for the drop shadow disappearing on the Hotline banner window when entering or exiting fullscreen.\r\n- A few classic Hotlines user icons have been remastered for retina displays—open to feedback on this! Original icons still display when running on a non-retina display.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b15.zip",
+     "size": 2780414,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta15/Hotline.b15.zip",
+     "path": "hotline-swiftui/1.0beta15/Hotline.b15.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta14",
+   "title": "Hotline for Mac b14",
+   "date": "2024-05-06",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta14",
+   "notes": "Build 1.0b14 includes:\r\n- New About Box with version checking and a list of contributors.\r\n- Some visual clean up in Settings.\r\n- More reliable URL highlighting in agreements, message board, chat, and private messages.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b14.zip",
+     "size": 2774203,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta14/Hotline.b14.zip",
+     "path": "hotline-swiftui/1.0beta14/Hotline.b14.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta13",
+   "title": "Hotline for Mac b13",
+   "date": "2024-05-03",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta13",
+   "notes": "**NEW** Private messaging now works between users.\r\n**NEW** Unread badges in sidebar.\r\n**NEW** Links in chat and on the message board are now highlighted and clickable.\r\n**NEW** Simple markdown styling supported in chat.\r\n**NEW** Server messages now show in public chat.\r\n**NEW** New about box!\r\n**FIX** Banner window now remembers if it was closed.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b13.zip",
+     "size": 2716115,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta13/Hotline.b13.zip",
+     "path": "hotline-swiftui/1.0beta13/Hotline.b13.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta12",
+   "title": "Hotline for Mac b12",
+   "date": "2024-05-02",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta12",
+   "notes": "• Added a floating Hotline toolbar window for a little added bit of nostalgia. You can hide it from the Window menu.\r\n• Added sound settings (thx @jhalter!)\r\n• Added get file info dialog (thx @jhalter!!)\r\n• Added helpful GitHub menu items to the Help menu.\r\n• Message board now updates when new content is added (thx @jhalter!!!)\r\n• Fix for login.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b12.zip",
+     "size": 2618506,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta12/Hotline.b12.zip",
+     "path": "hotline-swiftui/1.0beta12/Hotline.b12.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta11",
+   "title": "Hotline for Mac b11",
+   "date": "2024-01-18",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta11",
+   "notes": "- You can now finally save servers as bookmarks to the Servers window. Either right click on a server from a tracker listing and click \"Bookmark\" or hit ⌘K and enter your server and optional account details and click \"Save.\"\r\n- Similarly, you can finally add Trackers to the Servers window. Click the Add Tracker button in the Servers window toolbar and enter the Tracker's details.\r\n- Servers window allows you to drag to reorder and organize server and tracker bookmarks.\r\n- To remove a bookmark, simply select it and hit the delete key.\r\n- Fixed (I think) an issue when posting to the message board on classic Hotline servers. No longer attempting to send message board text as UTF-8 but Mac OS Roman instead.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b11.zip",
+     "size": 2356379,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta11/Hotline.b11.zip",
+     "path": "hotline-swiftui/1.0beta11/Hotline.b11.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta10",
+   "title": "Hotline for Mac b10",
+   "date": "2024-01-16",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta10",
+   "notes": "- Added a Server menu with some commands for switching between Chat, News, Message Board, and Files.\r\n- Added classic Hotline sounds for login, chat, and user join and leave.\r\n- Files served with resource forks now properly download to macOS Sonoma. You can then transfer files with resource forks over to classic Mac OS machines via network drives etc., or an emulator like SheepShaver and they should work just fine.\r\n- Files served with Mac OS creator and file type codes are properly set on the downloaded files now too.\r\n- Implemented a keep alive ping to Hotline servers every 3 minutes to make it possible to idle on servers.\r\n- Starting to pay attention to user access information sent by the server (for example) by disabling the message board post button when you are not allowed. Planning to make more use of this information later.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b10.zip",
+     "size": 2293309,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta10/Hotline.b10.zip",
+     "path": "hotline-swiftui/1.0beta10/Hotline.b10.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta9",
+   "title": "Hotline for Mac b9",
+   "date": "2024-01-14",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta9",
+   "notes": "- You can now post to a server's message board.\r\n- The biggest change here is more or less invisible but I've swapped out the underlying networking code for something a little more straightforward to reduce bugs. This seems to have fixed issues connecting to some servers. Let me know if you encounter any issues.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b9.zip",
+     "size": 2198764,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta9/Hotline.b9.zip",
+     "path": "hotline-swiftui/1.0beta9/Hotline.b9.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta8",
+   "title": "Hotline for Mac b8",
+   "date": "2024-01-09",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta8",
+   "notes": "• Attempt to bug fix hang connecting seen by a few people by disabling TCP Fast Open.\r\n• Added Markdown rendering in news posts so people can add formatting, images, etc. but still keep content accessible to classic Hotline users.\r\n• Address now focuses by default when opening the connect window.\r\n• Show news article titles in article viewer.\r\n• Added text file preview support alongside image file previewing.\r\n\r\n![CleanShot 2024-01-09 at 14 39 06@2x](https://github.com/mierau/hotline/assets/55453/db583260-51bb-4dff-baa5-23ff9083c0dc)\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b8.zip",
+     "size": 2213363,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta8/Hotline.b8.zip",
+     "path": "hotline-swiftui/1.0beta8/Hotline.b8.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta7",
+   "title": "Hotline for Mac b7",
+   "date": "2024-01-06",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta7",
+   "notes": "- Added support for previewing image files in app (vs downloading each file to view).\r\n- Some work on connect interface.\r\n\r\nhttps://github.com/mierau/hotline/assets/55453/16b1c6f0-ec64-4d64-82d9-6a67ad9acd5d\r\n\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b7.zip",
+     "size": 1242627,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta7/Hotline.b7.zip",
+     "path": "hotline-swiftui/1.0beta7/Hotline.b7.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta6",
+   "title": "Hotline for Mac b6",
+   "date": "2024-01-04",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta6",
+   "notes": "- You can now connect to servers by IP with login/password.\r\n- Added ⌘K shortcut for new Connect to Server menu item.\r\n- Nicer connection status UI.\r\n- Removed some clutter from server title.\r\n- Moved online user count to side bar.\r\n\r\n![CleanShot 2024-01-04 at 08 53 35](https://github.com/mierau/hotline/assets/55453/aee8de6a-bec5-4cf3-8364-69a98c87d372)\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b6.zip",
+     "size": 1185370,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta6/Hotline.b6.zip",
+     "path": "hotline-swiftui/1.0beta6/Hotline.b6.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta5",
+   "title": "Hotline for Mac b5",
+   "date": "2024-01-03",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta5",
+   "notes": "- Pulled the classic Hotline icon set from the Mac OS 9 app which you can now select from in Settings. They are also appropriately displayed on user in the user list. Considering allowing for different icon packs, the classic set looks pretty dated, but it's nice to have there for authenticity's sake.\r\n- Banners are working again.\r\n- Few other bug fixes here and there.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b5.zip",
+     "size": 1159656,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta5/Hotline.b5.zip",
+     "path": "hotline-swiftui/1.0beta5/Hotline.b5.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta4",
+   "title": "Hotline for Mac b4",
+   "date": "2024-01-01",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta4",
+   "notes": "File downloads now work in the Mac build.\r\nI'll add to iOS when I have some time (soon?).",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b4.zip",
+     "size": 1005099,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta4/Hotline.b4.zip",
+     "path": "hotline-swiftui/1.0beta4/Hotline.b4.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.0beta",
+   "title": "Hotline for Mac b3",
+   "date": "2023-12-25",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta",
+   "notes": "Plenty of bugs and things not working, but you can load the few built-in trackers. Connect to multiple servers. Chat. Read news and message boards. Browse files. And change username and icon.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b3.zip",
+     "size": 931799,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta/Hotline.b3.zip",
+     "path": "hotline-swiftui/1.0beta/Hotline.b3.zip",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

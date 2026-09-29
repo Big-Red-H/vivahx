@@ -1,0 +1,48 @@
+{
+ "id": "hotline-server",
+ "releases": [
+  {
+   "version": "1.9.1",
+   "title": "Hotline Server 1.9.1",
+   "date": "2003-01-01",
+   "url": "",
+   "notes": "Hotline Server for Mac OS X.",
+   "prerelease": false,
+   "source": "custom",
+   "files": [
+    {
+     "name": "Hotline-Server-1.9.1-OSX.zip",
+     "size": 0,
+     "source_url": "http://hlwiki.com/HotlineFiles/Servers/Hotline-Server-1.9.1-OSX.zip",
+     "path": "hotline-server/1.9.1/Hotline-Server-1.9.1-OSX.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.8.5",
+   "title": "Hotline Server 1.8.5",
+   "date": "2002-01-01",
+   "url": "",
+   "notes": "The last Hotline Server for Mac OS 9 and Windows.",
+   "prerelease": false,
+   "source": "custom",
+   "files": [
+    {
+     "name": "hlserver_ppc_185.sit",
+     "size": 0,
+     "source_url": "http://hlwiki.com/HotlineFiles/Servers/hlserver_ppc_185.sit",
+     "path": "hotline-server/1.8.5/hlserver_ppc_185.sit",
+     "mirrored": false
+    },
+    {
+     "name": "hlserver_pc_185.exe",
+     "size": 0,
+     "source_url": "http://hlwiki.com/HotlineFiles/Servers/hlserver_pc_185.exe",
+     "path": "hotline-server/1.8.5/hlserver_pc_185.exe",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}
