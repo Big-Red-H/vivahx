@@ -25,7 +25,7 @@ remote="$DEPLOY_USER@$DEPLOY_HOST"
 # rsync --delete only into a folder this script set up (it leaves a .vivahx-deploy file), or an
 # empty one. The old PHP site and forum, if they're still there, are never deleted by a deploy.
 delete=""
-if $ssh_cmd "$remote" "mkdir -p '$DEPLOY_PATH' && { test -e '$DEPLOY_PATH/.vivahx-deploy' || test -z \"\$(ls -A '$DEPLOY_PATH' | grep -v -e '^.dh-diag\$' -e '^.well-known\$' -e '^favicon.ico\$')\"; }"; then
+if $ssh_cmd "$remote" "mkdir -p '$DEPLOY_PATH' && { test -e '$DEPLOY_PATH/.vivahx-deploy' || test -z \"\$(ls -A '$DEPLOY_PATH' | grep -v -e '^.dh-diag\$' -e '^.well-known\$' -e '^favicon\.\(ico\|gif\)\$')\"; }"; then
   delete="--delete"
 else
   echo "::warning::$DEPLOY_PATH has files this deploy didn't put there, so nothing will be deleted from it. Clear it out, or add a .vivahx-deploy file to it, to allow deletes."
