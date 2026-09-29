@@ -523,6 +523,14 @@ discord_editors = []   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
 
 [[software]]
+id = "liteline"
+name = "Liteline"
+category = "Clients"
+description = "Vintage Hotline Client"
+homepage = "https://agora.vespernet.net/"
+platforms = "System 6"
+
+[[software]]
 id = "argus"
 name = "Argus"
 category = "Trackers"
