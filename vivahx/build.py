@@ -30,6 +30,8 @@ def h(text):
 
 def page(config, title, body, sidebar):
     full = config["title"] if not title else f"{title} - {config['title']}"
+    invite = config.get("discord_invite", "")
+    discord_link = f' | <a href="{h(invite)}"><b>Discord</b></a>' if invite else ""
     return f"""<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -69,7 +71,7 @@ def page(config, title, body, sidebar):
 </table>
 
 <div align="center" style="margin-top: 10px;">
-    <font size="2">[ <a href="/">General News</a> | <a href="/software/">Software</a> | <a href="/archive.html">Archive</a> ]</font>
+    <font size="2">[ <a href="/">General News</a> | <a href="/software/">Software</a> | <a href="/archive.html">Archive</a>{discord_link} ]</font>
 </div>
 
 <table width="98%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top: 15px;">
@@ -171,9 +173,10 @@ def by_recent_release(software, latest):
     return sorted(software, key=lambda s: (latest.get(s["id"]) or {}).get("date") or "", reverse=True)
 
 
-def build_sidebar(software, latest):
+def build_sidebar(software, latest, invite=""):
     parts = [sidebar_box("Links", [
         "- <a href='/'>Home</a>",
+        *([f"- <a href='{h(invite)}'>Hotline HQ Discord</a>"] if invite else []),
         "- <a href='/software/'>Software</a>",
         "- <a href='/archive.html'>News Archive</a>",
         "- <a href='http://tracker.bigredh.com/'>Server Tracker</a>",
@@ -311,7 +314,7 @@ def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(SITE, OUT)
-    sidebar = build_sidebar(software, latest)
+    sidebar = build_sidebar(software, latest, config.get("discord_invite", ""))
 
     # Front page and one page per post.
     front = [box(h(p["title"]), post_meta(p), post_html(config, p, releases_by_id), post_footer(p, software_by_id))
