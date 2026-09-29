@@ -529,5 +529,13 @@ category = "Trackers"
 description = "Modern cross-platform tracker, implementing tracker protocol v1, v2 and v3."
 homepage = "https://agora.vespernet.net/"
 platforms = "AIX, macOS, Linux, Windows, Solaris, Illumos, BSD"
+
+[[software]]
+id = "janus"
+name = "Janus"
+category = "Servers"
+description = "Modern cross-platform server software"
+homepage = "https://agora.vespernet.net/"
+platforms = "macOS, Linux, BSD, Windows"
 discord_editors = ["267316948277264386"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
