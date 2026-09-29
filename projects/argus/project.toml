@@ -1,0 +1,11 @@
+name = "Argus"
+category = "Trackers"
+description = "Modern cross-platform tracker, implementing tracker protocol v1, v2 and v3."
+homepage = "https://agora.vespernet.net/"
+platforms = "AIX, macOS, Linux, Windows, Solaris, Illumos, BSD"
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = []
+github_editors = []

@@ -1,0 +1,11 @@
+name = "Hotline Server"
+category = "Servers"
+description = "The original Hotline Server from Hotline Communications."
+homepage = "http://hlwiki.com/servers/"
+platforms = "Mac OS 9, Mac OS X, Windows"
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = []
+github_editors = []

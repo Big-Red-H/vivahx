@@ -14,5 +14,8 @@ posts_on_front_page = 10
 # VivaHX invite: it gives the VivaHX Visitor role, so keep it rather than the general one.
 discord_invite = "https://discord.gg/rfRKHy6UR2"
 
+# The GitHub repo this site is built from, for "Edit on GitHub" and "Suggest it on GitHub" links.
+github_repo = "Big-Red-H/vivahx"
+
 # The page editor for developers (needs HTTPS, since it signs in with Discord or GitHub).
 editor_url = "https://vivahx.com/editor"

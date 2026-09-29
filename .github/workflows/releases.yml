@@ -39,8 +39,10 @@ jobs:
           DREAMOBJECTS_BUCKET: ${{ vars.DREAMOBJECTS_BUCKET }}
           DREAMOBJECTS_ENDPOINT: ${{ vars.DREAMOBJECTS_ENDPOINT }}
         run: python3 -m vivahx.mirror --minutes 60
+      - name: Update the list of projects in projects/README.md
+        run: python3 -m vivahx.project_index
       - name: Save to GitHub
-        run: scripts/save.sh "Releases $(date -u +%Y-%m-%d)" data news
+        run: scripts/save.sh "Releases $(date -u +%Y-%m-%d)" data news projects/README.md
       # A push made by this workflow doesn't start the build workflow, so it uploads here.
       - name: Build and upload
         env:

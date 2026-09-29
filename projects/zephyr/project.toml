@@ -1,0 +1,11 @@
+name = "Zephyr"
+category = "Clients"
+description = "Modern Hotline client, embracing what once was."
+homepage = "https://agora.vespernet.net/"
+platforms = "macOS"
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = ["267316948277264386"]
+github_editors = []

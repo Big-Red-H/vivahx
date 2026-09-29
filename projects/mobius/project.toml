@@ -1,0 +1,12 @@
+name = "Mobius"
+category = "Servers"
+github = "jhalter/mobius"
+description = "A Hotline server written in Go."
+platforms = "Mac, Windows, Linux"
+skip_files = ["*_checksums.txt"]
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = ["500355016734015488"]
+github_editors = []

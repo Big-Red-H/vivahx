@@ -19,7 +19,7 @@ $value = $user['provider'] === 'github' ? $user['username'] : $user['id'];
 $body = "Sent from the VivaHX editor by " . identity($user) . ".\n\n"
     . "They'd like to edit **" . str_replace(['*', '`'], '', $project['name']) . "** (`{$project['id']}`).\n\n"
     . "> " . str_replace(['<', '>'], ['&lt;', '&gt;'], $note) . "\n\n"
-    . "To link them, add this to the project in `config/software.toml`:\n\n"
+    . "To link them, set this in `projects/{$project['id']}/project.toml`:\n\n"
     . "```toml\n$field = [" . toml_string($value) . "]\n```\n"
     . ($user['provider'] === 'discord' ? "\nThey also need the Client, Server or Tracker Dev role on the Hotline Discord.\n" : '')
     . "\nClose this issue to decline.";

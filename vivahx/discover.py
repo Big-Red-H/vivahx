@@ -3,7 +3,7 @@
   python3 -m vivahx.discover > candidates.md
 
 Prints a Markdown checklist for the weekly "New Hotline projects to look at" issue. A project is
-left out once it's in config/software.toml or config/ignored-repos.txt. "Hotline" is a common
+left out once it's in projects/ or config/ignored-repos.txt. "Hotline" is a common
 word (phone hotlines, Hotline Miami...), so a repo has to mention the protocol side of it too.
 """
 
@@ -60,9 +60,9 @@ def main():
             found[name] = repo
         time.sleep(3)  # the search API allows about 10 searches a minute without a token
 
-    print("Projects on GitHub that look Hotline-related and aren't on VivaHX yet. To follow one, add it "
-          "to `config/software.toml` (a starting point is below each). To stop it showing up here, add it "
-          "to `config/ignored-repos.txt`.\n")
+    print("Projects on GitHub that look Hotline-related and aren't on VivaHX yet. To follow one, create "
+          "`projects/<id>/project.toml` (a starting point is below each), or recommend it from the editor. "
+          "To stop one showing up here, add it to `config/ignored-repos.txt`.\n")
     if not found:
         print("Nothing new this week.")
         return 0
@@ -70,15 +70,17 @@ def main():
         desc = (repo.get("description") or "").replace("\n", " ").strip()
         print(f"- [ ] **[{name}]({repo['html_url']})** ({repo.get('stargazers_count', 0)} stars, "
               f"updated {(repo.get('pushed_at') or '')[:10]}){': ' + desc if desc else ''}")
+        pid = re.sub(r'[^a-z0-9]+', '-', repo['name'].lower()).strip('-')
         snippet = "\n".join([
-            "[[software]]",
-            f"id = {toml_string(re.sub(r'[^a-z0-9]+', '-', repo['name'].lower()).strip('-'))}",
+            f"# projects/{pid}/project.toml",
             f"name = {toml_string(repo['name'])}",
             'category = "Clients"  # or Servers, Trackers, Bots, Misc',
             f"github = {toml_string(name)}",
             f"description = {toml_string(desc)}",
+            "discord_editors = []",
+            "github_editors = []",
         ])
-        print("  <details><summary>software.toml</summary>\n\n  ```toml\n" +
+        print("  <details><summary>project.toml</summary>\n\n  ```toml\n" +
               "\n".join("  " + line for line in snippet.splitlines()) + "\n  ```\n  </details>")
     return 0
 

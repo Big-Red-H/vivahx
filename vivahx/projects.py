@@ -15,9 +15,7 @@ and the screenshots found there (data/projects/) are used.
 import shutil
 from html import escape
 
-from .common import ROOT, load_json, render_markdown, slugify
-
-PROJECTS = ROOT / "projects"
+from .common import PROJECTS, ROOT, load_json, render_markdown, slugify
 INFO = ROOT / "data" / "projects"
 THUMB_WIDTH = 200
 SCREENSHOTS_PER_ROW = 3

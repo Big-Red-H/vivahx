@@ -3,7 +3,7 @@
   python3 -m vivahx.sync_releases
 
 GitHub releases come from the API (set GITHUB_TOKEN to avoid its rate limit); custom ones from
-releases/custom/<id>/<version>.toml. A release is never removed here, even if it disappears
+projects/<id>/releases/<version>.toml. A release is never removed here, even if it disappears
 upstream: this is the backup. Files start out not mirrored; vivahx.mirror copies them.
 
 The first time a piece of software is added, its past releases are recorded but only the latest
@@ -18,7 +18,7 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
-from .common import (CUSTOM, DATA, NEWS, load_toml, releases_for, slugify, software_list,
+from .common import (DATA, NEWS, PROJECTS, load_toml, releases_for, slugify, software_list,
                      toml_string, write_json)
 
 
@@ -67,7 +67,7 @@ def github_releases(software):
 
 
 def custom_releases(software):
-    folder = CUSTOM / software["id"]
+    folder = PROJECTS / software["id"] / "releases"
     out = []
     for path in sorted(folder.glob("*.toml")) if folder.exists() else []:
         c = load_toml(path)

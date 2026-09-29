@@ -1,0 +1,10 @@
+name = "Hotline 1.9.2 banner patch"
+category = "Misc"
+github = "jhalter/hotline-client-1.9.2-banner-patch"
+description = "Fixes the broken banner ad in the Hotline 1.9.2 client."
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = []
+github_editors = []

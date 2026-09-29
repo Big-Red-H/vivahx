@@ -13,10 +13,10 @@ same as the old PHP site: same tables, colors and images.
 | To | Do this |
 |---|---|
 | Post news | Add a file to `news/` (see [news/README.md](news/README.md)), or open a **News post** issue and add the **publish** label |
-| Follow a new program | Add it to `config/software.toml`. GitHub releases are picked up by themselves |
+| Follow a new program | Make a folder for it in `projects/` with a `project.toml` (see [projects/README.md](projects/README.md)), or recommend it from the editor. GitHub releases are picked up by themselves |
 | Change a project's page | Edit `projects/<id>/` (see [projects/README.md](projects/README.md)), or let its developers do it from the editor |
-| Let a developer edit their project | Add their Discord user ID to `discord_editors`, or their GitHub username to `github_editors`, in `config/software.toml` |
-| Add a release that isn't on GitHub | Add a file to `releases/custom/` (see [releases/README.md](releases/README.md)) |
+| Let a developer edit their project | Add their Discord user ID to `discord_editors`, or their GitHub username to `github_editors`, in `projects/<id>/project.toml` |
+| Add a release that isn't on GitHub | Add a file to `projects/<id>/releases/` (see [projects/README.md](projects/README.md)) |
 | Stop the weekly search suggesting a repo | Add it to `config/ignored-repos.txt` |
 
 Every push to `main` rebuilds and uploads the site.
@@ -46,7 +46,9 @@ also starts `releases.yml` every 6 hours and `discover.yml` on Mondays (see the 
 
 ## The data
 
-- `config/software.toml`: every program we follow.
+- `projects/<id>/`: every program we follow, one folder each: what it is and who may edit it
+  (`project.toml`), and its page (see [projects/README.md](projects/README.md), which also lists
+  them all).
 - `data/releases/<id>.json`: every release of it we've seen, with its notes and files (name,
   size, download address). Releases are never removed from here, even if they disappear from
   GitHub, so the list survives even when a download doesn't.

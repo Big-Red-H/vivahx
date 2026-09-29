@@ -27,7 +27,7 @@ return [
         'client_secret' => '',
         'guild_id' => '',
         // Client Dev, Server Dev, Tracker Dev. Anyone with one of these AND listed in a project's
-        // discord_editors (config/software.toml) can edit that project.
+        // discord_editors (projects/<id>/project.toml) can edit that project.
         'role_ids' => ['1485095253873791007', '1485095448858329218', '1485095504390918257'],
         'invite' => 'https://discord.gg/rfRKHy6UR2', // The VivaHX invite (gives the VivaHX Visitor role).
     ],

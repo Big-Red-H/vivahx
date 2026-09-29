@@ -1,0 +1,11 @@
+name = "Nyx"
+category = "Misc"
+description = "Instant Messenger built on top of the Hotline protocol, currently available in Janus"
+homepage = "https://agora.vespernet.net/"
+platforms = "macOS, Linux, Windows"
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = ["267316948277264386"]
+github_editors = []

@@ -1,0 +1,11 @@
+name = "Liteline"
+category = "Clients"
+description = "Vintage Hotline Client"
+homepage = "https://agora.vespernet.net/"
+platforms = "System 6"
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = []
+github_editors = []

@@ -11,7 +11,7 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config"
 NEWS = ROOT / "news"
-CUSTOM = ROOT / "releases" / "custom"
+PROJECTS = ROOT / "projects"
 DATA = ROOT / "data" / "releases"
 SITE = ROOT / "site"
 
@@ -29,20 +29,28 @@ def site_config():
 
 
 def software_list():
-    """Every piece of software VivaHX follows, from config/software.toml, in file order."""
-    items = load_toml(CONFIG / "software.toml").get("software", [])
-    for s in items:
-        if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", s.get("id", "")):
-            raise SystemExit(f"config/software.toml: bad id {s.get('id')!r} (lowercase letters, digits, dashes)")
+    """Every piece of software VivaHX follows: one folder per project in projects/, each with a
+    project.toml (see projects/README.md). The folder's name is the project's id."""
+    items = []
+    for path in sorted(PROJECTS.glob("*/project.toml")):
+        pid = path.parent.name
+        where = f"projects/{pid}/project.toml"
+        if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", pid):
+            raise SystemExit(f"projects/{pid}: folder names are lowercase letters, digits and dashes")
+        s = load_toml(path)
+        s["id"] = pid
+        if not s.get("name"):
+            raise SystemExit(f"{where}: needs a name")
         if s.get("category") not in CATEGORIES:
-            raise SystemExit(f"config/software.toml: {s['id']} needs a category from {CATEGORIES}")
+            raise SystemExit(f"{where}: needs a category from {CATEGORIES}")
         for x in s.get("discord_editors", []):
             if not re.fullmatch(r"\d{15,21}", str(x)):
-                raise SystemExit(f"config/software.toml: {s['id']}: {x!r} isn't a Discord user ID (a long number)")
+                raise SystemExit(f"{where}: {x!r} isn't a Discord user ID (a long number)")
         for x in s.get("github_editors", []):
             if not re.fullmatch(r"[A-Za-z0-9-]{1,39}", str(x)):
-                raise SystemExit(f"config/software.toml: {s['id']}: {x!r} isn't a GitHub username")
-    return items
+                raise SystemExit(f"{where}: {x!r} isn't a GitHub username")
+        items.append(s)
+    return sorted(items, key=lambda s: s["name"].lower())
 
 
 def load_json(path, default):

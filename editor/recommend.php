@@ -2,7 +2,7 @@
 declare(strict_types=1);
 require __DIR__ . '/src/bootstrap.php';
 
-// "Recommend a project": adds a program to config/software.toml, as a pull request a maintainer
+// "Recommend a project": adds a program as a new projects/<id>/project.toml, in a pull request a maintainer
 // approves. Open to anyone who signed in with GitHub, and to Discord members with a Dev role.
 $isPost = ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST';
 $action = $isPost ? (string) ($_POST['do'] ?? '') : '';
@@ -78,19 +78,16 @@ if ($action === 'submit') {
     }
 
     if (!$errors) {
+        // A folder name that isn't taken, on the site or by a recommendation still waiting.
+        $id = slug($state['name']);
         try {
-            $file = $github->file('config/software.toml');
+            for ($n = 2, $base = $id; isset(projects()[$id]) || $github->file("projects/$id/project.toml") !== null; $n++) {
+                $id = "$base-$n";
+            }
         } catch (HttpError $e) {
             render_error($e);
         }
-        if ($file === null) {
-            render_error(new RuntimeException('config/software.toml is missing from the repo.'));
-        }
-        $id = slug($state['name']);
-        for ($n = 2, $base = $id; isset(projects()[$id]); $n++) {
-            $id = "$base-$n";
-        }
-        $lines = ['[[software]]', 'id = ' . toml_string($id), 'name = ' . toml_string($state['name']), 'category = ' . toml_string($state['category'])];
+        $lines = ['name = ' . toml_string($state['name']), 'category = ' . toml_string($state['category'])];
         if ($repo !== '') {
             $lines[] = 'github = ' . toml_string($repo);
         }
@@ -103,9 +100,13 @@ if ($action === 'submit') {
         }
         $mineDiscord = $state['mine'] && $user['provider'] === 'discord';
         $mineGitHub = $state['mine'] && $user['provider'] === 'github';
-        $lines[] = 'discord_editors = [' . ($mineDiscord ? toml_string($user['id']) : '') . ']   # Discord user IDs, like ["123456789012345678"]';
+        $lines[] = '';
+        $lines[] = "# Who may edit this project's page on VivaHX (every change is still reviewed):";
+        $lines[] = '# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub';
+        $lines[] = '# usernames (anyone who can push to the GitHub repo above already can).';
+        $lines[] = 'discord_editors = [' . ($mineDiscord ? toml_string($user['id']) : '') . ']';
         $lines[] = 'github_editors = [' . ($mineGitHub ? toml_string($user['username']) : '') . ']';
-        $text = rtrim($file['text']) . "\n\n" . implode("\n", $lines) . "\n";
+        $text = implode("\n", $lines) . "\n";
 
         $body = "Recommended from the VivaHX editor by " . identity($user) . ".\n\n"
             . "Adds **" . str_replace(['*', '`'], '', $state['name']) . "** to " . $state['category']
@@ -115,10 +116,10 @@ if ($action === 'submit') {
             . 'Check **Files changed**, then merge to add it or close to decline.';
         try {
             $url = $github->proposeEdit(branch_prefix($user) . gmdate('YmdHis'),
-                [['path' => 'config/software.toml', 'content' => $text, 'sha' => $file['sha']]],
+                [['path' => "projects/$id/project.toml", 'content' => $text, 'sha' => null]],
                 "Add {$state['name']} ({$state['category']})", $body, commit_author($user));
         } catch (EditConflict $ex) {
-            $errors[] = 'The list changed while you were sending. Please send it again.';
+            $errors[] = 'Someone recommended a project with the same name a moment ago. Please send it again.';
         } catch (HttpError $ex) {
             render_error($ex);
         }

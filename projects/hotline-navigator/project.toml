@@ -1,0 +1,11 @@
+name = "Hotline Navigator"
+category = "Clients"
+github = "fuzzywalrus/Hotline-Navigator"
+description = "A modern Hotline client."
+platforms = "Mac, Windows, Linux, Android, iOS"
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = ["894097789590593556"]
+github_editors = []

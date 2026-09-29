@@ -1,0 +1,11 @@
+name = "Hotline (SwiftUI)"
+category = "Clients"
+github = "mierau/hotline"
+description = "A modern remake of Hotline for macOS, iOS and iPadOS."
+platforms = "Mac OS 14.1 and later"
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = []
+github_editors = []

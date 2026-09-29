@@ -1,0 +1,10 @@
+name = "pushguest"
+category = "Misc"
+github = "fstltna/pushguest"
+description = "Pushes an updated guest account to several Hotline servers on Linux."
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = []
+github_editors = []

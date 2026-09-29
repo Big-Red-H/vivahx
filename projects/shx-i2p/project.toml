@@ -1,0 +1,10 @@
+name = "shx (I2P)"
+category = "Clients"
+github = "orignal/shx-i2p"
+description = "The SynHX client, patched for I2P."
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = []
+github_editors = []

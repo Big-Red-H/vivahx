@@ -1,0 +1,10 @@
+name = "Hotline client (Common Lisp)"
+category = "Clients"
+github = "floren/hotline-client"
+description = "A Hotline client library and GUI in Common Lisp."
+
+# Who may edit this project's page on VivaHX (every change is still reviewed):
+# Discord user IDs (they also need a Client, Server or Tracker Dev role), and GitHub
+# usernames (anyone who can push to the GitHub repo above already can).
+discord_editors = []
+github_editors = []

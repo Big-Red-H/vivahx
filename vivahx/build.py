@@ -265,6 +265,9 @@ def project_page(config, s, releases, posts, editor_url):
     if editor_url:
         # The editor needs a modern browser (it signs in with Discord or GitHub over HTTPS).
         footer += f' | <a href="{h(editor_url)}/project.php?id={h(s["id"])}">Edit this page</a>'
+    # The project's own folder in the repo, for maintainers and anyone who'd rather send a pull request.
+    repo = config.get("github_repo", "Big-Red-H/vivahx")
+    footer += f' | <a href="https://github.com/{h(repo)}/tree/main/projects/{h(s["id"])}">Edit on GitHub</a>'
     body = [box(h(s["name"]), projects.facts(s, releases), "\n".join(p for p in parts if p), footer)]
 
     if releases:

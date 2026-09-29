@@ -156,7 +156,7 @@ function require_post_with_csrf(): void
 
 // --- Projects and who may edit them -----------------------------------------
 
-/** Every project, from projects.json (written by the site build from config/software.toml). */
+/** Every project, from projects.json (written by the site build from projects/<id>/project.toml). */
 function projects(): array
 {
     static $projects = null;
