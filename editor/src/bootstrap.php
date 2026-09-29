@@ -29,8 +29,8 @@ function config(): array
             exit('The editor is not set up yet.');
         }
         $config = require $path;
-        $unset = fn ($v) => $v === '' || str_starts_with((string) $v, 'PASTE_');
-        if (PHP_SAPI !== 'cli-server' && ($unset($config['github']['token']) || ($unset($config['discord']['client_secret']) && $unset($config['github_login']['client_secret'])))) {
+        $unset = fn ($v) => !is_string($v) || $v === '' || str_starts_with($v, 'PASTE_');
+        if (PHP_SAPI !== 'cli-server' && ($unset($config['github']['token'] ?? '') || ($unset($config['discord']['client_secret'] ?? '') && $unset($config['github_login']['client_secret'] ?? '')))) {
             http_response_code(503);
             exit('The editor is not set up yet.');
         }
@@ -69,14 +69,20 @@ function site_url(string $path): string
     return preg_match('#^https?://#', $path) ? $path : config()['site_url'] . $path;
 }
 
+/** A setting that's been filled in (not empty, and not still the sample's PASTE_... text). */
+function is_set(mixed $value): bool
+{
+    return is_string($value) && $value !== '' && !str_starts_with($value, 'PASTE_');
+}
+
 function discord_enabled(): bool
 {
-    return !empty(config()['discord']['client_id']);
+    return is_set(config()['discord']['client_id'] ?? '') && is_set(config()['discord']['client_secret'] ?? '');
 }
 
 function github_login_enabled(): bool
 {
-    return !empty(config()['github_login']['client_id']);
+    return is_set(config()['github_login']['client_id'] ?? '') && is_set(config()['github_login']['client_secret'] ?? '');
 }
 
 function discord(): Discord
