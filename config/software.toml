@@ -25,7 +25,7 @@ category = "Clients"
 github = "fuzzywalrus/Hotline-Navigator"
 description = "A modern Hotline client."
 platforms = "Mac, Windows, Linux, Android, iOS"
-discord_editors = []   # Discord user IDs, like ["123456789012345678"]
+discord_editors = ["894097789590593556"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
 
 [[software]]
@@ -56,7 +56,7 @@ github = "jhalter/mobius"
 description = "A Hotline server written in Go."
 platforms = "Mac, Windows, Linux"
 skip_files = ["*_checksums.txt"]
-discord_editors = []   # Discord user IDs, like ["123456789012345678"]
+discord_editors = ["500355016734015488"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
 
 [[software]]
@@ -76,7 +76,7 @@ category = "Clients"
 github = "tagban/invigoration"
 description = "A chat client for Hotline and Battle.net, ported from VB6 to C#."
 platforms = "Windows, Mac, Linux"
-discord_editors = []   # Discord user IDs, like ["123456789012345678"]
+discord_editors = ["171426686057971713"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
 
 [[software]]
@@ -87,7 +87,7 @@ github = "jhalter/mobius-hotline-client"
 description = "A command line Hotline client."
 platforms = "Mac, Windows, Linux"
 skip_files = ["*checksums.txt"]
-discord_editors = []   # Discord user IDs, like ["123456789012345678"]
+discord_editors = ["500355016734015488"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
 
 [[software]]
@@ -107,7 +107,7 @@ category = "Clients"
 github = "mishan/gtkhx"
 description = "A Hotline client with a GTK+ interface."
 platforms = "Linux"
-discord_editors = []   # Discord user IDs, like ["123456789012345678"]
+discord_editors = ["691827072406126635"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
 
 [[software]]
@@ -136,7 +136,7 @@ category = "Clients"
 description = "A classic Hotline client for the Mac."
 platforms = "Mac OS 7.1 to 10.5"
 homepage = "http://macintoshgarden.org/apps/hotstuff"
-discord_editors = []   # Discord user IDs, like ["123456789012345678"]
+discord_editors = ["551122435848798217"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
 
 [[software]]
@@ -183,7 +183,7 @@ category = "Servers"
 github = "bourbonicfisky/lemoniscate"
 description = "A Hotline server for PowerPC Macs, in the spirit of Mobius."
 platforms = "Mac OS X on PowerPC"
-discord_editors = []   # Discord user IDs, like ["123456789012345678"]
+discord_editors = ["894097789590593556"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
 
 [[software]]
@@ -312,7 +312,7 @@ name = "Hotline protocol notes (fogWraith)"
 category = "Misc"
 github = "fogWraith/Hotline"
 description = "Documentation of the Hotline protocol."
-discord_editors = []   # Discord user IDs, like ["123456789012345678"]
+discord_editors = ["267316948277264386"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
 
 [[software]]
