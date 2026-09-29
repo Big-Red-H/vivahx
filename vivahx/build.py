@@ -34,9 +34,11 @@ def page(config, title, body, sidebar):
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="color-scheme" content="only light">
     <title>{h(full)}</title>
     <link rel="alternate" type="application/rss+xml" title="VivaHX news" href="/rss.xml">
     <style type="text/css">
+        :root {{ color-scheme: only light; }}
         body {{ background-color: #E8EFCF; color: #222222; margin: 0; padding: 0; font-family: Geneva, Helvetica, Arial, sans-serif; }}
         td {{ font-family: Geneva, Helvetica, Arial, sans-serif; }}
         a {{ color: #00A4D1; text-decoration: none; }}
