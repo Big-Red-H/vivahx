@@ -36,6 +36,12 @@ def software_list():
             raise SystemExit(f"config/software.toml: bad id {s.get('id')!r} (lowercase letters, digits, dashes)")
         if s.get("category") not in CATEGORIES:
             raise SystemExit(f"config/software.toml: {s['id']} needs a category from {CATEGORIES}")
+        for x in s.get("discord_editors", []):
+            if not re.fullmatch(r"\d{15,21}", str(x)):
+                raise SystemExit(f"config/software.toml: {s['id']}: {x!r} isn't a Discord user ID (a long number)")
+        for x in s.get("github_editors", []):
+            if not re.fullmatch(r"[A-Za-z0-9-]{1,39}", str(x)):
+                raise SystemExit(f"config/software.toml: {s['id']}: {x!r} isn't a GitHub username")
     return items
 
 

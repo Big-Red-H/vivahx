@@ -1,0 +1,24 @@
+{
+ "repo": "dubsdotla/decline",
+ "url": "https://github.com/dubsdotla/decline",
+ "description": "A re-imagined less buggy version of my 3rd party Hotline client from 2012",
+ "homepage": "",
+ "license": "",
+ "language": "Objective-C",
+ "stars": 7,
+ "topics": [
+  "hotline",
+  "hotline-client",
+  "macos"
+ ],
+ "archived": false,
+ "updated": "2025-09-06",
+ "intro": "The source code to the original version of decline has long since disappeared into the ether but that’s probably a good thing since it was a buggy mess 😅\n\nBut thankfully I’ve learned a few things since then and my vision of decline persists in this re-imagined version for modern macOS!",
+ "readme_images": [
+  {
+   "file": "readme-1.jpg",
+   "source": "https://github.com/user-attachments/assets/e77cd73e-bb26-459d-b1d7-e94b1a170e24"
+  }
+ ],
+ "readme_sha": "ccf321ee4aab3330da26dd0d4e8a73814c8dca0a"
+}

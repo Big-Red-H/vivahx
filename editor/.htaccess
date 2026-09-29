@@ -1,0 +1,8 @@
+# The editor signs people in, so it only runs over HTTPS (bootstrap.php redirects).
+DirectoryIndex index.php
+Options -Indexes
+
+# Who may edit what; read by the editor, not for the web.
+<Files "projects.json">
+    Require all denied
+</Files>

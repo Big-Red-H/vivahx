@@ -1,0 +1,20 @@
+{
+ "repo": "jhalter/mobius-hotline-client",
+ "url": "https://github.com/jhalter/mobius-hotline-client",
+ "description": "Cross-platform command line Hotline client",
+ "homepage": "",
+ "license": "",
+ "language": "Go",
+ "stars": 7,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-03-13",
+ "intro": "Mobius Hotline Client is a cross-platform command line [Hotline](https://en.wikipedia.org/wiki/Hotline_Communications) client implemented in Golang.\n\n* Provide a fully featured CLI Hotline for modern macOS, Linux, BSD, and Windows.\n* Provide an example of how to use the [hotline](https://github.com/jhalter/mobius) package to build a client",
+ "readme_images": [
+  {
+   "file": "readme-1.jpg",
+   "source": "https://github.com/user-attachments/assets/bdc71179-08ba-40fe-a521-7fb03ba11c51"
+  }
+ ],
+ "readme_sha": "a705e5faddb08e9d5b86d2271f1176d297913b92"
+}

@@ -1,0 +1,15 @@
+{
+ "repo": "fstltna/CreateList",
+ "url": "https://github.com/fstltna/CreateList",
+ "description": "Parses a list of websites for use as a list of Hotline servers and generates a HTML file of them",
+ "homepage": "",
+ "license": "GPL-3.0",
+ "language": "Perl",
+ "stars": 0,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-08-04",
+ "intro": "",
+ "readme_images": [],
+ "readme_sha": "ed43bdd66844698fa5f9e0997a37c6e4e2f00081"
+}

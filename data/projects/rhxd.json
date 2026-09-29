@@ -1,0 +1,15 @@
+{
+ "repo": "DaCodeChick/rhxd",
+ "url": "https://github.com/DaCodeChick/rhxd",
+ "description": "Rust-written Hotline server",
+ "homepage": "",
+ "license": "GPL-3.0",
+ "language": "Rust",
+ "stars": 0,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-02-02",
+ "intro": "A modern Rust implementation of the Hotline Connect protocol suite, consisting of:\n\n- **rhxcore** - Core protocol library for building clients, servers, and bots\n- **rhxd** - Hotline server daemon\n- **rhxtrackd** - Tracker daemon for server discovery",
+ "readme_images": [],
+ "readme_sha": "09912401028857c704f82385c5fd953829b94b2e"
+}

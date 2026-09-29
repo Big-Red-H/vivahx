@@ -1,0 +1,15 @@
+{
+ "repo": "benabernathy/magnetron",
+ "url": "https://github.com/benabernathy/magnetron",
+ "description": "A modern, multi-platform Hotline tracker",
+ "homepage": "",
+ "license": "MIT",
+ "language": "Go",
+ "stars": 6,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-01-03",
+ "intro": "The goal of Magnetron is to provide flexibility for those who wish to provide\ntrackers for Hotline servers. Magnetron can run on any platform that Golang supports.\nExamples include Windows, Linux (x86 & arm), Raspberry Pi, and MacOs (x86 and arm).\n\nWithout Hotline trackers, it is very difficult to locate Hotline servers. The original\ntracker was created to allow those with dynamic IPs to easily advertise their local Hotline\nserver. Magnetron aims to keep this aspect of the community alive by helping \"future proof\"\na critical, and often overlooked aspect of the Hotline community.",
+ "readme_images": [],
+ "readme_sha": "0b61b3f090921b824d7e45fc321d6f00d792a920"
+}

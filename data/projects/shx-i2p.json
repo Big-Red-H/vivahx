@@ -1,0 +1,15 @@
+{
+ "repo": "orignal/shx-i2p",
+ "url": "https://github.com/orignal/shx-i2p",
+ "description": "Clone of the hotline server SynHX patched for I2P ",
+ "homepage": "",
+ "license": "GPL-3.0",
+ "language": "C",
+ "stars": 1,
+ "topics": [],
+ "archived": false,
+ "updated": "2016-12-03",
+ "intro": "Fork of version 0.2.4 of SHX from the SynHXD\nBuildable with gcc 4.8.",
+ "readme_images": [],
+ "readme_sha": "0f8eb3d4a7fa7061e6f1705bd68a0856499bad00"
+}

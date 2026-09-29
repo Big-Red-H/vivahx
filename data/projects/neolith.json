@@ -1,0 +1,19 @@
+{
+ "repo": "jyelloz/neolith",
+ "url": "https://github.com/jyelloz/neolith",
+ "description": "An attempt at an easy-to-understand Hotline protocol implementation along with a reference client and server.",
+ "homepage": "",
+ "license": "MIT",
+ "language": "Rust",
+ "stars": 4,
+ "topics": [
+  "hotline",
+  "protocol",
+  "rust"
+ ],
+ "archived": false,
+ "updated": "2026-05-18",
+ "intro": "An attempt at an easy-to-understand\n[Hotline](https://en.wikipedia.org/wiki/Hotline_Communications) protocol\nimplementation along with a reference client and server.\n\n- Protocol frame serialization/deserialization\n    - Client/Server Handshake\n    - Transactions\n- Many of the higher level protocol concepts such as:\n    - Login\n    - Set user name info\n    - Send/receive chat\n    - Read/post non-threaded news\n    - many more...\n- A flat-file user account database\n    - 1 TOML file per user in a single directory\n    - Interactive terminal-interface [user data editor](src/bin/nlserver-edit-user.rs)\n- A very simple, insecure, and incoherent [demo server](src/bin/nlserver.rs)\n    - Logins are enforced\n    - Filesystem interface with AppleDouble support for resource forks and\n    most useful Finder metadata\n        - Read-only file browsing backed by a UNIX filesystem subtree\n        - Single-file downloads/uploads with Mac file support, without resume\n        support\n    - Chat messaging\n    - Broadcast messaging\n    - Private chat rooms\n    - Instant messaging",
+ "readme_images": [],
+ "readme_sha": "d3555aea94c4b7796cf83c6c6201d6d9382ef4ed"
+}

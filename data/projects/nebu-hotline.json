@@ -1,0 +1,12 @@
+{
+ "repo": "NebuHiiEjamu/Hotline",
+ "url": "https://github.com/NebuHiiEjamu/Hotline",
+ "description": "Hotline server that adds third party protocol extensions",
+ "homepage": "",
+ "license": "GPL-3.0",
+ "language": "C++",
+ "stars": 0,
+ "topics": [],
+ "archived": false,
+ "updated": "2020-01-20"
+}

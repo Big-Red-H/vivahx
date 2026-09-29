@@ -1,0 +1,20 @@
+{
+ "repo": "kangsterizer/rusty-hx",
+ "url": "https://github.com/kangsterizer/rusty-hx",
+ "description": "A Hotline 1.2.3 client with most features, but in Rust. Cuz.",
+ "homepage": "",
+ "license": "",
+ "language": "Rust",
+ "stars": 5,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-06-02",
+ "intro": "A Rust-based Text User Interface (TUI) client for the Hotline protocol. It's mainly been tested with Hotline 1.2.3 and mhxd.\n\nYou need to have Rust installed on your system.",
+ "readme_images": [
+  {
+   "file": "readme-1.jpg",
+   "source": "https://raw.githubusercontent.com/kangsterizer/rusty-hx/master/rhx.gif"
+  }
+ ],
+ "readme_sha": "344451e61b6d9896d4a252b81f2baf0738a65813"
+}

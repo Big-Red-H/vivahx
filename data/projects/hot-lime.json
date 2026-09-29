@@ -1,0 +1,15 @@
+{
+ "repo": "hjcoda/hot-lime-client",
+ "url": "https://github.com/hjcoda/hot-lime-client",
+ "description": "Hotline client using Electron",
+ "homepage": "",
+ "license": "MIT",
+ "language": "TypeScript",
+ "stars": 0,
+ "topics": [],
+ "archived": false,
+ "updated": "2025-06-15",
+ "intro": "",
+ "readme_images": [],
+ "readme_sha": "45720d3089a5af2c716dc48457b72bace404bd82"
+}

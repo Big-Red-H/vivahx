@@ -1,0 +1,15 @@
+{
+ "repo": "mishan/hx-libs",
+ "url": "https://github.com/mishan/hx-libs",
+ "description": "Rust crates for the Hotline protocol, shared by GtkHx and hxd-ng",
+ "homepage": "",
+ "license": "GPL-2.0",
+ "language": "Rust",
+ "stars": 0,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-09-28",
+ "intro": "hx-libs is a Cargo workspace holding the Hotline protocol pieces that don't belong to any one program: hxproto, the wire format (including the tracker protocol, for servers and clients alike); hxfiles-xfer, the file-transfer codec; and hxhfs, the HFS metadata and resource-fork sidecars. hxcrypto will move here from GtkHx when hxd-ng implements HOPE. GtkHx and hxd-ng pull these in as git dependencies.",
+ "readme_images": [],
+ "readme_sha": "000cbed22cc875876034ac4ac71dfa149fb3f910"
+}

@@ -6,6 +6,7 @@ Same tables, images and colors as the old PHP site, so it looks the same and sti
 classic Mac OS browsers over plain HTTP. No JavaScript.
 """
 
+import json
 import re
 import shutil
 from collections import defaultdict
@@ -13,6 +14,7 @@ from datetime import datetime, timezone
 from email.utils import format_datetime
 from html import escape
 
+from . import projects
 from .common import (CATEGORIES, NEWS, ROOT, SITE, file_url, format_size, read_post, releases_for,
                      render_markdown, site_config, software_list)
 
@@ -206,6 +208,11 @@ def post_html(config, post, releases_by_id):
     if post.get("software"):
         release = next((r for r in releases_by_id.get(post["software"], [])
                         if r["version"] == post.get("release")), None)
+    if release:
+        # The developer's own write-up about this release, if they've added one.
+        extra = projects.highlight(post["software"], release["version"]).strip()
+        if extra:
+            html = render_markdown(extra, trusted=False) + html
     downloads = download_list(config, release)
     html = re.sub(r"<p>\s*\{\{\s*downloads\s*\}\}\s*</p>", lambda m: downloads, html)
     return html.replace("{{ downloads }}", downloads)
@@ -221,8 +228,55 @@ def post_footer(post, software_by_id):
     links = [f'<a href="/news/{post["slug"]}.html">Permalink</a>']
     s = software_by_id.get(post.get("software"))
     if s:
-        links.append(f'<a href="/software/{s["id"]}.html">All {h(s["name"])} releases</a>')
+        links.append(f'<a href="/software/{s["id"]}.html">About {h(s["name"])}</a>')
     return " | ".join(links)
+
+
+def release_box(config, s, r, title_prefix=""):
+    extra = projects.highlight(s["id"], r["version"]).strip()
+    notes = render_markdown(extra, trusted=False) if extra else ""
+    notes += render_markdown(r.get("notes", ""), trusted=False) if r.get("notes") else ""
+    flags = " <i>(prerelease)</i>" if r.get("prerelease") else ""
+    flags += " <i>(since removed by its author)</i>" if r.get("removed_upstream") else ""
+    footer = f'<a href="{h(r["url"])}">Release page</a>' if r.get("url") else f'<a href="/software/{s["id"]}.html">{h(s["name"])}</a>'
+    return box(title_prefix + h(r["title"]) + flags, f"Released {h(r.get('date') or 'unknown')}",
+               notes + download_list(config, r), footer)
+
+
+def project_page(config, s, releases, posts, editor_url):
+    shots, from_readme = projects.publish_screenshots(s["id"], OUT)
+    parts = [f"<p><b>{h(projects.tagline(s))}</b></p>", projects.gallery(shots, from_readme), projects.about_html(s)]
+    if not releases:
+        where = "its website" if s.get("homepage") else "its source code page" if s.get("github") else "the Hotline Wiki"
+        parts.append(f"<p><i>No releases to download here yet. See {where}.</i></p>")
+    links = projects.links_html(s)
+    if links:
+        parts.append(f"<p><b>{links}</b></p>")
+    footer = f'<a href="/software/#{s["category"].lower()}">All {h(s["category"].lower())}</a>'
+    if editor_url:
+        # The editor needs a modern browser (it signs in with Discord or GitHub over HTTPS).
+        footer += f' | <a href="{h(editor_url)}/project.php?id={h(s["id"])}">Edit this page</a>'
+    body = [box(h(s["name"]), projects.facts(s, releases), "\n".join(p for p in parts if p), footer)]
+
+    if releases:
+        body.append(release_box(config, s, releases[0], "What's new: "))
+    if posts:
+        lines = [f'<li><a href="/news/{p["slug"]}.html">{h(p["title"])}</a> '
+                 f'<font size="1">{sort_key(p).strftime("%B %-d, %Y")}</font></li>' for p in posts[:10]]
+        body.append(box(f"News about {h(s['name'])}", f"{len(posts)} post{'' if len(posts) == 1 else 's'}",
+                        "<ul>\n" + "\n".join(lines) + "\n</ul>", '<a href="/archive.html">All news</a>'))
+    for r in releases[1:FULL_RELEASES]:
+        body.append(release_box(config, s, r))
+    older = releases[FULL_RELEASES:]
+    if older:
+        lines = []
+        for r in older:
+            files = ", ".join(f'<a href="{h(file_url(config, f))}">{h(f["name"])}</a>' for f in r.get("files", []))
+            lines.append(f"<li><b>{h(r['title'])}</b> <font size=\"1\">({h(r.get('date') or 'unknown')})</font>"
+                         + (f"<br><font size=\"1\">{files}</font>" if files else "") + "</li>")
+        body.append(box("Older releases", f"{len(older)} more", "<ul>\n" + "\n".join(lines) + "\n</ul>",
+                        f'<a href="/software/{s["id"]}.html">Back to the top</a>'))
+    return "\n".join(body)
 
 
 def write(path, text):
@@ -289,45 +343,27 @@ def main():
             rows.append(f'<p><b><a href="/software/{s["id"]}.html">{h(s["name"])}</a></b>'
                         + (f' {h(r["version"])} <font size="1">({h(r.get("date", ""))})</font>' if r else "")
                         + (f'<br><font size="1">{h(s.get("platforms", ""))}</font>' if s.get("platforms") else "")
-                        + f'<br>{h(s.get("description", ""))}</p>')
+                        + f'<br>{h(projects.tagline(s))}</p>')
         sections.append(f'<a name="{category.lower()}"></a>' + box(
             h(category), f"{len(items)} {'program' if len(items) == 1 else 'programs'}", "\n".join(rows),
             "Downloads come straight from each project's own releases"))
     write("software/index.html", page(config, "Software", "\n".join(sections), sidebar))
 
+    posts_by_software = defaultdict(list)
+    for p in posts:
+        if p.get("software"):
+            posts_by_software[p["software"]].append(p)
+    editor_url = config.get("editor_url", "").rstrip("/")
     for s in software:
-        releases = releases_by_id[s["id"]]
-        about = [f"<p>{h(s.get('description', ''))}</p>"]
-        if s.get("platforms"):
-            about.append(f"<p><b>Runs on:</b> {h(s['platforms'])}</p>")
-        links = []
-        if s.get("homepage"):
-            links.append(f'<a href="{h(s["homepage"])}">Home page</a>')
-        if s.get("github"):
-            links.append(f'<a href="https://github.com/{h(s["github"])}">Source code</a>')
-        if not releases:
-            where = "its home page" if s.get("homepage") else "its source code page" if s.get("github") else "the Hotline Wiki"
-            about.append(f"<p><i>No releases to download here yet. See {where}.</i></p>")
-        count = f"{len(releases)} release{'' if len(releases) == 1 else 's'}"
-        body = [box(h(s["name"]), f"[ {h(s['category'])} ] {count}", "\n".join(about),
-                    " | ".join(links) or '<a href="/software/">All software</a>')]
-        for r in releases[:FULL_RELEASES]:
-            notes = render_markdown(r.get("notes", ""), trusted=False) if r.get("notes") else ""
-            extra = " <i>(prerelease)</i>" if r.get("prerelease") else ""
-            extra += " <i>(since removed by its author)</i>" if r.get("removed_upstream") else ""
-            footer = f'<a href="{h(r["url"])}">Release page</a>' if r.get("url") else '<a href="/software/">All software</a>'
-            body.append(box(h(r["title"]) + extra, f"Released {h(r.get('date') or 'unknown')}",
-                            notes + download_list(config, r), footer))
-        older = releases[FULL_RELEASES:]
-        if older:
-            lines = []
-            for r in older:
-                files = ", ".join(f'<a href="{h(file_url(config, f))}">{h(f["name"])}</a>' for f in r.get("files", []))
-                lines.append(f"<li><b>{h(r['title'])}</b> <font size=\"1\">({h(r.get('date') or 'unknown')})</font>"
-                             + (f"<br><font size=\"1\">{files}</font>" if files else "") + "</li>")
-            body.append(box("Older releases", f"{len(older)} more", "<ul>\n" + "\n".join(lines) + "\n</ul>",
-                            f'<a href="/software/{s["id"]}.html">Back to the top</a>'))
-        write(f"software/{s['id']}.html", page(config, s["name"], "\n".join(body), sidebar))
+        body = project_page(config, s, releases_by_id[s["id"]], posts_by_software[s["id"]], editor_url)
+        write(f"software/{s['id']}.html", page(config, s["name"], body, sidebar))
+
+    # What the editor reads to know who may edit which project. It's kept from the web by
+    # editor/.htaccess.
+    editor = OUT / "editor"
+    shutil.copytree(ROOT / "editor", editor, ignore=shutil.ignore_patterns("config*.php", "*.md"))
+    (editor / "projects.json").write_text(json.dumps(
+        [projects.editor_entry(s, releases_by_id[s["id"]]) for s in software], indent=1) + "\n", encoding="utf-8")
 
     # RSS for feed readers, old and new.
     items = []

@@ -1,0 +1,24 @@
+{
+ "repo": "jhalter/hotline-client-1.9.2-banner-patch",
+ "url": "https://github.com/jhalter/hotline-client-1.9.2-banner-patch",
+ "description": "A patch to fix the broken banner ad task in the Hotline 1.9.2 client",
+ "homepage": "",
+ "license": "",
+ "language": "Python",
+ "stars": 1,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-08-22",
+ "intro": "This repository contains a reproducible binary patch for the PowerPC Classic\nMac version of Hotline 1.9. It replaces the client's defunct ZipAds endpoint\nwith a configurable plain-HTTP banner URL and fixes the legacy client behavior\nthat otherwise prevents a direct banner image from loading.\n\nNo Hotline application binary is included. You must provide your own copy of\nthe exact original `HLclient19.Classic` application.",
+ "readme_images": [
+  {
+   "file": "readme-1.jpg",
+   "source": "https://github.com/user-attachments/assets/5b11e31a-cb90-4ec1-a12f-e9e0a3ce299f"
+  },
+  {
+   "file": "readme-2.jpg",
+   "source": "https://github.com/user-attachments/assets/37cbc2e5-40ce-4943-a53f-37b4f94aa87d"
+  }
+ ],
+ "readme_sha": "02afcf7c721c006065ab9138d1682d41f14c8244"
+}

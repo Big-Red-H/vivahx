@@ -1,0 +1,23 @@
+{
+ "repo": "franckjej/heidrun-server",
+ "url": "https://github.com/franckjej/heidrun-server",
+ "description": "Hotline Protocol Server",
+ "homepage": "",
+ "license": "GPL-2.0",
+ "language": "Swift",
+ "stars": 1,
+ "topics": [
+  "hotline-server",
+  "p2p",
+  "peer-to-peer",
+  "server",
+  "serverside",
+  "swift",
+  "swiftserver"
+ ],
+ "archived": false,
+ "updated": "2026-09-16",
+ "intro": "A Swift 6, pure-SwiftNIO Hotline-protocol server. Pairs with the [Heidrun](https://github.com/franckjej/heidrun) macOS client (or any classic Hotline 1.x client). Runs on macOS and Linux from the same source.\n\n- Hotline 1.x protocol: chat, plain + threaded news, private messages + private chats, kick, broadcast\n- Persistent accounts (SQLite via GRDB) with PBKDF2-SHA256 password hashing\n- Admin transactions: `createLogin` / `deleteLogin` / `openLogin` / `modifyLogin`\n- File system: list, info, download, upload, delete, create folder, rename, move, alias\n- HTXF transfer side-channel (port + 1) with data-fork resume\n- Optional TLS sibling listener pair (encrypts control + transfer end-to-end)\n- Tracker UDP registration (Mobius-compatible, 5-min beacon)\n- Server banner (transID 212) — JPEG / GIF / BMP / PICT / URL\n- Per-file metadata (HFS type/creator + comments) persisted alongside accounts\n- Idle-away supervisor — auto-flips the away flag after configurable inactivity\n- Server-side chat commands — `/version`, `/who`, `/topic`, `/broadcast`, `/kick`, `/usershistory`, `/away`, `/me`, …\n- Structured logging via swift-log, graceful shutdown on SIGINT / SIGTERM",
+ "readme_images": [],
+ "readme_sha": "aa8b91f8c6939dc7d141aabfa2f4e5c78d882823"
+}

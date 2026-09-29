@@ -1,0 +1,15 @@
+{
+ "repo": "JustinTArthur/Hotline2IRCRouter",
+ "url": "https://github.com/JustinTArthur/Hotline2IRCRouter",
+ "description": "An mIRC script that allows mIRC to automatically route messages to and from a Hotline server's primary chat room and an IRC channel. Dug up from the past and open sourced for the lulz.",
+ "homepage": "",
+ "license": "",
+ "language": "",
+ "stars": 3,
+ "topics": [],
+ "archived": false,
+ "updated": "2013-02-06",
+ "intro": "An mIRC script that allows mIRC to automatically route messages to and from a Hotline server's primary chat room and an IRC channel. Dug up from the past and open sourced for the lulz.",
+ "readme_images": [],
+ "readme_sha": "87daa12dca5935193a9c53314b55e09613ad30b2"
+}

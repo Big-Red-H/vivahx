@@ -1,0 +1,20 @@
+{
+ "repo": "amoeba/hotline",
+ "url": "https://github.com/amoeba/hotline",
+ "description": "Ruby gem for the Hotline protocol. WIP.",
+ "homepage": "",
+ "license": "MIT",
+ "language": "Ruby",
+ "stars": 1,
+ "topics": [
+  "hotline",
+  "hotline-client",
+  "hotline-server",
+  "hotline-tracker"
+ ],
+ "archived": false,
+ "updated": "2026-02-22",
+ "intro": "An implementation of the Hotline protocols, currently just the tracker client.\n\n- [ ] Server\n  - [ ] Server\n  - [ ] Client\n- [ ] Tracker\n  - [ ] Server\n  - [x] Client",
+ "readme_images": [],
+ "readme_sha": "af40d11380a2b4e7ecdb5d3c1a6e0d505deee303"
+}

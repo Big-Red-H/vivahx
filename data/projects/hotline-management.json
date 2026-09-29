@@ -1,0 +1,15 @@
+{
+ "repo": "fstltna/HotlineManagement",
+ "url": "https://github.com/fstltna/HotlineManagement",
+ "description": "Manage your Hotline server with a text UI",
+ "homepage": "",
+ "license": "GPL-3.0",
+ "language": "Perl",
+ "stars": 0,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-03-17",
+ "intro": "Install all the dependancies by running this command:\n\nRun \"hmc\". If you need to change any settings after this, edit \"~/.hmcrc\" and make the desired changes. This can be done within hmc itself.",
+ "readme_images": [],
+ "readme_sha": "85a85a40505637c8c734573ee543c9f4aef2a924"
+}

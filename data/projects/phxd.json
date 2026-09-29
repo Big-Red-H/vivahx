@@ -1,0 +1,19 @@
+{
+ "repo": "dcwatson/phxd",
+ "url": "https://github.com/dcwatson/phxd",
+ "description": "A Hotline server written in Python using Twisted.",
+ "homepage": "",
+ "license": "BSD-2-Clause",
+ "language": "Python",
+ "stars": 7,
+ "topics": [
+  "hotline",
+  "python",
+  "twisted"
+ ],
+ "archived": false,
+ "updated": "2019-05-22",
+ "intro": "",
+ "readme_images": [],
+ "readme_sha": "6f8de6aabed2cb1c43cddd463eac869c5e0ab17d"
+}

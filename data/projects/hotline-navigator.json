@@ -1,0 +1,32 @@
+{
+ "repo": "bourbonicfisky/Hotline-Navigator",
+ "url": "https://github.com/bourbonicfisky/Hotline-Navigator",
+ "description": "Hotline Navigator: A modern Hotline client for macOS / Windows / Linux / Android / iOS",
+ "homepage": "https://hotlinenavigator.com/",
+ "license": "NOASSERTION",
+ "language": "HTML",
+ "stars": 28,
+ "topics": [
+  "hotline",
+  "hotline-client",
+  "vintage-computers"
+ ],
+ "archived": false,
+ "updated": "2026-09-05",
+ "intro": "A modern, cross-platform Hotline client built with **Tauri**, React, and Rust. This is a spiritual port of Dustin Mierau's wonderful [Hotline app](https://github.com/mierau/hotline), with the goal of bringing the classic Hotline protocol to as many modern platforms as possible. It provides multi-session, single window interface and a responsive design.\n\nThis port is divergent from the original Swift/macOS Hotline client and is not a direct port, rather a recreation of it in Tauri using React and Rust, the source code providing valuable information about the protocol and how to implement it.",
+ "readme_images": [
+  {
+   "file": "readme-1.jpg",
+   "source": "https://raw.githubusercontent.com/fuzzywalrus/hotline/refs/heads/main/hotline-tauri/public/hotline-navigator-banner.jpg"
+  },
+  {
+   "file": "readme-2.jpg",
+   "source": "https://raw.githubusercontent.com/bourbonicfisky/Hotline-Navigator/main/doc-media/v0.2.5-dark-mode-discord.png"
+  },
+  {
+   "file": "readme-3.jpg",
+   "source": "https://raw.githubusercontent.com/bourbonicfisky/Hotline-Navigator/main/doc-media/main-screen.png"
+  }
+ ],
+ "readme_sha": "0c5264cb72fe96cda3f2aef69230ba34b26650e8"
+}

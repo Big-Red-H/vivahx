@@ -1,0 +1,15 @@
+{
+ "repo": "fstltna/pushguest",
+ "url": "https://github.com/fstltna/pushguest",
+ "description": "Pushes a updated \"guest\" account to multiple hotline servers on Linux",
+ "homepage": "",
+ "license": "GPL-3.0",
+ "language": "Perl",
+ "stars": 0,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-08-04",
+ "intro": "My Hotline install steps are here: https://hotline.retro-os.live/Install_Hotline.txt\nStrongly suggest you use them for the easiest use of this script.\n\nThis way you can update only one server and automatically push that guest account to multiple other servers.",
+ "readme_images": [],
+ "readme_sha": "b393c19e7b5c61c8526c6e4a12b4fdfbc3d33908"
+}

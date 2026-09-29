@@ -1,0 +1,15 @@
+{
+ "repo": "Oli97430/hotline-modern",
+ "url": "https://github.com/Oli97430/hotline-modern",
+ "description": "Modern reinvention of Hotline (1997) — decentralized chat & file sharing with self-hosted servers. Go + React/Tauri.",
+ "homepage": "",
+ "license": "",
+ "language": "TypeScript",
+ "stars": 4,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-06-04",
+ "intro": "A modern reinvention of [Hotline](https://en.wikipedia.org/wiki/Hotline_Communications) (1997) — decentralized chat and file sharing with self-hosted servers.\n\n**Key principles:** Each server is sovereign. No central accounts. Portable identity via Ed25519 keys. Communities run their own servers.",
+ "readme_images": [],
+ "readme_sha": "8b4457fd522d5f3955ae3b01464811f0e44331eb"
+}

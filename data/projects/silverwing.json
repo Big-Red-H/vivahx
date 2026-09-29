@@ -1,0 +1,15 @@
+{
+ "repo": "HaikuArchives/SilverWing",
+ "url": "https://github.com/HaikuArchives/SilverWing",
+ "description": "A Hotline client clone for BeOS. Hotline is a proprietary protocol of Hotline Communications that provides News, Chat and FTP.",
+ "homepage": "",
+ "license": "",
+ "language": "C++",
+ "stars": 2,
+ "topics": [],
+ "archived": false,
+ "updated": "2017-07-04",
+ "intro": "A Hotline client clone for BeOS. Hotline is a proprietary protocol of Hotline Communications that\nprovides News, Chat and FTP.\n\nOriginally from http://sourceforge.net/projects/silverwing/.",
+ "readme_images": [],
+ "readme_sha": "700638f12d8e69668c129f58ad1c654235737258"
+}

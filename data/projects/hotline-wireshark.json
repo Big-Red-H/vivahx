@@ -1,0 +1,15 @@
+{
+ "repo": "jhalter/hotline-wireshark-dissector",
+ "url": "https://github.com/jhalter/hotline-wireshark-dissector",
+ "description": "A Hotline protocol dissector for Wireshark",
+ "homepage": "",
+ "license": "MIT",
+ "language": "Lua",
+ "stars": 2,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-08-21",
+ "intro": "A Lua dissector for the classic Hotline client/server protocol. It decodes the\nsession handshake and transactions, file transfers, tracker traffic, and HTTP\ntunnel records; handles TCP segmentation; and exposes useful values as\nWireshark display filters.\n\n- Recognizes the `TRTP` / `TRTPHOTL` session handshake and decodes transaction\n  headers, transaction types, field headers, and common field values.\n- Reassembles Hotline PDUs split across TCP segments and dissects multiple PDUs\n  carried in one segment.\n- Correlates transaction replies with requests and reports response frames and\n  response time.\n- Decodes common string, numeric, date, flag, access-right, file, user, chat,\n  and news fields while preserving their original bytes.\n- Decodes `HTXF` transfer setup, flattened `FILP` file objects, fork metadata,\n  folder actions, `HTRK` tracker queries/registrations, and Hotline HTTP tunnel\n  records.\n- Supports standard ports, TCP/UDP heuristic detection, and Wireshark's\n  **Decode As…** workflow for nonstandard ports.\n- Reports truncated, malformed, inconsistent, and oversized data with\n  Wireshark expert information instead of raising Lua errors.",
+ "readme_images": [],
+ "readme_sha": "f7786af505322676408ab103807a4f0d429664ec"
+}

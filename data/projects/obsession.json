@@ -1,0 +1,26 @@
+{
+ "repo": "tjohnman/Obsession",
+ "url": "https://github.com/tjohnman/Obsession",
+ "description": "A modern Hotline client written in Qt featuring Shift-JIS support and other stuff.",
+ "homepage": "",
+ "license": "GPL-3.0",
+ "language": "C++",
+ "stars": 41,
+ "topics": [
+  "chat",
+  "chat-aplication",
+  "chat-app",
+  "hotline",
+  "hotline-client"
+ ],
+ "archived": false,
+ "updated": "2025-08-31",
+ "intro": "A Hotline client written in Qt featuring Shift-JIS support and other stuff.\n\nThe Obsession Hotline client aims to be a modern alternative for Windows users. It supports Shift-JIS and UTF-8 encoding for Japanese users or for browsing Japanese servers. It is written using Qt and should compile and work out of the box on Windows, macOS and Linux. Check out other clients in the [Hotline Wiki](http://hotline.wikia.com/wiki/Clients).",
+ "readme_images": [
+  {
+   "file": "readme-1.jpg",
+   "source": "https://raw.githubusercontent.com/tjohnman/Obsession/qt4/screenshot.png?raw=true"
+  }
+ ],
+ "readme_sha": "fa03b28dc3431006d218026b63b77d8518e922ff"
+}

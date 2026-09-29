@@ -9,3 +9,6 @@ url = "http://vivahx.com"
 files_base_url = ""
 
 posts_on_front_page = 10
+
+# The page editor for developers (needs HTTPS, since it signs in with Discord or GitHub).
+editor_url = "https://vivahx.com/editor"

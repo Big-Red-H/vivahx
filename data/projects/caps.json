@@ -1,0 +1,15 @@
+{
+ "repo": "hansipie/Caps",
+ "url": "https://github.com/hansipie/Caps",
+ "description": "Client/Server for the Hotline Protocol",
+ "homepage": "",
+ "license": "MIT",
+ "language": "C++",
+ "stars": 1,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-08-18",
+ "intro": "CAPS is an open-source implementation of the [Hotline](https://en.wikipedia.org/wiki/Hotline_Communications) protocol, written in C++. It consists of three components:\n\n- **BlueCap** — the server\n- **RedCap/Console** — the command-line client\n- **RedCap/GUI** — the graphical client (wxWidgets, work in progress)",
+ "readme_images": [],
+ "readme_sha": "6e8c9035ae0763f0ed690d56a7244171970c0699"
+}

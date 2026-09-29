@@ -1,0 +1,20 @@
+{
+ "repo": "jwheare/hotline",
+ "url": "https://github.com/jwheare/hotline",
+ "description": "Browser based Hotline client in Erlang",
+ "homepage": "",
+ "license": "MIT",
+ "language": "JavaScript",
+ "stars": 15,
+ "topics": [
+  "chat",
+  "erlang",
+  "hotline",
+  "javascript"
+ ],
+ "archived": false,
+ "updated": "2023-05-26",
+ "intro": "1. Make a file in apps/hotline/priv/conf/local.conf that looks like this:\n\n4. Point a browser at http://localhost:55500/",
+ "readme_images": [],
+ "readme_sha": "5d787c2850787a79ba56c5035ee3f1914dea00ac"
+}

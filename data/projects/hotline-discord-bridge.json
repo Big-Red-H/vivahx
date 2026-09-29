@@ -1,0 +1,15 @@
+{
+ "repo": "tagban/hotline_discord_bridge",
+ "url": "https://github.com/tagban/hotline_discord_bridge",
+ "description": "Bridge to connect Hotline Servers and Discord Channels",
+ "homepage": "",
+ "license": "GPL-3.0",
+ "language": "Python",
+ "stars": 0,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-04-08",
+ "intro": "This is the complete documentation for the **BigRedH Hotline-Discord Bridge**, formatted for a GitHub `README.md` file.\n\nA robust, state-of-the-art bridge connecting retro Hotline Communications servers with modern Discord channels. This tool features deep packet scanning for icons, a real-time web monitor, and smart persistence for user identities.",
+ "readme_images": [],
+ "readme_sha": "7f2e5bcc594a515af7c99dd8dd4d81e95ac06c8f"
+}

@@ -1,0 +1,20 @@
+{
+ "repo": "franckjej/heidrun-spirit",
+ "url": "https://github.com/franckjej/heidrun-spirit",
+ "description": "Heidrun Spirit — a MegaHAL Hotline chatbot (GPLv2). Runs on the cross-platform NIO Hotline client; Docker + launchd deploy.",
+ "homepage": "",
+ "license": "GPL-2.0",
+ "language": "C",
+ "stars": 0,
+ "topics": [
+  "bot",
+  "chatbot",
+  "hotline",
+  "old-school"
+ ],
+ "archived": false,
+ "updated": "2026-06-06",
+ "intro": "A standalone **Hotline chatterbot** powered by the classic [**MegaHAL**](https://megahal.alioth.debian.org/) Markov engine (© 1998 Jason Hutchens, GPL-2.0). A Swift revival of the 2002 \"Heidrun's Spirit\" module — logs into a Hotline server and talks nonsense to whoever's listening.\n\nThe 1998 C engine compiles untouched as a SwiftPM C target; a thin Swift actor wraps it. The Hotline client side rides [`HeidrunNIOClient`](https://github.com/franckjej/heidrun-protocol), so the bot builds and runs on **macOS** and **Linux** from the same source.",
+ "readme_images": [],
+ "readme_sha": "faa80cfaa3fc08ea6537f015bb7da22a7133e5a6"
+}

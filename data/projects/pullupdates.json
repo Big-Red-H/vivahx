@@ -1,0 +1,15 @@
+{
+ "repo": "fstltna/PullUpdates",
+ "url": "https://github.com/fstltna/PullUpdates",
+ "description": "Downloads a new version of Hotline from the master server to the local server and restarts the Hotline process.",
+ "homepage": "",
+ "license": "GPL-3.0",
+ "language": "Perl",
+ "stars": 0,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-06-16",
+ "intro": "1 */12 * * * /home/hotlineuser/PullUpdates/check4update > /dev/null 2>&1",
+ "readme_images": [],
+ "readme_sha": "bdcbe0607d59c4715ae9b158a8b97add79495ba1"
+}

@@ -1,0 +1,15 @@
+{
+ "repo": "jhalter/hotline-ws-bridge",
+ "url": "https://github.com/jhalter/hotline-ws-bridge",
+ "description": "A WebSocket to Hotline protocol bridge",
+ "homepage": "",
+ "license": "MIT",
+ "language": "JavaScript",
+ "stars": 1,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-08-20",
+ "intro": "A small Cloudflare Worker that bridges browser **WebSockets** to **Hotline TCP** — so a\nHotline client running in a web page (for example a classic Mac emulator) can reach real\nHotline servers and trackers.\n\nBrowsers can't open raw TCP sockets. Hotline speaks TCP: servers on **5500** (session) and\n**5501** (file transfers), trackers on **5498**. This Worker terminates a WebSocket from the\nbrowser and opens the matching TCP connection from Cloudflare's edge, relaying bytes in both\ndirections. It is a transparent pipe — it does not understand or parse the Hotline protocol.",
+ "readme_images": [],
+ "readme_sha": "370e46a4248a25710cd86281aad24732a984907c"
+}

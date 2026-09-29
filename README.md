@@ -14,6 +14,8 @@ same as the old PHP site: same tables, colors and images.
 |---|---|
 | Post news | Add a file to `news/` (see [news/README.md](news/README.md)), or open a **News post** issue and add the **publish** label |
 | Follow a new program | Add it to `config/software.toml`. GitHub releases are picked up by themselves |
+| Change a project's page | Edit `projects/<id>/` (see [projects/README.md](projects/README.md)), or let its developers do it from the editor |
+| Let a developer edit their project | Add their Discord user ID to `discord_editors`, or their GitHub username to `github_editors`, in `config/software.toml` |
 | Add a release that isn't on GitHub | Add a file to `releases/custom/` (see [releases/README.md](releases/README.md)) |
 | Stop the weekly search suggesting a repo | Add it to `config/ignored-repos.txt` |
 
@@ -23,10 +25,21 @@ Every push to `main` rebuilds and uploads the site.
 
 | When | Workflow | What it does |
 |---|---|---|
-| Every 6 hours | `releases.yml` | Checks every program for new releases, writes a news post for each, saves to GitHub and uploads the site. |
+| Every 6 hours | `releases.yml` | Checks every program for new releases, writes a news post for each, reads each project's GitHub page and README, saves to GitHub and uploads the site. |
 | Mondays | `discover.yml` | Searches GitHub for Hotline projects that aren't on the list and keeps them in one open issue labeled **discovery**. |
 | When an issue gets **publish** | `news-from-issue.yml` | Turns a **News post** issue into a post, uploads the site and closes the issue. |
 | Every push to `main` | `build.yml` | Rebuilds and uploads the site. Pull requests are built but not uploaded. |
+
+## The developer editor
+
+`editor/` is a small PHP app at https://vivahx.com/editor/ (it needs HTTPS; the rest of the site
+stays plain HTTP). Developers sign in with GitHub or Discord and can change their own project's
+tagline, links, About text and screenshots, post news about it, and write up a release. Every
+change arrives as a pull request. It's the Hotline Wiki's Discord editor, adapted.
+
+Its settings, with its secrets, live outside the website at `~/editor-config/vivahx.com.php` on
+DreamHost; `editor/config.sample.php` says what goes in it. See
+[projects/README.md](projects/README.md) for who can edit what.
 
 ## The data
 

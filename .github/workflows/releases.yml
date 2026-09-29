@@ -27,6 +27,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 -m vivahx.sync_releases
+      - name: Read each project's GitHub page and README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 -m vivahx.project_info
       # Off unless a file mirror's keys are set; downloads normally link to GitHub.
       - name: Copy new files to the file mirror
         env:

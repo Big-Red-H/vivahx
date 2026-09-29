@@ -1,0 +1,20 @@
+{
+ "repo": "franckjej/heidrun-protocol",
+ "url": "https://github.com/franckjej/heidrun-protocol",
+ "description": "hotline shared protocol, heidrun cli hotline client",
+ "homepage": "",
+ "license": "GPL-2.0",
+ "language": "Swift",
+ "stars": 0,
+ "topics": [
+  "hotline-client",
+  "hx",
+  "swift",
+  "swift-package-manager"
+ ],
+ "archived": false,
+ "updated": "2026-09-27",
+ "intro": "Hotline-protocol wire format, codecs, and clients for the [Heidrun][heidrun] Mac client and HeidrunServer. Pure Swift 6; the value layer has no Apple-only dependencies, so it builds on both macOS and Linux.\n\n- **`HeidrunCore`** — wire-level value types (`PacketHeader`, `PacketObject`, `TransactionType`, `RemotePath`, `ConnectionSettings`), codecs (`PacketCodec`, `FileListEntryCodec`, `NewsBundleEntryCodec`, …), the Network.framework-based `HotlineNetworkClient`, and `HotlineTrackerClient`. Apple-only files are `#if canImport(Network)`-gated so Linux builds skip them cleanly.\n- **`HeidrunNIOClient`** — cross-platform Hotline transport on SwiftNIO. Reuses `HeidrunCore`'s codecs and `EventBroadcaster`.\n- **`heidrun`** — text-only Hotline CLI (\"modern HX\") built on `HeidrunNIOClient`.",
+ "readme_images": [],
+ "readme_sha": "64ceccd6b80f69574be13883c5fce3eb3de4f19a"
+}

@@ -1,0 +1,34 @@
+{
+ "repo": "mierau/hotline",
+ "url": "https://github.com/mierau/hotline",
+ "description": "A modern remake of Hotline for macOS, iOS, and iPadOS.",
+ "homepage": "",
+ "license": "MIT",
+ "language": "Swift",
+ "stars": 759,
+ "topics": [
+  "chat",
+  "chat-app",
+  "chat-application",
+  "hotline",
+  "hotline-client"
+ ],
+ "archived": false,
+ "updated": "2026-03-09",
+ "intro": "**Required:** Sequoia 15.7 and up.  \niOS, iPadOS, and visionOS are still in the works.\n\nTo keep this software fresh and running on Apple's latest platforms, the intention is to support the last two major OS releases from Apple. This gives people time to move to the latest major OS release while also allowing this project to make use of the latest APIs.",
+ "readme_images": [
+  {
+   "file": "readme-1.jpg",
+   "source": "https://github.com/user-attachments/assets/73873a25-e18f-4dfd-9454-4c71ce271054"
+  },
+  {
+   "file": "readme-2.jpg",
+   "source": "https://github.com/user-attachments/assets/30534bb1-4274-45c6-86cd-ed2bb1dd1d98"
+  },
+  {
+   "file": "readme-3.jpg",
+   "source": "https://github.com/user-attachments/assets/f1c9ec16-3526-4266-81a3-ab26a3d86e84"
+  }
+ ],
+ "readme_sha": "991b20aae2794049ea2128eae4b5f4f54024848f"
+}
