@@ -41,14 +41,18 @@ def page(config, title, body, sidebar):
         :root {{ color-scheme: only light; }}
         body {{ background-color: #E8EFCF; color: #222222; margin: 0; padding: 0; font-family: Geneva, Helvetica, Arial, sans-serif; }}
         td {{ font-family: Geneva, Helvetica, Arial, sans-serif; }}
-        a {{ color: #00A4D1; text-decoration: none; }}
+        a {{ color: #00607F; text-decoration: none; }}
+        a:visited {{ color: #8A4B00; }}
         a:hover {{ text-decoration: underline; }}
         img {{ display: block; border: 0; }}
         .spacer {{ line-height: 1px; font-size: 1px; }}
         pre {{ white-space: pre-wrap; }}
+        /* Old browsers keep the sizes in the HTML; newer ones get small text at a readable size. */
+        font[size="1"] {{ font-size: 12px; }}
+        font[size="2"] {{ font-size: 13px; }}
     </style>
 </head>
-<body bgcolor="#E8EFCF" text="#222222" link="#00A4D1" vlink="#E89519" alink="#FF0000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<body bgcolor="#E8EFCF" text="#222222" link="#00607F" vlink="#8A4B00" alink="#FF0000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/images/toptile.gif">
     <tr>

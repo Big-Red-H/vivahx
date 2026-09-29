@@ -1,7 +1,7 @@
 /* The editor needs a modern browser anyway (it signs in over HTTPS), so plain CSS here,
    in the site's colors. */
 body { margin: 0; background: #E8EFCF; color: #222; font: 14px/1.5 Geneva, Helvetica, Arial, sans-serif; }
-a { color: #00879f; }
+a { color: #00607F; }
 #header { background: url(/images/toptile.gif); }
 #header img { display: block; }
 #topbar { padding: 6px 16px; background: #5fba22; color: #fff; font-size: 13px; }
@@ -42,7 +42,7 @@ button.primary, .button { color: #fff; background: #3f8a1a; border-color: #2f622
 .button.small { padding: 3px 9px; font-size: 13px; }
 button:hover, .button:hover { filter: brightness(1.08); }
 button:focus-visible, .button:focus-visible { outline: 2px solid #1a5fd0; outline-offset: 2px; }
-.linkbutton { padding: 0; font-weight: normal; color: #00879f; background: none; border: 0; text-decoration: underline; }
+.linkbutton { padding: 0; font-weight: normal; color: #00607F; background: none; border: 0; text-decoration: underline; }
 
 .note { color: #555; font-size: 90%; }
 .notice { padding: 8px 12px; background: #f4f8e8; border: 1px solid #5fba22; }
