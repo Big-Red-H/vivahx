@@ -547,3 +547,13 @@ homepage = "https://agora.vespernet.net/"
 platforms = "macOS, Linux, BSD, Windows"
 discord_editors = ["267316948277264386"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
+
+[[software]]
+id = "nyx"
+name = "Nyx"
+category = "Misc"
+description = "Instant Messenger built on top of the Hotline protocol, currently available in Janus"
+homepage = "https://agora.vespernet.net/"
+platforms = "macOS, Linux, Windows"
+discord_editors = ["267316948277264386"]   # Discord user IDs, like ["123456789012345678"]
+github_editors = []
