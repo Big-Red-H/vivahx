@@ -521,3 +521,13 @@ github = "fstltna/PullUpdates"
 description = "Updates a Hotline server from a master server and restarts it."
 discord_editors = []   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
+
+[[software]]
+id = "argus"
+name = "Argus"
+category = "Trackers"
+description = "Modern cross-platform tracker, implementing tracker protocol v1, v2 and v3."
+homepage = "https://agora.vespernet.net/"
+platforms = "AIX, macOS, Linux, Windows, Solaris, Illumos, BSD"
+discord_editors = ["267316948277264386"]   # Discord user IDs, like ["123456789012345678"]
+github_editors = []
