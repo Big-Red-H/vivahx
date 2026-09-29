@@ -557,3 +557,13 @@ homepage = "https://agora.vespernet.net/"
 platforms = "macOS, Linux, Windows"
 discord_editors = ["267316948277264386"]   # Discord user IDs, like ["123456789012345678"]
 github_editors = []
+
+[[software]]
+id = "zephyr"
+name = "Zephyr"
+category = "Clients"
+description = "Modern Hotline client, embracing what once was."
+homepage = "https://agora.vespernet.net/"
+platforms = "macOS"
+discord_editors = ["267316948277264386"]   # Discord user IDs, like ["123456789012345678"]
+github_editors = []
