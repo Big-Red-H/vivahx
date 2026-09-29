@@ -3,9 +3,9 @@
 title = "VivaHX! - Hotline HQ"
 url = "http://vivahx.com"
 
-# Where mirrored release files are served from, over plain HTTP so old Macs can download them.
-# Leave empty until the DreamObjects bucket is set up; until then downloads link to where each
-# file came from.
+# Downloads link to where each file came from: GitHub for GitHub releases, and the address in
+# a custom release's file. Only if a file mirror is set up some day (see vivahx/mirror.py) does
+# this get its plain HTTP address, like "http://files.vivahx.com".
 files_base_url = ""
 
 posts_on_front_page = 10

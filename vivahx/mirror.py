@@ -1,4 +1,7 @@
-"""Copies release files to the DreamObjects bucket, where they're served over plain HTTP.
+"""Optional: copies release files to a DreamObjects bucket, to serve them over plain HTTP.
+
+Not in use: downloads link to each project's own releases. This stays so a mirror can be
+switched on later by adding the keys below and files_base_url in config/site.toml.
 
   python3 -m vivahx.mirror [--minutes 50]
 

@@ -27,7 +27,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 -m vivahx.sync_releases
-      - name: Copy new files to DreamObjects
+      # Off unless a file mirror's keys are set; downloads normally link to GitHub.
+      - name: Copy new files to the file mirror
         env:
           DREAMOBJECTS_ACCESS_KEY: ${{ secrets.DREAMOBJECTS_ACCESS_KEY }}
           DREAMOBJECTS_SECRET_KEY: ${{ secrets.DREAMOBJECTS_SECRET_KEY }}

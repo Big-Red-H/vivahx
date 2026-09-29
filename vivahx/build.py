@@ -194,10 +194,9 @@ def download_list(config, release):
         return ""
     rows = []
     for f in release["files"]:
-        note = "" if f.get("mirrored") and config.get("files_base_url") else " <i>(from the original site)</i>"
         size = format_size(f.get("size"))
         rows.append(f'<li><a href="{h(file_url(config, f))}">{h(f["name"])}</a>'
-                    f'{" &nbsp;(" + size + ")" if size else ""}{note}</li>')
+                    f'{" &nbsp;(" + size + ")" if size else ""}</li>')
     return "<p><b>Downloads</b></p>\n<ul>\n" + "\n".join(rows) + "\n</ul>"
 
 
@@ -293,7 +292,7 @@ def main():
                         + f'<br>{h(s.get("description", ""))}</p>')
         sections.append(f'<a name="{category.lower()}"></a>' + box(
             h(category), f"{len(items)} {'program' if len(items) == 1 else 'programs'}", "\n".join(rows),
-            "Every file is kept on VivaHX, over plain HTTP"))
+            "Downloads come straight from each project's own releases"))
     write("software/index.html", page(config, "Software", "\n".join(sections), sidebar))
 
     for s in software:
@@ -315,7 +314,7 @@ def main():
         for r in releases[:FULL_RELEASES]:
             notes = render_markdown(r.get("notes", ""), trusted=False) if r.get("notes") else ""
             extra = " <i>(prerelease)</i>" if r.get("prerelease") else ""
-            extra += " <i>(no longer on the original site)</i>" if r.get("removed_upstream") else ""
+            extra += " <i>(since removed by its author)</i>" if r.get("removed_upstream") else ""
             footer = f'<a href="{h(r["url"])}">Release page</a>' if r.get("url") else '<a href="/software/">All software</a>'
             body.append(box(h(r["title"]) + extra, f"Released {h(r.get('date') or 'unknown')}",
                             notes + download_list(config, r), footer))

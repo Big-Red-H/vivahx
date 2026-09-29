@@ -61,7 +61,8 @@ def slugify(text):
 
 
 def file_url(config, file):
-    """Plain HTTP from the file mirror once a file is copied there, otherwise where it came from."""
+    """Where the file came from (a GitHub release, or a custom release's own address). If a file
+    mirror is ever set up (files_base_url), copies there are used instead."""
     base = config.get("files_base_url", "").rstrip("/")
     if file.get("mirrored") and base:
         return base + "/" + quote(file["path"])
