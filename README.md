@@ -41,6 +41,9 @@ Its settings, with its secrets, live outside the website at `~/editor-config/viv
 DreamHost; `editor/config.sample.php` says what goes in it. See
 [projects/README.md](projects/README.md) for who can edit what.
 
+GitHub's schedules are best effort, so the cron job on DreamHost that starts BigRedH's workflows
+also starts `releases.yml` every 6 hours and `discover.yml` on Mondays (see the BigRedH README).
+
 ## The data
 
 - `config/software.toml`: every program we follow.
