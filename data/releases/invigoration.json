@@ -2,6 +2,45 @@
  "id": "invigoration",
  "releases": [
   {
+   "version": "v2.3.3",
+   "title": "Invigoration 2.3.3",
+   "date": "2026-09-30",
+   "url": "https://github.com/tagban/invigoration/releases/tag/v2.3.3",
+   "notes": "## Fixes\n\n- **Hotline**: wide user icons are no longer cut off in the Users list. The panel opens wider (280 pixels) and you can drag its left edge to resize it, and icons are drawn at their own size instead of being scaled.\n\n## Downloads\n\nmacOS builds are signed and notarized. `osx-arm64` is for Apple Silicon, `osx-x64` for Intel.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Invigoration-v2.3.3-linux-x64.tar.gz",
+     "size": 55458413,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.3/Invigoration-v2.3.3-linux-x64.tar.gz",
+     "path": "invigoration/v2.3.3/Invigoration-v2.3.3-linux-x64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.3-osx-arm64.zip",
+     "size": 53281848,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.3/Invigoration-v2.3.3-osx-arm64.zip",
+     "path": "invigoration/v2.3.3/Invigoration-v2.3.3-osx-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.3-osx-x64.zip",
+     "size": 56286273,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.3/Invigoration-v2.3.3-osx-x64.zip",
+     "path": "invigoration/v2.3.3/Invigoration-v2.3.3-osx-x64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "Invigoration-v2.3.3-win-x64.zip",
+     "size": 57254124,
+     "source_url": "https://github.com/tagban/invigoration/releases/download/v2.3.3/Invigoration-v2.3.3-win-x64.zip",
+     "path": "invigoration/v2.3.3/Invigoration-v2.3.3-win-x64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "v2.3.2",
    "title": "Invigoration 2.3.2",
    "date": "2026-09-25",

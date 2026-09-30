@@ -100,7 +100,7 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 ## All projects
 
 <!-- projects:start (written by vivahx/project_index.py; don't edit by hand) -->
-59 projects.
+60 projects.
 
 | Project | Category | Latest release | Source | Editors |
 |---|---|---|---|---|
@@ -115,8 +115,8 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 | [Hotline Navigator](hotline-navigator/) | Clients | v0.3.0 (2026-09-05) | [fuzzywalrus/Hotline-Navigator](https://github.com/fuzzywalrus/Hotline-Navigator) | 1 |
 | [HotStuff!](hotstuff/) | Clients |  | [website](http://macintoshgarden.org/apps/hotstuff) | 1 |
 | [hx-ng](hx-ng/) | Clients |  | [mishan/hx-ng](https://github.com/mishan/hx-ng) |  |
-| [Invigoration](invigoration/) | Clients | v2.3.2 (2026-09-25) | [tagban/invigoration](https://github.com/tagban/invigoration) | 1 |
-| [Liteline](liteline/) | Clients |  | [website](https://agora.vespernet.net/) |  |
+| [Invigoration](invigoration/) | Clients | v2.3.3 (2026-09-30) | [tagban/invigoration](https://github.com/tagban/invigoration) | 1 |
+| [Liteline](liteline/) | Clients |  | [website](https://agora.vespernet.net/) | 1 |
 | [Mobius Client](mobius-client/) | Clients | v0.3.1 (2026-03-12) | [jhalter/mobius-hotline-client](https://github.com/jhalter/mobius-hotline-client) | 1 |
 | [Obsession](obsession/) | Clients | v109.05-alpha (2024-10-09) | [tjohnman/Obsession](https://github.com/tjohnman/Obsession) |  |
 | [rusty-hx](rusty-hx/) | Clients | 1.0.1 (2025-12-06) | [kangsterizer/rusty-hx](https://github.com/kangsterizer/rusty-hx) |  |
@@ -152,6 +152,7 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 | [hotline (Ruby gem)](hotline-ruby/) | Misc |  | [amoeba/hotline](https://github.com/amoeba/hotline) |  |
 | [Hotline 1.9.2 banner patch](hotline-192-banner-patch/) | Misc |  | [jhalter/hotline-client-1.9.2-banner-patch](https://github.com/jhalter/hotline-client-1.9.2-banner-patch) |  |
 | [Hotline icons](hotline-icons/) | Misc |  | [tagban/hotline_icons](https://github.com/tagban/hotline_icons) |  |
+| [Hotline IM (HIM)](hotline-im-him/) | Misc | v0.1.0 (2026-09-30) | [tagban/him](https://github.com/tagban/him) | 1 |
 | [Hotline Modern](hotline-modern/) | Misc | v0.9.1 (2026-06-04) | [Oli97430/hotline-modern](https://github.com/Oli97430/hotline-modern) |  |
 | [Hotline protocol notes (fogWraith)](fogwraith-hotline/) | Misc |  | [fogWraith/Hotline](https://github.com/fogWraith/Hotline) | 1 |
 | [Hotline WebSocket bridge](hotline-ws-bridge/) | Misc |  | [jhalter/hotline-ws-bridge](https://github.com/jhalter/hotline-ws-bridge) |  |

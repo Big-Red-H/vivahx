@@ -1,0 +1,72 @@
+{
+ "id": "hotline-im-him",
+ "releases": [
+  {
+   "version": "v0.1.0",
+   "title": "HIM v0.1.0",
+   "date": "2026-09-30",
+   "url": "https://github.com/tagban/him/releases/tag/v0.1.0",
+   "notes": "The first release of HIM, the Hotline Instant Messenger: a late-90s AIM-style buddy list for the Hotline IM network. It starts out on VesperNet; **Get a Screen Name** on the Sign On window makes an account.\n\n- Buddy List, IM windows, away messages and auto-responses, offline messages, delivered/read receipts\n- HOPE secure sign-on, with ChaCha20-Poly1305 encryption when the server offers it\n- Buddy Icons (the Buddy Icons extension, Janus 2.0.16+), including BadassBuddy zips as a searchable gallery\n- AIM-style smileys, door sounds, and Hotline servers as chat rooms\n\n| System | File |\n|---|---|\n| macOS, Apple silicon | `HIM_0.1.0_aarch64.dmg` (signed and notarized) |\n| macOS, Intel | `HIM_0.1.0_x64.dmg` (signed and notarized) |\n| Windows | `HIM_0.1.0_x64-setup.exe`, or the `.msi` |\n| Linux | `HIM_v0.1.0_x86_64.flatpak` / `_aarch64.flatpak`, or the `.deb` |\n\nThe flatpak needs the GNOME 47 runtime: `flatpak install flathub org.gnome.Platform//47`, then `flatpak install --user HIM_v0.1.0_x86_64.flatpak`.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "HIM_0.1.0_aarch64.dmg",
+     "size": 4181382,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.0/HIM_0.1.0_aarch64.dmg",
+     "path": "hotline-im-him/v0.1.0/HIM_0.1.0_aarch64.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.1.0_amd64.deb",
+     "size": 5222784,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.0/HIM_0.1.0_amd64.deb",
+     "path": "hotline-im-him/v0.1.0/HIM_0.1.0_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.1.0_arm64.deb",
+     "size": 4973144,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.0/HIM_0.1.0_arm64.deb",
+     "path": "hotline-im-him/v0.1.0/HIM_0.1.0_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.1.0_x64-setup.exe",
+     "size": 3537618,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.0/HIM_0.1.0_x64-setup.exe",
+     "path": "hotline-im-him/v0.1.0/HIM_0.1.0_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.1.0_x64.dmg",
+     "size": 4606146,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.0/HIM_0.1.0_x64.dmg",
+     "path": "hotline-im-him/v0.1.0/HIM_0.1.0_x64.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.1.0_x64_en-US.msi",
+     "size": 4947968,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.0/HIM_0.1.0_x64_en-US.msi",
+     "path": "hotline-im-him/v0.1.0/HIM_0.1.0_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_v0.1.0_aarch64.flatpak",
+     "size": 3382376,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.0/HIM_v0.1.0_aarch64.flatpak",
+     "path": "hotline-im-him/v0.1.0/HIM_v0.1.0_aarch64.flatpak",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_v0.1.0_x86_64.flatpak",
+     "size": 3801328,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.0/HIM_v0.1.0_x86_64.flatpak",
+     "path": "hotline-im-him/v0.1.0/HIM_v0.1.0_x86_64.flatpak",
+     "mirrored": false
+    }
+   ]
+  }
+ ]
+}

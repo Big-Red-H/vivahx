@@ -1,0 +1,28 @@
+{
+ "repo": "tagban/him",
+ "url": "https://github.com/tagban/him",
+ "description": "HIM, the Hotline Instant Messenger: a late-90s AIM-style buddy list for the Hotline IM network",
+ "homepage": "",
+ "license": "MIT",
+ "language": "Rust",
+ "stars": 0,
+ "topics": [],
+ "archived": false,
+ "updated": "2026-09-30",
+ "intro": "A buddy list in the spirit of late-90s AIM, for the Hotline network: gray\nWindows 98 windows, the Sign On screen, a Buddy List with Online and List Setup\ntabs, one little window per conversation, away messages, door sounds when\nbuddies come and go, and chat rooms.\n\n- **Instant messages** use fogWraith's\n  [Hotline Instant Messaging extension](https://github.com/fogWraith/Hotline/blob/main/Docs/IM/Client-Creation-Guide.md)\n  on any Hotline server that has messaging turned on (Janus). Buddy lists live on\n  the server, with buddy requests, presence, away messages, offline messages, and\n  delivered/read receipts.\n- **Chat rooms** are ordinary Hotline servers. HIM lists every server the public\n  trackers know about, joins one as a guest, and shows its public chat the way AIM\n  showed a chat room: the conversation, and the people there, by name only.",
+ "readme_images": [
+  {
+   "file": "readme-1.jpg",
+   "source": "https://raw.githubusercontent.com/tagban/him/main/docs/screenshots/vespernet-buddylist.png"
+  },
+  {
+   "file": "readme-2.jpg",
+   "source": "https://raw.githubusercontent.com/tagban/him/main/docs/screenshots/vespernet-chatroom.png"
+  },
+  {
+   "file": "readme-3.jpg",
+   "source": "https://raw.githubusercontent.com/tagban/him/main/docs/screenshots/vespernet-buddylist-away.png"
+  }
+ ],
+ "readme_sha": "ecca134d55f976ee057afaf43ed816b90964eab8"
+}

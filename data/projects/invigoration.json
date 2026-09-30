@@ -8,7 +8,7 @@
  "stars": 4,
  "topics": [],
  "archived": false,
- "updated": "2026-09-25",
+ "updated": "2026-09-30",
  "intro": "A complete rewrite of the classic Battle.net bot, brought to the .NET era — 15 years late, but built with a lot of help from AI. Runs natively on **Windows**, **macOS** (signed and notarized — opens with no Gatekeeper warnings), and **Linux**.\n\n- Multi-bot, multi-server: run several bots side-by-side in tabs, each on its own server, game, and account\n- **StarCraft II connectivity** (limited but working) over Blizzard's real modern protocol — login, multi-channel chat, whispers, and friends. SC:Remastered and Warcraft III: Reforged are selectable as products on the same connection but not yet actually working — coming soon\n- Shared clan roster with configurable ranks — per-rank command access, auto-whisper/auto-kick/auto-ban\n- Trivia across 6 categories (Diablo, Warcraft, StarCraft, Blizzard, Pop Culture, Music), with editable question packs\n- Per-bot custom chat color schemes, plus a full icon manager for game/status icons\n- BNCS friends list, flood protection, SOCKS5/HTTP CONNECT proxy support, auto-connect\n- Auto-reconnect with your own pacing: seconds between attempts and how many attempts before giving up (e.g. every 45s up to 10 tries)\n- **Rapid reconnect** for private servers: the first attempt goes out the instant the connection drops, and every attempt skips BNLS by reusing the session's first login answers — about half the time of a normal login (pair it with e.g. every 1s up to 45 tries)\n- Config saved as JSON, with multi-profile loading",
  "readme_images": [
   {
