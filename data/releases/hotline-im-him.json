@@ -3,65 +3,65 @@
  "releases": [
   {
    "version": "v0.1.1",
-   "title": "HIM 0.1.1",
+   "title": "HIM v0.1.1",
    "date": "2026-10-01",
    "url": "https://github.com/tagban/him/releases/tag/v0.1.1",
-   "notes": "A fix for signing up: **Get a Screen Name** now opens VesperNet's messenger sign-up page, https://agora.vespernet.net/messenger (it went to the wrong page in 0.1.0, so new people couldn't make an account).\n\n**Downloads**\n- Mac (Apple Silicon): `HIM_0.1.1_aarch64.dmg` · Mac (Intel): `HIM_0.1.1_x64.dmg`. Both signed and notarized.\n- Windows: `HIM_0.1.1_x64-setup.exe` (or the `.msi`)\n- Linux: `.deb` for x86_64 and arm64, or the Flatpaks\n",
+   "notes": "HIM 0.1.1 brings sign-up, file sharing, saved conversations and more.\n\n**New**\n- **Get a Screen Name** opens VesperNet's messenger sign-up page, https://agora.vespernet.net/messenger (0.1.0 sent people to the wrong page).\n- **Send File:** send pictures and files to a buddy with the Send File button in an IM window. They choose Accept or Decline; files land in Downloads/HIM. Pictures show right in the conversation; click one to open it full size.\n- **Conversations are kept** on your computer, so an IM window opens where you left off.\n- **BadassBuddy Icons:** My HIM > Buddy Icon > **BadassBuddy Icons...** opens the BadassBuddy.com collection, built in. Icons courtesy of [BadassBuddy.com](https://www.badassbuddy.com) ♥ (© BadassBuddy.com, used by permission; see LICENSE-ICONS.txt).\n- **Suggested buddies** on VesperNet: John (who made HIM) and SmarterChild, if you'd like them. Not now hides the suggestion.\n- **Chat rooms:** on servers that keep chat history, you see what was said before you came in. Other Hotline users see the ICQ flower (icon 25901) beside you.\n- Emoji you type go out as classic text faces (:D, (Y)...), which every Hotline client can show.\n\n**Downloads**\n- Mac (Apple Silicon): `HIM_0.1.1_aarch64.dmg` · Mac (Intel): `HIM_0.1.1_x64.dmg`. Both signed and notarized.\n- Windows: `HIM_0.1.1_x64-setup.exe` (or the `.msi`)\n- Linux: `.deb` for x86_64 and arm64, or the Flatpaks\n\nUsing Adium or Pidgin? [purple-hotline](https://github.com/tagban/purple-hotline) brings Hotline messaging to them.\n",
    "prerelease": false,
    "source": "github",
    "files": [
     {
      "name": "HIM_0.1.1_aarch64.dmg",
-     "size": 4177334,
+     "size": 12913831,
      "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_aarch64.dmg",
      "path": "hotline-im-him/v0.1.1/HIM_0.1.1_aarch64.dmg",
      "mirrored": false
     },
     {
      "name": "HIM_0.1.1_amd64.deb",
-     "size": 5223256,
+     "size": 13886582,
      "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_amd64.deb",
      "path": "hotline-im-him/v0.1.1/HIM_0.1.1_amd64.deb",
      "mirrored": false
     },
     {
      "name": "HIM_0.1.1_arm64.deb",
-     "size": 4972712,
+     "size": 13619750,
      "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_arm64.deb",
      "path": "hotline-im-him/v0.1.1/HIM_0.1.1_arm64.deb",
      "mirrored": false
     },
     {
      "name": "HIM_0.1.1_x64-setup.exe",
-     "size": 3537030,
+     "size": 11505711,
      "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_x64-setup.exe",
      "path": "hotline-im-him/v0.1.1/HIM_0.1.1_x64-setup.exe",
      "mirrored": false
     },
     {
      "name": "HIM_0.1.1_x64.dmg",
-     "size": 4610745,
+     "size": 13373231,
      "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_x64.dmg",
      "path": "hotline-im-him/v0.1.1/HIM_0.1.1_x64.dmg",
      "mirrored": false
     },
     {
      "name": "HIM_0.1.1_x64_en-US.msi",
-     "size": 4947968,
+     "size": 14077473,
      "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_x64_en-US.msi",
      "path": "hotline-im-him/v0.1.1/HIM_0.1.1_x64_en-US.msi",
      "mirrored": false
     },
     {
      "name": "HIM_v0.1.1_aarch64.flatpak",
-     "size": 3380800,
+     "size": 3655696,
      "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_v0.1.1_aarch64.flatpak",
      "path": "hotline-im-him/v0.1.1/HIM_v0.1.1_aarch64.flatpak",
      "mirrored": false
     },
     {
      "name": "HIM_v0.1.1_x86_64.flatpak",
-     "size": 3799016,
+     "size": 4099304,
      "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_v0.1.1_x86_64.flatpak",
      "path": "hotline-im-him/v0.1.1/HIM_v0.1.1_x86_64.flatpak",
      "mirrored": false
