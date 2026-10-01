@@ -2,6 +2,73 @@
  "id": "hotline-im-him",
  "releases": [
   {
+   "version": "v0.1.1",
+   "title": "HIM 0.1.1",
+   "date": "2026-10-01",
+   "url": "https://github.com/tagban/him/releases/tag/v0.1.1",
+   "notes": "A fix for signing up: **Get a Screen Name** now opens VesperNet's messenger sign-up page, https://agora.vespernet.net/messenger (it went to the wrong page in 0.1.0, so new people couldn't make an account).\n\n**Downloads**\n- Mac (Apple Silicon): `HIM_0.1.1_aarch64.dmg` · Mac (Intel): `HIM_0.1.1_x64.dmg`. Both signed and notarized.\n- Windows: `HIM_0.1.1_x64-setup.exe` (or the `.msi`)\n- Linux: `.deb` for x86_64 and arm64, or the Flatpaks\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "HIM_0.1.1_aarch64.dmg",
+     "size": 4177334,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_aarch64.dmg",
+     "path": "hotline-im-him/v0.1.1/HIM_0.1.1_aarch64.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.1.1_amd64.deb",
+     "size": 5223256,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_amd64.deb",
+     "path": "hotline-im-him/v0.1.1/HIM_0.1.1_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.1.1_arm64.deb",
+     "size": 4972712,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_arm64.deb",
+     "path": "hotline-im-him/v0.1.1/HIM_0.1.1_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.1.1_x64-setup.exe",
+     "size": 3537030,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_x64-setup.exe",
+     "path": "hotline-im-him/v0.1.1/HIM_0.1.1_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.1.1_x64.dmg",
+     "size": 4610745,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_x64.dmg",
+     "path": "hotline-im-him/v0.1.1/HIM_0.1.1_x64.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.1.1_x64_en-US.msi",
+     "size": 4947968,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_0.1.1_x64_en-US.msi",
+     "path": "hotline-im-him/v0.1.1/HIM_0.1.1_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_v0.1.1_aarch64.flatpak",
+     "size": 3380800,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_v0.1.1_aarch64.flatpak",
+     "path": "hotline-im-him/v0.1.1/HIM_v0.1.1_aarch64.flatpak",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_v0.1.1_x86_64.flatpak",
+     "size": 3799016,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.1.1/HIM_v0.1.1_x86_64.flatpak",
+     "path": "hotline-im-him/v0.1.1/HIM_v0.1.1_x86_64.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "v0.1.0",
    "title": "HIM v0.1.0",
    "date": "2026-09-30",
