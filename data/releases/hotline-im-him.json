@@ -2,6 +2,73 @@
  "id": "hotline-im-him",
  "releases": [
   {
+   "version": "v0.2.0",
+   "title": "HIM v0.2.0",
+   "date": "2026-10-02",
+   "url": "https://github.com/tagban/him/releases/tag/v0.2.0",
+   "notes": "HIM 0.2.0 looks and sounds more like AIM, and adds dark mode, your own colors, and drag-and-drop file sending.\n\n**New**\n- **The AIM IM window:** your buddy's icon sits in the lower-left corner with no frame, on the light gray it was drawn for.\n- **The classic AIM sounds** are built in: buddy in and out, IM sent and received. Setup still takes your own sound files.\n- **Dark mode and your own colors:** Setup > Theme picks Classic or Dark, and **Colors...** lets you change any color in HIM, from text and windows to links and the gray behind Buddy Icons.\n- **Drag and drop:** drop a picture or file on an IM window to send it.\n- **Choose where received files go:** Setup > Received files (Downloads/HIM unless you change it).\n- **Links:** web addresses in IMs and chat rooms are clickable and open in your browser.\n- **Chat rooms:** lines relayed from Discord on MacDomain, and from the Hotline Central Hub's Relay, show the real sender: \"Tagban: lol (via Discord)\".\n- **Update notice:** HIM checks GitHub at startup and shows a one-line notice when a newer version is out. It sends nothing about you.\n- **BugBot:** a suggested buddy for bug reports and ideas. Tell it what happened, send a screenshot if you have one, and it files the report on GitHub.\n\n**Fixed**\n- Linux: clicking a window's title bar (easy to do when a buddy request pops up under the mouse) could leave the window stuck to the pointer.\n- Linux: the Flatpak now includes the BadassBuddy icon collection.\n- Setup: section titles no longer have a line through them.\n\n**Downloads**\n- Mac (Apple Silicon): `HIM_0.2.0_aarch64.dmg` · Mac (Intel): `HIM_0.2.0_x64.dmg`. Both signed and notarized.\n- Windows: `HIM_0.2.0_x64-setup.exe` (or the `.msi`)\n- Linux: `.deb` for x86_64 and arm64, or the Flatpaks\n\nUsing Adium or Pidgin? [purple-hotline](https://github.com/tagban/purple-hotline) brings Hotline messaging to them.\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "HIM_0.2.0_aarch64.dmg",
+     "size": 12970378,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.2.0/HIM_0.2.0_aarch64.dmg",
+     "path": "hotline-im-him/v0.2.0/HIM_0.2.0_aarch64.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.2.0_amd64.deb",
+     "size": 13948528,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.2.0/HIM_0.2.0_amd64.deb",
+     "path": "hotline-im-him/v0.2.0/HIM_0.2.0_amd64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.2.0_arm64.deb",
+     "size": 13675822,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.2.0/HIM_0.2.0_arm64.deb",
+     "path": "hotline-im-him/v0.2.0/HIM_0.2.0_arm64.deb",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.2.0_x64-setup.exe",
+     "size": 11562362,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.2.0/HIM_0.2.0_x64-setup.exe",
+     "path": "hotline-im-him/v0.2.0/HIM_0.2.0_x64-setup.exe",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.2.0_x64.dmg",
+     "size": 13429290,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.2.0/HIM_0.2.0_x64.dmg",
+     "path": "hotline-im-him/v0.2.0/HIM_0.2.0_x64.dmg",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_0.2.0_x64_en-US.msi",
+     "size": 14138913,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.2.0/HIM_0.2.0_x64_en-US.msi",
+     "path": "hotline-im-him/v0.2.0/HIM_0.2.0_x64_en-US.msi",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_v0.2.0_aarch64.flatpak",
+     "size": 11484936,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.2.0/HIM_v0.2.0_aarch64.flatpak",
+     "path": "hotline-im-him/v0.2.0/HIM_v0.2.0_aarch64.flatpak",
+     "mirrored": false
+    },
+    {
+     "name": "HIM_v0.2.0_x86_64.flatpak",
+     "size": 11928504,
+     "source_url": "https://github.com/tagban/him/releases/download/v0.2.0/HIM_v0.2.0_x86_64.flatpak",
+     "path": "hotline-im-him/v0.2.0/HIM_v0.2.0_x86_64.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "v0.1.1",
    "title": "HIM v0.1.1",
    "date": "2026-10-01",

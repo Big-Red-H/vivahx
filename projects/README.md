@@ -152,7 +152,7 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 | [hotline (Ruby gem)](hotline-ruby/) | Misc |  | [amoeba/hotline](https://github.com/amoeba/hotline) |  |
 | [Hotline 1.9.2 banner patch](hotline-192-banner-patch/) | Misc |  | [jhalter/hotline-client-1.9.2-banner-patch](https://github.com/jhalter/hotline-client-1.9.2-banner-patch) |  |
 | [Hotline icons](hotline-icons/) | Misc |  | [tagban/hotline_icons](https://github.com/tagban/hotline_icons) |  |
-| [Hotline IM (HIM)](hotline-im-him/) | Misc | v0.1.1 (2026-10-01) | [tagban/him](https://github.com/tagban/him) | 1 |
+| [Hotline IM (HIM)](hotline-im-him/) | Misc | v0.2.0 (2026-10-02) | [tagban/him](https://github.com/tagban/him) | 1 |
 | [Hotline Modern](hotline-modern/) | Misc | v0.9.1 (2026-06-04) | [Oli97430/hotline-modern](https://github.com/Oli97430/hotline-modern) |  |
 | [Hotline protocol notes (fogWraith)](fogwraith-hotline/) | Misc |  | [fogWraith/Hotline](https://github.com/fogWraith/Hotline) | 1 |
 | [Hotline WebSocket bridge](hotline-ws-bridge/) | Misc |  | [jhalter/hotline-ws-bridge](https://github.com/jhalter/hotline-ws-bridge) |  |
