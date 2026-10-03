@@ -8,7 +8,7 @@
  "stars": 0,
  "topics": [],
  "archived": false,
- "updated": "2026-10-02",
+ "updated": "2026-10-03",
  "intro": "A browser client for the **Hotline-ng** wire: public chat, the user list\nwith the classic icons or a picture of your own, private messages,\nthreaded news, notifications\nwhile you are away, reports and moderation, and the voice and video the SFU already serves. It never sees the legacy wire, and the server cannot\ntell it apart from any other ng client. The protocol it speaks is\n[`hotline-ng.md`](https://github.com/mishan/hxd-ng/blob/main/docs/hotline-ng.md).\n\nThe reference server is [hxd-ng](https://github.com/mishan/hxd-ng). Any\nserver that speaks the protocol will do; this client has no dependency on\nthat one beyond the wire.",
  "readme_images": [],
  "readme_sha": "591e696992a19419b6e089802bc1c43b40682557"
