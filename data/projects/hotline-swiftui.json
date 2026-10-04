@@ -14,7 +14,7 @@
   "hotline-client"
  ],
  "archived": false,
- "updated": "2026-10-03",
+ "updated": "2026-10-04",
  "intro": "**Required:** Sequoia 15.7 and up.  \niOS, iPadOS, and visionOS are still in the works.\n\nTo keep this software fresh and running on Apple's latest platforms, the intention is to support the last two major OS releases from Apple. This gives people time to move to the latest major OS release while also allowing this project to make use of the latest APIs.",
  "readme_images": [
   {
