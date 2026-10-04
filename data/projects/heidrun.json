@@ -13,7 +13,7 @@
   "peer-to-peer"
  ],
  "archived": false,
- "updated": "2026-10-03",
+ "updated": "2026-10-04",
  "intro": "A Mac Hotline client. Swift 6 port and modernisation of the 2002 original by Göran Granström.\n\nDrag **Heidrun** into your **Applications** folder. Launch from Spotlight.",
  "readme_images": [],
  "readme_sha": "8d47f0e5e0e1c69a4c3de3dccafab9d084d1d4f3"

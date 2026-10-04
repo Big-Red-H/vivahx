@@ -2,6 +2,24 @@
  "id": "heidrun",
  "releases": [
   {
+   "version": "1.6.0",
+   "title": "Heidrun 1.6.0",
+   "date": "2026-10-04",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.6.0",
+   "notes": "\n### Added\n- **Back and forward in Files.** Swipe with two fingers (the page slides like Safari), use the mouse side buttons, ⌘[ / ⌘] or the new ‹ › buttons; ⌘↑ goes up. Revisited folders appear instantly, with their selection and scroll position.\n\n### Changed\n- The sidebar marks the open feature with an accent-coloured pill.\n- The Files column header has a single full-width divider line.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.6.0-186.dmg",
+     "size": 8373452,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.6.0/Heidrun-1.6.0-186.dmg",
+     "path": "heidrun/1.6.0/Heidrun-1.6.0-186.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "1.5.1",
    "title": "Heidrun 1.5.1",
    "date": "2026-09-27",
