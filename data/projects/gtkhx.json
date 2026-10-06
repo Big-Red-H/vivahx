@@ -19,7 +19,7 @@
   "voice-chat"
  ],
  "archived": false,
- "updated": "2026-10-05",
+ "updated": "2026-10-06",
  "intro": "GtkHx is a client for Hotline, the chat and file-sharing system from 1996.\nA Hotline server is a small community of its own: a public chat room,\nprivate messages, a shared file library, and a news board, all run by\nwhoever hosts it. Trackers list the servers that are up, so you can go\nlooking for one.\n\nGtkHx was first written in 2000 for GTK+ 1.2. It has since been rebuilt\nfor GTK 4 and libadwaita, and much of it rewritten in Rust, while staying\nfully compatible with the Hotline 1.2, 1.5 and 1.9 servers still running\ntoday.",
  "readme_images": [
   {
