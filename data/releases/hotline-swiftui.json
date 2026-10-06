@@ -2,6 +2,24 @@
  "id": "hotline-swiftui",
  "releases": [
   {
+   "version": "1.0beta29",
+   "title": "Hotline for Mac b29",
+   "date": "2026-10-05",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta29",
+   "notes": "Good day!\r\n\r\nIt's Fall, and looking at this project's history, that apparently means it's Hotline update season! (new releases falling and such, you get it)\r\n\r\nThe promise has been that we will only support the most recent 2 releases of macOS. Though I didn't adjust the OS version number in this build, the next build will. So anything less than macOS 26 will no longer be supported. This helps keep the project and app fresh and working on Apple's latest while also reducing the complexity of working on this project so it doesn't become a burden.\r\n\r\n### New in b29:\r\n- Server themes! Each server now takes on colors to make each server feel like a unique space. These colors are pulled from a server's banner image. You can disable themes in settings.\r\n- New connection interface! I've taken a stab at rethinking the connection form in Hotline. Now you can just start typing a server name into the address field and it will show suggestions based on your bookmarks and any trackers you have added automatically. Recent servers appear under the address field.\r\n- Liquid Glass! Some Liquid Glass effects are now used in the toolbar and a few other places.\r\n- Full color toolbar: we're now generating more colors from server banners to make the toolbar even more themed.\r\n- Instant server banners: we now cache server banners locally so you see it immediately upon signing in.\r\n- Rebuilt chat: the chat now uses TextKit 2 and supports themes, user icons, inline image URL previews, hover underlines on links and usernames, special handling of hotline links to files, simple support for markdown code blocks with basic syntax highlighting, back-to-back messages are now grouped by user, and overall faster search and rendering.\r\n- Tab complete usernames in chat input field.\r\n- Redesigned file preview window with edge-to-edge video and image support.\r\n- Support for previewing classic PICT files.\r\n- Support for previewing zip, Compact Pro, XAR, packages, MacBinary, BinHex, and disc images using HFS, HFS+, and 9660 which includes Toast and CD master images, floppies, Disk Copy images, and those compressed with DART, KenCode, or ShrinkWrap. Handy if you want to see the contents of a large archive before downloading it.\r\n\r\n### Changed\r\n- Updated about box.\r\n- New Markdown renderer for news, private messages, and release notes.\r\n\r\n### Fixed\r\n- Double-clicking a Bonjour server could fail the first time.\r\n- Line breaks in private messages didn't show up in older Hotline clients.\r\n- Sound effects stuttered when logging in and had their endings cut off.\r\n- Closing a server window while it was connecting didn't stop the connection.\r\n- Animations in the Servers window used too much CPU.\r\n- A memory leak kept each server's data around after its window closed.\r\n- Connections could stay open after a server disconnected, and data could be lost when a server closed the connection.\r\n- Downloading files with resource forks used much more memory than it needed to (resource forks are streamed to disk now).",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b29.zip",
+     "size": 15764539,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta29/Hotline.b29.zip",
+     "path": "hotline-swiftui/1.0beta29/Hotline.b29.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "1.0beta28",
    "title": "Hotline for Mac b28",
    "date": "2026-03-03",
