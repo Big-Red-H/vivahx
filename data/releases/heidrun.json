@@ -2,6 +2,24 @@
  "id": "heidrun",
  "releases": [
   {
+   "version": "1.6.2",
+   "title": "Heidrun 1.6.2",
+   "date": "2026-10-07",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.6.2",
+   "notes": "\n### Added\n- **Quick Look shows images:** PNG, JPEG, GIF, TIFF, HEIC, WebP and more.\n- **Upload into a drop box** from its context menu, or select it and click Upload….\n- A close button hides the transfer box under the file list without clearing the Task Manager.\n\n### Changed\n- Space bar closes Quick Look again when it already shows the selected file.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.6.2-199.dmg",
+     "size": 8391231,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.6.2/Heidrun-1.6.2-199.dmg",
+     "path": "heidrun/1.6.2/Heidrun-1.6.2-199.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "1.6.1",
    "title": "Heidrun 1.6.1",
    "date": "2026-10-05",
