@@ -105,7 +105,7 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 | Project | Category | Latest release | Source | Editors |
 |---|---|---|---|---|
 | [Decline](decline/) | Clients | 1.0-build-11 (2025-09-06) | [dubsdotla/decline](https://github.com/dubsdotla/decline) |  |
-| [GtkHx](gtkhx/) | Clients | v1.5.0 (2026-10-08) | [mishan/gtkhx](https://github.com/mishan/gtkhx) | 1 |
+| [GtkHx](gtkhx/) | Clients | v1.5.1 (2026-10-09) | [mishan/gtkhx](https://github.com/mishan/gtkhx) | 1 |
 | [Heidrun](heidrun/) | Clients | 1.6.2 (2026-10-07) | [franckjej/heidrun](https://github.com/franckjej/heidrun) |  |
 | [Hot Lime](hot-lime/) | Clients |  | [hjcoda/hot-lime-client](https://github.com/hjcoda/hot-lime-client) |  |
 | [Hotline (pennig)](pennig-hotline/) | Clients |  | [pennig/hotline](https://github.com/pennig/hotline) |  |

@@ -2,6 +2,52 @@
  "id": "gtkhx",
  "releases": [
   {
+   "version": "v1.5.1",
+   "title": "1.5.1",
+   "date": "2026-10-09",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.5.1",
+   "notes": "## 1.5.1\n\n- Connecting\n  - A lock in the header bar shows when the connection is encrypted with TLS or HOPE; its tooltip names the TLS version and cipher suite, or the HOPE cipher\n- Settings\n  - The icon picker fits its window again when wide banner icons are installed, instead of cutting off its columns and scrolling sideways\n- Tabs\n  - Fixed a crash when dragging a connection tab off the tab strip and back. A tab dragged off its tab bar now stops at the edge, so connection and chat tabs no longer end up in each other's bars\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "GtkHx-v1.5.1-aarch64.flatpak",
+     "size": 9308024,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.5.1/GtkHx-v1.5.1-aarch64.flatpak",
+     "path": "gtkhx/v1.5.1/GtkHx-v1.5.1-aarch64.flatpak",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.5.1-macos-arm64.zip",
+     "size": 34479250,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.5.1/GtkHx-v1.5.1-macos-arm64.zip",
+     "path": "gtkhx/v1.5.1/GtkHx-v1.5.1-macos-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.5.1-macos-x86_64.zip",
+     "size": 36748995,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.5.1/GtkHx-v1.5.1-macos-x86_64.zip",
+     "path": "gtkhx/v1.5.1/GtkHx-v1.5.1-macos-x86_64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.5.1-win64.zip",
+     "size": 74054227,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.5.1/GtkHx-v1.5.1-win64.zip",
+     "path": "gtkhx/v1.5.1/GtkHx-v1.5.1-win64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.5.1-x86_64.flatpak",
+     "size": 10562696,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.5.1/GtkHx-v1.5.1-x86_64.flatpak",
+     "path": "gtkhx/v1.5.1/GtkHx-v1.5.1-x86_64.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "v1.5.0",
    "title": "1.5.0",
    "date": "2026-10-08",
