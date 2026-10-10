@@ -11,7 +11,7 @@
   "hotline-server"
  ],
  "archived": false,
- "updated": "2026-08-23",
+ "updated": "2026-10-10",
  "intro": "Mobius is a cross-platform command line [Hotline](https://en.wikipedia.org/wiki/Hotline_Communications) server implemented in Golang.\n\n- **Project Goal:** Make it simple to run a Hotline server on macOS, Linux, and Windows, with full compatibility for all popular Hotline clients.",
  "readme_images": [],
  "readme_sha": "d09719b2c055632675e69e3a51504557ec3d07ad"

@@ -8,8 +8,8 @@
  "stars": 0,
  "topics": [],
  "archived": false,
- "updated": "2026-10-09",
+ "updated": "2026-10-10",
  "intro": "A Hotline server, written from scratch in Rust, that serves the Hotline\nclients of 1997 and the phones of today from one shared state — and a new\nprotocol, **Hotline-ng**, for the clients that want more than 1997 offered.\n\n[Hotline](https://en.wikipedia.org/wiki/Hotline_Communications) was a\nMac-first chat, file-sharing and bulletin-board system from the late\n1990s: you ran a server, people connected to it directly, and a tracker\ntold them where servers were. Nothing about it was centralised, which is\nwhy it still exists. A small community still runs servers, writes clients,\nand extends the protocol; [hlwiki.com](https://hlwiki.com/index.php/Clients)\nkeeps the list.",
  "readme_images": [],
- "readme_sha": "56245860fdcac5b2ac79436b86faa3704c7dc0ca"
+ "readme_sha": "a0d0e41cc0fa3e1caf3e55a82828fee08ec171cb"
 }
