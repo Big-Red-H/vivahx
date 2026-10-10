@@ -11,7 +11,7 @@
   "hotline-server"
  ],
  "archived": false,
- "updated": "2026-10-04",
+ "updated": "2026-10-10",
  "intro": "General-purpose Hotline **server / tracker container images**. They're usable\nfor real deployments, and are also what [GtkHx](https://github.com/mishan/gtkhx)'s\nCI pulls instead of rebuilding on every run.\n\nEach image runs a **general default config** (features off, conventional\nports, no seeded content). Customise at runtime with env vars or by\nmounting your own config — see below and each image's `README.md`.",
  "readme_images": [],
  "readme_sha": "78d4098d75f96eb632376491ab1792c7d074c9b9"
