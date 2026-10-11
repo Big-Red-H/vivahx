@@ -133,7 +133,7 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 | [jshxd](jshxd/) | Servers |  | [Schala/jshxd](https://github.com/Schala/jshxd) |  |
 | [Lemoniscate](lemoniscate/) | Servers | v0.1.7 (2026-04-17) | [bourbonicfisky/lemoniscate](https://github.com/bourbonicfisky/lemoniscate) | 1 |
 | [mhxd](mhxd/) | Servers |  | [website](http://hlwiki.com/servers/) |  |
-| [Mobius](mobius/) | Servers | v0.23.1 (2026-08-23) | [jhalter/mobius](https://github.com/jhalter/mobius) | 1 |
+| [Mobius](mobius/) | Servers | v0.23.2 (2026-10-11) | [jhalter/mobius](https://github.com/jhalter/mobius) | 1 |
 | [phxd](phxd/) | Servers |  | [dcwatson/phxd](https://github.com/dcwatson/phxd) |  |
 | [phxd (with IRC)](phxd-irc/) | Servers |  | [kangsterizer/phxd](https://github.com/kangsterizer/phxd) |  |
 | [Pitbull Pro](pitbull/) | Servers |  | [website](http://ubersoft.org/pitbullserver/) |  |
