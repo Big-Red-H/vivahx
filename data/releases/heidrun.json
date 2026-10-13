@@ -2,6 +2,24 @@
  "id": "heidrun",
  "releases": [
   {
+   "version": "1.6.4",
+   "title": "Heidrun 1.6.4",
+   "date": "2026-10-13",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.6.4",
+   "notes": "\n### Added\n- **Per-sound switches:** turn each sound effect on or off in Settings → Sounds.\n- **Board/Threaded switch in News:** threaded servers also show their plain news board, as in classic Heidrun.\n\n### Changed\n- The plain news input is a fixed, smaller height.\n- The Connecting screen shows the New Connection and Task Manager toolbar buttons.\n\n### Fixed\n- The message input in Messages no longer touches the transcript divider; Chat uses the same gap.\n- Closing a reopened connection no longer asks to save an “Untitled” document.\n- Reopening connections at launch no longer leaves an extra tab stuck on “Connecting…”.\n- Reopened connections open as tabs, even while Touch ID is waiting.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.6.4-221.dmg",
+     "size": 8488704,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.6.4/Heidrun-1.6.4-221.dmg",
+     "path": "heidrun/1.6.4/Heidrun-1.6.4-221.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "1.6.3",
    "title": "Heidrun 1.6.3",
    "date": "2026-10-10",
