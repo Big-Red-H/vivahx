@@ -124,7 +124,7 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 | [shx (I2P)](shx-i2p/) | Clients |  | [orignal/shx-i2p](https://github.com/orignal/shx-i2p) |  |
 | [SilverWing](silverwing/) | Clients |  | [HaikuArchives/SilverWing](https://github.com/HaikuArchives/SilverWing) |  |
 | [Zephyr](zephyr/) | Clients |  | [website](https://agora.vespernet.net/) | 1 |
-| [Heidrun Server](heidrun-server/) | Servers | 1.5.1 (2026-09-16) | [franckjej/heidrun-server](https://github.com/franckjej/heidrun-server) |  |
+| [Heidrun Server](heidrun-server/) | Servers | 1.5.2 (2026-10-14) | [franckjej/heidrun-server](https://github.com/franckjej/heidrun-server) |  |
 | [Hotline Docker images](hotline-docker/) | Servers |  | [mishan/hotline-docker](https://github.com/mishan/hotline-docker) |  |
 | [Hotline Server](hotline-server/) | Servers | 1.9.1 (2003-01-01) | [website](http://hlwiki.com/servers/) |  |
 | [Hotline Server (NebuHiiEjamu)](nebu-hotline/) | Servers |  | [NebuHiiEjamu/Hotline](https://github.com/NebuHiiEjamu/Hotline) |  |

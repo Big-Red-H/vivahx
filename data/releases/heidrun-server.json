@@ -2,6 +2,16 @@
  "id": "heidrun-server",
  "releases": [
   {
+   "version": "1.5.2",
+   "title": "1.5.2",
+   "date": "2026-10-14",
+   "url": "https://github.com/franckjej/heidrun-server/releases/tag/1.5.2",
+   "notes": "\n### Added\n- **`/news clear flat|threaded|all`** chat command wipes news on the live server (admin, `deleteNewsBundles`); audited as `news_reset`.\n\n### Changed\n- Plain-news posts end with a blank line and an underscore divider instead of dashes.\n- `heidrun-admin news reset` notes that a running server overwrites it.\n\n",
+   "prerelease": false,
+   "source": "github",
+   "files": []
+  },
+  {
    "version": "1.5.1",
    "title": "1.5.1",
    "date": "2026-09-16",
