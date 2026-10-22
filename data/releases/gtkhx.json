@@ -2,6 +2,52 @@
  "id": "gtkhx",
  "releases": [
   {
+   "version": "v1.6.2",
+   "title": "1.6.2",
+   "date": "2026-10-22",
+   "url": "https://github.com/mishan/gtkhx/releases/tag/v1.6.2",
+   "notes": "## 1.6.2\n\n- Chat\n  - `/exec` runs the command on your computer, rather than sending the line to everyone in the chat; start a line with `//` to send it to the server as typed, as in `//exec`. A server's own commands are recognized only by their full names\n- Accessibility\n  - Fixed GtkHx crashing as soon as a screen reader read a chat view\n  - A chat picture is read as its description once, without \"image\" said again after it\n  - The dock's corner menu buttons are each named for their pane, and a divider no longer reads as two different numbers\n  - On a first run, Settings opens over the main window, rather than as a window of its own that could open behind it\n  - The section headings in Settings' sidebar are easier to read in the light style\n\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "GtkHx-v1.6.2-aarch64.flatpak",
+     "size": 9398512,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.6.2/GtkHx-v1.6.2-aarch64.flatpak",
+     "path": "gtkhx/v1.6.2/GtkHx-v1.6.2-aarch64.flatpak",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.6.2-macos-arm64.zip",
+     "size": 34761292,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.6.2/GtkHx-v1.6.2-macos-arm64.zip",
+     "path": "gtkhx/v1.6.2/GtkHx-v1.6.2-macos-arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.6.2-macos-x86_64.zip",
+     "size": 37044793,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.6.2/GtkHx-v1.6.2-macos-x86_64.zip",
+     "path": "gtkhx/v1.6.2/GtkHx-v1.6.2-macos-x86_64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.6.2-win64.zip",
+     "size": 74238301,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.6.2/GtkHx-v1.6.2-win64.zip",
+     "path": "gtkhx/v1.6.2/GtkHx-v1.6.2-win64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "GtkHx-v1.6.2-x86_64.flatpak",
+     "size": 10754264,
+     "source_url": "https://github.com/mishan/gtkhx/releases/download/v1.6.2/GtkHx-v1.6.2-x86_64.flatpak",
+     "path": "gtkhx/v1.6.2/GtkHx-v1.6.2-x86_64.flatpak",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "v1.6.1",
    "title": "1.6.1",
    "date": "2026-10-19",
