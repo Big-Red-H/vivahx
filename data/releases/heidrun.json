@@ -2,6 +2,42 @@
  "id": "heidrun",
  "releases": [
   {
+   "version": "1.7.1",
+   "title": "Heidrun 1.7.1",
+   "date": "2026-10-26",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.7.1",
+   "notes": "\n### Fixed\n- **News remembers Board or Threaded per server** across reconnects and bookmark autoconnects.\n- The Connection menu no longer goes inactive after switching the news view.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.7.1-234.dmg",
+     "size": 8853725,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.7.1/Heidrun-1.7.1-234.dmg",
+     "path": "heidrun/1.7.1/Heidrun-1.7.1-234.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
+   "version": "1.7.0",
+   "title": "Heidrun 1.7.0",
+   "date": "2026-10-26",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.7.0",
+   "notes": "\n### Added\n- **News auto-download:** threaded servers load board and threaded news on first open and show the one with content (threaded when both have content); progress and Cancel in the Task Manager.\n- **Settings → News:** turn auto-download off and pick the default news view (Automatic, Threaded or Board).\n\n### Changed\n- **Softer sound effects:** the classic sounds are denoised, filtered, faded and level-matched.\n- **⌥⌘W closes all other windows and tabs** (File → Close Others), also ones showing the server agreement.\n- **Disconnect closes the window** while other connections stay open; only the last one returns to the connection form.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.7.0-232.dmg",
+     "size": 8844760,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.7.0/Heidrun-1.7.0-232.dmg",
+     "path": "heidrun/1.7.0/Heidrun-1.7.0-232.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "1.6.4",
    "title": "Heidrun 1.6.4",
    "date": "2026-10-13",
