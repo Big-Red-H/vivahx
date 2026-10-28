@@ -112,7 +112,7 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 | [Hotline (SwiftUI)](hotline-swiftui/) | Clients | 1.0beta29 (2026-10-05) | [mierau/hotline](https://github.com/mierau/hotline) |  |
 | [Hotline client (Common Lisp)](hotline-client-lisp/) | Clients |  | [floren/hotline-client](https://github.com/floren/hotline-client) |  |
 | [Hotline for the browser](hotline-web/) | Clients |  | [jwheare/hotline](https://github.com/jwheare/hotline) |  |
-| [Hotline Navigator](hotline-navigator/) | Clients | v0.3.0 (2026-09-05) | [fuzzywalrus/Hotline-Navigator](https://github.com/fuzzywalrus/Hotline-Navigator) | 1 |
+| [Hotline Navigator](hotline-navigator/) | Clients | v0.3.1 (2026-10-28) | [fuzzywalrus/Hotline-Navigator](https://github.com/fuzzywalrus/Hotline-Navigator) | 1 |
 | [HotStuff!](hotstuff/) | Clients |  | [website](http://macintoshgarden.org/apps/hotstuff) | 1 |
 | [hx-ng](hx-ng/) | Clients |  | [mishan/hx-ng](https://github.com/mishan/hx-ng) |  |
 | [Invigoration](invigoration/) | Clients | v2.3.3 (2026-09-30) | [tagban/invigoration](https://github.com/tagban/invigoration) | 1 |
