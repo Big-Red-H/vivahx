@@ -131,7 +131,7 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 | [hxd-ng](hxd-ng/) | Servers |  | [mishan/hxd-ng](https://github.com/mishan/hxd-ng) |  |
 | [Janus](janus/) | Servers |  | [website](https://agora.vespernet.net/) | 1 |
 | [jshxd](jshxd/) | Servers |  | [Schala/jshxd](https://github.com/Schala/jshxd) |  |
-| [Lemoniscate](lemoniscate/) | Servers | v0.1.7 (2026-04-17) | [bourbonicfisky/lemoniscate](https://github.com/bourbonicfisky/lemoniscate) | 1 |
+| [Lemoniscate](lemoniscate/) | Servers | v0.1.8 (2026-11-03) | [bourbonicfisky/lemoniscate](https://github.com/bourbonicfisky/lemoniscate) | 1 |
 | [mhxd](mhxd/) | Servers |  | [website](http://hlwiki.com/servers/) |  |
 | [Mobius](mobius/) | Servers | v0.23.2 (2026-10-11) | [jhalter/mobius](https://github.com/jhalter/mobius) | 1 |
 | [phxd](phxd/) | Servers |  | [dcwatson/phxd](https://github.com/dcwatson/phxd) |  |
