@@ -128,7 +128,7 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 | [Hotline Docker images](hotline-docker/) | Servers |  | [mishan/hotline-docker](https://github.com/mishan/hotline-docker) |  |
 | [Hotline Server](hotline-server/) | Servers | 1.9.1 (2003-01-01) | [website](http://hlwiki.com/servers/) |  |
 | [Hotline Server (NebuHiiEjamu)](nebu-hotline/) | Servers |  | [NebuHiiEjamu/Hotline](https://github.com/NebuHiiEjamu/Hotline) |  |
-| [hxd-ng](hxd-ng/) | Servers |  | [mishan/hxd-ng](https://github.com/mishan/hxd-ng) |  |
+| [hxd-ng](hxd-ng/) | Servers | v0.3.0 (2026-11-06) | [mishan/hxd-ng](https://github.com/mishan/hxd-ng) |  |
 | [Janus](janus/) | Servers |  | [website](https://agora.vespernet.net/) | 1 |
 | [jshxd](jshxd/) | Servers |  | [Schala/jshxd](https://github.com/Schala/jshxd) |  |
 | [Lemoniscate](lemoniscate/) | Servers | v0.1.8 (2026-11-03) | [bourbonicfisky/lemoniscate](https://github.com/bourbonicfisky/lemoniscate) | 1 |
