@@ -311,8 +311,10 @@ def main():
     releases_by_id = {s["id"]: releases_for(s["id"])["releases"] for s in software}
     latest = {sid: next((r for r in rs if not r.get("prerelease")), rs[0] if rs else None)
               for sid, rs in releases_by_id.items()}
-    posts = sorted((read_post(p) for p in NEWS.glob("*.md") if p.name != "README.md"),
-                   key=sort_key, reverse=True)
+    # Newest first; posts with the same time (a project's releases found in one run) go by file
+    # name, so they come out the same everywhere, newest version first.
+    paths = sorted((p for p in NEWS.glob("*.md") if p.name != "README.md"), key=lambda p: p.name, reverse=True)
+    posts = sorted((read_post(p) for p in paths), key=sort_key, reverse=True)
 
     if OUT.exists():
         shutil.rmtree(OUT)
