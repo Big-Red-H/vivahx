@@ -2,6 +2,24 @@
  "id": "heidrun",
  "releases": [
   {
+   "version": "1.8.0",
+   "title": "Heidrun 1.8.0",
+   "date": "2026-11-10",
+   "url": "https://github.com/franckjej/heidrun/releases/tag/1.8.0",
+   "notes": "\n### Added\n- **Bookmark shortcuts:** assign ⌃⌘1–⌃⌘9 to a bookmark to open it from the Bookmarks menu; applies immediately and shows in the bookmark sidebar.\n- **Quit prompt auto-quits:** an unanswered quit confirmation quits after a countdown (default 30 s, Settings → Connection) and is skipped on logout, restart or shutdown.",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Heidrun-1.8.0-248.dmg",
+     "size": 8890970,
+     "source_url": "https://github.com/franckjej/heidrun/releases/download/1.8.0/Heidrun-1.8.0-248.dmg",
+     "path": "heidrun/1.8.0/Heidrun-1.8.0-248.dmg",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "1.7.1",
    "title": "Heidrun 1.7.1",
    "date": "2026-10-26",
