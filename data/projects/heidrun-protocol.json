@@ -13,8 +13,8 @@
   "swift-package-manager"
  ],
  "archived": false,
- "updated": "2026-09-27",
+ "updated": "2026-11-12",
  "intro": "Hotline-protocol wire format, codecs, and clients for the [Heidrun][heidrun] Mac client and HeidrunServer. Pure Swift 6; the value layer has no Apple-only dependencies, so it builds on both macOS and Linux.\n\n- **`HeidrunCore`** — wire-level value types (`PacketHeader`, `PacketObject`, `TransactionType`, `RemotePath`, `ConnectionSettings`), codecs (`PacketCodec`, `FileListEntryCodec`, `NewsBundleEntryCodec`, …), the Network.framework-based `HotlineNetworkClient`, and `HotlineTrackerClient`. Apple-only files are `#if canImport(Network)`-gated so Linux builds skip them cleanly.\n- **`HeidrunNIOClient`** — cross-platform Hotline transport on SwiftNIO. Reuses `HeidrunCore`'s codecs and `EventBroadcaster`.\n- **`heidrun`** — text-only Hotline CLI (\"modern HX\") built on `HeidrunNIOClient`.",
  "readme_images": [],
- "readme_sha": "64ceccd6b80f69574be13883c5fce3eb3de4f19a"
+ "readme_sha": "01eeb4b0329f4a6057f238b02dc4b241c37c82fa"
 }
