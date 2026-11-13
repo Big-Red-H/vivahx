@@ -2,6 +2,52 @@
  "id": "magnetron",
  "releases": [
   {
+   "version": "v0.5.0",
+   "title": "V0.5.0",
+   "date": "2026-11-13",
+   "url": "https://github.com/benabernathy/magnetron/releases/tag/v0.5.0",
+   "notes": "## What's Changed\r\nMagnetron now supports TLS as well as non-TLS (classic) servers & clients. Using an unused set of bytes, modern servers and clients can support TLS. Magnetron will now let clients know which servers it is tracking support TLS. \r\n\r\nThanks to both @jhalter and @mierau for their help with this feature. \r\n\r\n* Feature/21 reserved bytes by @benabernathy in https://github.com/benabernathy/magnetron/pull/23\r\n\r\n\r\n**Full Changelog**: https://github.com/benabernathy/magnetron/compare/v0.4.0...v0.5.0",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "magnetron-darwin-amd64.tar.gz",
+     "size": 9662659,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.5.0/magnetron-darwin-amd64.tar.gz",
+     "path": "magnetron/v0.5.0/magnetron-darwin-amd64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-darwin-arm64.tar.gz",
+     "size": 11888215,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.5.0/magnetron-darwin-arm64.tar.gz",
+     "path": "magnetron/v0.5.0/magnetron-darwin-arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-linux-amd64.tar.gz",
+     "size": 9483821,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.5.0/magnetron-linux-amd64.tar.gz",
+     "path": "magnetron/v0.5.0/magnetron-linux-amd64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-linux-arm64.tar.gz",
+     "size": 8606559,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.5.0/magnetron-linux-arm64.tar.gz",
+     "path": "magnetron/v0.5.0/magnetron-linux-arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "magnetron-windows-amd64.tar.gz",
+     "size": 9618760,
+     "source_url": "https://github.com/benabernathy/magnetron/releases/download/v0.5.0/magnetron-windows-amd64.tar.gz",
+     "path": "magnetron/v0.5.0/magnetron-windows-amd64.tar.gz",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "v0.4.0",
    "title": "v0.4.0",
    "date": "2026-01-03",

@@ -142,7 +142,7 @@ Downloads link to each `url`, so it has to keep working. Classic Mac software sh
 | [zhxd](zhxd/) | Servers |  | [Schala/zhxd](https://github.com/Schala/zhxd) |  |
 | [Argus](argus/) | Trackers |  | [website](https://agora.vespernet.net/) |  |
 | [hltracker (Visual Basic)](hltracker-vb/) | Trackers |  | [codebox/hltracker](https://github.com/codebox/hltracker) |  |
-| [Magnetron](magnetron/) | Trackers | v0.4.0 (2026-01-03) | [benabernathy/magnetron](https://github.com/benabernathy/magnetron) |  |
+| [Magnetron](magnetron/) | Trackers | v0.5.0 (2026-11-13) | [benabernathy/magnetron](https://github.com/benabernathy/magnetron) |  |
 | [Heidrun Spirit](heidrun-spirit/) | Bots | 1.0.0 (2026-06-03) | [franckjej/heidrun-spirit](https://github.com/franckjej/heidrun-spirit) |  |
 | [Hotline Discord Bridge](hotline-discord-bridge/) | Bots | 1.0.0a (2026-04-08) | [tagban/hotline_discord_bridge](https://github.com/tagban/hotline_discord_bridge) |  |
 | [Hotline2IRCRouter](hotline2irc/) | Bots |  | [JustinTArthur/Hotline2IRCRouter](https://github.com/JustinTArthur/Hotline2IRCRouter) |  |
