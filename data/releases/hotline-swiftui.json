@@ -2,6 +2,31 @@
  "id": "hotline-swiftui",
  "releases": [
   {
+   "version": "1.0beta31",
+   "title": "Hotline for Mac b31",
+   "date": "2026-11-14",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta31",
+   "notes": "Happy Friday the 13th!\r\n\r\nAnd thank goodness this release has a privacy focus for your protection. Secure connections and a privacy section in Settings, among other things. Take care of yourself. :)\r\n\r\n### New in b31\r\n- Secure connections! Hotline now connects to servers over TLS when they support it (like servers running Mobius), so your password and messages are encrypted. It tries a secure connection first, and uses a regular one if a server doesn't offer it. Bookmarks can require a secure connection, and hotlines:// links connect securely. Once you've connected to a server securely, Hotline won't connect to it any other way without asking, and it asks before trusting a server whose certificate has changed.\r\n- Starting with b31, Hotline can fully update itself! When a new build is out, Hotline shows what's new, and Install Update downloads _and_ installs it, then reopens Hotline. Updates are signed, so Hotline only installs genuine releases. Check for Updates in the Hotline menu checks right away.\r\n- Release Notes browser in the Help menu.\r\n- Unread counts in the sidebar, and on Hotline's icon in the Dock.\r\n- More notifications: public chat, private chats and invitations, broadcasts, new message board posts, and when an administrator disconnects you. Pick the ones you want in Settings ▸ Notifications.\r\n- A new Privacy section in Settings, for refusing private messages and chat invites, the servers you've connected to securely, where picture previews can come from, and hiding offensive words.\r\n- Hide offensive words: turn it on in Settings ▸ Privacy, and swearing turns into cartoon cursing like \"!@#$%\", while slurs are blotted out, in chat, posts, news, messages and notifications.\r\n- Picture previews now come only from trusted sites: popular image hosts and the server you're on. A site that shows you a picture can see your IP address, so you can allow any site, or none, in Settings ▸ Privacy. Previews also work for Instagram, Facebook, and Reddit's image viewer.\r\n\r\n### Changed\r\n- Refuse private messages and Refuse private chat invites moved to Settings ▸ Privacy.\r\n- Downloads never replace a file that's already there, and a folder download can't put files outside its folder.\r\n- If your download folder is on a drive that isn't connected, downloads go to your Downloads folder until it's back, and a download folder you've moved is still found.\r\n- A link to a server you've bookmarked fills in your saved login, but never uses your saved password with a different login.\r\n\r\n### Fixed\r\n- Some message board posts could freeze Hotline.\r\n- Bad data or ports from a server could crash Hotline.\r\n- Names with colons in them could pose as other people in chat.\r\n- Downloads to a chosen folder could stop working after a while.\r\n- The Edit button in Accounts didn't respond to clicks.\r\n- The About box lost its list of contributors when GitHub didn't answer.\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b31.zip",
+     "size": 13168650,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta31/Hotline.b31.zip",
+     "path": "hotline-swiftui/1.0beta31/Hotline.b31.zip",
+     "mirrored": false
+    },
+    {
+     "name": "updates.xml",
+     "size": 4244,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta31/updates.xml",
+     "path": "hotline-swiftui/1.0beta31/updates.xml",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "1.0beta30",
    "title": "Hotline for Mac b30",
    "date": "2026-11-10",
