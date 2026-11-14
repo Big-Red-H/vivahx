@@ -2,6 +2,66 @@
  "id": "mobius",
  "releases": [
   {
+   "version": "v0.24",
+   "title": "v0.24",
+   "date": "2026-11-14",
+   "url": "https://github.com/jhalter/mobius/releases/tag/v0.24",
+   "notes": "## Changelog\n* 84994be Advertise TLS port in Bonjour TXT record\n* 59d2c11 Bump Go to 1.27.3 and align build tooling\n* 29e603d Exclude unsupported Windows ARM release target\n* 54fabd6 Fix connection logging test wait group race\n* 578078a Fix unchecked connection cleanup errors in logging tests\n* 01d9236 Reject file renames that conflict with existing destination entries\n* 0ed11ff Suppress transfer probe noise and log connection addresses\n* 3395cb9 Validate missing and malformed protocol fields before decoding\n\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "mobius_server_Darwin_arm64.tar.gz",
+     "size": 8488514,
+     "source_url": "https://github.com/jhalter/mobius/releases/download/v0.24/mobius_server_Darwin_arm64.tar.gz",
+     "path": "mobius/v0.24/mobius_server_Darwin_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius_server_Darwin_x86_64.tar.gz",
+     "size": 9317815,
+     "source_url": "https://github.com/jhalter/mobius/releases/download/v0.24/mobius_server_Darwin_x86_64.tar.gz",
+     "path": "mobius/v0.24/mobius_server_Darwin_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius_server_Linux_arm64.tar.gz",
+     "size": 8105178,
+     "source_url": "https://github.com/jhalter/mobius/releases/download/v0.24/mobius_server_Linux_arm64.tar.gz",
+     "path": "mobius/v0.24/mobius_server_Linux_arm64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius_server_Linux_armv6.tar.gz",
+     "size": 8455256,
+     "source_url": "https://github.com/jhalter/mobius/releases/download/v0.24/mobius_server_Linux_armv6.tar.gz",
+     "path": "mobius/v0.24/mobius_server_Linux_armv6.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius_server_Linux_x86_64.tar.gz",
+     "size": 9122680,
+     "source_url": "https://github.com/jhalter/mobius/releases/download/v0.24/mobius_server_Linux_x86_64.tar.gz",
+     "path": "mobius/v0.24/mobius_server_Linux_x86_64.tar.gz",
+     "mirrored": false
+    },
+    {
+     "name": "mobius_server_Windows_arm64.zip",
+     "size": 8206250,
+     "source_url": "https://github.com/jhalter/mobius/releases/download/v0.24/mobius_server_Windows_arm64.zip",
+     "path": "mobius/v0.24/mobius_server_Windows_arm64.zip",
+     "mirrored": false
+    },
+    {
+     "name": "mobius_server_Windows_x86_64.zip",
+     "size": 9380655,
+     "source_url": "https://github.com/jhalter/mobius/releases/download/v0.24/mobius_server_Windows_x86_64.zip",
+     "path": "mobius/v0.24/mobius_server_Windows_x86_64.zip",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "v0.23.2",
    "title": "v0.23.2",
    "date": "2026-10-11",
