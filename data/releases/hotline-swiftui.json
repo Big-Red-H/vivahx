@@ -2,6 +2,31 @@
  "id": "hotline-swiftui",
  "releases": [
   {
+   "version": "1.0beta32",
+   "title": "Hotline for Mac b32",
+   "date": "2026-11-16",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta32",
+   "notes": "### New in b32\r\n- Column View in Files! This one works as you would expect, no explanation needed hopefully. :)\r\n- Separate News Topics from Articles: topics and categories now display in their own list, to the left of the article list above the article viewer.\r\n- News articles you've read are now remembered as such between disconnects and relaunches.\r\n- Private messages now show whether it was delivered with a Try Again button when it wasn't.\r\n- Server agreements show Markdown, pictures, and ASCII art.\r\n- Read a server's agreement again any time with Server ▸ Show Agreement.\r\n- Secure connections on your local network: servers that offer TLS over Bonjour, like Mobius 0.24 and later, show a lock in the Servers window, and Hotline connects to them securely.\r\n- Picture previews from GitHub: pictures people upload to GitHub, and pictures in GitHub repositories and READMEs, now preview like other trusted sites.\r\n- Release Notes browser now shows how long ago each build came out, checks off the build you have and the ones before it, and shows newer builds in bold. Its toolbar can download any build to your Downloads folder, or open its code or release on GitHub.\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b32.zip",
+     "size": 13487152,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta32/Hotline.b32.zip",
+     "path": "hotline-swiftui/1.0beta32/Hotline.b32.zip",
+     "mirrored": false
+    },
+    {
+     "name": "updates.xml",
+     "size": 2539,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta32/updates.xml",
+     "path": "hotline-swiftui/1.0beta32/updates.xml",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "1.0beta31",
    "title": "Hotline for Mac b31",
    "date": "2026-11-14",
