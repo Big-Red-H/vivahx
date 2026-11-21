@@ -2,6 +2,31 @@
  "id": "hotline-swiftui",
  "releases": [
   {
+   "version": "1.0beta33",
+   "title": "Hotline for Mac b33",
+   "date": "2026-11-20",
+   "url": "https://github.com/mierau/hotline/releases/tag/1.0beta33",
+   "notes": "Hey all,\r\n\r\nSome nice changes in this release. Some further work on security, like around image previews where we now only allow image previews from registered domains and over secure connections (even when you have said to allow all sites). Also now support for animated GIFs in chat and a brand new slash commands interface.\r\n\r\n### New\r\n- Animated GIFs! GIFs now play in chat, private chat, news and the message board. Links to Giphy, Tenor and Imgur pages show their GIF, and a link to a picture now shows as just the picture. Turn off Play GIFs automatically in Settings ▸ Chat and they'll only play when you hover over them.\r\n- Slash commands in chat and private chat: /me, /msg, /away and /back, /name, /icon, /invite, /topic, /leave, /info, /broadcast, /kick and /ban.\r\n- Ban someone right from the userlist menu.\r\n- Release notes now look as they do on GitHub, with pictures, videos and GIFs, in the update window and the Release Notes browser.\r\n- Copy Image and Save Image… in a picture preview's menu.\r\n- Previews for AVIF and JPEG XL pictures.\r\n- Encrypted Servers, in Settings ▸ Privacy: select servers to forget several at once, and Show Certificate shows the certificate a server gave you, for any you've connected to since updating.\r\n\r\n### Changed\r\n- Pictures come in more smoothly: a new picture's box shows straight away with its link in it, takes the picture's shape as soon as it starts loading, and shows a spinner if it's slow, so chat doesn't jump around as pictures load.\r\n- Picture previews use less memory: the ones you've scrolled past let go of their pictures until you scroll back to them.\r\n- Picture previews never load from IP addresses or local network names like localhost, except the server you're on, even when you allow any site.\r\n- A picture that couldn't be reached is tried again when your network comes back.\r\n- Animated server banners (and the animated hotline logo) use a fraction of the CPU they did.\r\n- Column view: folders show how many items they have, empty folders say so, selecting several files shows a summary, and the info pane's buttons got a refresh.\r\n- With auto-reply on, servers can now show you as idle even while you're using your Mac.\r\n\r\n### Fixed\r\n- Hotline could crash when clicking quickly through news articles.\r\n- Column view could scroll back to the left when selecting a file in the next column, and clicks could land in the wrong column after it scrolled.\r\n- Choosing Chat or Files in the sidebar moved the keyboard focus out of the sidebar.\r\n- A picture preview from a site that didn't say how big the picture was could keep downloading well past the 10 MB limit.\r\n",
+   "prerelease": false,
+   "source": "github",
+   "files": [
+    {
+     "name": "Hotline.b33.zip",
+     "size": 13865870,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta33/Hotline.b33.zip",
+     "path": "hotline-swiftui/1.0beta33/Hotline.b33.zip",
+     "mirrored": false
+    },
+    {
+     "name": "updates.xml",
+     "size": 3656,
+     "source_url": "https://github.com/mierau/hotline/releases/download/1.0beta33/updates.xml",
+     "path": "hotline-swiftui/1.0beta33/updates.xml",
+     "mirrored": false
+    }
+   ]
+  },
+  {
    "version": "1.0beta32",
    "title": "Hotline for Mac b32",
    "date": "2026-11-16",
