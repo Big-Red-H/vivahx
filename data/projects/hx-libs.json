@@ -8,7 +8,7 @@
  "stars": 0,
  "topics": [],
  "archived": false,
- "updated": "2026-11-23",
+ "updated": "2026-11-26",
  "intro": "The Hotline protocol pieces that don't belong to any one program, as one\nCargo workspace. [GtkHx](https://github.com/mishan/gtkhx) and\n[hxd-ng](https://github.com/mishan/hxd-ng) pull them in as git\ndependencies.\n\n- `hxproto`'s emoji shortcode tables sit behind its default `emoji`\n  feature, so a build that doesn't need them can leave them out\n  (`default-features = false`). `tools/gen_emoji_table.py` generates\n  them.\n- `hxsession`'s `hope` feature, off by default, lets a session log in\n  with HOPE; its bytes then go through the transport `hxhope` agreed. A\n  client that does not log in with HOPE leaves the ciphers and\n  compressors out.\n- HOPE's Zstandard compression, a C library, sits behind `hxhope`'s\n  `zstd` feature (and `hxsession`'s), off unless a consumer turns it on.\n- `hxproto`, `hxfiles-xfer`, `hxcrypto`, `hxhope` and `hxsession` also\n  build for `wasm32-unknown-unknown`, for a browser client.",
  "readme_images": [],
  "readme_sha": "d12e0b110face5c6109c651ab472df07640642ff"
